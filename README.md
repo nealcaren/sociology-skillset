@@ -1,6 +1,23 @@
 # Sociology Writing Suite
 
-A complete academic writing toolkit for sociology research with 12 integrated skills covering the full research-to-publication workflow.
+A complete academic writing toolkit for sociology research with 13 integrated skills covering the full research-to-publication workflow.
+
+## Quick Start: The Research Coordinator
+
+**Start here**: `/research-coordinator` orchestrates your entire research workflow—from literature review through data analysis to publication-ready writing. It:
+
+- Drives the process proactively (you navigate, it drives)
+- Maintains project state and tracks dependencies
+- Dispatches to specialized skills automatically
+- Supports non-linear, iterative research workflows
+
+```
+/research-coordinator
+
+I'm studying how journalists cover protests. I have 30 interviews with reporters.
+```
+
+The coordinator will guide you through literature search, synthesis, data analysis, and writing—invoking the appropriate skills at each stage.
 
 ## Installation
 
@@ -29,8 +46,9 @@ Then add to your Claude Code settings (`~/.claude/settings.json` or project `.cl
 
 ### Verify Installation
 
-After adding the plugin, restart Claude Code and type `/help`. You should see all 12 skills listed:
+After adding the plugin, restart Claude Code and type `/help`. You should see all 13 skills listed:
 
+- `/research-coordinator` ← **Start here for full workflow orchestration**
 - `/bibliography-builder`
 - `/case-justification`
 - `/genre-skill-builder`

@@ -1,7 +1,7 @@
 {
   "name": "sociology-writing-suite",
   "version": "1.0.0",
-  "description": "Complete academic writing toolkit for sociology research with 12 integrated skills: literature review (lit-search, lit-synthesis, lit-writeup), qualitative analysis (interview-analyst, interview-writeup), manuscript drafting (methods-writer, case-justification, interview-bookends), revision support (peer-reviewer, revision-coordinator, bibliography-builder), and skill creation (genre-skill-builder).",
+  "description": "Complete academic writing toolkit for sociology research with 13 integrated skills. Use research-coordinator to orchestrate the full workflow, or invoke individual skills: literature review (lit-search, lit-synthesis, lit-writeup), qualitative analysis (interview-analyst, interview-writeup), manuscript drafting (methods-writer, case-justification, interview-bookends), revision support (peer-reviewer, revision-coordinator, bibliography-builder), and skill creation (genre-skill-builder).",
   "author": {
     "name": "Neal Caren"
   },
