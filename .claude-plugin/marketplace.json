@@ -8,8 +8,8 @@
     {
       "name": "sociology-writing-suite",
       "source": {
-        "type": "github",
-        "repo": "nealcaren/sociology-writing-suite"
+        "source": "url",
+        "url": "https://github.com/nealcaren/sociology-writing-suite.git"
       },
       "description": "Complete academic writing toolkit for sociology research with 12 integrated skills: literature review (lit-search, lit-synthesis, lit-writeup), qualitative analysis (interview-analyst, interview-writeup), manuscript drafting (methods-writer, case-justification, interview-bookends), revision support (peer-reviewer, revision-coordinator, bibliography-builder), and skill creation (genre-skill-builder).",
       "version": "1.0.0",
