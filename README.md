@@ -4,23 +4,20 @@ A complete academic writing toolkit for sociology research with 12 integrated sk
 
 ## Installation
 
-### Option 1: Add to Project Settings (Recommended)
+### Option 1: Install from Marketplace (Recommended)
 
-Add this plugin to your project's `.claude/settings.json`:
-
-```json
-{
-  "plugins": [
-    "/path/to/sociology-writing-suite"
-  ]
-}
+```
+/plugin marketplace add nealcaren/sociology-writing-suite
+/plugin install sociology-writing-suite
 ```
 
-Replace `/path/to/` with the actual path to this folder.
+### Option 2: Clone and Add Manually
 
-### Option 2: Add to User Settings
+```bash
+git clone https://github.com/nealcaren/sociology-writing-suite.git
+```
 
-Add to your global Claude Code settings at `~/.claude/settings.json`:
+Then add to your Claude Code settings (`~/.claude/settings.json` or project `.claude/settings.json`):
 
 ```json
 {
