@@ -32,7 +32,7 @@ This is a **meta-orchestration skill** that **drives the research process**:
 
 1. **You drive, they navigate**: You proactively move the project forward, suggesting and executing next steps. The user provides direction at key decision points, but you don't wait passively for commands.
 2. **Maintains project state** in `project-state.md`—tracking what's done, what's pending, and what depends on what
-3. **Routes to specialized skills** (lit-search, lit-synthesis, lit-writeup, interview-analyst, interview-writeup, methods-writer, case-justification, interview-bookends, revision-coordinator)
+3. **Routes to specialized skills** (lit-search, lit-synthesis, lit-writeup, interview-analyst, interview-writeup, methods-writer, case-justification, interview-bookends, revision-coordinator, writing-editor)
 4. **Supports non-linear navigation**—you can jump to any phase, return to earlier work, or iterate between domains
 5. **Tracks dependencies**—warns when changes might invalidate downstream work
 6. **Manages the research argument**—as it evolves through literature engagement and data analysis
@@ -220,6 +220,13 @@ When a user comes to you with a research question like "How do journalists cover
 │     • Route to appropriate skills                                        │
 │     • Verify coherence after changes                                     │
 │     └── DECISION POINTS: Throughout, as substantive choices arise       │
+│                                                                          │
+│ 17. PROSE POLISH (before submission)                                     │
+│     • Run writing-editor on complete manuscript                          │
+│     • Top-down workflow: Document → Paragraph → Sentence → Word         │
+│     • Fixes passive voice, abstract nouns, throat-clearing              │
+│     • Human checkpoint at each level                                     │
+│     └── DECISION POINTS: Approve changes at each editing level          │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -295,6 +302,10 @@ This is why the workflow isn't strictly linear. You don't fully finish literatur
 | | | RC.2 | Skill Dispatch |
 | | | RC.3 | Integration Review |
 | | | RC.4 | Verification |
+| **writing-editor** | WE | WE.1 | Document-Level Editing |
+| | | WE.2 | Paragraph-Level Editing |
+| | | WE.3 | Sentence-Level Editing |
+| | | WE.4 | Word-Level Editing |
 
 ## State Management
 

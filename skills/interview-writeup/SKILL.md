@@ -110,6 +110,8 @@ The skill includes detailed reference guides:
 
 **Guide**: `phases/phase3-revision.md`
 
+> **Optional**: After revision, consider running `/writing-editor` for prose polish—fixes passive voice, abstract nouns, and academic bad habits.
+
 ---
 
 ## Prohibited Moves

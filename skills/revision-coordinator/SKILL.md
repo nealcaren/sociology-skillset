@@ -219,6 +219,8 @@ When invoking a sub-skill for revision, provide:
 
 **Output**: `revision-summary.md` with complete accounting.
 
+> **Recommended**: Before final submission, run `/writing-editor` on the complete manuscript for prose polish—fixes passive voice, abstract nouns, throat-clearing, and academic bad habits using a top-down (Document → Paragraph → Sentence → Word) workflow with human checkpoints.
+
 ---
 
 ### Phase 5 (Optional): Final Peer Review Simulation

@@ -165,6 +165,8 @@ See `clusters/` directory for detailed profiles with benchmarks, signature moves
 
 **Output**: Revised case justification section with quality memo.
 
+> **Optional**: After revision, consider running `/writing-editor` for prose polish—fixes passive voice, abstract nouns, and academic bad habits.
+
 ---
 
 ## Cluster Decision Tree

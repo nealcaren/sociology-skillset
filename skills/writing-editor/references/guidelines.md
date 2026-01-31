@@ -1,6 +1,10 @@
-# Prose Humanization Guidelines
+# LLM Pattern Guidelines
 
 Editing heuristics for turning LLM prose into human prose. Apply these once the ideas are sound.
+
+See also:
+- `becker-guidelines.md` for general academic writing fixes (passive voice, wordiness, abstract placeholders)
+- `sword-guidelines.md` for stylish writing techniques (concrete language, hooks, storytelling)
 
 ---
 

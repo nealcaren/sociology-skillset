@@ -154,6 +154,8 @@ See `clusters/` directory for detailed profiles with characteristic paragraph se
 
 **Output**: Final Theory section + quality memo + `citations-final.json` + `bibliography.md`.
 
+> **Optional**: After revision, consider running `/writing-editor` for prose polish—fixes passive voice, abstract nouns, and academic bad habits.
+
 ---
 
 ## Technique Guides

@@ -79,6 +79,7 @@ Restart Claude Code and type `/help`. You should see these skills listed:
 - `/methods-writer`
 - `/peer-reviewer`
 - `/revision-coordinator`
+- `/writing-editor`
 
 ## Quick Start
 
@@ -151,6 +152,7 @@ Go from raw interviews to written manuscript sections:
 | `/revision-coordinator` | Parse reviewer feedback, route to specialized skills |
 | `/peer-reviewer` | Simulate peer review before submission |
 | `/bibliography-builder` | Extract citations, match to Zotero, generate bibliography |
+| `/writing-editor` | Edit prose to sound natural; fixes LLM patterns and academic bad habits |
 
 ### Meta-Skill
 
@@ -215,7 +217,8 @@ sociology-writing-suite/
     ├── methods-writer/
     ├── peer-reviewer/
     ├── research-coordinator/
-    └── revision-coordinator/
+    ├── revision-coordinator/
+    └── writing-editor/
 ```
 
 Each skill folder contains:

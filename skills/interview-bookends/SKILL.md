@@ -125,6 +125,8 @@ Five cluster styles require different approaches:
 
 **Guide**: `phases/phase3-coherence.md`
 
+> **Optional**: After coherence check, consider running `/writing-editor` for prose polish—fixes passive voice, abstract nouns, and academic bad habits.
+
 ---
 
 ## Cluster Profiles
