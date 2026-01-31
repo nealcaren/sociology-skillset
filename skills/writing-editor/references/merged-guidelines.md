@@ -6,6 +6,40 @@ Work through each level with a human checkpoint before moving to the next.
 
 ---
 
+## Step 0: Document Protection
+
+**Before making any edits**, establish how changes will be tracked.
+
+### Option A: Working Copy (Default)
+
+Create a copy of the original file and edit only the copy.
+
+- Input: `draft.md` → Working file: `draft-working.md`
+- Original file is never modified
+- Safe for users without version control experience
+
+### Option B: Git Tracking
+
+Use git to create a full revision history with commits after each phase.
+
+**Setup**:
+1. Check if file is in a git repo
+2. If not, offer to `git init` in the file's directory
+3. Commit the original state before any edits: `"Writing editor: Original state"`
+
+**After each level**:
+- Commit approved changes with descriptive message
+- Example: `"Writing editor: Level 1 (Document) complete"`
+
+**Benefits**:
+- Full diff history between phases
+- Easy to revert any level's changes
+- User can see exactly what changed at each stage
+
+**Never edit the original file directly unless git tracking is active.**
+
+---
+
 ## The Core Method: Deletion Test
 
 Remove each word or phrase. If meaning doesn't change, delete it.
@@ -269,6 +303,23 @@ Replace abstract reflection language with causal explanation.
 **Before**: "This reflects a broader shift in the manuscript's theoretical orientation."
 **After**: "Because the spatial framework is gone, the analysis now follows the interviews more closely."
 
+## 3.14 Replace Em/En Dashes with Commas or Restructure
+
+Em dashes (—) and en dashes (–) create artificial drama and interrupt reading flow. Replace with commas or restructure the sentence.
+
+| With dashes | Without dashes |
+|-------------|----------------|
+| "The respondents—who had previously expressed happiness—decided to leave" | "The respondents, who had previously expressed happiness, decided to leave" |
+| "Three factors—cost, time, and risk—drove the decision" | "Three factors drove the decision: cost, time, and risk" |
+| "She found—surprisingly—that wages had fallen" | "She found, surprisingly, that wages had fallen" |
+| "The policy—implemented in 2019—failed immediately" | "The policy, implemented in 2019, failed immediately" |
+
+**When dashes might stay**:
+- Abrupt interruption that's the point: "He started to explain—but then stopped."
+- Range notation: "pages 12–15" (en dash is standard here)
+
+**Rule**: For parenthetical insertions, commas almost always work better. Dashes signal "pay attention to this aside!" when the aside rarely deserves that emphasis.
+
 ---
 
 # Level 4: Word
@@ -386,8 +437,9 @@ Academic reviewers understate. Enthusiasm reads as synthetic.
 
 # Editing Workflow
 
-1. **Document level**: Fix structure, hooks, titles, abstracts → Human checkpoint
-2. **Paragraph level**: Fix symmetry, triplets, endings → Human checkpoint
-3. **Sentence level**: Fix passive voice, agents, abstract nouns → Human checkpoint
-4. **Word level**: Fix adverbs, signposts, fancy-talk → Human checkpoint
+0. **Document protection**: Create working copy OR set up git tracking → User chooses
+1. **Document level**: Fix structure, hooks, titles, abstracts → Human checkpoint (git commit if tracking)
+2. **Paragraph level**: Fix symmetry, triplets, endings → Human checkpoint (git commit if tracking)
+3. **Sentence level**: Fix passive voice, agents, abstract nouns, em/en dashes → Human checkpoint (git commit if tracking)
+4. **Word level**: Fix adverbs, signposts, fancy-talk → Human checkpoint (git commit if tracking)
 5. **Read aloud**: Final calibration check

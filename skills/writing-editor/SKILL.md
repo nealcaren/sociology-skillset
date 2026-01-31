@@ -11,11 +11,32 @@ Edit academic prose using a top-down workflow with human review at each level.
 
 Work through each level, presenting proposed changes for user approval before moving to the next.
 
+### Step 0: Document Protection
+
+**Before making any edits**, ask the user how they want to track changes:
+
+| Option | How it works |
+|--------|--------------|
+| **Copy (default)** | Create `filename-working.md` and edit only that copy. Original is never touched. |
+| **Git tracking** | Initialize or use existing git repo. Commit after each phase with descriptive message (e.g., "Level 1: Document structure edits"). |
+
+If user chooses **copy**: Create the working copy immediately. All subsequent edits go to the copy.
+
+If user chooses **git**:
+- Check if file is in a git repo; if not, offer to `git init`
+- Commit the original state before any edits
+- After each level's approved changes, commit with message like: `"Writing editor: Level 1 (Document) complete"`
+- This creates a full revision history the user can diff or revert
+
+**Never edit the original file directly unless git tracking is active.**
+
+### Levels with Checkpoints
+
 | Level | What to Fix | Checkpoint |
 |-------|-------------|------------|
 | **1. Document** | Structure, hooks, titles, abstracts, citations | User approves before continuing |
 | **2. Paragraph** | Symmetry, triplets, endings, contrast patterns | User approves before continuing |
-| **3. Sentence** | Passive voice, agents, abstract nouns, meta-commentary | User approves before continuing |
+| **3. Sentence** | Passive voice, agents, abstract nouns, meta-commentary, em/en dashes | User approves before continuing |
 | **4. Word** | Adverbs, signposts, throat-clearing, fancy-talk | User approves final version |
 
 This ensures the user stays in control and can accept/reject changes at each stage.
@@ -101,6 +122,7 @@ After paragraphs are structured:
 - **Meta-commentary**: Cut sentences about process/intent
 - **Grand evaluations**: Replace abstract praise with observable effects
 - **Over-justification**: Allow judgment without explaining every reason
+- **Em/en dashes**: Replace with commas or restructure. Dashes create artificial drama and interrupt flow.
 
 Present sentence-level changes. Wait for user approval.
 
