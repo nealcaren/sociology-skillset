@@ -1,54 +1,72 @@
 # Sociology Writing Suite
 
-A complete academic writing toolkit for sociology research with 13 integrated skills covering the full research-to-publication workflow.
+A set of skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) to assist with qualitative research projects involving interviews or other similarly structured textual data. Covers the full research-to-publication workflow: literature review, qualitative analysis, and academic writing.
 
-## Quick Start: The Research Coordinator
+**This project is actively under development.** Skills and workflows may change.
 
-**Start here**: `/research-coordinator` orchestrates your entire research workflow—from literature review through data analysis to publication-ready writing. It:
+## Requirements
 
-- Drives the process proactively (you navigate, it drives)
-- Maintains project state and tracks dependencies
-- Dispatches to specialized skills automatically
-- Supports non-linear, iterative research workflows
+### Claude Code
 
-```
-/research-coordinator
+This plugin requires [Claude Code](https://docs.anthropic.com/en/docs/claude-code), Anthropic's agentic coding tool. Install it first:
 
-I'm studying how journalists cover protests. I have 30 interviews with reporters.
+```bash
+npm install -g @anthropic-ai/claude-code
 ```
 
-The coordinator will guide you through literature search, synthesis, data analysis, and writing—invoking the appropriate skills at each stage.
+### Optional: Zotero MCP Server
+
+Two skills (`lit-synthesis` and `peer-reviewer`) work best with the Zotero MCP server for full-text PDF access:
+
+```bash
+uv tool install "git+https://github.com/54yyyu/zotero-mcp.git"
+zotero-mcp setup
+```
+
+See `skills/lit-synthesis/mcp/zotero-setup.md` for configuration details. These skills still function without Zotero, but with reduced capabilities.
+
+### Optional: Docling (for PDF conversion)
+
+The `lit-synthesis` skill can use docling for batch PDF-to-markdown conversion:
+
+```bash
+pip install docling
+```
 
 ## Installation
 
-### Option 1: Install from Marketplace (Recommended)
+### Option 1: Marketplace (Recommended)
 
 ```
-/plugin marketplace add nealcaren/sociology-writing-suite
-/plugin install sociology-writing-suite
+/install nealcaren/sociology-writing-suite
 ```
 
-### Option 2: Clone and Add Manually
+### Option 2: Clone and Configure Manually
 
 ```bash
 git clone https://github.com/nealcaren/sociology-writing-suite.git
 ```
 
-Then add to your Claude Code settings (`~/.claude/settings.json` or project `.claude/settings.json`):
+Add to your Claude Code settings (`~/.claude/settings.json` or project `.claude/settings.json`):
 
 ```json
 {
-  "plugins": [
-    "/path/to/sociology-writing-suite"
-  ]
+  "projects": {
+    "/path/to/your/project": {
+      "mcpServers": {},
+      "skills": [
+        "/path/to/sociology-writing-suite"
+      ]
+    }
+  }
 }
 ```
 
 ### Verify Installation
 
-After adding the plugin, restart Claude Code and type `/help`. You should see all 13 skills listed:
+Restart Claude Code and type `/help`. You should see these skills listed:
 
-- `/research-coordinator` ← **Start here for full workflow orchestration**
+- `/research-coordinator`
 - `/bibliography-builder`
 - `/case-justification`
 - `/genre-skill-builder`
@@ -64,29 +82,31 @@ After adding the plugin, restart Claude Code and type `/help`. You should see al
 
 ## Quick Start
 
-### Invoke a Skill Directly
+### The Research Coordinator
 
-Type the skill name as a slash command:
+Start with `/research-coordinator` for full workflow orchestration. It drives the process proactively, maintains project state, and dispatches to specialized skills as needed:
+
+```
+/research-coordinator
+
+I'm studying how journalists cover protests. I have 30 interviews with reporters.
+```
+
+The coordinator guides you through literature search, synthesis, data analysis, and writing.
+
+### Invoke Skills Directly
+
+Or invoke any skill directly:
 
 ```
 /lit-writeup
 ```
 
-Claude will load the skill and guide you through its workflow.
+Claude loads the skill and guides you through its workflow.
 
-### Ask for Help with a Task
+### Provide Context
 
-You can also describe what you need:
-
-```
-I need to write a theory section for my paper on social movements
-```
-
-Claude will suggest the appropriate skill (`lit-writeup`) and offer to invoke it.
-
-### Provide Context When Invoking
-
-You can include context with the command:
+Include context when invoking:
 
 ```
 /interview-analyst
@@ -95,160 +115,86 @@ I have 30 interviews with activists about why they left social movements.
 My theoretical interest is in disengagement processes.
 ```
 
-## The 12 Skills
+## The Skills
 
 ### Literature Review Chain
 
-Use these three skills in sequence to go from search to written Theory section:
+Use in sequence to go from search to written Theory section:
 
-| Skill | What It Does | When to Use |
-|-------|--------------|-------------|
-| `/lit-search` | Build a literature database using OpenAlex API | Starting a new literature review |
-| `/lit-synthesis` | Deep reading, theoretical mapping, debate identification | After downloading papers, before writing |
-| `/lit-writeup` | Draft publication-ready Theory section | When ready to write the lit review |
-
-**Example workflow**:
-```
-/lit-search
-> Search for literature on "activist burnout" and "movement disengagement"
-
-/lit-synthesis
-> Analyze my Zotero collection and identify key debates
-
-/lit-writeup
-> Draft a Gap-Filler style theory section for my disengagement paper
-```
+| Skill | What It Does |
+|-------|--------------|
+| `/lit-search` | Build literature database using OpenAlex API |
+| `/lit-synthesis` | Deep reading, theoretical mapping, debate identification |
+| `/lit-writeup` | Draft publication-ready Theory section |
 
 ### Interview Research Chain
 
-Use these skills to go from raw interviews to written Methods, Findings, Intro, and Conclusion:
+Go from raw interviews to written manuscript sections:
 
-| Skill | What It Does | When to Use |
-|-------|--------------|-------------|
-| `/interview-analyst` | Qualitative coding and pattern identification | After completing interviews |
-| `/interview-writeup` | Draft Methods and Findings sections | After coding is complete |
-| `/interview-bookends` | Draft Introduction and Conclusion | After Theory and Findings are drafted |
-
-**Example workflow**:
-```
-/interview-analyst
-> I have transcripts from 30 interviews. Help me code them using Track B (data-first).
-
-/interview-writeup
-> Draft my Findings section using the Mechanism List archetype
-
-/interview-bookends
-> Write my introduction and conclusion as Gap-Filler style
-```
+| Skill | What It Does |
+|-------|--------------|
+| `/interview-analyst` | Qualitative coding and pattern identification |
+| `/interview-writeup` | Draft Methods and Findings sections |
+| `/interview-bookends` | Draft Introduction and Conclusion |
 
 ### Manuscript Section Skills
 
-| Skill | What It Does | When to Use |
-|-------|--------------|-------------|
-| `/methods-writer` | Write Methods sections with 3 pathway options | Drafting or revising Methods |
-| `/case-justification` | Write case selection rationale | When your methods need case justification |
-
-**Example**:
-```
-/methods-writer
-> I interviewed 25 former activists. Help me write a Standard pathway methods section.
-```
+| Skill | What It Does |
+|-------|--------------|
+| `/methods-writer` | Write Methods sections (3 pathway options) |
+| `/case-justification` | Write case selection rationale |
 
 ### Revision Support
 
-| Skill | What It Does | When to Use |
-|-------|--------------|-------------|
-| `/revision-coordinator` | Parse reviewer feedback, route to specialized skills | After receiving reviews |
-| `/peer-reviewer` | Simulate peer review before submission | Before submitting to journal |
-| `/bibliography-builder` | Extract citations, match to Zotero, generate bibliography | Finalizing references |
-
-**Example**:
-```
-/revision-coordinator
-> Here's my R&R feedback. Help me parse it and plan revisions.
-
-/peer-reviewer
-> Simulate 3 reviewers for my complete manuscript before I submit to ASR.
-```
+| Skill | What It Does |
+|-------|--------------|
+| `/revision-coordinator` | Parse reviewer feedback, route to specialized skills |
+| `/peer-reviewer` | Simulate peer review before submission |
+| `/bibliography-builder` | Extract citations, match to Zotero, generate bibliography |
 
 ### Meta-Skill
 
-| Skill | What It Does | When to Use |
-|-------|--------------|-------------|
-| `/genre-skill-builder` | Create new writing skills from corpus analysis | Building custom skills for other genres |
-
-## MCP Server Requirements
-
-Two skills require the Zotero MCP server for full functionality:
-
-### lit-synthesis and peer-reviewer
-
-These skills use Zotero to:
-- Access your library's full-text PDFs
-- Build reviewer personas from relevant literature
-- Match citations to your collection
-
-**Setup**: Install and configure the Zotero MCP server. See `skills/lit-synthesis/mcp/zotero-setup.md` for instructions.
-
-**Without Zotero MCP**: These skills will still work but with reduced functionality (no full-text access, manual citation matching).
+| Skill | What It Does |
+|-------|--------------|
+| `/genre-skill-builder` | Create new writing skills from corpus analysis |
 
 ## Common Workflows
 
 ### Writing a New Paper from Interview Data
 
-1. **Analyze interviews**: `/interview-analyst`
-2. **Write methods**: `/methods-writer`
-3. **Write findings**: `/interview-writeup`
-4. **Build literature review**: `/lit-search` → `/lit-synthesis` → `/lit-writeup`
-5. **Write intro and conclusion**: `/interview-bookends`
-6. **Pre-submission review**: `/peer-reviewer`
-7. **Finalize bibliography**: `/bibliography-builder`
+1. `/interview-analyst` — Analyze interviews
+2. `/methods-writer` — Write methods
+3. `/interview-writeup` — Write findings
+4. `/lit-search` → `/lit-synthesis` → `/lit-writeup` — Build literature review
+5. `/interview-bookends` — Write intro and conclusion
+6. `/peer-reviewer` — Pre-submission review
+7. `/bibliography-builder` — Finalize references
 
 ### Revising After Peer Review
 
-1. **Parse and route feedback**: `/revision-coordinator`
-2. **Revise specific sections**: Skills dispatched by coordinator
-3. **Check coherence**: `/interview-bookends` Phase 3
-4. **Validate before resubmission**: `/peer-reviewer`
-
-### Writing Just a Theory Section
-
-1. **Search literature**: `/lit-search`
-2. **Synthesize and map**: `/lit-synthesis`
-3. **Draft section**: `/lit-writeup`
+1. `/revision-coordinator` — Parse and route feedback
+2. Skills dispatched by coordinator for specific sections
+3. `/interview-bookends` Phase 3 — Check coherence
+4. `/peer-reviewer` — Validate before resubmission
 
 ## Skill Features
 
 ### Cluster-Based Writing
 
-Several skills use "clusters" - empirically-derived styles based on analysis of 80 articles from *Social Problems* and *Social Forces*:
+Several skills use empirically-derived styles based on analysis of 80 articles from *Social Problems* and *Social Forces*:
 
 - **lit-writeup**: Gap-Filler, Theory-Extender, Concept-Builder, Synthesis, Problem-Driven
-- **interview-bookends**: Same 5 clusters applied to intros/conclusions
+- **interview-bookends**: Same 5 clusters for intros/conclusions
 - **case-justification**: Minimal, Standard, Deep Historical, Comparative, Policy-Driven
 - **methods-writer**: Efficient (600-900w), Standard (900-1200w), Detailed (1200-1800w)
 
 ### Calibration Benchmarks
 
-All skills include empirically-derived benchmarks:
-- Word counts and section lengths
-- Citation density (~24 per 1,000 words for Theory sections)
-- Structural patterns (subsections, paragraph sequences)
-- Cluster-specific norms
+All skills include empirically-derived benchmarks: word counts, citation density (~24 per 1,000 words for Theory sections), structural patterns, and cluster-specific norms.
 
 ### Phase-Based Workflows
 
-Each skill follows a structured workflow with explicit pause points for user review:
-- **Phase 0**: Intake and assessment
-- **Phases 1-N**: Drafting/analysis steps
-- **Final Phase**: Revision and quality checks
-
-## Tips
-
-- **Start with assessment**: Let skills diagnose your contribution type before drafting
-- **Provide context**: Share your research question, argument, and relevant materials
-- **Use the chains**: The lit trilogy and interview chain work best in sequence
-- **Trust the benchmarks**: Calibration norms come from real journal articles
+Each skill follows a structured workflow with pause points for user review.
 
 ## File Structure
 
@@ -268,14 +214,15 @@ sociology-writing-suite/
     ├── lit-writeup/
     ├── methods-writer/
     ├── peer-reviewer/
+    ├── research-coordinator/
     └── revision-coordinator/
 ```
 
 Each skill folder contains:
-- `SKILL.md` - Main skill definition and overview
-- `phases/` - Detailed phase guides
-- `clusters/` or `pathways/` - Style-specific guidance (where applicable)
-- `techniques/` - Reference guides for specific craft elements
+- `SKILL.md` — Main skill definition
+- `phases/` — Phase guides
+- `clusters/` or `pathways/` — Style-specific guidance
+- `techniques/` — Craft reference guides
 
 ## License
 
