@@ -6,7 +6,20 @@ Deep reading is where understanding happens. Abstracts tell you *what* papers ar
 
 ---
 
-## Your Tasks
+## Choose Your Reading Mode
+
+This phase supports two modes. Choose based on your situation:
+
+| Mode | When to Use | Model | How It Works |
+|------|-------------|-------|--------------|
+| **Zotero** | Papers in library, especially with annotations | Opus | Read via MCP, leverage highlights |
+| **Docling** | Batch processing PDFs, no annotations | Haiku | Convert PDF→markdown, spawn reading agents |
+
+You can mix modes: use Zotero for key theoretical papers you've annotated, Docling for the rest.
+
+---
+
+## Zotero Mode
 
 ### 1. Prepare Reading Environment
 
@@ -56,9 +69,21 @@ For each paper, create a note file using the template in SKILL.md:
 
 ```
 reading-notes/
-├── author2020-short-title.md
-├── author2019-short-title.md
+├── smith2020-cultural-frames.md
+├── jones2019-institutional.md
 └── ...
+```
+
+**Required frontmatter** (at least one identifier):
+```yaml
+---
+openalex_id: W2123456789    # From lit-search (preferred)
+doi: 10.1086/123456         # DOI if available
+zotero_key: ABC123XY        # Zotero key if in library
+first_author: Smith
+year: 2020
+short_title: cultural-frames
+---
 ```
 
 **Essential sections**:
@@ -69,6 +94,8 @@ reading-notes/
 - Contribution claim
 - Key quotes (with page numbers)
 - Your analytical notes
+
+**Why identifiers matter**: The frontmatter identifiers let you reliably match notes back to source papers across the workflow—from lit-search database through lit-synthesis to lit-writeup citations.
 
 ### 4. Flag Connections
 
@@ -160,6 +187,136 @@ Use zotero_semantic_search with a concept to find related papers
 
 ---
 
+## Docling Mode
+
+For batch processing PDFs without annotations, use docling to convert PDFs to markdown, then spawn haiku agents for structured note-taking.
+
+### 1. Convert PDF to Markdown
+
+```bash
+# Convert a single PDF (output cached alongside original)
+./scripts/pdf-to-md.sh "/path/to/paper.pdf"
+# Returns: /path/to/paper.md
+```
+
+The markdown is saved next to the PDF. Subsequent conversions use the cached file.
+
+### 2. Spawn Reading Agent
+
+Use the Task tool to spawn a haiku agent for each paper:
+
+```
+Task tool parameters:
+- subagent_type: "general-purpose"
+- model: "haiku"
+- prompt: [reading prompt with markdown content and identifiers]
+```
+
+### 3. Reading Agent Prompt Template
+
+When spawning the reading agent, provide this prompt structure:
+
+```
+You are a research assistant creating structured reading notes for a sociology literature synthesis project.
+
+## Paper Identifiers
+- OpenAlex ID: [from lit-search database, e.g., W2123456789]
+- DOI: [if available]
+- PDF source: [path]
+
+## Paper Content
+[Insert markdown content from docling conversion]
+
+## Instructions
+
+Create reading notes in this exact format, starting with the required frontmatter:
+
+---
+openalex_id: [ID from above]
+doi: [DOI from above]
+first_author: [extract from paper]
+year: [extract from paper]
+short_title: [2-3 word slug]
+---
+
+# [Author Year] - [Short Title]
+
+## Bibliographic Info
+- **Authors**: [extract all authors]
+- **Year**: [publication year]
+- **Title**: [full title]
+- **Journal**: [venue]
+- **DOI**: [link]
+
+## Core Argument
+[1-2 sentences: What is the paper arguing?]
+
+## Theoretical Framework
+- **Tradition**: [e.g., Bourdieusian, institutionalist, interactionist]
+- **Key concepts**: [list main concepts used]
+- **Theory deployment**: [description vs. extension vs. critique]
+
+## Empirical Strategy
+- **Data**: [what kind of data]
+- **Methods**: [how analyzed]
+- **Sample**: [who/what, N if applicable]
+
+## Key Findings
+1. [Finding 1]
+2. [Finding 2]
+3. [Finding 3]
+
+## Contribution Claim
+[What does the paper claim to contribute to the literature?]
+
+## Limitations
+[As noted by authors]
+
+## Key Quotes
+> "[Quote 1]" (p. X)
+> "[Quote 2]" (p. Y)
+
+## Connections
+[What other papers or concepts does this connect to?]
+
+## Analytical Notes
+[Observations about how argument is constructed, assumptions, relevance to project]
+```
+
+### 4. Batch Processing Workflow
+
+For processing multiple papers:
+
+1. **Prepare list**: Gather PDF paths and their identifiers (from lit-search database)
+2. **Convert all PDFs**: Run docling on each (conversions are cached)
+3. **Spawn agents in parallel**: Use multiple Task calls to process papers concurrently
+4. **Collect notes**: Save each agent's output to `reading-notes/author-year-slug.md`
+
+Example batch orchestration:
+```
+For each paper in priority list:
+  1. pdf_path = paper.pdf_location
+  2. markdown = read the .md file (or convert if not cached)
+  3. identifiers = {openalex_id: paper.id, doi: paper.doi}
+  4. Spawn haiku agent with reading prompt + markdown + identifiers
+  5. Save output to reading-notes/
+```
+
+### 5. Quality Check
+
+After batch processing, review notes for:
+- Frontmatter completeness (identifiers present?)
+- Core argument clarity
+- Key quotes with page numbers
+- Theoretical tradition identification
+
+Flag papers that need deeper (Opus) reading based on:
+- Central to your argument
+- Theoretically dense
+- Haiku notes seem thin
+
+---
+
 ## Guiding Principles
 
 ### Read the Whole Paper
@@ -181,7 +338,9 @@ Write notes that will make sense when you return to them in Phase 3-4. Be explic
 
 ## Output Files to Create
 
-1. **reading-notes/*.md** - One file per paper
+1. **reading-notes/*.md** - One file per paper (with identifier frontmatter)
+   - Filename: `author-year-slug.md` (e.g., `smith2020-cultural-frames.md`)
+   - Frontmatter: Must include at least one of: `openalex_id`, `doi`, `zotero_key`
 2. **reading-summary.md** - Compiled patterns and observations
 
 ---

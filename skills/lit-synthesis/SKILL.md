@@ -41,9 +41,26 @@ Use this skill when users:
 
 5. **Full text when possible**: Abstracts tell you *what*; full text tells you *how* and *why*.
 
+## Reading Modes
+
+Phase 1 (Deep Reading) supports two modes for accessing paper content:
+
+| Mode | Source | Model | Cost | Best For |
+|------|--------|-------|------|----------|
+| **Zotero** | Library via MCP | Opus | Higher | Papers you've annotated; leverages highlights |
+| **Docling** | PDF → Markdown | Haiku | Lower | Batch processing; new PDFs without annotations |
+
+Choose based on your situation:
+- **Zotero mode**: When papers are in your library and you've already highlighted key passages
+- **Docling mode**: When processing many new PDFs quickly, or when Zotero isn't set up
+
+Both modes produce the same structured reading notes with required identifiers.
+
+---
+
 ## Zotero MCP Integration
 
-This skill uses **Zotero MCP** for accessing your library:
+For **Zotero mode**, this skill uses **Zotero MCP** for accessing your library:
 
 ### Setup
 
@@ -71,6 +88,46 @@ See `mcp/zotero-setup.md` for detailed configuration.
 2. **Acquire PDFs**: Use Zotero's "Find Available PDF" or manual download
 3. **Read and annotate**: Highlight key passages, add notes
 4. **lit-synthesis reads**: Access annotations via MCP for analysis
+
+---
+
+## Docling PDF Conversion
+
+For **Docling mode**, PDFs are converted to markdown for agent-based reading:
+
+### Setup
+
+Install docling:
+```bash
+pip install docling
+```
+
+### Conversion Scripts
+
+Located in `scripts/` directory (within this skill):
+
+| Script | Purpose |
+|--------|---------|
+| `pdf-to-md.sh` | Convert single PDF to markdown (with caching) |
+| `read-paper.sh` | Wrapper with status messages |
+| `reading-agent-prompt.md` | Template for haiku reading agents |
+
+### Usage
+
+```bash
+# Convert a PDF (cached alongside the original)
+./scripts/pdf-to-md.sh "/path/to/paper.pdf"
+
+# Returns: /path/to/paper.md
+```
+
+The markdown is saved next to the PDF. Subsequent calls use the cached version.
+
+### Workflow Integration
+
+1. **Convert PDF**: Run `pdf-to-md.sh` on the paper
+2. **Spawn reading agent**: Use Task tool with haiku model
+3. **Save notes**: Agent creates structured notes with identifiers
 
 ## Workflow Phases
 
@@ -171,25 +228,40 @@ See `mcp/zotero-setup.md` for detailed configuration.
 lit-synthesis/
 ├── corpus-audit.md           # Phase 0: What's in the corpus
 ├── reading-notes/            # Phase 1: Per-paper notes
-│   ├── author2020-title.md
-│   ├── author2019-title.md
-│   └── ...
+│   ├── smith2020-cultural-frames.md    # Filename: author-year-short-title
+│   ├── jones2019-institutional.md
+│   └── ...                             # Each file has identifier frontmatter
 ├── theoretical-map.md        # Phase 2: Traditions and lineages
 ├── thematic-clusters.md      # Phase 3: Paper groupings
 ├── debate-map.md             # Phase 4: Tensions and positions
 └── field-synthesis.md        # Phase 5: Integrated understanding
 ```
 
+**Note**: Filenames use `author-year-short-title.md` for human readability, but the **frontmatter identifiers** (OpenAlex ID, DOI, Zotero key) are the authoritative way to match notes back to source papers.
+
 ## Reading Note Template
 
-For each paper in Phase 1:
+For each paper in Phase 1, notes **must include identifier frontmatter** to enable reliable retrieval across the workflow:
 
 ```markdown
-# [Author Year] - [Short Title]
+---
+# Required: At least one unique identifier
+openalex_id: W2123456789    # From lit-search database (preferred)
+doi: 10.1086/123456         # Digital Object Identifier
+zotero_key: ABC123XY        # Zotero item key (if in library)
+
+# Recommended: Additional metadata for filtering
+first_author: Smith
+year: 2020
+short_title: cultural-frames
+---
+
+# Smith 2020 - Cultural Frames
 
 ## Bibliographic Info
-- Full citation: [from Zotero]
+- Full citation: [from Zotero or database]
 - DOI: [link]
+- OpenAlex: https://openalex.org/W2123456789
 
 ## Core Argument
 [1-2 sentences: What is the paper arguing?]
@@ -233,34 +305,45 @@ For each paper in Phase 1:
 | Phase | Model | Rationale |
 |-------|-------|-----------|
 | **Phase 0**: Corpus Audit | **Sonnet** | Data processing, statistics |
-| **Phase 1**: Deep Reading | **Opus** | Analytical reading, synthesis |
+| **Phase 1**: Deep Reading (Zotero) | **Opus** | Analytical reading with annotations |
+| **Phase 1**: Deep Reading (Docling) | **Haiku** | Cost-effective batch processing |
 | **Phase 2**: Theoretical Mapping | **Opus** | Pattern recognition, intellectual history |
 | **Phase 3**: Thematic Clustering | **Sonnet** | Organization, categorization |
 | **Phase 4**: Debate Mapping | **Opus** | Tension identification, nuance |
 | **Phase 5**: Field Synthesis | **Opus** | Integration, strategic judgment |
 
+**Phase 1 model choice**: Use Opus for close reading of key theoretical papers; use Haiku via docling mode for processing larger batches where structured extraction is the goal.
+
 ## Starting the Synthesis
 
 When the user is ready to begin:
 
-1. **Check Zotero setup**:
-   > "Do you have Zotero MCP configured? If not, let's set that up first (see `mcp/zotero-setup.md`)."
+1. **Identify the corpus**:
+   > "Where are your papers? A Zotero collection? A folder of PDFs? A database from lit-search? How many papers total?"
 
-2. **Identify the corpus**:
-   > "Where are your papers? A Zotero collection from lit-search? An existing library folder? How many papers total?"
+2. **Choose reading mode**:
+   > "For Phase 1, we have two options:
+   > - **Zotero mode**: Best if papers are in your library with annotations. Uses Opus for deep reading.
+   > - **Docling mode**: Best for batch-processing PDFs. Converts to markdown and uses Haiku agents.
+   > Which fits your situation?"
 
-3. **Set priorities**:
+3. **Verify setup** (based on mode):
+   - *Zotero*: Check MCP is configured (see `mcp/zotero-setup.md`)
+   - *Docling*: Verify docling is installed (`pip install docling`)
+
+4. **Set priorities**:
    > "Which papers are most central to your project? We'll deep-read those first and skim the rest."
 
-4. **Clarify goals**:
+5. **Clarify goals**:
    > "What are you trying to understand about this field? Are you looking for gaps, debates, or a specific theoretical tradition?"
 
-5. **Proceed with Phase 0** to audit the corpus.
+6. **Proceed with Phase 0** to audit the corpus.
 
 ## Key Reminders
 
-- **Zotero is the source of truth**: All papers should be in Zotero for consistent access
-- **Annotations accelerate**: If you've already highlighted papers, those annotations are accessible via MCP
+- **Identifiers are essential**: Every reading note must have at least one unique identifier (OpenAlex ID, DOI, or Zotero key) in its frontmatter
+- **Choose the right mode**: Zotero mode for annotated papers; Docling mode for batch processing
+- **Annotations accelerate**: If you've already highlighted papers, Zotero mode leverages that work
 - **Quality over quantity**: Deep reading 15 papers beats skimming 50
 - **Debates are opportunities**: Every tension you find is a potential contribution space
 - **This feeds lit-writeup**: The outputs here become inputs there—keep that handoff in mind
