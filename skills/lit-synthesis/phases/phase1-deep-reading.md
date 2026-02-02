@@ -189,9 +189,36 @@ Use zotero_semantic_search with a concept to find related papers
 
 ## Docling Mode
 
-For batch processing PDFs without annotations, use docling to convert PDFs to markdown, then spawn haiku agents for structured note-taking.
+For batch processing PDFs without annotations, use the **reading-agent** skill for structured note-taking.
 
-### 1. Convert PDF to Markdown
+### Option 1: Use reading-agent Skill (Recommended)
+
+The reading-agent skill handles PDF conversion and note creation:
+
+```
+/reading-agent
+
+Paper: Smith 2020 "Cultural Frames"
+PDF: /path/to/paper.pdf
+DOI: 10.1086/123456
+OpenAlex: W2123456789
+```
+
+For batch processing:
+```
+/reading-agent
+
+Batch process these papers:
+- /papers/smith2020.pdf (DOI: 10.1086/123456, OpenAlex: W2123456789)
+- /papers/jones2019.pdf (DOI: 10.1177/789456, OpenAlex: W3456789012)
+- /papers/brown2021.pdf (DOI: 10.1093/567890, OpenAlex: W4567890123)
+```
+
+### Option 2: Manual Agent Spawning
+
+For more control, manually convert PDFs and spawn agents:
+
+#### 1. Convert PDF to Markdown
 
 ```bash
 # Convert a single PDF (output cached alongside original)
@@ -201,7 +228,7 @@ For batch processing PDFs without annotations, use docling to convert PDFs to ma
 
 The markdown is saved next to the PDF. Subsequent conversions use the cached file.
 
-### 2. Spawn Reading Agent
+#### 2. Spawn Reading Agent
 
 Use the Task tool to spawn a haiku agent for each paper:
 
@@ -212,9 +239,9 @@ Task tool parameters:
 - prompt: [reading prompt with markdown content and identifiers]
 ```
 
-### 3. Reading Agent Prompt Template
+#### 3. Reading Agent Prompt Template
 
-When spawning the reading agent, provide this prompt structure:
+When spawning the reading agent manually, provide this prompt structure:
 
 ```
 You are a research assistant creating structured reading notes for a sociology literature synthesis project.

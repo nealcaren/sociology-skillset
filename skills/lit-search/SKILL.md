@@ -115,7 +115,8 @@ See `api/openalex-reference.md` for query syntax and endpoints.
 **Goal**: Extract structured information from each paper.
 
 **Process**:
-- For each paper (full text preferred, abstract if necessary):
+- For priority papers, use **reading-agent** skill for deep structured reading
+- For remaining papers (full text preferred, abstract if necessary):
   - Research question/hypothesis
   - Theoretical framework
   - Methods (data, sample, analysis)
@@ -125,7 +126,7 @@ See `api/openalex-reference.md` for query syntax and endpoints.
 - User reviews and corrects extractions
 - Flag papers needing closer reading
 
-**Output**: Annotated database entries.
+**Output**: Annotated database entries (merged with reading-agent notes).
 
 > **Pause**: User reviews annotations for accuracy.
 

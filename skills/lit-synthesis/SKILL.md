@@ -58,36 +58,40 @@ Both modes produce the same structured reading notes with required identifiers.
 
 ---
 
-## Zotero MCP Integration
+## Zotero Integration
 
-For **Zotero mode**, this skill uses **Zotero MCP** for accessing your library:
+For **Zotero mode**, this skill uses the bundled **zotero** and **zotero-rag** skills:
 
 ### Setup
 
-Install the Zotero MCP server:
-```bash
-uv tool install "git+https://github.com/54yyyu/zotero-mcp.git"
-zotero-mcp setup
-```
-
 See `mcp/zotero-setup.md` for detailed configuration.
+
+### Two Complementary Skills
+
+| Skill | Purpose | Best For |
+|-------|---------|----------|
+| **zotero** | 43 MCP tools for library operations | Metadata, collections, annotations |
+| **zotero-rag** | Semantic search across PDF content | Finding passages by meaning |
 
 ### Key Capabilities
 
-| Tool | Purpose |
-|------|---------|
-| `zotero_search_items` | Find papers by keyword, author, tag |
-| `zotero_semantic_search` | Conceptual similarity search |
-| `zotero_get_item_metadata` | Retrieve full metadata + BibTeX |
-| `zotero_get_annotations` | Extract PDF highlights and notes |
-| `zotero_search_notes` | Search your reading notes |
+**zotero skill** (structured access):
+- `search_items` - Find papers by keyword, author, tag
+- `get_item` - Retrieve full metadata
+- `collection_items` - List items in a collection
+
+**zotero-rag skill** (semantic search):
+- `semantic_search` - Find passages by conceptual similarity
+- `get_chunk_context` - Expand results with surrounding text
+- `find_similar_chunks` - Discover related discussions across documents
 
 ### Workflow Integration
 
 1. **From lit-search**: Import the BibTeX export into Zotero
 2. **Acquire PDFs**: Use Zotero's "Find Available PDF" or manual download
-3. **Read and annotate**: Highlight key passages, add notes
-4. **lit-synthesis reads**: Access annotations via MCP for analysis
+3. **Index for RAG**: Run `index_library collection_key="YOUR_COLLECTION"`
+4. **Read and annotate**: Highlight key passages, add notes
+5. **lit-synthesis reads**: Access via zotero tools and semantic search via zotero-rag
 
 ---
 
@@ -102,32 +106,49 @@ Install docling:
 pip install docling
 ```
 
-### Conversion Scripts
+### Using reading-agent Skill
 
-Located in `scripts/` directory (within this skill):
+For structured reading notes, use the bundled **reading-agent** skill:
+
+```
+/reading-agent
+
+Paper: [Author Year - Title]
+PDF: /path/to/paper.pdf
+DOI: [doi]
+```
+
+The reading-agent skill handles PDF conversion and produces structured notes with:
+- Bibliographic info and identifiers
+- Core arguments and theoretical frameworks
+- Methods and empirical strategy
+- Key findings and contribution claims
+- Key quotes with page numbers
+
+### Batch Processing
+
+For batch processing many papers:
+
+1. **Convert PDFs**: Run `scripts/pdf-to-md.sh` on each paper
+2. **Use reading-agent in batch mode**:
+   ```
+   /reading-agent
+
+   Batch process these papers:
+   - /papers/smith2020.pdf (DOI: 10.1086/123456)
+   - /papers/jones2019.pdf (OpenAlex: W2123456789)
+   ```
+3. **Collect outputs**: Notes saved to `reading-notes/` directory
+
+### Conversion Scripts (Alternative)
+
+Located in `scripts/` directory:
 
 | Script | Purpose |
 |--------|---------|
 | `pdf-to-md.sh` | Convert single PDF to markdown (with caching) |
 | `read-paper.sh` | Wrapper with status messages |
-| `reading-agent-prompt.md` | Template for haiku reading agents |
-
-### Usage
-
-```bash
-# Convert a PDF (cached alongside the original)
-./scripts/pdf-to-md.sh "/path/to/paper.pdf"
-
-# Returns: /path/to/paper.md
-```
-
-The markdown is saved next to the PDF. Subsequent calls use the cached version.
-
-### Workflow Integration
-
-1. **Convert PDF**: Run `pdf-to-md.sh` on the paper
-2. **Spawn reading agent**: Use Task tool with haiku model
-3. **Save notes**: Agent creates structured notes with identifiers
+| `reading-agent-prompt.md` | Template for manual agent spawning |
 
 ## Workflow Phases
 

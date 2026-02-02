@@ -231,11 +231,9 @@ Install docling:
 pip install docling
 ```
 
-For Zotero access, configure the Zotero MCP server:
-```bash
-uv tool install "git+https://github.com/54yyyu/zotero-mcp.git"
-zotero-mcp setup
-```
+For Zotero access, use the bundled **zotero** skill. See `skills/zotero/guides/setup.md` for configuration.
+
+For semantic search across PDFs, use the bundled **zotero-rag** skill. This enables finding passages by meaning rather than keyword.
 
 ---
 

@@ -12,6 +12,29 @@ A literature database is only as useful as its annotations. This phase transform
 - Check `data/fulltext_status.json` for available full texts
 - Full text PDFs should be in `fulltext/` directory
 
+## Integration with reading-agent
+
+For deep reading and structured note extraction, use the **reading-agent** skill:
+
+```
+/reading-agent
+
+Paper: [title]
+PDF: fulltext/[filename].pdf
+DOI: [doi]
+```
+
+The reading-agent skill produces structured reading notes with:
+- Core arguments and theoretical frameworks
+- Methods and empirical strategy
+- Key findings and contribution claims
+- Key quotes with page numbers
+
+**Workflow**:
+1. Use reading-agent for priority papers requiring deep reading
+2. Use batch annotation (below) for remaining papers
+3. Merge reading-agent notes into the annotation database
+
 ## Your Tasks
 
 ### 1. Define Annotation Schema

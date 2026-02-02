@@ -1,90 +1,76 @@
-# Zotero MCP Setup Guide
+# Zotero Integration Setup
 
-This skill requires the **Zotero MCP** server to access your library, read PDFs, and retrieve annotations.
+This skill uses the bundled **zotero** and **zotero-rag** skills for library access and semantic search.
 
 ## Prerequisites
 
 1. **Zotero 7+** installed on your machine
-2. **uv** package manager installed
+2. **mcp-zotero MCP server** configured in Claude
 3. Papers imported into Zotero (from lit-search BibTeX or manually)
 
-## Installation
+## MCP Server Setup
 
-### Step 1: Install the MCP Server
+### Option 1: Using the Bundled zotero Skill
 
+The zotero skill is bundled with this suite. See `skills/zotero/guides/setup.md` for configuration.
+
+Quick setup:
 ```bash
-uv tool install "git+https://github.com/54yyyu/zotero-mcp.git"
+# Install the MCP server
+uv tool install mcp-zotero
+
+# Or from source
+uv tool install "git+https://github.com/nealcaren/mcp-zotero.git"
 ```
 
-### Step 2: Run Setup
+Configure in Claude's MCP settings with your Zotero credentials.
 
-```bash
-zotero-mcp setup
-```
-
-This auto-configures for Claude Desktop. Follow the prompts.
-
-### Step 3: Enable Zotero API Access
+### Option 2: Enable Zotero API Access
 
 In Zotero:
 1. Go to **Edit → Preferences** (Windows/Linux) or **Zotero → Settings** (Mac)
 2. Navigate to **Advanced → General**
 3. Enable **"Allow other applications on this computer to communicate with Zotero"**
 
-### Step 4: Restart Claude Desktop
+## Two Ways to Access Your Library
 
-After setup, restart Claude Desktop to load the MCP server.
+### 1. zotero Skill (43 MCP Tools)
 
-## Connection Options
+For structured library operations:
+- `search_items` - Keyword search across your library
+- `get_item` - Full metadata for a specific item
+- `collection_items` - List items in a collection
+- `download_attachments` - Get PDF content
 
-### Local API (Recommended)
+### 2. zotero-rag Skill (Semantic Search)
 
-Uses Zotero's local API for offline access to your desktop library.
+For meaning-based search across PDF content:
+- `semantic_search` - Find passages by conceptual similarity
+- `get_chunk_context` - Expand results with surrounding text
+- `find_similar_chunks` - Discover related passages across documents
 
-**Advantages**:
-- Works offline
-- Faster access
-- Full PDF access
+**Workflow**: Use zotero for metadata and structure, zotero-rag for discovering passages by meaning.
 
-**Requirements**:
-- Zotero running on your machine
-- "Allow other applications" enabled
+## Semantic Search Setup (zotero-rag)
 
-### Web API (Alternative)
+The zotero-rag skill provides RAG-based semantic search:
 
-Uses Zotero's web API for cloud-synced libraries.
+1. **Index your collection**:
+   ```
+   index_library collection_key="YOUR_COLLECTION"
+   ```
 
-**Advantages**:
-- Access from anywhere
-- Works without Zotero running
+2. **Search by meaning**:
+   ```
+   semantic_search query="how organizations maintain legitimacy under pressure"
+   ```
 
-**Requirements**:
-- Zotero API key (get from zotero.org/settings/keys)
-- Library ID
-- PDFs must be synced to cloud
+3. **Expand context**:
+   ```
+   get_chunk_context chunk_id="ABC123_5" context_lines=20
+   ```
 
-## Verifying Setup
-
-After setup, test with:
-
-```
-Use the zotero_search_items tool to search for "test"
-```
-
-If working, you should see results from your library.
-
-## Available Tools
-
-Once configured, you have access to:
-
-| Tool | What It Does |
-|------|--------------|
-| `zotero_search_items` | Keyword search across your library |
-| `zotero_semantic_search` | AI-powered conceptual similarity search |
-| `zotero_advanced_search` | Multi-criteria filtering (author, date, tags, etc.) |
-| `zotero_get_item_metadata` | Full metadata for a specific item + BibTeX |
-| `zotero_get_annotations` | PDF highlights and comments |
-| `zotero_search_notes` | Search your personal notes |
+See `skills/zotero-rag/SKILL.md` for full documentation.
 
 ## Workflow Integration
 
@@ -95,6 +81,14 @@ Once configured, you have access to:
 3. Papers appear in your library (create a collection for the project)
 4. Use **"Find Available PDF"** to auto-download open access versions
 5. Manually acquire remaining PDFs via institutional access
+
+### Index for Semantic Search
+
+After importing:
+1. Note your collection key from Zotero
+2. Run `index_library collection_key="YOUR_KEY"`
+3. Wait for PDF extraction and embedding (may take a few minutes)
+4. Use `semantic_search` to find passages by meaning
 
 ### Organizing for Analysis
 
@@ -109,7 +103,7 @@ Create a Zotero collection for your project:
 As you read in Zotero's PDF viewer:
 - **Highlight** key passages (yellow for findings, blue for theory, green for methods)
 - **Add notes** to highlights for your interpretation
-- These annotations are accessible via `zotero_get_annotations`
+- These annotations are accessible via the zotero skill's annotation tools
 
 ## Troubleshooting
 
@@ -117,13 +111,13 @@ As you read in Zotero's PDF viewer:
 
 - Ensure Zotero is running
 - Check that "Allow other applications" is enabled
-- Restart both Zotero and Claude Desktop
+- Restart both Zotero and Claude
 
-### "No results" for Known Papers
+### Semantic Search Returns No Results
 
-- Verify the paper is in your Zotero library (not just synced to cloud)
-- Check your search terms (try author name or partial title)
-- Use `zotero_search_items` with broader terms
+- Verify the collection has been indexed: `index_status`
+- Check that PDFs are attached (not just linked)
+- Try `list_indexed_items` to see what's indexed
 
 ### Annotations Not Appearing
 
@@ -131,14 +125,8 @@ As you read in Zotero's PDF viewer:
 - External annotations (from Preview, Acrobat) won't sync
 - Ensure the PDF is attached to the Zotero item (not just linked)
 
-### Web API Authentication Errors
-
-- Verify your API key at zotero.org/settings/keys
-- Check that the key has read access to your library
-- Confirm your Library ID is correct
-
 ## Resources
 
-- **Zotero MCP Repository**: https://github.com/54yyyu/zotero-mcp
+- **zotero Skill**: `skills/zotero/SKILL.md` (43 MCP tools reference)
+- **zotero-rag Skill**: `skills/zotero-rag/SKILL.md` (semantic search)
 - **Zotero Documentation**: https://www.zotero.org/support/
-- **API Key Management**: https://www.zotero.org/settings/keys
