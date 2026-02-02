@@ -79,21 +79,26 @@ Use these categories:
 | **Stylistic** | Word count, clarity, repetition, prose quality | Skill calibration |
 | **Coherence** | Cross-section alignment, promise-delivery | interview-bookends Phase 3 |
 
-### Task 5: Route to Skills
+### Task 5: Route to Skills (ALL sections go to Task agents)
 
-For each section with feedback items, identify the primary skill:
+**Every section routes to a Task agent. There is NO "direct revision" option.**
 
-| Section | Primary Skill | Backup Approach |
-|---------|---------------|-----------------|
-| Introduction | `interview-bookends` | Direct revision if minimal |
-| Conclusion | `interview-bookends` | Direct revision if minimal |
-| Theory/Literature | `argument-builder` | Direct revision if < 3 items |
-| Methods | `methods-writer` | Direct revision if < 3 items |
-| Case Justification | `case-justification` | Direct revision if < 3 items |
-| Findings | No dedicated skill | Direct revision with guidance |
-| Discussion | `argument-builder` techniques | Direct revision with guidance |
+| Section | Primary Skill | Phase |
+|---------|---------------|-------|
+| Abstract | `abstract-builder` | Phase 3 (revision) |
+| Introduction | `interview-bookends` | Phase 1 (intro) or Phase 3 (coherence) |
+| Conclusion | `interview-bookends` | Phase 2 (conclusion) or Phase 3 (coherence) |
+| Theory/Literature | `argument-builder` | Phase 4 (turn) or Phase 5 (revision) |
+| Methods | `methods-writer` | Phase 1 (pathway) or Phase 2 (revision) |
+| Case Justification | `case-justification` | Phase 1 (cluster) or Phase 2 (revision) |
+| Findings | `interview-writeup` | Phase 3 (revision & quality check) |
+| Discussion | `argument-builder` + `interview-analyst` | See Discussion logic below |
 
-**Routing threshold**: If a section has 3+ substantive/structural items, route to the specialized skill. If it has only 1-2 stylistic items, may handle directly.
+**Discussion routing logic**:
+- Scope/framing issues (limitations, implications) → `argument-builder`
+- Evidence issues (claims need support) → `interview-analyst` first (return to data), then `interview-writeup`
+
+**Why no direct revision?** Specialized skills have cluster knowledge, benchmarks, and calibration checks. Winging it produces generic prose that reviewers catch.
 
 ### Task 6: Identify Dependencies
 
@@ -126,8 +131,8 @@ Create `revision-map.md` with this structure:
 | Introduction | Yes | 800 | interview-bookends | 2 |
 | Theory | Yes | 1500 | argument-builder | 3 |
 | Methods | Yes | 900 | methods-writer | 2 |
-| Findings | Yes | 4000 | Direct | 1 |
-| Discussion | Yes | 1200 | Direct | 2 |
+| Findings | Yes | 4000 | interview-writeup | 1 |
+| Discussion | Yes | 1200 | argument-builder | 2 |
 | Conclusion | Yes | 600 | interview-bookends | 1 |
 
 ---
@@ -200,6 +205,6 @@ Summarize for the orchestrator:
 - Questions requiring user input
 
 **Example summary**:
-> Parsed 11 feedback items across 6 sections. Routing: Introduction/Conclusion → interview-bookends (3 items), Theory → argument-builder (3 items), Methods → methods-writer (2 items), Findings/Discussion → direct (3 items). Proposed sequence: Theory → Intro → Methods → Findings → Discussion → Conclusion. One question for user: R1 says expand methods, R2 says paper is too long—how to reconcile?
+> Parsed 11 feedback items across 6 sections. Routing: Introduction/Conclusion → interview-bookends (3 items), Theory → argument-builder (3 items), Methods → methods-writer (2 items), Findings → interview-writeup (1 item), Discussion → argument-builder (2 items). Proposed sequence: Theory → Intro → Methods → Findings → Discussion → Conclusion. One question for user: R1 says expand methods, R2 says paper is too long—how to reconcile?
 
 Then pause for user confirmation before proceeding to Phase 1.

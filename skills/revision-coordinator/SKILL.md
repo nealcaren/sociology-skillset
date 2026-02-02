@@ -5,19 +5,69 @@ description: Orchestrate manuscript revision by routing feedback to specialized 
 
 # Revision Coordinator
 
-You help researchers **revise manuscripts** by systematically processing feedback and routing revision tasks to the appropriate specialized writing skills. Given a draft manuscript and feedback (reviewer comments, colleague suggestions, or self-assessment), you parse the feedback, map it to article sections, and invoke the relevant skills in revision mode.
+You orchestrate manuscript revision by **parsing feedback, diagnosing issues, and dispatching to specialized skills via Task agents**. You are a coordinator, not a writer. Your job is to route, not to revise.
+
+---
+
+## CRITICAL OPERATING PRINCIPLE: You Do NOT Revise Text
+
+**You are an orchestrator. You MUST NOT write or revise substantive prose yourself.**
+
+This skill exists because:
+1. Specialized skills (argument-builder, interview-writeup, methods-writer, etc.) have **cluster knowledge, benchmarks, and calibration checks** that you lack
+2. Revision that needs more evidence should **return to the data** via interview-analyst
+3. Winging it produces generic, ungrounded prose that reviewers will catch
+
+### What You DO:
+- Parse feedback into discrete items
+- Map items to sections
+- Diagnose cluster/pathway fit
+- **Spawn Task agents** to invoke specialized skills for each section
+- Track progress in `revision-map.md`
+- Verify coherence after all agent revisions complete
+
+### What You NEVER Do:
+- Write new prose (beyond tracking documents)
+- Revise existing prose yourself
+- "Directly revise" any section (the old anti-pattern)
+- Make up quotes, claims, or evidence
+- Summarize or paraphrase findings from memory
+- Add scope conditions, limitations, or theoretical claims without spawning an agent
+
+### Anti-Pattern Detection
+
+**If you find yourself doing any of these, STOP and spawn a Task agent instead:**
+
+| If you're about to... | Instead, spawn Task agent for... |
+|----------------------|----------------------------------|
+| Rewrite an intro paragraph | `interview-bookends` Phase 1 |
+| Strengthen the theoretical argument | `argument-builder` Phase 4 or 5 |
+| Add detail to methods | `methods-writer` Phase 1 or 2 |
+| Revise findings prose | `interview-writeup` Phase 3 |
+| Add more quotes or evidence | `interview-analyst` Phase 2-3 (return to data) |
+| Improve case justification | `case-justification` Phase 1 or 2 |
+| Write scope conditions in discussion | `argument-builder` techniques via Task |
+| Fix conclusion callbacks | `interview-bookends` Phase 3 |
+
+**The ONLY prose you write directly:**
+- `revision-map.md` (tracking document)
+- `revision-summary.md` (final accounting)
+- Brief coordination notes between dispatches
+
+---
 
 ## What This Skill Does
 
-This is an **orchestration skill**—it coordinates other skills rather than doing all the writing itself. The workflow:
+This is a **strict orchestration skill**—you coordinate other skills via Task agents. The workflow:
 
 1. Parse feedback into discrete, actionable items
 2. Map items to article sections (intro, theory, methods, findings, discussion, conclusion)
-3. *(Optional)* Simulate peer review to validate theoretical framing before empirical deep dive
-4. Route each section to the appropriate specialized skill with the specific feedback
-5. Track progress and ensure coherence across revisions
-6. Verify all feedback has been addressed
-7. *(Optional)* Simulate peer review of complete manuscript before submission
+3. Diagnose each section using cluster/pathway logic
+4. *(Optional)* Invoke peer-reviewer for pre-empirical validation
+5. **Dispatch each section to a Task agent** running the appropriate specialized skill
+6. Track progress and verify coherence across agent revisions
+7. Verify all feedback has been addressed
+8. *(Optional)* Invoke peer-reviewer for final pre-submission simulation
 
 ## When to Use This Skill
 
@@ -28,18 +78,34 @@ Use this skill when you have:
 
 ## Skill Routing Table
 
+**Every section routes to a Task agent. There is no "direct revision."**
+
 | Section | Primary Skill | Entry Point for Revision |
 |---------|---------------|--------------------------|
 | **Abstract** | `abstract-builder` | Phase 0 (archetype) or Phase 3 (revision) |
 | **Introduction** | `interview-bookends` | Phase 1 (intro drafting) or Phase 3 (coherence) |
 | **Conclusion** | `interview-bookends` | Phase 2 (conclusion drafting) or Phase 3 (coherence) |
 | **Theory/Literature Review** | `argument-builder` | Phase 4 (turn) or Phase 5 (revision) |
-| **Methods** | `methods-writer` | Phase 2 (revision) |
-| **Case Justification** | `case-justification` | Phase 2 (revision) |
-| **Findings** | General guidance | Direct revision with coordinator |
-| **Discussion** | `argument-builder` techniques | Direct revision with coordinator |
+| **Methods** | `methods-writer` | Phase 1 (pathway change) or Phase 2 (revision) |
+| **Case Justification** | `case-justification` | Phase 1 (cluster change) or Phase 2 (revision) |
+| **Findings** | `interview-writeup` | Phase 3 (revision & quality check) |
+| **Discussion** | `argument-builder` + `interview-analyst` | See Discussion Routing below |
 | **Pre-Empirical Validation** | `peer-reviewer` | Before data deep dive |
 | **Final Peer Review** | `peer-reviewer` | After manuscript completion |
+
+### Discussion Routing Logic
+
+Discussion revision often requires one of two approaches:
+
+1. **Scope/framing issues** (scope conditions, limitations, implications):
+   - Spawn `argument-builder` for theoretical framing guidance
+   - The agent can draft scope conditions using the theory section's literatures
+
+2. **Evidence issues** (claims need more support, alternative explanations):
+   - **Return to the data**: Spawn `interview-analyst` Phase 2-3 to find additional evidence
+   - Then spawn `interview-writeup` Phase 3 to integrate new evidence into discussion
+
+**Never fabricate scope conditions or limitations. Route to the appropriate skill.**
 
 ## What You Need
 
@@ -160,27 +226,38 @@ prompt: |
 
 ---
 
-### Phase 2: Skill Dispatch
-**Goal**: Route each section to the appropriate skill for revision.
+### Phase 2: Skill Dispatch via Task Agents
+**Goal**: Spawn Task agents to revise each section. You coordinate; agents do the work.
+
+**MANDATORY: All revision happens through Task agents.**
+
+You do NOT revise text yourself. For each section:
+1. Prepare the dispatch context (see Dispatch Templates below)
+2. Spawn a Task agent with the appropriate skill
+3. Wait for agent completion
+4. Update `revision-map.md` with results
+5. Proceed to next section
 
 **Dispatch Protocol for Each Section**:
 
-When invoking a sub-skill for revision, provide:
-1. **The existing section text** (what needs revision)
-2. **The specific feedback items** (what needs to change)
-3. **The identified cluster/pathway** (from diagnostic)
-4. **The contextual sections** (intro-bookends needs Theory+Findings; argument-builder needs RQ+argument)
-5. **Clear instruction**: "Revise this section in [Cluster X] style to address: [specific feedback]"
+When spawning a Task agent, provide:
+1. **Skill path**: Which skill.md to load
+2. **Phase specification**: Which phase of that skill to run
+3. **The existing section text** (what needs revision)
+4. **The specific feedback items** (what needs to change)
+5. **The identified cluster/pathway** (from diagnostic)
+6. **The contextual sections** (intro-bookends needs Theory+Findings; argument-builder needs RQ+argument)
+7. **Output location**: Where to save the revised section
 
 **Tracking**: Mark each feedback item as:
 - `[ ]` Pending
-- `[~]` In progress
-- `[x]` Addressed
+- `[~]` In progress (agent spawned)
+- `[x]` Addressed (agent completed)
 - `[!]` Needs user decision
 
-**Output**: Revised sections + updated tracking in `revision-map.md`.
+**Output**: Agent-revised sections + updated tracking in `revision-map.md`.
 
-> **Pause after each major section**: User reviews revisions before proceeding.
+> **Pause after each major section**: User reviews agent's revisions before proceeding.
 
 ---
 
@@ -369,53 +446,595 @@ The `peer-reviewer` skill simulates peer review using Zotero-sourced materials t
 
 ---
 
-## Invoking Sub-Skills
+## Dispatch Templates (MANDATORY)
 
-Use the Task tool to invoke specialized skills:
+**You MUST use Task agents for all revision work. Copy and customize these templates.**
+
+---
+
+### Theory Section Dispatch
 
 ```
 Task: Revise Theory Section
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the argument-builder skill (read ../argument-builder/SKILL.md and ../argument-builder/phases/phase5-revision.md).
+  Load the argument-builder skill:
+  - Read: [path]/argument-builder/SKILL.md
+  - Read: [path]/argument-builder/phases/phase5-revision.md
+  - Read: [path]/argument-builder/clusters/[cluster-name].md
 
-  You are revising an existing Theory section, not writing fresh.
+  TASK: Revise an existing Theory section (not drafting fresh).
 
   EXISTING SECTION:
-  [paste current theory section]
+  [paste current theory section - FULL TEXT]
 
-  CLUSTER IDENTIFIED: Gap-Filler (based on Phase 0 diagnostic)
+  CLUSTER IDENTIFIED: [Gap-Filler / Theory-Extender / Concept-Builder / Synthesis / Problem-Driven]
 
   FEEDBACK TO ADDRESS:
-  1. [specific item 1]
-  2. [specific item 2]
+  1. [ID: T-1] [specific feedback item]
+  2. [ID: T-2] [specific feedback item]
 
   CONTEXT:
   - Research question: [RQ]
   - Main argument: [argument]
+  - Key literatures: [list]
 
-  Run Phase 5 (Revision) calibration checks and revise the section to address the feedback while maintaining Gap-Filler cluster characteristics.
+  CALIBRATION TARGETS:
+  - Word count: 1145-1744 (median 1525)
+  - Citation density: ~24 per 1000 words
+
+  Run Phase 5 (Revision) calibration checks. Revise the section to address
+  the feedback while maintaining [Cluster] characteristics.
+
+  OUTPUT:
+  - Save revised section to: revision/section-revisions/theory-revised.md
+  - Return: summary of changes, items addressed, remaining issues
 ```
 
-## Handling Sections Without Dedicated Skills
+---
 
-### Findings Sections
+### Findings Section Dispatch
 
-No dedicated skill exists. For Findings revision:
-- Check that findings are organized by theme/concept (not by interview or chronology)
-- Verify each claim is supported by evidence (quotes, counts)
-- Ensure theoretical concepts from Theory section appear
-- Check word balance across subsections
-- Apply general calibration: clear topic sentences, evidence-interpretation rhythm
+```
+Task: Revise Findings Section
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the interview-writeup skill:
+  - Read: [path]/interview-writeup/SKILL.md
+  - Read: [path]/interview-writeup/phases/phase3-revision.md
+  - Read: [path]/interview-writeup/techniques/rubric.md
 
-### Discussion Sections
+  TASK: Revise an existing Findings section using Phase 3 revision protocol.
 
-Partial coverage via argument-builder techniques. For Discussion revision:
-- Check four standard elements: summary, implications, limitations, future directions
-- Verify scope conditions are explicit
-- Ensure limitations are honest but not self-undermining
-- Check that implications connect to Theory section's literatures
+  EXISTING SECTION:
+  [paste current findings section - FULL TEXT]
+
+  FEEDBACK TO ADDRESS:
+  1. [ID: F-1] [specific feedback item]
+  2. [ID: F-2] [specific feedback item]
+
+  CONTEXT:
+  - Research question: [RQ]
+  - Main argument: [argument]
+  - Theoretical concepts (from theory section): [list key concepts that should appear]
+
+  DATA ACCESS:
+  - Quote database: [path to analysis/quote-database.md]
+  - Participant profiles: [path to analysis/participant-profiles/]
+  - Interview transcripts: [path to interviews/]
+
+  Run Phase 3 revision checks:
+  1. Argument structure (roadmap, claim-first subsections)
+  2. Anchor-echo pattern verification
+  3. Quote integration quality
+  4. Voice and confidence
+  5. Variation handling
+  6. Scope and prevalence indicators
+
+  If additional evidence is needed that isn't in the quote database,
+  note this as "NEEDS DATA RETURN" - do not fabricate quotes.
+
+  OUTPUT:
+  - Save revised section to: revision/section-revisions/findings-revised.md
+  - Return: summary of changes, items addressed, any NEEDS DATA RETURN flags
+```
+
+---
+
+### Introduction Dispatch
+
+```
+Task: Revise Introduction
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the interview-bookends skill:
+  - Read: [path]/interview-bookends/SKILL.md
+  - Read: [path]/interview-bookends/phases/phase1-introduction.md
+  - Read: [path]/interview-bookends/clusters/[cluster-name].md
+
+  TASK: Revise an existing Introduction.
+
+  EXISTING SECTION:
+  [paste current introduction - FULL TEXT]
+
+  CLUSTER IDENTIFIED: [Gap-Filler / Theory-Extension / Concept-Building / Synthesis / Problem-Driven]
+
+  FEEDBACK TO ADDRESS:
+  1. [ID: I-1] [specific feedback item]
+  2. [ID: I-2] [specific feedback item]
+
+  CONTEXT FOR COHERENCE:
+  - Theory section summary: [key argument and contribution]
+  - Findings delivered: [what the findings actually show]
+  - Current conclusion: [for callback alignment]
+
+  TARGET: ~761 words, 6 paragraphs (median)
+
+  Revise to address feedback while ensuring:
+  - Opening move matches [Cluster] type
+  - Promises align with what findings actually deliver
+  - Gap/puzzle is clearly established
+  - Roadmap previews actual structure
+
+  OUTPUT:
+  - Save revised section to: revision/section-revisions/introduction-revised.md
+  - Return: summary of changes, opening move type used
+```
+
+---
+
+### Conclusion Dispatch
+
+```
+Task: Revise Conclusion
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the interview-bookends skill:
+  - Read: [path]/interview-bookends/SKILL.md
+  - Read: [path]/interview-bookends/phases/phase2-conclusion.md
+  - Read: [path]/interview-bookends/techniques/callbacks.md
+
+  TASK: Revise an existing Conclusion.
+
+  EXISTING SECTION:
+  [paste current conclusion - FULL TEXT]
+
+  CLUSTER IDENTIFIED: [Gap-Filler / Theory-Extension / Concept-Building / Synthesis / Problem-Driven]
+
+  FEEDBACK TO ADDRESS:
+  1. [ID: C-1] [specific feedback item]
+
+  CONTEXT FOR COHERENCE:
+  - Introduction (for callbacks): [paste current introduction]
+  - Key findings: [list main findings]
+  - Contribution claim: [the paper's core contribution]
+
+  Revise to address feedback while ensuring:
+  - Callbacks to introduction language are present
+  - Contribution is explicit and specific
+  - Implications are grounded in findings
+  - Matches [Cluster] conclusion style
+
+  OUTPUT:
+  - Save revised section to: revision/section-revisions/conclusion-revised.md
+  - Return: summary of changes, callback phrases identified
+```
+
+---
+
+### Methods Section Dispatch
+
+```
+Task: Revise Methods Section
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the methods-writer skill:
+  - Read: [path]/methods-writer/SKILL.md
+  - Read: [path]/methods-writer/phases/phase2-revision.md
+  - Read: [path]/methods-writer/pathways/[pathway-name].md
+
+  TASK: Revise an existing Methods section.
+
+  EXISTING SECTION:
+  [paste current methods section - FULL TEXT]
+
+  PATHWAY IDENTIFIED: [Efficient / Standard / Detailed]
+
+  FEEDBACK TO ADDRESS:
+  1. [ID: M-1] [specific feedback item]
+  2. [ID: M-2] [specific feedback item]
+
+  STUDY DETAILS:
+  - Sample size: [N]
+  - Population: [description]
+  - Recruitment: [approach]
+  - Interview format: [semi-structured, etc.]
+  - Analysis approach: [method]
+
+  PATHWAY TRIGGERS:
+  - Vulnerable population? [Yes/No]
+  - Novel methods? [Yes/No]
+  - Space constraints? [Yes/No]
+
+  If pathway should change based on triggers, redraft accordingly.
+
+  OUTPUT:
+  - Save revised section to: revision/section-revisions/methods-revised.md
+  - Return: pathway used, word count, components added/removed
+```
+
+---
+
+### Case Justification Dispatch
+
+```
+Task: Revise Case Justification
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the case-justification skill:
+  - Read: [path]/case-justification/SKILL.md
+  - Read: [path]/case-justification/phases/phase2-revision.md
+  - Read: [path]/case-justification/clusters/[cluster-name].md
+
+  TASK: Revise an existing Case Justification section.
+
+  EXISTING SECTION:
+  [paste current case section - FULL TEXT]
+
+  CLUSTER IDENTIFIED: [Minimal / Standard / Deep Historical / Comparative / Policy-Driven]
+
+  FEEDBACK TO ADDRESS:
+  1. [ID: CJ-1] [specific feedback item]
+
+  CASE DETAILS:
+  - Site(s): [description]
+  - Population: [description]
+  - Key contextual features: [list]
+  - Relationship to theory: [why this case for this argument?]
+
+  POSITION CHECK:
+  - Current position: [Before/After theory section]
+  - Required position for cluster: [Policy-Driven = before; others = after]
+
+  OUTPUT:
+  - Save revised section to: revision/section-revisions/case-revised.md
+  - Return: cluster used, word count, position recommendation
+```
+
+---
+
+### Discussion Dispatch (Scope/Framing Issues)
+
+```
+Task: Revise Discussion - Scope and Framing
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the argument-builder skill:
+  - Read: [path]/argument-builder/SKILL.md
+  - Read: [path]/argument-builder/techniques/scope-conditions.md (if exists)
+
+  TASK: Revise Discussion section for scope conditions, limitations, implications.
+
+  EXISTING SECTION:
+  [paste current discussion section - FULL TEXT]
+
+  FEEDBACK TO ADDRESS:
+  1. [ID: D-1] [specific feedback item about scope/limitations/implications]
+
+  CONTEXT:
+  - Theory section literatures: [list engaged literatures]
+  - Contribution claim: [the paper's core contribution]
+  - Key findings: [list main findings]
+
+  DISCUSSION COMPONENTS TO CHECK:
+  - Summary: Brief recap (not repetition)
+  - Implications: How findings advance literature
+  - Scope conditions: Explicit boundaries on claims
+  - Limitations: Honest but not self-undermining
+  - Future directions: 2-3 specific suggestions
+
+  Revise to address feedback. Ground scope conditions in the actual
+  study design and sample - do not invent limitations.
+
+  OUTPUT:
+  - Save revised section to: revision/section-revisions/discussion-revised.md
+  - Return: summary of changes, scope conditions added
+```
+
+---
+
+### Return to Data Dispatch (When More Evidence Needed)
+
+**Use this when feedback indicates claims need more support or quotes are insufficient.**
+
+```
+Task: Return to Data for Additional Evidence
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the interview-analyst skill:
+  - Read: [path]/interview-analyst/SKILL.md
+  - Read: [path]/interview-analyst/phases/phase2-coding.md
+  - Read: [path]/interview-analyst/phases/phase3-interpretation.md
+
+  TASK: Find additional evidence for a specific claim or theme.
+
+  EVIDENCE NEEDED FOR:
+  [describe what claim or section needs more support]
+
+  CURRENT QUOTE DATABASE:
+  [path to analysis/quote-database.md]
+
+  INTERVIEW TRANSCRIPTS:
+  [path to interviews/]
+
+  EXISTING CODES RELEVANT TO THIS CLAIM:
+  [list relevant codes from codebook if available]
+
+  PROCESS:
+  1. Search transcripts for quotes supporting this claim
+  2. Check if existing codes capture this or if new coding needed
+  3. Add new quotes to quote database with proper tagging
+  4. Note prevalence (how many participants?)
+
+  OUTPUT:
+  - Update: analysis/quote-database.md with new quotes
+  - Return: quotes found, prevalence count, any new codes created
+  - Flag if insufficient evidence exists in the data
+```
+
+---
+
+### Coherence Check Dispatch
+
+```
+Task: Coherence Check - Intro/Conclusion Alignment
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the interview-bookends skill:
+  - Read: [path]/interview-bookends/SKILL.md
+  - Read: [path]/interview-bookends/phases/phase3-coherence.md
+  - Read: [path]/interview-bookends/techniques/callbacks.md
+
+  TASK: Verify and repair coherence between Introduction and Conclusion.
+
+  INTRODUCTION:
+  [paste current introduction - FULL TEXT]
+
+  CONCLUSION:
+  [paste current conclusion - FULL TEXT]
+
+  THEORY SECTION (for reference):
+  [paste or summarize theory section]
+
+  FINDINGS SECTION (for reference):
+  [paste or summarize key findings]
+
+  COHERENCE CHECKS:
+  1. Vocabulary echoes (key terms in both)
+  2. Promise-delivery alignment (intro promises match findings)
+  3. Callback presence (conclusion references intro language)
+  4. Ambition calibration (claims consistent across sections)
+
+  Classify coherence type:
+  - Parallel (66%): Promises match delivery ✓
+  - Escalators (20%): Delivery exceeds promises (acceptable)
+  - Deflators (6%): Delivery falls short (problematic - fix!)
+
+  OUTPUT:
+  - Save coherence memo to: revision/coherence-memo.md
+  - If fixes needed, save revised sections
+  - Return: coherence type, issues found, fixes made
+```
+
+---
+
+### Abstract Revision Dispatch
+
+```
+Task: Revise Abstract
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the abstract-builder skill:
+  - Read: [path]/abstract-builder/SKILL.md
+  - Read: [path]/abstract-builder/phases/phase3-revision.md
+  - Read: [path]/abstract-builder/clusters/[archetype-name].md
+
+  TASK: Revise an existing abstract.
+
+  EXISTING ABSTRACT:
+  [paste current abstract - FULL TEXT]
+
+  ARCHETYPE IDENTIFIED: [Empirical-Showcase / Research-Report / Stakes-Driven / Puzzle-Solver]
+
+  FEEDBACK TO ADDRESS:
+  1. [ID: A-1] [specific feedback item]
+
+  CONTEXT:
+  - Research question: [RQ]
+  - Main argument: [contribution]
+  - Key findings: [2-3 findings]
+  - Data: [sample size, population, location]
+
+  CALIBRATION TARGETS:
+  - Word count: 165-210 (median 189)
+  - Sentence count: 5-7 (median 6)
+  - Closing: Should end with contribution claim
+
+  Generate 2-3 variants using different archetypes for comparison.
+
+  OUTPUT:
+  - Save variants to: revision/section-revisions/abstract-variants.md
+  - Return: recommended variant, word counts, archetype comparison
+```
+
+---
+
+### Additional Literature Search Dispatch
+
+**Use when reviewer asks for engagement with literatures not covered.**
+
+```
+Task: Expand Literature Coverage
+subagent_type: general-purpose
+model: sonnet
+prompt: |
+  Load the lit-search skill:
+  - Read: [path]/lit-search/SKILL.md
+  - Read: [path]/lit-search/api/openalex-reference.md
+
+  TASK: Find additional literature on a specific topic/tradition.
+
+  LITERATURES TO SEARCH:
+  [describe what literatures reviewer asked for - be specific]
+
+  EXISTING COVERAGE:
+  [list literatures already in the theory section]
+
+  SEARCH CONSTRAINTS:
+  - Date range: [if specified]
+  - Key authors to include: [if known]
+  - Disciplinary focus: [sociology, etc.]
+
+  PROCESS:
+  1. Develop search terms for the missing literature
+  2. Run OpenAlex queries
+  3. Screen for relevance (focus on seminal works + recent advances)
+  4. Return 5-10 key papers that should be engaged
+
+  OUTPUT:
+  - Save to: literature/additional-search-[topic].json
+  - Return: list of papers with brief relevance notes, suggested citation pattern
+```
+
+---
+
+### Literature Synthesis Dispatch
+
+**Use when reviewer asks for deeper engagement with existing literature or theoretical positioning.**
+
+```
+Task: Deepen Literature Engagement
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the lit-synthesis skill:
+  - Read: [path]/lit-synthesis/SKILL.md
+  - Read: [path]/lit-synthesis/phases/phase4-debate-mapping.md
+
+  TASK: Develop deeper engagement with specific theoretical traditions.
+
+  FEEDBACK DRIVING THIS:
+  [describe what reviewer asked for - more engagement, better positioning, etc.]
+
+  LITERATURES TO ENGAGE:
+  [list specific literatures or debates]
+
+  EXISTING LITERATURE DATABASE:
+  - Zotero collection: [name or path]
+  - OR papers in: [path to literature folder]
+
+  CURRENT THEORY SECTION (for context):
+  [paste or summarize current theoretical framing]
+
+  PROCESS:
+  1. Identify key debates in the specified literatures
+  2. Map positions and tensions
+  3. Locate where this paper's contribution fits
+  4. Suggest specific citations and framing moves
+
+  OUTPUT:
+  - Save to: literature/synthesis-[topic].md
+  - Return: debate map, positioning recommendations, suggested citations
+```
+
+---
+
+### Writing Editor Dispatch (Prose Polish)
+
+**Use at the END of revision, after all substantive changes are complete.**
+
+```
+Task: Polish Prose - Full Manuscript
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the writing-editor skill:
+  - Read: [path]/writing-editor/SKILL.md
+  - Read: [path]/writing-editor/references/merged-guidelines.md
+
+  TASK: Edit the complete manuscript for prose quality.
+
+  MANUSCRIPT:
+  [paste complete manuscript OR provide file path]
+
+  PROTECTION MODE: [copy / git]
+
+  RUN THE FOUR-LEVEL WORKFLOW:
+  1. Document level: hooks, titles, structure, citations
+  2. Paragraph level: endings, symmetry, triplets, contrast
+  3. Sentence level: passive voice, abstract nouns, agents, dashes
+  4. Word level: throat-clearing, signposts, adverbs, fancy-talk
+
+  CONSTRAINTS:
+  - Preserve all citations exactly
+  - Maintain academic register
+  - Do not change substantive claims
+
+  OUTPUT:
+  - Save edited version to: [manuscript-edited.md or via git commit]
+  - Return: summary of changes at each level
+  - Pause for user approval between levels
+```
+
+---
+
+### Writing Editor Dispatch (Single Section)
+
+**Use for prose polish on a specific section.**
+
+```
+Task: Polish Prose - [Section Name]
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the writing-editor skill:
+  - Read: [path]/writing-editor/SKILL.md
+  - Read: [path]/writing-editor/references/merged-guidelines.md
+
+  TASK: Edit a single section for prose quality.
+
+  SECTION:
+  [paste section text - FULL TEXT]
+
+  SECTION TYPE: [Introduction / Theory / Methods / Findings / Discussion / Conclusion]
+
+  RUN ALL FOUR LEVELS on this section:
+  1. Document level (for this section): structure, flow
+  2. Paragraph level: endings, symmetry
+  3. Sentence level: passive voice, abstract nouns
+  4. Word level: throat-clearing, signposts
+
+  CONSTRAINTS:
+  - Preserve all citations exactly
+  - Maintain academic register
+  - Keep substantive claims unchanged
+
+  OUTPUT:
+  - Save to: revision/section-revisions/[section]-polished.md
+  - Return: summary of changes, word count before/after
+```
+
+---
 
 ## Common Revision Scenarios
 
