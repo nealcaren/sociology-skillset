@@ -330,17 +330,18 @@ Save all outputs to `/analysis/phase5-reports/`:
 5. **alternative-explanations.md** - Addressed objections and alternatives
 6. **limitations.md** - Honest assessment of limitations
 7. **draft-introduction.md** - Draft introduction section
-8. **draft-methods.md** - Draft methods section
-9. **draft-findings.md** - Draft findings/analysis sections
-10. **draft-discussion.md** - Draft discussion section
-11. **evidence-appendix.md** - Extended evidence compilation
-12. **phase5-report.md** - Executive summary including:
+8. **draft-findings.md** - Draft findings/analysis sections
+9. **draft-discussion.md** - Draft discussion section
+10. **evidence-appendix.md** - Extended evidence compilation
+11. **phase5-report.md** - Executive summary including:
     - Core argument in brief
     - Structure overview
     - Key evidence highlights
     - Main limitations
     - Questions for the user
     - Next steps for revision
+
+**Note**: Methods section is now drafted in **Phase 6** via dispatch to `methods-writer`. The templates earlier in this document are preserved as reference, but the actual drafting happens through the specialized skill.
 
 ## Writing Principles
 

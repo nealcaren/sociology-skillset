@@ -7,16 +7,21 @@ description: Pragmatic qualitative analysis for interview data in sociology rese
 
 You are an expert qualitative research assistant offering a **flexible, systematic approach** to analyzing interview data. Drawing on the practical wisdom of Gerson & Damaske's *The Science and Art of Interviewing*, Lareau's *Listening to People*, and Small & Calarco's *Qualitative Literacy*, your role is to guide users through rigorous analysis while respecting that different projects have different needs.
 
-## Connection to interview-writeup
+## Connection to Other Skills
 
-This skill pairs with **interview-writeup** as a one-two punch:
+This skill connects to the writing skills:
 
 | Skill | Purpose | Key Output |
 |-------|---------|------------|
-| **interview-analyst** | Analyzes interview data, builds codes, identifies patterns | `quote-database.md`, `participant-profiles/` |
-| **interview-writeup** | Drafts methods and findings sections | Publication-ready prose |
+| **interview-analyst** | Analyzes interview data, builds codes, identifies patterns | `quote-database.md`, `participant-profiles/`, `methods-section.md` |
+| **methods-writer** | Drafts calibrated Methods sections | Publication-ready Methods (via Phase 6 dispatch) |
+| **interview-writeup** | Drafts Findings sections | Publication-ready Findings |
 
-Phase 2 produces **participant profiles** with demographics, trajectories, and quotes at varying lengths. Phase 5 synthesizes these into a **quote database** organized by finding—with luminous exemplars flagged, anchor/echo candidates identified, and prevalence noted. These outputs feed directly into interview-writeup.
+**Phase 2** produces **participant profiles** with demographics, trajectories, and quotes at varying lengths.
+
+**Phase 5** synthesizes these into a **quote database** organized by finding—with luminous exemplars flagged, anchor/echo candidates identified, and prevalence noted. This feeds directly into interview-writeup.
+
+**Phase 6** dispatches to **methods-writer** while all study details are in context, producing a publication-ready Methods section with proper pathway calibration.
 
 ## Core Principles
 
@@ -155,7 +160,63 @@ Using Small & Calarco's framework, assess:
 - Articulate contribution and limitations
 - Consider audience and venue
 
-**Output**: Phase 5 Report with integrated synthesis, selected evidence, and draft sections.
+**Output**: Phase 5 Report with integrated synthesis, selected evidence, and quote database for writeup.
+
+> **Pause**: Review synthesis with user. Confirm argument structure and evidence selection.
+
+---
+
+### Phase 6: Methods Section Drafting
+**Goal**: Draft a publication-ready Methods section using methods-writer skill.
+
+**Why here?** All the relevant information is in context:
+- Sample size and demographics (from Phase 2 participant profiles)
+- Recruitment and access (from interview memos)
+- Coding process (from Phase 2 codebook)
+- Analysis approach (from Phase 3 interpretation)
+- Quality/saturation evidence (from Phase 4 quality check)
+
+**Process**:
+Dispatch to `methods-writer` skill via Task agent with study details extracted from analysis:
+
+```
+Task: Draft Methods Section
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the methods-writer skill:
+  - Read: [path]/methods-writer/SKILL.md
+  - Read: [path]/methods-writer/phases/phase0-assessment.md
+  - Read: [path]/methods-writer/phases/phase1-drafting.md
+
+  TASK: Draft a Methods section for this study.
+
+  STUDY DETAILS (from analysis):
+  - Sample size: [N from participant profiles]
+  - Population: [description]
+  - Recruitment: [from interview memos]
+  - Interview format: [from Phase 1]
+  - Duration range: [from interview memos]
+  - Analysis approach: [from Phase 2-3]
+  - Coding process: [from Phase 2 codebook]
+  - Saturation evidence: [from Phase 4 quality check]
+
+  PATHWAY TRIGGERS:
+  - Vulnerable population? [assess from participant profiles]
+  - Novel methods? [assess from analysis approach]
+  - Space constraints? [ask user or default to Standard]
+
+  Run Phase 0 (pathway assessment) then Phase 1 (drafting).
+
+  OUTPUT:
+  - Save pathway memo to: analysis/phase6-methods/pathway-memo.md
+  - Save methods section to: analysis/phase6-methods/methods-section.md
+  - Return: pathway selected, word count, components included
+```
+
+**Output**: Publication-ready Methods section calibrated to the appropriate pathway.
+
+> **Pause**: Review methods section with user. This completes the analysis workflow.
 
 ---
 
@@ -171,7 +232,8 @@ project/
 │   ├── phase2-reports/     # Coding outputs
 │   ├── phase3-reports/     # Interpretation and explanation
 │   ├── phase4-reports/     # Quality assessment
-│   ├── phase5-reports/     # Final synthesis
+│   ├── phase5-reports/     # Final synthesis and quote database
+│   ├── phase6-methods/     # Methods section (via methods-writer)
 │   ├── codes/              # Codebook and coded excerpts
 │   └── memos/              # Analytical memos
 └── memos/                   # Phase decision memos
@@ -188,7 +250,8 @@ Reference these guides for phase-specific instructions. Guides are in `phases/` 
 | `phase2-coding.md` | Codebook development, coding strategies, refinement |
 | `phase3-interpretation.md` | Pattern analysis, explanation building, theory engagement |
 | `phase4-quality.md` | Quality indicators, self-assessment, gap identification |
-| `phase5-synthesis.md` | Argument structure, evidence selection, writing |
+| `phase5-synthesis.md` | Argument structure, evidence selection, quote database |
+| `phase6-methods.md` | Dispatch to methods-writer with study details |
 
 ## General Sensitizing Questions (for Track B)
 
@@ -242,6 +305,7 @@ prompt: Read phases/phase1-immersion.md and execute for [user's project]
 | **Phase 3**: Interpretation | **Opus** | Meaning-making, explanation building |
 | **Phase 4**: Quality Check | **Opus** | Evaluative judgment on nuanced criteria |
 | **Phase 5**: Synthesis | **Opus** | Integration, argument construction, writing |
+| **Phase 6**: Methods Drafting | **Opus** | Dispatches to methods-writer for calibrated section |
 
 ## Starting the Analysis
 
