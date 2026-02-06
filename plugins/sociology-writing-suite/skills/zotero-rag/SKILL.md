@@ -7,35 +7,57 @@ description: Semantic search for Zotero libraries using RAG. Use when users want
 
 Search your Zotero library by meaning using the `mcp-zotero` MCP server's RAG tools. These 8 tools are available when the server is installed with `mcp-zotero[rag]`.
 
-## Setup
+## First-Run Check
 
-RAG tools are part of the consolidated `mcp-zotero` package. Install with:
+**Before doing anything else**, verify RAG tools are available:
+
+1. **Check if zotero tools exist**: Try calling `health_check()`. If the tool is not found (no `zotero` MCP server configured), proceed to step 2. If it succeeds, check the response for `rag_available` and skip to step 3.
+
+2. **Install mcp-zotero with RAG**: Run `uv tool list | grep mcp-zotero` in the terminal.
+   - If **not installed**, tell the user:
+     > "The Zotero MCP server with semantic search isn't installed yet. I can install it for you. Shall I run `uv tool install 'mcp-zotero[rag]'`?"
+   - If **installed without RAG** (base only), tell the user:
+     > "mcp-zotero is installed but without semantic search. I can upgrade it. Shall I run `uv tool install 'mcp-zotero[rag]'`?"
+   - If the user agrees, run: `uv tool install "mcp-zotero[rag]"`
+   - Then check if `.mcp.json` is configured. If not, ask the user for their Zotero Library ID (found at https://www.zotero.org/settings/keys) and write the config:
+     ```json
+     {
+       "mcpServers": {
+         "zotero": {
+           "command": "mcp-zotero",
+           "env": {
+             "ZOTERO_LIBRARY_ID": "THEIR_ID",
+             "ZOTERO_LOCAL": "true",
+             "ZOTERO_LOCAL_KEY": "THEIR_KEY",
+             "ZOTERO_ATTACHMENTS_DIR": "~/Zotero/storage"
+           }
+         }
+       }
+     }
+     ```
+   - Tell the user: "MCP server configured. Please restart Claude Code to load the new server, then invoke this skill again."
+
+3. **Check RAG availability**: If `health_check()` returns `rag_available: false`:
+   - Tell the user: "The Zotero server is running but semantic search isn't enabled. Shall I upgrade with `uv tool install 'mcp-zotero[rag]'`?"
+   - After upgrading, the user must restart Claude Code to reload the MCP server.
+
+4. **Verify RAG is working**: If `health_check()` returns `rag_available: true`, proceed to the user's task.
+
+**Important**: `ZOTERO_ATTACHMENTS_DIR` must be set (typically `~/Zotero/storage`) — RAG needs this to find PDF files for indexing.
+
+---
+
+## Setup Reference
+
+RAG tools are part of the consolidated `mcp-zotero` package:
 
 ```bash
+# With semantic search
 uv tool install "mcp-zotero[rag]"
+
+# With semantic search + OCR for scanned PDFs
+uv tool install "mcp-zotero[rag,ocr]"
 ```
-
-Configure in `.mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "zotero": {
-      "command": "mcp-zotero",
-      "env": {
-        "ZOTERO_LIBRARY_ID": "YOUR_LIBRARY_ID",
-        "ZOTERO_LOCAL": "true",
-        "ZOTERO_LOCAL_KEY": "YOUR_LOCAL_KEY",
-        "ZOTERO_ATTACHMENTS_DIR": "~/Zotero/storage"
-      }
-    }
-  }
-}
-```
-
-`ZOTERO_ATTACHMENTS_DIR` is required for RAG — it tells the indexer where to find the PDF files.
-
-Verify with `health_check` — look for `rag_available: true` in the response. If it shows `false`, the `[rag]` extras aren't installed.
 
 ## RAG Tools (8)
 

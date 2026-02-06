@@ -9,6 +9,42 @@ metadata:
 
 Use this skill when you need to interact with a Zotero library through Claude Code. This skill provides comprehensive access to Zotero's reference management capabilities: searching and retrieving items, organizing with collections and tags, creating and modifying items, and managing file attachments.
 
+## First-Run Check
+
+**Before doing anything else**, verify the MCP server is available:
+
+1. **Check if zotero tools exist**: Try calling `health_check()`. If the tool is not found (no `zotero` MCP server configured), proceed to step 2. If it succeeds, skip to step 4.
+
+2. **Check if mcp-zotero is installed**: Run `uv tool list | grep mcp-zotero` in the terminal.
+   - If **not installed**, tell the user:
+     > "The Zotero MCP server isn't installed yet. I can install it for you. Shall I run `uv tool install mcp-zotero`?"
+   - If the user agrees, run: `uv tool install mcp-zotero`
+
+3. **Configure the MCP server**: Check if `.mcp.json` exists in the project root or home directory. If not configured:
+   - Ask the user for their Zotero Library ID (found at https://www.zotero.org/settings/keys — "Your userID for use in API calls is XXXXXXX")
+   - Ask if they want local mode (Zotero app running) or web-only mode
+   - Write the `.mcp.json` configuration:
+     ```json
+     {
+       "mcpServers": {
+         "zotero": {
+           "command": "mcp-zotero",
+           "env": {
+             "ZOTERO_LIBRARY_ID": "THEIR_ID",
+             "ZOTERO_LOCAL": "true",
+             "ZOTERO_LOCAL_KEY": "THEIR_KEY",
+             "ZOTERO_ATTACHMENTS_DIR": "~/Zotero/storage"
+           }
+         }
+       }
+     }
+     ```
+   - Tell the user: "MCP server configured. Please restart Claude Code to load the new server, then invoke this skill again."
+
+4. **Verify connection**: If `health_check()` succeeds with `ok: true`, proceed to the user's task.
+
+---
+
 ## When to Use This Skill
 
 Use this skill when:
@@ -252,9 +288,7 @@ If credentials are in your shell profile (`~/.zshrc`, `~/.bashrc`):
 {
   "mcpServers": {
     "zotero": {
-      "type": "stdio",
-      "command": "uv",
-      "args": ["run", "--project", "/path/to/mcp-zotero", "mcp-zotero"],
+      "command": "mcp-zotero",
       "env": {
         "ZOTERO_LOCAL": "true"
       }
@@ -271,14 +305,13 @@ The server inherits `ZOTERO_LIBRARY_ID`, `ZOTERO_LOCAL_KEY`, etc. from your envi
 {
   "mcpServers": {
     "zotero": {
-      "type": "stdio",
-      "command": "uv",
-      "args": ["run", "--project", "/path/to/mcp-zotero", "mcp-zotero"],
+      "command": "mcp-zotero",
       "env": {
         "ZOTERO_LOCAL": "true",
         "ZOTERO_LIBRARY_ID": "YOUR_ID",
         "ZOTERO_LIBRARY_TYPE": "user",
-        "ZOTERO_LOCAL_KEY": "YOUR_KEY"
+        "ZOTERO_LOCAL_KEY": "YOUR_KEY",
+        "ZOTERO_ATTACHMENTS_DIR": "~/Zotero/storage"
       }
     }
   }

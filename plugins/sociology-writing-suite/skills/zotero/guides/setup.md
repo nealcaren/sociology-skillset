@@ -124,8 +124,7 @@ Then use a minimal `.mcp.json` that inherits from environment:
   "mcpServers": {
     "zotero": {
       "type": "stdio",
-      "command": "uv",
-      "args": ["run", "--project", "/path/to/mcp-zotero", "mcp-zotero"],
+      "command": "mcp-zotero",
       "env": {
         "ZOTERO_LOCAL": "true"
       }
@@ -145,8 +144,7 @@ For explicit configuration or if env vars aren't set:
   "mcpServers": {
     "zotero": {
       "type": "stdio",
-      "command": "uv",
-      "args": ["run", "--project", "/path/to/mcp-zotero", "mcp-zotero"],
+      "command": "mcp-zotero",
       "env": {
         "ZOTERO_LOCAL": "true",
         "ZOTERO_LIBRARY_ID": "your_user_id",
