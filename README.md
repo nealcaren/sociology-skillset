@@ -16,48 +16,46 @@ npm install -g @anthropic-ai/claude-code
 
 ### Zotero MCP Server (Recommended)
 
-Several skills work with your Zotero library for full-text PDF access, annotations, and semantic search. Install the MCP server:
+Several skills work with your Zotero library for full-text PDF access, annotations, and semantic search. The `mcp-zotero` package provides 38 base tools plus optional semantic search:
 
 ```bash
+# Base install (38 Zotero API tools)
 uv tool install mcp-zotero
+
+# With semantic search (+ 8 RAG tools)
+uv tool install "mcp-zotero[rag]"
+
+# With OCR fallback for scanned PDFs
+uv tool install "mcp-zotero[rag,ocr]"
 ```
 
-Or from source:
+Configure in `.mcp.json`:
 
-```bash
-uv tool install "git+https://github.com/nealcaren/mcp-zotero.git"
+```json
+{
+  "mcpServers": {
+    "zotero": {
+      "command": "mcp-zotero",
+      "env": {
+        "ZOTERO_LIBRARY_ID": "YOUR_LIBRARY_ID",
+        "ZOTERO_LOCAL": "true",
+        "ZOTERO_LOCAL_KEY": "YOUR_LOCAL_KEY",
+        "ZOTERO_ATTACHMENTS_DIR": "~/Zotero/storage"
+      }
+    }
+  }
+}
 ```
 
-Then configure in your Claude settings. See `plugins/sociology-writing-suite/skills/zotero/guides/setup.md` for details.
+See `plugins/sociology-writing-suite/skills/zotero/guides/setup.md` for details.
 
 **Skills that use Zotero:**
-- `zotero` — 43 MCP tools for library operations
-- `zotero-rag` — Semantic search across PDF content
+- `zotero` — 38 MCP tools for library operations
+- `zotero-rag` — Semantic search across PDF content (requires `[rag]` install)
 - `lit-synthesis` — Deep reading with Zotero annotations
 - `peer-reviewer` — Build reviewer personas from your sources
 - `reading-agent` — Create structured reading notes
 - `bibliography-builder` — Match citations to Zotero items
-
-### Optional: Zotero RAG Server (Semantic Search)
-
-For semantic search across your PDFs (finding passages by meaning, not just keywords), install the RAG server:
-
-```bash
-uv tool install "git+https://github.com/nealcaren/mcp-zotero-rag.git"
-```
-
-This enables the `zotero-rag` skill to:
-- Search passages by conceptual similarity
-- Find related discussions across documents
-- Get expanded context around quotes
-
-### Optional: Docling (for PDF conversion)
-
-The `lit-synthesis` and `reading-agent` skills can use docling for batch PDF-to-markdown conversion:
-
-```bash
-pip install docling
-```
 
 ## Installation
 

@@ -1,64 +1,68 @@
 # Zotero Integration Setup
 
-This skill uses the bundled **zotero** and **zotero-rag** skills for library access and semantic search.
+This skill uses the **mcp-zotero** MCP server for library access and semantic search.
 
 ## Prerequisites
 
-1. **Zotero 7+** installed on your machine
-2. **mcp-zotero MCP server** configured in Claude
+1. **Zotero 7+** installed and running on your machine
+2. **mcp-zotero** MCP server configured in Claude
 3. Papers imported into Zotero (from lit-search BibTeX or manually)
 
 ## MCP Server Setup
 
-### Option 1: Using the Bundled zotero Skill
-
-The zotero skill is bundled with this suite. See `skills/zotero/guides/setup.md` for configuration.
-
-Quick setup:
 ```bash
-# Install the MCP server
+# Base install (38 Zotero API tools)
 uv tool install mcp-zotero
 
-# Or from source
-uv tool install "git+https://github.com/nealcaren/mcp-zotero.git"
+# With semantic search (+ 8 RAG tools)
+uv tool install "mcp-zotero[rag]"
 ```
 
-Configure in Claude's MCP settings with your Zotero credentials.
+Configure in `.mcp.json`:
+```json
+{
+  "mcpServers": {
+    "zotero": {
+      "command": "mcp-zotero",
+      "env": {
+        "ZOTERO_LIBRARY_ID": "YOUR_LIBRARY_ID",
+        "ZOTERO_LOCAL": "true",
+        "ZOTERO_LOCAL_KEY": "YOUR_LOCAL_KEY",
+        "ZOTERO_ATTACHMENTS_DIR": "~/Zotero/storage"
+      }
+    }
+  }
+}
+```
 
-### Option 2: Enable Zotero API Access
-
-In Zotero:
-1. Go to **Edit → Preferences** (Windows/Linux) or **Zotero → Settings** (Mac)
-2. Navigate to **Advanced → General**
-3. Enable **"Allow other applications on this computer to communicate with Zotero"**
+Enable Zotero's local API: **Zotero → Settings → Advanced → General → Allow other applications to communicate with Zotero**.
 
 ## Two Ways to Access Your Library
 
-### 1. zotero Skill (43 MCP Tools)
+### 1. Base Tools (38 MCP Tools)
 
 For structured library operations:
-- `search_items` - Keyword search across your library
-- `get_item` - Full metadata for a specific item
-- `collection_items` - List items in a collection
-- `download_attachments` - Get PDF content
+- `search_items` — keyword search across your library
+- `get_item` — full metadata for a specific item
+- `collection_items` — list items in a collection
+- `download_attachments` — get PDF content
 
-### 2. zotero-rag Skill (Semantic Search)
+### 2. RAG Tools (8 MCP Tools, requires `[rag]` install)
 
 For meaning-based search across PDF content:
-- `semantic_search` - Find passages by conceptual similarity
-- `get_chunk_context` - Expand results with surrounding text
-- `find_similar_chunks` - Discover related passages across documents
+- `semantic_search` — find passages by conceptual similarity
+- `get_chunk_context` — expand results with surrounding text
+- `find_similar_chunks` — discover related passages across documents
 
-**Workflow**: Use zotero for metadata and structure, zotero-rag for discovering passages by meaning.
+**Workflow**: Use base tools for metadata and structure, RAG tools for discovering passages by meaning.
 
-## Semantic Search Setup (zotero-rag)
-
-The zotero-rag skill provides RAG-based semantic search:
+## Semantic Search Setup
 
 1. **Index your collection**:
    ```
    index_library collection_key="YOUR_COLLECTION"
    ```
+   Check `warnings` in the response for scanned PDFs or extraction issues.
 
 2. **Search by meaning**:
    ```
