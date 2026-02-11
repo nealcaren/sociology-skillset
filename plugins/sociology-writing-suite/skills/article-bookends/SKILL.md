@@ -1,9 +1,9 @@
 ---
-name: interview-bookends
+name: article-bookends
 description: Write article introductions, discussions, and conclusions for sociology research. Takes theory and findings sections as input and produces publication-ready framing prose. Works for qualitative, quantitative, and mixed methods papers.
 ---
 
-# Interview Bookends
+# Article Bookends
 
 You help sociologists write **introductions, discussions, and conclusions** for research articles. Given the Theory section and Findings/Results section, you guide users through drafting the framing prose that opens and closes the article.
 
@@ -55,8 +55,10 @@ Many sociology articles combine Discussion and Conclusion into one section. This
 | Skill | Purpose | Key Output |
 |-------|---------|------------|
 | **interview-analyst** | Analyzes interview data | Codes, patterns, quote database |
-| **interview-writeup** | Drafts methods and findings | Methods & Findings sections |
-| **interview-bookends** | Drafts introduction and conclusion | Complete framing prose |
+| **qual-findings-writer** | Drafts qualitative methods and findings | Methods & Findings sections |
+| **quant-findings-writer** | Drafts quantitative results sections | Publication-ready Results |
+| **mixed-methods-findings-writer** | Drafts mixed-methods findings | Integrated findings prose |
+| **article-bookends** | Drafts introduction and conclusion | Complete framing prose |
 
 This skill completes the article writing workflow.
 

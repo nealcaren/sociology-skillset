@@ -243,7 +243,7 @@ diverse research team].
 
 ### 7. Build the Quote Database for Writeup
 
-This is the key handoff to the interview-writeup skill. Reorganize the person-level material from Phase 2 participant profiles into a finding-level database ready for drafting.
+This is the key handoff to the qual-findings-writer skill. Reorganize the person-level material from Phase 2 participant profiles into a finding-level database ready for drafting.
 
 **For each major finding/mechanism:**
 
@@ -325,7 +325,7 @@ Save all outputs to `/analysis/phase5-reports/`:
    - Echo quotes compiled
    - Prevalence noted
    - Attribution complete
-   *(This is the primary handoff to interview-writeup)*
+   *(This is the primary handoff to qual-findings-writer)*
 4. **evidence-selection.md** - Selected quotes organized by claim (legacy format)
 5. **alternative-explanations.md** - Addressed objections and alternatives
 6. **limitations.md** - Honest assessment of limitations

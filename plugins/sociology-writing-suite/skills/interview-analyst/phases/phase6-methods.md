@@ -172,5 +172,5 @@ Return a summary to the user:
 5. Location of output files
 
 **This completes the interview-analyst workflow.** The user now has:
-- Quote database ready for interview-writeup (from Phase 5)
+- Quote database ready for qual-findings-writer (from Phase 5)
 - Methods section ready for the manuscript (from Phase 6)

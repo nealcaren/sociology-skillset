@@ -125,7 +125,7 @@ See `clusters/` directory for detailed profiles.
 
 Create 3-4 phase files based on section type:
 
-**For Introduction/Conclusion skills** (like interview-bookends):
+**For Introduction/Conclusion skills** (like article-bookends):
 - Phase 0: Intake & Assessment (identify cluster)
 - Phase 1: Drafting (write the section)
 - Phase 2: Coherence Check (verify alignment)

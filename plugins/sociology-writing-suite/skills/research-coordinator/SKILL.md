@@ -1,6 +1,6 @@
 ---
 name: research-coordinator
-description: Orchestrate the complete qualitative research workflow from literature review through data analysis to writing. Supports non-linear, iterative work with state tracking at the sub-phase level.
+description: Orchestrate the complete research workflow—qualitative, quantitative, or mixed methods—from literature review through data analysis to writing. Supports non-linear, iterative work with state tracking at the sub-phase level.
 ---
 
 # Research Coordinator
@@ -34,9 +34,9 @@ Ask scoping questions, then scaffold:
 1. Run `/project-scaffold` to create project structure (asks for project type)
 2. Initialize `project.yaml` with their responses
 3. Route to appropriate workflow based on project type:
-   - **Qualitative**: Literature → interview-analyst → interview-writeup → bookends
-   - **Quantitative**: Literature → data prep → analysis → results-writing
-   - **Mixed**: Parallel qual + quant strands → integration
+   - **Qualitative**: Literature → interview-analyst → qual-findings-writer → article-bookends
+   - **Quantitative**: Literature → r-analyst/stata-analyst → quant-findings-writer → article-bookends
+   - **Mixed**: Literature → interview-analyst + r-analyst/stata-analyst → mixed-methods-findings-writer → article-bookends
 
 ## Project Type Routing
 
@@ -50,21 +50,23 @@ type: qualitative  # or quantitative, mixed
 Use the full skill suite as documented below.
 
 ### Quantitative Projects
-- Skip interview-analyst, interview-writeup (qual-specific)
+- Skip interview-analyst, qual-findings-writer (qual-specific)
+- Use **r-analyst** or **stata-analyst** for statistical analysis (RA/SA.0–5)
+- Use **quant-findings-writer** to draft Results section (QF.1–5)
 - Use methods-writer for methods section
-- Results section: guide user through findings structure
-- Figures/tables workflow (coming soon)
+- Use article-bookends for introduction/conclusion
 
 ### Mixed Methods Projects
-- Run qualitative and quantitative strands in parallel or sequence
-- Integration phase connects the two
+- Run qualitative (**interview-analyst**) and quantitative (**r-analyst/stata-analyst**) strands in parallel or sequence
+- Use **mixed-methods-findings-writer** to integrate both strands (MF.1–5)
 - Methods section covers both approaches
+- Use article-bookends for introduction/conclusion
 
 ---
 
 ## Overview
 
-You orchestrate **the complete qualitative interview research workflow**—from literature review through data analysis to publication-ready writing. Unlike linear workflows, you support the **iterative, non-linear process** that real research requires: preliminary lit review, data analysis, deeper lit review, writing, more analysis, revision, and back again.
+You orchestrate **the complete research workflow**—qualitative, quantitative, or mixed methods——from literature review through data analysis to publication-ready writing. Unlike linear workflows, you support the **iterative, non-linear process** that real research requires: preliminary lit review, data analysis, deeper lit review, writing, more analysis, revision, and back again.
 
 ## What This Skill Does
 
@@ -72,7 +74,7 @@ This is a **meta-orchestration skill** that **drives the research process**:
 
 1. **You drive, they navigate**: You proactively move the project forward, suggesting and executing next steps. The user provides direction at key decision points, but you don't wait passively for commands.
 2. **Maintains project state** in `project-state.md`—tracking what's done, what's pending, and what depends on what
-3. **Routes to specialized skills** (lit-search, lit-synthesis, argument-builder, interview-analyst, interview-writeup, methods-writer, case-justification, interview-bookends, verifier, revision-coordinator, writing-editor)
+3. **Routes to specialized skills** (lit-search, lit-synthesis, argument-builder, interview-analyst, qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer, r-analyst, stata-analyst, methods-writer, case-justification, article-bookends, verifier, revision-coordinator, writing-editor)
 4. **Supports non-linear navigation**—you can jump to any phase, return to earlier work, or iterate between domains
 5. **Tracks dependencies**—warns when changes might invalidate downstream work
 6. **Manages the research argument**—as it evolves through literature engagement and data analysis
@@ -229,16 +231,17 @@ When a user comes to you with a research question like "How do journalists cover
 │     • Contextualize the research setting                                 │
 │     └── NO PAUSE: Execute based on case characteristics                 │
 │                                                                          │
-│ 13. FINDINGS SECTION (IW.0-IW.3)                                         │
-│     • Argument-driven, not theme-catalog                                 │
-│     • Anchor-echo pattern for evidence                                   │
+│ 13. FINDINGS SECTION                                                     │
+│     • Qualitative: qual-findings-writer (QW.0-QW.3)                     │
+│     • Quantitative: quant-findings-writer (QF.1-QF.5)                   │
+│     • Mixed: mixed-methods-findings-writer (MF.1-MF.5)                  │
 │     └── DECISION POINT: Does the argument land? Evidence sufficient?    │
 │                                                                          │
 │     ⚠️  ITERATION LIKELY HERE                                            │
 │     • Writing often reveals need for more analysis or literature        │
 │     • This is normal—embrace it, don't fight it                         │
 │                                                                          │
-│ 14. BOOKENDS (IB.0-IB.4)                                                 │
+│ 14. BOOKENDS (AB.0-AB.4)                                                 │
 │     • Introduction: open the circuit                                     │
 │     • Discussion: interpret what findings mean                           │
 │     • Conclusion: close it with significance                             │
@@ -332,15 +335,37 @@ This is why the workflow isn't strictly linear. You don't fully finish literatur
 | **case-justification** | CJ | CJ.0 | Cluster Assessment |
 | | | CJ.1 | Drafting |
 | | | CJ.2 | Revision |
-| **interview-writeup** | IW | IW.0 | Intake & Scope |
-| | | IW.1 | Methods Section |
-| | | IW.2 | Findings Section |
-| | | IW.3 | Revision |
-| **interview-bookends** | IB | IB.0 | Intake & Assessment |
-| | | IB.1 | Introduction Drafting |
-| | | IB.2 | Discussion Drafting |
-| | | IB.3 | Conclusion Drafting |
-| | | IB.4 | Coherence Check |
+| **qual-findings-writer** | QW | QW.0 | Intake & Scope |
+| | | QW.1 | Methods Section |
+| | | QW.2 | Findings Section |
+| | | QW.3 | Revision |
+| **quant-findings-writer** | QF | QF.1 | Orient |
+| | | QF.2 | Select Cluster |
+| | | QF.3 | Build the Arc |
+| | | QF.4 | Draft |
+| | | QF.5 | Calibrate |
+| **mixed-methods-findings-writer** | MF | MF.1 | Orient |
+| | | MF.2 | Select Cluster |
+| | | MF.3 | Build the Arc |
+| | | MF.4 | Draft |
+| | | MF.5 | Calibrate |
+| **r-analyst** | RA | RA.0 | Research Design Review |
+| | | RA.1 | Data Familiarization |
+| | | RA.2 | Model Specification |
+| | | RA.3 | Main Analysis |
+| | | RA.4 | Robustness & Sensitivity |
+| | | RA.5 | Output & Interpretation |
+| **stata-analyst** | SA | SA.0 | Research Design Review |
+| | | SA.1 | Data Familiarization |
+| | | SA.2 | Model Specification |
+| | | SA.3 | Main Analysis |
+| | | SA.4 | Robustness & Sensitivity |
+| | | SA.5 | Output & Interpretation |
+| **article-bookends** | AB | AB.0 | Intake & Assessment |
+| | | AB.1 | Introduction Drafting |
+| | | AB.2 | Discussion Drafting |
+| | | AB.3 | Conclusion Drafting |
+| | | AB.4 | Coherence Check |
 
 ### Domain 4: Integration & Revision
 
@@ -460,7 +485,7 @@ IA.0 ──────→ IA.1 → IA.2 → IA.3 → IA.4 → IA.5 ←───
     (Track A)  │                    │       │                          │
                │                    │       │                          │
                │                    ↓       ↓                          │
-Writing Domain │                  IW.0 → IW.1 → IW.2 → IW.3            │
+Writing Domain │                  QW.0 → QW.1 → QW.2 → QW.3            │
                │                          │       │                    │
                │                          │       │                    │
                │                    MW.0 → MW.1 → MW.2                 │
@@ -471,7 +496,7 @@ Writing Domain │                  IW.0 → IW.1 → IW.2 → IW.3            �
              LW.0 → LW.1 → LW.2 → LW.3 → LW.4 → LW.5 ←─────────────────┘
                                           │
                                           ↓
-                                   IB.0 → IB.1 → IB.2 → IB.3
+                                   AB.0 → AB.1 → AB.2 → AB.3
 ```
 
 ### Key Dependencies
@@ -479,13 +504,13 @@ Writing Domain │                  IW.0 → IW.1 → IW.2 → IW.3            �
 | If this changes... | These may be affected... |
 |--------------------|--------------------------|
 | Research questions | Everything |
-| Theoretical map (LY.2) | LW.0-5 (Theory section), IA.0 (if Track A), IB.0-3 |
+| Theoretical map (LY.2) | LW.0-5 (Theory section), IA.0 (if Track A), AB.0-3 |
 | Debate map (LY.4) | LW.3-5 (Theory drafting) |
 | Coding structure (IA.2) | IA.3-5, IW.2 (Findings) |
-| Quote database (IA.5) | IW.2 (Findings), VF.0-4 (Verification) |
-| Main argument | IB.1 (Intro), IB.2 (Conclusion), LW.4 (Turn) |
-| Theory section (LW.3) | IB.0-3 (Bookends), VF.0-4 (if literature claims) |
-| Findings section (IW.2) | IB.0-3 (Bookends), VF.0-4 (if interview quotes) |
+| Quote database (IA.5) | QW.2 (Findings), VF.0-4 (Verification) |
+| Main argument | AB.1 (Intro), AB.2 (Conclusion), LW.4 (Turn) |
+| Theory section (LW.3) | AB.0-3 (Bookends), VF.0-4 (if literature claims) |
+| Findings section (QW.2/QF.4/MF.4) | AB.0-3 (Bookends), VF.0-4 (if quotes/claims) |
 | Interview transcripts | VF.3 (Verification) |
 
 ## Entry Points
@@ -1035,15 +1060,15 @@ This diagram shows how skills connect and depend on each other:
 │              │                        │                            │        │
 │              ▼                        ▼                            ▼        │
 │   ┌───────────────────┐    ┌───────────────────┐    ┌───────────────────┐  │
-│   │ case-justification│    │ interview-writeup │    │ interview-bookends│  │
-│   │    CJ.0-CJ.2      │    │    IW.0-IW.3      │    │    IB.0-IB.4      │  │
-│   │                   │    │                   │    │                   │  │
-│   │  Clusters:        │    │  Findings by      │    │  Phases:          │  │
-│   │  - Methodological │    │  argument, not    │    │  0: Intake        │  │
-│   │  - Typicality     │    │  theme catalog    │    │  1: Introduction  │  │
-│   │  - Strategic      │    │                   │    │  2: Discussion    │  │
-│   │  - Uniqueness     │    │                   │    │  3: Conclusion    │  │
-│   │  - Policy-Oriented│    │                   │    │  4: Coherence     │  │
+│   │ case-justification│    │ FINDINGS WRITERS  │    │ article-bookends  │  │
+│   │    CJ.0-CJ.2      │    │                   │    │    AB.0-AB.4      │  │
+│   │                   │    │ qual (QW.0-QW.3)  │    │                   │  │
+│   │  Clusters:        │    │ quant (QF.1-QF.5) │    │  Phases:          │  │
+│   │  - Methodological │    │ mixed (MF.1-MF.5) │    │  0: Intake        │  │
+│   │  - Typicality     │    │                   │    │  1: Introduction  │  │
+│   │  - Strategic      │    │ STAT ANALYSIS     │    │  2: Discussion    │  │
+│   │  - Uniqueness     │    │ r-analyst (RA)    │    │  3: Conclusion    │  │
+│   │  - Policy-Oriented│    │ stata-analyst (SA)│    │  4: Coherence     │  │
 │   └─────────┬─────────┘    └─────────┬─────────┘    └─────────┬─────────┘  │
 │             │                        │                        │             │
 │             └────────────────────────┼────────────────────────┘             │
@@ -1066,8 +1091,8 @@ This diagram shows how skills connect and depend on each other:
 │   │                 │      │   RC.0-RC.4     │      │                 │    │
 │   │ • Quote verify  │      │                 │      │ • Document level│    │
 │   │ • Claim verify  │      │ Routes to:      │      │ • Paragraph     │    │
-│   │ • Source map    │      │ • interview-    │      │ • Sentence      │    │
-│   │                 │      │   writeup       │      │ • Word          │    │
+│   │ • Source map    │      │ • qual-findings-│      │ • Sentence      │    │
+│   │                 │      │   writer        │      │ • Word          │    │
 │   │                 │      │ • argument-     │      │                 │    │
 │   │                 │      │   builder       │      │ Fixes:          │    │
 │   │                 │      │ • interview-    │      │ • Passive voice │    │
@@ -1097,11 +1122,13 @@ This diagram shows how skills connect and depend on each other:
 | **lit-synthesis** | Theoretical map | **argument-builder** | Framework for theory section |
 | **lit-synthesis** | Debate map | **argument-builder** | Contribution positioning |
 | **lit-synthesis** | Theoretical map | **interview-analyst** | Sensitizing concepts (Track A) |
-| **interview-analyst** | Quote database | **interview-writeup** | Evidence for findings |
-| **interview-analyst** | Participant profiles | **interview-writeup** | Context for cases |
+| **interview-analyst** | Quote database | **qual-findings-writer** | Evidence for findings |
+| **interview-analyst** | Participant profiles | **qual-findings-writer** | Context for cases |
 | **interview-analyst** | Study details | **methods-writer** | Section content |
-| **argument-builder** | Theory section | **interview-bookends** | Framework for intro/conclusion |
-| **interview-writeup** | Findings section | **interview-bookends** | Claims to frame |
+| **r-analyst/stata-analyst** | Tables, figures, memos | **quant-findings-writer** | Statistical output for Results |
+| **interview-analyst** + **r-analyst/stata-analyst** | Combined output | **mixed-methods-findings-writer** | Evidence for integration |
+| **argument-builder** | Theory section | **article-bookends** | Framework for intro/conclusion |
+| **qual-findings-writer/quant-findings-writer/mixed-methods-findings-writer** | Findings section | **article-bookends** | Claims to frame |
 | **All writing skills** | Manuscript | **verifier** | Content to verify |
 | **verifier** | Issue report | **revision-coordinator** | Items to address |
 | **revision-coordinator** | Feedback map | **[various skills]** | Specific revision tasks |

@@ -18,7 +18,7 @@ Generated skills should include project integration sections that:
 
 ## What This Skill Does
 
-This is a **meta-skill**—it creates other skills. The output is a fully-functional writing skill like `argument-builder` or `interview-bookends`, with:
+This is a **meta-skill**—it creates other skills. The output is a fully-functional writing skill like `argument-builder` or `article-bookends`, with:
 - A main `SKILL.md` with genre-based guidance
 - Phase files for a structured writing workflow
 - Cluster profiles based on discovered patterns
@@ -40,7 +40,7 @@ Use this skill when you want to:
    - Ideally from target venues (e.g., *Social Problems*, *Social Forces*)
 
 2. **A model skill to learn from**
-   - An existing skill like `argument-builder` or `interview-bookends`
+   - An existing skill like `argument-builder` or `article-bookends`
    - Provides structural template for the generated skill
 
 ## Connection to Other Skills
@@ -51,7 +51,7 @@ This skill adapts the methodology from:
 |-------|----------------|
 | **interview-analyst** | Systematic coding approach (Phases 1-3) |
 | **argument-builder** | Cluster-based writing guidance structure |
-| **interview-bookends** | Benchmarks and coherence checking |
+| **article-bookends** | Benchmarks and coherence checking |
 
 ## Core Principles
 
@@ -305,7 +305,7 @@ When the user is ready to begin:
    > "Where is your corpus of articles? How many articles do you have?"
 
 3. **Ask about the model skill**:
-   > "Which existing skill should I use as a structural model? Options include `argument-builder` (Theory sections) and `interview-bookends` (intro/conclusion). I can also review other skills if you prefer."
+   > "Which existing skill should I use as a structural model? Options include `argument-builder` (Theory sections) and `article-bookends` (intro/conclusion). I can also review other skills if you prefer."
 
 4. **Ask about output**:
    > "What should the new skill be named? (e.g., `discussion-writer`, `methods-guide`)"

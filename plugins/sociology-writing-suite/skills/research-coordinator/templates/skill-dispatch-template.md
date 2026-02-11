@@ -354,7 +354,7 @@ prompt: |
 
 ---
 
-### interview-writeup
+### qual-findings-writer
 
 #### IW.2: Findings Section
 
@@ -363,7 +363,7 @@ Task: IW.2 Findings Section Drafting
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-writeup skill (read ../interview-writeup/SKILL.md).
+  Load the qual-findings-writer skill (read ../qual-findings-writer/SKILL.md).
   Read technique guides:
   - techniques/macro-structure.md
   - techniques/prose-craft.md
@@ -486,7 +486,7 @@ prompt: |
 
 ---
 
-### interview-bookends
+### article-bookends
 
 #### IB.1: Introduction Drafting
 
@@ -495,7 +495,7 @@ Task: IB.1 Introduction Drafting
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-bookends skill (read ../interview-bookends/SKILL.md).
+  Load the article-bookends skill (read ../article-bookends/SKILL.md).
   Read phase guide: phases/phase1-introduction.md
   Read techniques: techniques/opening-moves.md
   Read cluster profile: clusters/[CLUSTER].md
@@ -542,7 +542,7 @@ Task: IB.3 Coherence Check
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-bookends skill.
+  Load the article-bookends skill.
   Read phase guide: phases/phase3-coherence.md
   Read techniques: techniques/coherence-types.md, techniques/callbacks.md
   Execute Phase 3: Coherence Check.

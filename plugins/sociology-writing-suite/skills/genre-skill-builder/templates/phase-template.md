@@ -162,6 +162,6 @@ For phases that review and refine:
 |----------|--------|---------|
 | `{{N}}` | Phase number | "1" |
 | `{{Phase Name}}` | Descriptive name | "Introduction Drafting" |
-| `{{skill_name}}` | From SKILL.md | "interview-bookends" |
+| `{{skill_name}}` | From SKILL.md | "article-bookends" |
 | `{{goal statement}}` | Phase purpose | "write an introduction that opens the circuit effectively" |
 | `{{output_path}}` | Where files go | `/drafts/` or user-specified |

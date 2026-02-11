@@ -14,8 +14,12 @@ You can start the workflow at any phase if you have the necessary inputs. Common
 | LY.0 (Corpus Audit) | Papers in Zotero | Have literature, need synthesis |
 | IA.1 (Immersion) | Transcripts | Have data, ready to analyze |
 | LW.0 (Theory Cluster) | Literature notes | Have lit knowledge, ready to write |
-| IW.0 (Findings Intake) | Quote database | Have analysis, ready to write |
-| IB.0 (Bookends Intake) | Theory + Findings sections | Have body, need framing |
+| QW.0 (Findings Intake) | Quote database | Have qual analysis, ready to write |
+| RA.0 (Design) | Data + RQ | Have data, ready for quantitative analysis |
+| SA.0 (Design) | Data + RQ | Have data, ready for quantitative analysis (Stata) |
+| QF.1 (Assessment) | Statistical output | Have quant results, ready to write |
+| MF.1 (Assessment) | Qual + quant output | Have both strands, ready to integrate |
+| AB.0 (Bookends Intake) | Theory + Findings sections | Have body, need framing |
 | RC.0 (Revision Intake) | Manuscript + feedback | Have draft, need revision |
 
 ### 2. Forward Movement Is Default
@@ -86,7 +90,7 @@ This will evaluate your analysis against established quality indicators.
 Alternatives:
 - /goto IA.5 to skip quality check and proceed to synthesis
 - /goto LY.4 if findings connect to debates not yet mapped
-- /goto IW.0 if ready to start writing findings
+- /goto QW.0 if ready to start writing findings
 
 Proceed with IA.4? (y/n)
 ```
@@ -113,7 +117,7 @@ Please provide a reason for this iteration (for the log):
 > Writing findings revealed need for additional coding on institutional barriers
 
 Logging iteration:
-- From: IW.2 (Findings Writing)
+- From: QW.2 (Findings Writing)
 - To: IA.2 (Systematic Coding)
 - Reason: "Writing findings revealed need for additional coding on institutional barriers"
 
@@ -121,7 +125,7 @@ Marking as potentially stale:
 - IA.3 (Interpretation)
 - IA.4 (Quality Checkpoint)
 - IA.5 (Synthesis)
-- IW.2 (Findings Writing)
+- QW.2 (Findings Writing)
 
 Proceeding to IA.2...
 ```
@@ -209,10 +213,6 @@ lit-synthesis:
   [!] LY.4  Debate Mapping             stale (re-review needed)
   [ ] LY.5  Field Synthesis            not_started
 
-argument-builder:
-  [ ] LW.0  Cluster Assessment         not_started
-  ...
-
 DATA ANALYSIS DOMAIN
 ────────────────────
 interview-analyst:
@@ -220,6 +220,42 @@ interview-analyst:
   [✓] IA.1  Immersion                  completed 2025-01-25
   [✓] IA.2  Systematic Coding          completed 2025-01-27
   [▶] IA.3  Interpretation             in_progress (started 2025-01-28)
+  ...
+
+r-analyst (or stata-analyst):
+  [ ] RA.0  Research Design            not_started
+  [ ] RA.1  Data Preparation           not_started
+  [ ] RA.2  Exploratory Analysis       not_started
+  [ ] RA.3  Model Estimation           not_started
+  [ ] RA.4  Robustness Checks          not_started
+  [ ] RA.5  Output & Documentation     not_started
+
+WRITING DOMAIN
+──────────────
+argument-builder:
+  [ ] LW.0  Cluster Assessment         not_started
+  ...
+
+qual-findings-writer:
+  [ ] QW.0  Findings Intake            not_started
+  ...
+
+quant-findings-writer:
+  [ ] QF.1  Assessment                 not_started
+  [ ] QF.2  Architecture               not_started
+  [ ] QF.3  Drafting                   not_started
+  [ ] QF.4  Calibration                not_started
+  [ ] QF.5  Revision                   not_started
+
+mixed-methods-findings-writer:
+  [ ] MF.1  Assessment                 not_started
+  [ ] MF.2  Architecture               not_started
+  [ ] MF.3  Drafting                   not_started
+  [ ] MF.4  Calibration                not_started
+  [ ] MF.5  Revision                   not_started
+
+article-bookends:
+  [ ] AB.0  Bookends Intake            not_started
   ...
 ```
 
@@ -235,7 +271,7 @@ DEPENDENCY GRAPH
 LY.2 (Theoretical Mapping)
   └──► LW.0-LW.5 (Theory Section)
   └──► IA.0 (Theory Synthesis, if Track A)
-  └──► IB.0-IB.3 (Bookends)
+  └──► AB.0-AB.3 (Bookends)
 
 LY.4 (Debate Mapping) ⚠ CHANGED 2025-01-29
   └──► LW.3-LW.5 (Theory Drafting)
@@ -243,10 +279,10 @@ LY.4 (Debate Mapping) ⚠ CHANGED 2025-01-29
 
 IA.2 (Coding)
   └──► IA.3-IA.5 (Analysis)
-  └──► IW.2 (Findings)
+  └──► QW.2 (Findings)
 
 IA.5 (Quote Database)
-  └──► IW.2 (Findings)
+  └──► QW.2 (Findings)
 
 STALE OUTPUT WARNINGS
 ─────────────────────
@@ -317,7 +353,7 @@ WRITING
 You're writing findings and discover you need more analysis.
 
 ```
-Current: IW.2 (Findings Writing)
+Current: QW.2 (Findings Writing)
 Discovery: "I need quotes about institutional barriers, but didn't code for that"
 
 /back IA.2
@@ -332,7 +368,7 @@ Reason: "Writing findings revealed need for additional coding on institutional b
 /goto IA.5   # Update quote database
 [Add new quotes]
 
-/goto IW.2   # Return to findings writing
+/goto QW.2   # Return to findings writing
 [Continue with enriched material]
 ```
 
@@ -341,13 +377,13 @@ Reason: "Writing findings revealed need for additional coding on institutional b
 Your findings connect to literature you didn't cover.
 
 ```
-Current: IW.2 (Findings Writing)
+Current: QW.2 (Findings Writing)
 Discovery: "These patterns relate to Bourdieu's cultural capital, but I didn't review that lit"
 
 Option A: Quick addition
 /back LY.4           # Add to debate map
 [Add the missing theoretical connection]
-/goto IW.2           # Return to writing
+/goto QW.2           # Return to writing
 
 Option B: Deep addition
 /back LS.0           # New literature search
@@ -356,7 +392,7 @@ Option B: Deep addition
 /goto LY.2           # Update theoretical map
 /goto LY.4           # Update debate map
 /goto LW.0           # May need to update theory section
-/goto IW.2           # Return to findings
+/goto QW.2           # Return to findings
 ```
 
 ### Pattern 3: Argument Evolution
@@ -373,7 +409,7 @@ New argument: "Participants engage in pragmatic accommodation rather than resist
 
 Coordinator marks as potentially stale:
 - LW.0-LW.5 (if started)
-- IB.0-IB.3 (if started)
+- AB.0-AB.3 (if started)
 
 Then: Review affected phases
 [The coordinator will prompt you to review stale outputs when you reach them]
@@ -398,6 +434,48 @@ Option: Explicit parallel tracking
 The coordinator tracks both positions and reminds you of context when switching.
 ```
 
+### Pattern 5: Quantitative Analysis Iteration
+
+You're writing results and discover model specification issues.
+
+```
+Current: QF.3 (Results Drafting)
+Discovery: "Robustness check invalidates main model specification"
+
+/back RA.3          # Return to model estimation
+Reason: "Robustness check invalidated main specification; need alternative approach"
+
+[Revise model specification]
+
+/goto RA.4          # Re-run robustness checks
+[Verify new specification holds]
+
+/goto RA.5          # Update output documentation
+[Regenerate tables and figures]
+
+/goto QF.3          # Return to results writing
+[Continue with updated results]
+```
+
+### Pattern 6: Mixed Methods Integration
+
+Quantitative results don't align with qualitative findings.
+
+```
+Current: MF.3 (Integration Drafting)
+Discovery: "Regression results contradict interview themes on institutional support"
+
+Option A: Re-examine qualitative data
+/back IA.3          # Return to interpretation
+Reason: "Quant results suggest need to re-examine qual patterns on institutional support"
+
+Option B: Re-examine quantitative models
+/back RA.3          # Return to model estimation
+Reason: "Qual findings suggest omitted variable or specification issue"
+
+[Investigate discrepancy, then return to MF.3]
+```
+
 ## Prerequisite Checking
 
 When jumping to a phase, the coordinator checks prerequisites:
@@ -410,14 +488,18 @@ When jumping to a phase, the coordinator checks prerequisites:
 | LS.5 | Full texts acquired |
 | LY.1 | Papers in Zotero |
 | IA.2 | Transcripts exist |
-| IW.2 | Quote database exists |
-| IB.1 | Theory section exists |
-| IB.2 | Theory + Findings exist |
+| QW.2 | Quote database exists |
+| QF.1 | Statistical output exists (tables/figures from r-analyst or stata-analyst) |
+| MF.1 | Both qual quote database and quant statistical output exist |
+| RA.1 | Data files exist |
+| SA.1 | Data files exist |
+| AB.1 | Theory section exists |
+| AB.2 | Theory + Findings exist |
 | RC.0 | Manuscript + feedback exist |
 
 If hard prerequisites are unmet:
 ```
-Cannot proceed to IW.2 (Findings Section).
+Cannot proceed to QW.2 (Findings Section).
 
 Missing prerequisite: Quote database (IA.5 output)
 
@@ -433,7 +515,9 @@ Options:
 |-------|-------------------|
 | LW.0 | LY.5 (field synthesis) |
 | IA.3 | LY.2 (theoretical map, for Track A) |
-| IB.0 | Methods section |
+| AB.0 | Methods section |
+| QF.1 | Literature synthesis (for positioning results) |
+| MF.1 | Literature synthesis (for integration framing) |
 
 If soft prerequisites are unmet:
 ```

@@ -56,7 +56,8 @@ status_quantitative:
   data_cleaning: not_started
   variable_construction: not_started
 
-  # Analysis
+  # Analysis (r-analyst or stata-analyst)
+  statistical_analysis: not_started  # maps to r-analyst/stata-analyst
   eda: not_started
   modeling: not_started
   robustness: not_started
@@ -90,7 +91,8 @@ status_mixed:
   qual_interpretation: not_started
   qual_synthesis: not_started
 
-  # Quantitative strand
+  # Quantitative strand (r-analyst or stata-analyst)
+  quant_analysis: not_started  # maps to r-analyst/stata-analyst
   quant_data_prep: not_started
   quant_eda: not_started
   quant_modeling: not_started

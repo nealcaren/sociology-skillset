@@ -35,7 +35,7 @@ This skill works best as part of a larger writing workflow:
 |-------|------|------------|
 | **argument-builder** | Craft Theory/Literature section | Strategic contribution positioning |
 | **abstract-builder** | Craft abstract | Publication-ready abstract |
-| **interview-bookends** | Craft introduction/conclusion | Full article framing |
+| **article-bookends** | Craft introduction/conclusion | Full article framing |
 
 **Ideal sequence**: Argument-builder helps you clarify your contribution type. Abstract-builder then communicates that contribution efficiently. Introduction/conclusion expand on the same framing.
 

@@ -77,7 +77,7 @@ Use these categories:
 | **Substantive** | Argument strength, evidence, interpretation | Skill drafting phases |
 | **Methodological** | Methods justification, credibility, transparency | methods-writer |
 | **Stylistic** | Word count, clarity, repetition, prose quality | Skill calibration |
-| **Coherence** | Cross-section alignment, promise-delivery | interview-bookends Phase 3 |
+| **Coherence** | Cross-section alignment, promise-delivery | article-bookends Phase 3 |
 
 ### Task 5: Route to Skills (ALL sections go to Task agents)
 
@@ -86,17 +86,17 @@ Use these categories:
 | Section | Primary Skill | Phase |
 |---------|---------------|-------|
 | Abstract | `abstract-builder` | Phase 3 (revision) |
-| Introduction | `interview-bookends` | Phase 1 (intro) or Phase 3 (coherence) |
-| Conclusion | `interview-bookends` | Phase 2 (conclusion) or Phase 3 (coherence) |
+| Introduction | `article-bookends` | Phase 1 (intro) or Phase 3 (coherence) |
+| Conclusion | `article-bookends` | Phase 2 (conclusion) or Phase 3 (coherence) |
 | Theory/Literature | `argument-builder` | Phase 4 (turn) or Phase 5 (revision) |
 | Methods | `methods-writer` | Phase 1 (pathway) or Phase 2 (revision) |
 | Case Justification | `case-justification` | Phase 1 (cluster) or Phase 2 (revision) |
-| Findings | `interview-writeup` | Phase 3 (revision & quality check) |
+| Findings | `qual-findings-writer` | Phase 3 (revision & quality check) |
 | Discussion | `argument-builder` + `interview-analyst` | See Discussion logic below |
 
 **Discussion routing logic**:
 - Scope/framing issues (limitations, implications) → `argument-builder`
-- Evidence issues (claims need support) → `interview-analyst` first (return to data), then `interview-writeup`
+- Evidence issues (claims need support) → `interview-analyst` first (return to data), then `qual-findings-writer`
 
 **Why no direct revision?** Specialized skills have cluster knowledge, benchmarks, and calibration checks. Winging it produces generic prose that reviewers catch.
 
@@ -128,18 +128,18 @@ Create `revision-map.md` with this structure:
 
 | Section | Present | ~Words | Skill | Items |
 |---------|---------|--------|-------|-------|
-| Introduction | Yes | 800 | interview-bookends | 2 |
+| Introduction | Yes | 800 | article-bookends | 2 |
 | Theory | Yes | 1500 | argument-builder | 3 |
 | Methods | Yes | 900 | methods-writer | 2 |
-| Findings | Yes | 4000 | interview-writeup | 1 |
+| Findings | Yes | 4000 | qual-findings-writer | 1 |
 | Discussion | Yes | 1200 | argument-builder | 2 |
-| Conclusion | Yes | 600 | interview-bookends | 1 |
+| Conclusion | Yes | 600 | article-bookends | 1 |
 
 ---
 
 ## Parsed Feedback Items
 
-### Introduction (2 items) → interview-bookends
+### Introduction (2 items) → article-bookends
 | ID | Type | Source | Item | Status |
 |----|------|--------|------|--------|
 | I-1 | Stylistic | R1 | Too long | [ ] |
@@ -205,6 +205,6 @@ Summarize for the orchestrator:
 - Questions requiring user input
 
 **Example summary**:
-> Parsed 11 feedback items across 6 sections. Routing: Introduction/Conclusion → interview-bookends (3 items), Theory → argument-builder (3 items), Methods → methods-writer (2 items), Findings → interview-writeup (1 item), Discussion → argument-builder (2 items). Proposed sequence: Theory → Intro → Methods → Findings → Discussion → Conclusion. One question for user: R1 says expand methods, R2 says paper is too long—how to reconcile?
+> Parsed 11 feedback items across 6 sections. Routing: Introduction/Conclusion → article-bookends (3 items), Theory → argument-builder (3 items), Methods → methods-writer (2 items), Findings → qual-findings-writer (1 item), Discussion → argument-builder (2 items). Proposed sequence: Theory → Intro → Methods → Findings → Discussion → Conclusion. One question for user: R1 says expand methods, R2 says paper is too long—how to reconcile?
 
 Then pause for user confirmation before proceeding to Phase 1.

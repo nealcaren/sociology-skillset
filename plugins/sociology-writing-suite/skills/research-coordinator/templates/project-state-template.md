@@ -454,11 +454,11 @@ phases:
       final_word_count: null
 
   # ---------------------------------------------------------------------------
-  # interview-writeup: Draft methods and findings
+  # qual-findings-writer: Draft methods and findings
   # ---------------------------------------------------------------------------
   IW.0:
     name: "Intake & Scope"
-    skill: "interview-writeup"
+    skill: "qual-findings-writer"
     status: not_started
     started: null
     completed: null
@@ -470,7 +470,7 @@ phases:
 
   IW.1:
     name: "Methods Section"
-    skill: "interview-writeup"
+    skill: "qual-findings-writer"
     status: not_started
     started: null
     completed: null
@@ -479,7 +479,7 @@ phases:
 
   IW.2:
     name: "Findings Section"
-    skill: "interview-writeup"
+    skill: "qual-findings-writer"
     status: not_started
     started: null
     completed: null
@@ -492,7 +492,7 @@ phases:
 
   IW.3:
     name: "Revision"
-    skill: "interview-writeup"
+    skill: "qual-findings-writer"
     status: not_started
     started: null
     completed: null
@@ -500,11 +500,11 @@ phases:
     notes: null
 
   # ---------------------------------------------------------------------------
-  # interview-bookends: Draft introduction and conclusion
+  # article-bookends: Draft introduction and conclusion
   # ---------------------------------------------------------------------------
   IB.0:
     name: "Intake & Assessment"
-    skill: "interview-bookends"
+    skill: "article-bookends"
     status: not_started
     started: null
     completed: null
@@ -516,7 +516,7 @@ phases:
 
   IB.1:
     name: "Introduction Drafting"
-    skill: "interview-bookends"
+    skill: "article-bookends"
     status: not_started
     started: null
     completed: null
@@ -528,7 +528,7 @@ phases:
 
   IB.2:
     name: "Conclusion Drafting"
-    skill: "interview-bookends"
+    skill: "article-bookends"
     status: not_started
     started: null
     completed: null
@@ -540,7 +540,7 @@ phases:
 
   IB.3:
     name: "Coherence Check"
-    skill: "interview-bookends"
+    skill: "article-bookends"
     status: not_started
     started: null
     completed: null

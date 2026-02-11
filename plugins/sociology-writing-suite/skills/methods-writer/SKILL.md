@@ -47,8 +47,8 @@ This skill assumes users have completed their data collection and analysis, and 
 | Skill | Purpose | Key Output |
 |-------|---------|------------|
 | **interview-analyst** | Analyze qualitative data | Coding structure, findings |
-| **interview-writeup** | Write findings sections | Draft findings |
-| **interview-bookends** | Write intros/conclusions | Draft bookends |
+| **qual-findings-writer** | Write findings sections | Draft findings |
+| **article-bookends** | Write intros/conclusions | Draft bookends |
 
 ## Core Principles (from Genre Analysis)
 

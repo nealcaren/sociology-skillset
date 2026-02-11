@@ -201,7 +201,7 @@ Add diagnostic findings to `revision-map.md`:
 ### Section: Introduction
 - **Cluster**: Gap-Filler
 - **Key issues**: Two intros (structural), too long (calibration)
-- **Entry point**: interview-bookends Phase 1 (redraft intro)
+- **Entry point**: article-bookends Phase 1 (redraft intro)
 
 ### Section: Theory
 - **Cluster**: Gap-Filler (matches intro)
@@ -284,6 +284,6 @@ Summarize for the orchestrator:
 - Revised sequencing if needed
 
 **Example summary**:
-> Diagnostics complete. Theory section is Gap-Filler cluster, word count high (+200), turn needs strengthening → argument-builder Phase 5. Methods currently Standard but should be Detailed given vulnerable population → methods-writer Phase 1 for pathway change. Introduction has two-intros problem → interview-bookends Phase 1 after theory settled. No cluster mismatches detected. Revised sequence: Theory → Methods → Intro → Conclusion.
+> Diagnostics complete. Theory section is Gap-Filler cluster, word count high (+200), turn needs strengthening → argument-builder Phase 5. Methods currently Standard but should be Detailed given vulnerable population → methods-writer Phase 1 for pathway change. Introduction has two-intros problem → article-bookends Phase 1 after theory settled. No cluster mismatches detected. Revised sequence: Theory → Methods → Intro → Conclusion.
 
 Then pause for user confirmation before proceeding to Phase 2.

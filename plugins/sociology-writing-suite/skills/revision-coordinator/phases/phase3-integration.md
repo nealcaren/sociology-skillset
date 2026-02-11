@@ -19,7 +19,7 @@ Do intro, theory, and conclusion share the same cluster type?
 **If mismatch detected**:
 - Usually the theory cluster is authoritative (it reflects the actual contribution)
 - Intro and conclusion should be adjusted to match theory
-- Use interview-bookends Phase 3 (coherence) to realign
+- Use article-bookends Phase 3 (coherence) to realign
 
 ### Check 2: Promise-Delivery Alignment
 
@@ -79,7 +79,7 @@ Does the conclusion reference specific language/concepts from the intro?
 **If callbacks missing**:
 - Identify 2-3 specific intro phrases that can be echoed
 - Add explicit references in conclusion (not repetition, but resonance)
-- Use interview-bookends Phase 3 specifically for this
+- Use article-bookends Phase 3 specifically for this
 
 ### Check 5: Methods → Findings Alignment
 

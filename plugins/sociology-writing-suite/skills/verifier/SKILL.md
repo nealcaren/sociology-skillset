@@ -281,7 +281,7 @@ project/
 
 ## Integration with Other Skills
 
-**After interview-writeup**: Run verifier on the findings section to confirm all participant quotes are accurate.
+**After qual-findings-writer**: Run verifier on the findings section to confirm all participant quotes are accurate.
 
 **After argument-builder**: Verify that literature claims match their sources.
 

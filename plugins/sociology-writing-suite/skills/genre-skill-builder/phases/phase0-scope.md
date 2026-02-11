@@ -65,8 +65,8 @@ Review available model skills and select the most appropriate:
 | Skill | Best For | Key Features |
 |-------|----------|--------------|
 | `argument-builder` | Theory/Lit Review sections | 5 clusters, paragraph functions, citation patterns |
-| `interview-bookends` | Intro/Conclusion pairs | Coherence checking, callbacks, opening moves |
-| `interview-writeup` | Methods/Findings | Quote integration, anchor/echo patterns |
+| `article-bookends` | Intro/Conclusion pairs | Coherence checking, callbacks, opening moves |
+| `qual-findings-writer` | Methods/Findings | Quote integration, anchor/echo patterns |
 
 For each candidate, identify what to extract:
 - Phase structure (how many phases, what each does)
@@ -76,7 +76,7 @@ For each candidate, identify what to extract:
 
 **Selection criteria**:
 - Match section type if possible (argument-builder for theory sections)
-- Match rhetorical function (interview-bookends for framing sections)
+- Match rhetorical function (article-bookends for framing sections)
 - Consider complexity (simpler model for first skill)
 
 ### 4. Review Model Skill Structure

@@ -44,10 +44,10 @@ This skill assumes users have selected their research site and can describe its 
 | Skill | Purpose | Key Output |
 |-------|---------|------------|
 | **interview-analyst** | Analyze qualitative data | Coding structure, findings |
-| **interview-writeup** | Write findings sections | Draft findings |
+| **qual-findings-writer** | Write findings sections | Draft findings |
 | **methods-writer** | Write methods sections | Draft methods |
 | **case-justification** | Write case/setting context | Draft case justification |
-| **interview-bookends** | Write intros/conclusions | Draft bookends |
+| **article-bookends** | Write intros/conclusions | Draft bookends |
 
 This skill handles the case background that typically appears between the theory section and methods section.
 

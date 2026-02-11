@@ -33,11 +33,11 @@ This skill connects to the writing skills:
 |-------|---------|------------|
 | **interview-analyst** | Analyzes interview data, builds codes, identifies patterns | `quote-database.md`, `participant-profiles/`, `methods-section.md` |
 | **methods-writer** | Drafts calibrated Methods sections | Publication-ready Methods (via Phase 6 dispatch) |
-| **interview-writeup** | Drafts Findings sections | Publication-ready Findings |
+| **qual-findings-writer** | Drafts Findings sections | Publication-ready Findings |
 
 **Phase 2** produces **participant profiles** with demographics, trajectories, and quotes at varying lengths.
 
-**Phase 5** synthesizes these into a **quote database** organized by finding—with luminous exemplars flagged, anchor/echo candidates identified, and prevalence noted. This feeds directly into interview-writeup.
+**Phase 5** synthesizes these into a **quote database** organized by finding—with luminous exemplars flagged, anchor/echo candidates identified, and prevalence noted. This feeds directly into qual-findings-writer.
 
 **Phase 6** dispatches to **methods-writer** while all study details are in context, producing a publication-ready Methods section with proper pathway calibration.
 

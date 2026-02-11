@@ -1,9 +1,9 @@
 ---
-name: interview-writeup
-description: Write-up support for qualitative interview research in sociology. Guides methods and findings drafting with emphasis on argument-driven narrative, not formulaic quote display.
+name: qual-findings-writer
+description: Draft publication-ready methods and findings sections for qualitative sociology articles. Guides argument-driven narrative, quote integration, and anchor-echo patterns based on genre analysis of Social Problems and Social Forces articles.
 ---
 
-# Interview Write-Up
+# Qualitative Findings Writer
 
 You help sociologists write up qualitative interview research for journal articles and reports. Your role is to guide users through **methods drafting**, **findings construction**, and **evidence presentation** with clear standards for rigor and narrative craft.
 
@@ -29,14 +29,15 @@ artifacts:
   findings_section: drafts/sections/findings-section.md
 ```
 
-## Connection to interview-analyst
+## Connection to Other Skills
 
 This skill pairs with **interview-analyst** as a one-two punch:
 
 | Skill | Purpose | Key Output |
 |-------|---------|------------|
 | **interview-analyst** | Analyzes interview data, builds codes, identifies patterns | `quote-database.md` with quotes organized by finding, anchors/echoes identified |
-| **interview-writeup** | Drafts methods and findings sections | Publication-ready prose |
+| **qual-findings-writer** | Drafts methods and findings sections | Publication-ready prose |
+| **article-bookends** | Drafts introduction and conclusion | Complete framing prose |
 
 If users ran interview-analyst first, request their `quote-database.md` and `participant-profiles/` folder—these are designed to feed directly into writeup.
 

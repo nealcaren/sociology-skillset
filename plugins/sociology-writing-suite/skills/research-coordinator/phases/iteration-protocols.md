@@ -25,7 +25,7 @@ From Gerson & Damaske's *The Science and Art of Interviewing*:
 **Protocol**:
 
 ```
-CURRENT: IW.2 (Findings Writing)
+CURRENT: QW.2 (Findings Writing)
 DESTINATION: IA.2 (Coding) or IA.3 (Interpretation)
 
 Step 1: Document what's missing
@@ -47,7 +47,7 @@ Step 4: Update quote database
   - Identify anchors and echoes for new themes
 
 Step 5: Return to writing
-  /goto IW.2
+  /goto QW.2
   - Continue with enriched material
   - Note in iteration log: what was added, how it changed the findings
 ```
@@ -69,7 +69,7 @@ Step 5: Return to writing
 **Protocol**:
 
 ```
-CURRENT: IW.2 (Findings Writing) or IA.3 (Interpretation)
+CURRENT: QW.2 (Findings Writing) or IA.3 (Interpretation)
 DESTINATION: LY.4 (Debate Mapping) or LS.0 (New Search)
 
 Step 1: Assess the gap
@@ -142,8 +142,8 @@ Step 2: Review argument history
 Step 3: Assess cascade effects
   Coordinator marks potentially stale:
   - Theory section (LW.0-5) - the turn may need revision
-  - Findings framing (IW.2) - may need reframing
-  - Bookends (IB.0-3) - promises and delivery affected
+  - Findings framing (QW.2) - may need reframing
+  - Bookends (AB.0-3) - promises and delivery affected
 
 Step 4: Decide on scope of revision
   Options:
@@ -252,6 +252,18 @@ Feedback Type D: "Strengthen methods justification"
   - Potentially change pathway
   - Revise methods section
 
+Feedback Type E: "Strengthen statistical analysis"
+  /back RA.3 or RA.4
+  - Revise model specification or robustness checks
+  - Update output documentation (RA.5)
+  - Update results section (QF.3)
+
+Feedback Type F: "Better integrate qual and quant"
+  /back MF.2
+  - Reassess integration architecture
+  - Consider different integration strategy
+  - Redraft integration narrative (MF.3)
+
 Step: After addressing, return to revision
   /goto RC.2
   - Continue with remaining feedback
@@ -311,6 +323,94 @@ IMPORTANT: Don't lose track. At session end, document:
 
 ---
 
+### Pattern 7: Model Specification Revision
+
+**Scenario**: Statistical results reveal specification problems during results writing.
+
+**Symptoms**:
+- Key coefficients are not significant or have wrong signs
+- Robustness checks fail
+- Reviewer identifies omitted variable or endogeneity concern
+- Results don't align with theoretical expectations
+
+**Protocol**:
+
+```
+CURRENT: QF.3 (Results Drafting) or QF.4 (Calibration)
+DESTINATION: RA.3 (Model Estimation) or RA.4 (Robustness)
+
+Step 1: Diagnose the problem
+  Is this:
+  a) A specification issue? → Go to RA.3
+  b) A robustness issue? → Go to RA.4
+  c) A data issue? → Go to RA.1
+
+Step 2: Return to analysis
+  /back RA.3
+  Reason: "Results writing revealed specification problem: [describe]"
+
+  - Revise model specification
+  - Consider alternative estimators
+  - Re-run robustness checks (RA.4)
+  - Update output documentation (RA.5)
+
+Step 3: Return to writing
+  /goto QF.3
+  - Rewrite results with updated tables/figures
+  - Note changes in methods section (may need MW update)
+```
+
+**Duration**: 1-3 sessions
+
+---
+
+### Pattern 8: Mixed Methods Discrepancy
+
+**Scenario**: Quantitative and qualitative findings appear to contradict each other.
+
+**Symptoms**:
+- Regression coefficients contradict interview themes
+- Effect sizes don't match qualitative prominence
+- Qualitative data suggests mechanisms not captured in models
+- Integration narrative feels forced or unconvincing
+
+**Protocol**:
+
+```
+CURRENT: MF.3 (Integration Drafting)
+DESTINATION: IA.3 (Qual Interpretation) or RA.3 (Model Estimation)
+
+Step 1: Characterize the discrepancy
+  Is this:
+  a) A genuine contradiction? → Investigate both strands
+  b) A difference in scope? → One strand captures what the other misses
+  c) A measurement issue? → One strand may be measuring something different
+
+Step 2a: Re-examine qualitative strand
+  /back IA.3
+  Reason: "Quant results suggest need to re-examine [pattern]"
+  - Look for negative cases or exceptions
+  - Check if qual patterns hold for subgroups that match quant sample
+  - Consider whether interview context explains statistical finding
+
+Step 2b: Re-examine quantitative strand
+  /back RA.3
+  Reason: "Qual findings suggest [potential issue] with model"
+  - Consider omitted variables suggested by interviews
+  - Check subgroup analyses that match qual patterns
+  - Consider alternative specifications or moderating variables
+
+Step 3: Return to integration
+  /goto MF.3
+  - Frame discrepancy productively (discrepancies ARE findings)
+  - Use one strand to explain/qualify the other
+  - Document the reconciliation in the integration narrative
+```
+
+**Duration**: 2-5 sessions
+
+---
+
 ## Logging Iterations
 
 ### What to Log
@@ -319,7 +419,7 @@ Every iteration record contains:
 
 ```yaml
 - date: 2025-01-25
-  from_phase: IW.2
+  from_phase: QW.2
   from_name: "Findings Writing"
   to_phase: IA.3
   to_name: "Interpretation"
@@ -354,7 +454,8 @@ Total iterations: 7
 
 By destination domain:
   Literature: 2
-  Analysis: 4
+  Qualitative Analysis: 3
+  Statistical Analysis: 1
   Writing: 1
 
 Most common pattern:

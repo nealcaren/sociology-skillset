@@ -19,9 +19,9 @@ paths:
 ```
 
 **Project type:** This skill works for **all project types**. Revision coordination routes to the appropriate skills based on project type:
-- **Qualitative**: Routes to interview-analyst, interview-writeup for findings revisions
-- **Quantitative**: Routes to methods-writer for analysis revisions (findings support coming)
-- **Mixed**: Handles both routing pathways
+- **Qualitative**: Routes to interview-analyst, qual-findings-writer for findings revisions
+- **Quantitative**: Routes to r-analyst, quant-findings-writer for results revisions
+- **Mixed**: Routes to interview-analyst + r-analyst, mixed-methods-findings-writer for integrated findings revisions
 
 Updates `progress.yaml` when complete:
 ```yaml
@@ -39,7 +39,7 @@ artifacts:
 **You are an orchestrator. You MUST NOT write or revise substantive prose yourself.**
 
 This skill exists because:
-1. Specialized skills (argument-builder, interview-writeup, methods-writer, etc.) have **cluster knowledge, benchmarks, and calibration checks** that you lack
+1. Specialized skills (argument-builder, qual-findings-writer, methods-writer, etc.) have **cluster knowledge, benchmarks, and calibration checks** that you lack
 2. Revision that needs more evidence should **return to the data** via interview-analyst
 3. Winging it produces generic, ungrounded prose that reviewers will catch
 
@@ -65,14 +65,17 @@ This skill exists because:
 
 | If you're about to... | Instead, spawn Task agent for... |
 |----------------------|----------------------------------|
-| Rewrite an intro paragraph | `interview-bookends` Phase 1 |
+| Rewrite an intro paragraph | `article-bookends` Phase 1 |
 | Strengthen the theoretical argument | `argument-builder` Phase 4 or 5 |
 | Add detail to methods | `methods-writer` Phase 1 or 2 |
-| Revise findings prose | `interview-writeup` Phase 3 |
+| Revise findings prose | `qual-findings-writer` Phase 3 |
 | Add more quotes or evidence | `interview-analyst` Phase 2-3 (return to data) |
 | Improve case justification | `case-justification` Phase 1 or 2 |
 | Write scope conditions in discussion | `argument-builder` techniques via Task |
-| Fix conclusion callbacks | `interview-bookends` Phase 3 |
+| Fix conclusion callbacks | `article-bookends` Phase 3 |
+| Revise quantitative results | `quant-findings-writer` Phase 5 (revision) |
+| Revise mixed methods findings | `mixed-methods-findings-writer` Phase 5 (revision) |
+| Re-run statistical models | `r-analyst` Phase 3-4 or `stata-analyst` Phase 3-4 |
 
 **The ONLY prose you write directly:**
 - `revision-map.md` (tracking document)
@@ -99,7 +102,7 @@ This is a **strict orchestration skill**—you coordinate other skills via Task 
 Use this skill when you have:
 - A **completed draft** (or substantial sections) of a manuscript
 - **Feedback** from reviewers, editors, colleagues, or self-assessment
-- Sections that were written (or could have been written) using skills like `argument-builder`, `methods-writer`, `interview-bookends`, or `case-justification`
+- Sections that were written (or could have been written) using skills like `argument-builder`, `methods-writer`, `article-bookends`, or `case-justification`
 
 ## Skill Routing Table
 
@@ -108,13 +111,15 @@ Use this skill when you have:
 | Section | Primary Skill | Entry Point for Revision |
 |---------|---------------|--------------------------|
 | **Abstract** | `abstract-builder` | Phase 0 (archetype) or Phase 3 (revision) |
-| **Introduction** | `interview-bookends` | Phase 1 (intro drafting) or Phase 3 (coherence) |
-| **Conclusion** | `interview-bookends` | Phase 2 (conclusion drafting) or Phase 3 (coherence) |
+| **Introduction** | `article-bookends` | Phase 1 (intro drafting) or Phase 3 (coherence) |
+| **Conclusion** | `article-bookends` | Phase 2 (conclusion drafting) or Phase 3 (coherence) |
 | **Theory/Literature Review** | `argument-builder` | Phase 4 (turn) or Phase 5 (revision) |
 | **Methods** | `methods-writer` | Phase 1 (pathway change) or Phase 2 (revision) |
 | **Case Justification** | `case-justification` | Phase 1 (cluster change) or Phase 2 (revision) |
-| **Findings** | `interview-writeup` | Phase 3 (revision & quality check) |
-| **Discussion** | `argument-builder` + `interview-analyst` | See Discussion Routing below |
+| **Findings** | `qual-findings-writer` | Phase 3 (revision & quality check) |
+| **Results (Quantitative)** | `quant-findings-writer` | Phase 5 (revision) |
+| **Findings (Mixed Methods)** | `mixed-methods-findings-writer` | Phase 5 (revision) |
+| **Discussion** | `argument-builder` + analysis skill | See Discussion Routing below |
 | **Pre-Empirical Validation** | `peer-reviewer` | Before data deep dive |
 | **Final Peer Review** | `peer-reviewer` | After manuscript completion |
 
@@ -127,10 +132,11 @@ Discussion revision often requires one of two approaches:
    - The agent can draft scope conditions using the theory section's literatures
 
 2. **Evidence issues** (claims need more support, alternative explanations):
-   - **Return to the data**: Spawn `interview-analyst` Phase 2-3 to find additional evidence
-   - Then spawn `interview-writeup` Phase 3 to integrate new evidence into discussion
+   - **Qualitative projects**: Spawn `interview-analyst` Phase 2-3 to find additional evidence, then `qual-findings-writer` Phase 3
+   - **Quantitative projects**: Spawn `r-analyst` or `stata-analyst` Phase 3-4 for additional analysis, then `quant-findings-writer` Phase 5
+   - **Mixed methods projects**: May need to return to either or both strands, then `mixed-methods-findings-writer` Phase 5
 
-**Never fabricate scope conditions or limitations. Route to the appropriate skill.**
+**Never fabricate scope conditions, limitations, or statistical results. Route to the appropriate skill.**
 
 ## What You Need
 
@@ -300,7 +306,7 @@ When spawning a Task agent, provide:
 **Coherence Repairs**:
 - If intro promises changed, may need to adjust conclusion
 - If theory framing changed, may need to revise findings language
-- Use `interview-bookends` Phase 3 for intro/conclusion coherence specifically
+- Use `article-bookends` Phase 3 for intro/conclusion coherence specifically
 
 **Output**: Coherence assessment + any final adjustments.
 
@@ -437,7 +443,9 @@ Into:
 | **Substantive** | "Strengthen the argument for X" | Skill Phase 3-4 (Drafting/Turn) |
 | **Methodological** | "Explain intercoder reliability" | methods-writer Phase 2 |
 | **Stylistic** | "Cut 500 words from intro" | Skill calibration checks |
-| **Coherence** | "Intro promises don't match findings" | interview-bookends Phase 3 |
+| **Coherence** | "Intro promises don't match findings" | article-bookends Phase 3 |
+| **Statistical** | "Re-run models with controls for X" | r-analyst/stata-analyst Phase 3-4 |
+| **Integration** | "Better connect qual and quant" | mixed-methods-findings-writer Phase 2-5 |
 
 ### Identify Dependencies
 
@@ -526,10 +534,10 @@ Task: Revise Findings Section
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-writeup skill:
-  - Read: [path]/interview-writeup/SKILL.md
-  - Read: [path]/interview-writeup/phases/phase3-revision.md
-  - Read: [path]/interview-writeup/techniques/rubric.md
+  Load the qual-findings-writer skill:
+  - Read: [path]/qual-findings-writer/SKILL.md
+  - Read: [path]/qual-findings-writer/phases/phase3-revision.md
+  - Read: [path]/qual-findings-writer/techniques/rubric.md
 
   TASK: Revise an existing Findings section using Phase 3 revision protocol.
 
@@ -575,10 +583,10 @@ Task: Revise Introduction
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-bookends skill:
-  - Read: [path]/interview-bookends/SKILL.md
-  - Read: [path]/interview-bookends/phases/phase1-introduction.md
-  - Read: [path]/interview-bookends/clusters/[cluster-name].md
+  Load the article-bookends skill:
+  - Read: [path]/article-bookends/SKILL.md
+  - Read: [path]/article-bookends/phases/phase1-introduction.md
+  - Read: [path]/article-bookends/clusters/[cluster-name].md
 
   TASK: Revise an existing Introduction.
 
@@ -618,10 +626,10 @@ Task: Revise Conclusion
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-bookends skill:
-  - Read: [path]/interview-bookends/SKILL.md
-  - Read: [path]/interview-bookends/phases/phase2-conclusion.md
-  - Read: [path]/interview-bookends/techniques/callbacks.md
+  Load the article-bookends skill:
+  - Read: [path]/article-bookends/SKILL.md
+  - Read: [path]/article-bookends/phases/phase2-conclusion.md
+  - Read: [path]/article-bookends/techniques/callbacks.md
 
   TASK: Revise an existing Conclusion.
 
@@ -817,6 +825,144 @@ prompt: |
 
 ---
 
+### Quantitative Results Section Dispatch
+
+```
+Task: Revise Quantitative Results Section
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the quant-findings-writer skill:
+  - Read: [path]/quant-findings-writer/SKILL.md
+  - Read: [path]/quant-findings-writer/clusters/[cluster-name].md
+  - Read: [path]/quant-findings-writer/techniques/techniques.md
+
+  TASK: Revise an existing Results section.
+
+  EXISTING SECTION:
+  [paste current results section - FULL TEXT]
+
+  CLUSTER IDENTIFIED: [Progressive Model Builder / Hypothesis Tester / Decomposition Analyst / etc.]
+
+  FEEDBACK TO ADDRESS:
+  1. [ID: R-1] [specific feedback item]
+  2. [ID: R-2] [specific feedback item]
+
+  CONTEXT:
+  - Research question: [RQ]
+  - Main argument: [contribution]
+  - Statistical output location: [path to tables/figures]
+
+  STATISTICAL OUTPUT:
+  - Tables: [list key tables]
+  - Figures: [list key figures]
+  - Model documentation: [path to analysis scripts/output]
+
+  Run Phase 5 (Revision) calibration checks. Revise to address feedback
+  while maintaining [Cluster] characteristics.
+
+  If reanalysis is needed (new models, different specifications),
+  note this as "NEEDS REANALYSIS" - do not fabricate statistical results.
+
+  OUTPUT:
+  - Save revised section to: revision/section-revisions/results-revised.md
+  - Return: summary of changes, items addressed, any NEEDS REANALYSIS flags
+```
+
+---
+
+### Mixed Methods Findings Section Dispatch
+
+```
+Task: Revise Mixed Methods Findings Section
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the mixed-methods-findings-writer skill:
+  - Read: [path]/mixed-methods-findings-writer/SKILL.md
+  - Read: [path]/mixed-methods-findings-writer/clusters/[cluster-name].md
+  - Read: [path]/mixed-methods-findings-writer/techniques/techniques.md
+
+  TASK: Revise an existing integrated Findings section.
+
+  EXISTING SECTION:
+  [paste current findings section - FULL TEXT]
+
+  CLUSTER IDENTIFIED: [Thematic Integrator / Quant-Anchored Elaborator / etc.]
+
+  FEEDBACK TO ADDRESS:
+  1. [ID: MF-1] [specific feedback item]
+  2. [ID: MF-2] [specific feedback item]
+
+  CONTEXT:
+  - Research question: [RQ]
+  - Main argument: [contribution]
+  - Integration design: [how qual and quant connect]
+
+  QUALITATIVE DATA ACCESS:
+  - Quote database: [path]
+  - Interview transcripts: [path]
+
+  QUANTITATIVE DATA ACCESS:
+  - Statistical output: [path to tables/figures]
+  - Model documentation: [path]
+
+  Run Phase 5 (Revision). Revise to address feedback while maintaining
+  integration coherence between qualitative and quantitative strands.
+
+  If additional qualitative evidence is needed, note as "NEEDS QUAL DATA RETURN".
+  If reanalysis is needed, note as "NEEDS REANALYSIS".
+  Do not fabricate quotes or statistical results.
+
+  OUTPUT:
+  - Save revised section to: revision/section-revisions/mixed-findings-revised.md
+  - Return: summary of changes, integration assessment, any data return flags
+```
+
+---
+
+### Return to Statistical Analysis Dispatch (When Reanalysis Needed)
+
+**Use this when feedback indicates statistical models need revision or additional analysis.**
+
+```
+Task: Return to Statistical Analysis for Reanalysis
+subagent_type: general-purpose
+model: opus
+prompt: |
+  Load the r-analyst skill (or stata-analyst as appropriate):
+  - Read: [path]/r-analyst/SKILL.md
+  - Read: [path]/r-analyst/phases/phase3-estimation.md
+  - Read: [path]/r-analyst/phases/phase4-robustness.md
+
+  TASK: Revise statistical analysis based on reviewer feedback.
+
+  REANALYSIS NEEDED FOR:
+  [describe what models or analyses need revision]
+
+  CURRENT ANALYSIS:
+  - Scripts: [path to analysis scripts]
+  - Output: [path to tables/figures]
+  - Data: [path to processed data]
+
+  FEEDBACK DRIVING REANALYSIS:
+  1. [specific feedback about statistical approach]
+
+  PROCESS:
+  1. Review current model specification
+  2. Implement requested changes (alternative estimator, additional controls, subgroup analysis, etc.)
+  3. Re-run robustness checks (Phase 4)
+  4. Update output documentation (Phase 5)
+  5. Regenerate tables and figures
+
+  OUTPUT:
+  - Updated analysis scripts
+  - Updated tables/figures
+  - Return: summary of changes, new results, any concerns about revised specification
+```
+
+---
+
 ### Coherence Check Dispatch
 
 ```
@@ -824,10 +970,10 @@ Task: Coherence Check - Intro/Conclusion Alignment
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-bookends skill:
-  - Read: [path]/interview-bookends/SKILL.md
-  - Read: [path]/interview-bookends/phases/phase3-coherence.md
-  - Read: [path]/interview-bookends/techniques/callbacks.md
+  Load the article-bookends skill:
+  - Read: [path]/article-bookends/SKILL.md
+  - Read: [path]/article-bookends/phases/phase3-coherence.md
+  - Read: [path]/article-bookends/techniques/callbacks.md
 
   TASK: Verify and repair coherence between Introduction and Conclusion.
 
@@ -1069,7 +1215,7 @@ prompt: |
 **Resolution**:
 1. Keep ONE intro (usually the first)
 2. Convert the second into a proper Theory section (use argument-builder cluster guidance)
-3. Run interview-bookends Phase 3 for coherence check
+3. Run article-bookends Phase 3 for coherence check
 
 ### Scenario: Methods Credibility Gap
 **Feedback**: "Need more detail on coding/reliability"
@@ -1092,9 +1238,9 @@ prompt: |
 **Diagnosis**: Coherence failure between intro and body.
 **Resolution**:
 1. Decide which is right: the promise or the delivery
-2. If delivery is right, revise intro to match (interview-bookends Phase 1)
+2. If delivery is right, revise intro to match (article-bookends Phase 1)
 3. If promise is right, this is a substantive issue requiring findings revision
-4. Run interview-bookends Phase 3 for coherence verification
+4. Run article-bookends Phase 3 for coherence verification
 
 ## Key Reminders
 

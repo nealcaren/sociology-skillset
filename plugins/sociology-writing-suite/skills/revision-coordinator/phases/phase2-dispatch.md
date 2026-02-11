@@ -62,17 +62,17 @@ prompt: |
 
 ---
 
-### Introduction → interview-bookends
+### Introduction → article-bookends
 
 ```
 Task: Revise Introduction
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-bookends skill:
-  - Read: [path]/interview-bookends/SKILL.md
-  - Read: [path]/interview-bookends/phases/phase1-introduction.md
-  - Read: [path]/interview-bookends/clusters/[cluster-name].md
+  Load the article-bookends skill:
+  - Read: [path]/article-bookends/SKILL.md
+  - Read: [path]/article-bookends/phases/phase1-introduction.md
+  - Read: [path]/article-bookends/clusters/[cluster-name].md
 
   TASK: Revise an existing Introduction.
 
@@ -94,17 +94,17 @@ prompt: |
 
 ---
 
-### Conclusion → interview-bookends
+### Conclusion → article-bookends
 
 ```
 Task: Revise Conclusion
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-bookends skill:
-  - Read: [path]/interview-bookends/SKILL.md
-  - Read: [path]/interview-bookends/phases/phase2-conclusion.md
-  - Read: [path]/interview-bookends/techniques/callbacks.md
+  Load the article-bookends skill:
+  - Read: [path]/article-bookends/SKILL.md
+  - Read: [path]/article-bookends/phases/phase2-conclusion.md
+  - Read: [path]/article-bookends/techniques/callbacks.md
 
   TASK: Revise an existing Conclusion.
 
@@ -192,19 +192,19 @@ prompt: |
 
 ---
 
-### Findings Section → interview-writeup
+### Findings Section → qual-findings-writer
 
-**Findings revision goes to interview-writeup Phase 3, NOT "direct revision."**
+**Findings revision goes to qual-findings-writer Phase 3, NOT "direct revision."**
 
 ```
 Task: Revise Findings Section
 subagent_type: general-purpose
 model: opus
 prompt: |
-  Load the interview-writeup skill:
-  - Read: [path]/interview-writeup/SKILL.md
-  - Read: [path]/interview-writeup/phases/phase3-revision.md
-  - Read: [path]/interview-writeup/techniques/rubric.md
+  Load the qual-findings-writer skill:
+  - Read: [path]/qual-findings-writer/SKILL.md
+  - Read: [path]/qual-findings-writer/phases/phase3-revision.md
+  - Read: [path]/qual-findings-writer/techniques/rubric.md
 
   TASK: Revise an existing Findings section.
 
@@ -367,8 +367,8 @@ After each agent completes, update `revision-map.md`:
 | Time | Section | Agent Task | Items | Status |
 |------|---------|------------|-------|--------|
 | [time] | Theory | argument-builder/P5 | T-1, T-2 | Complete |
-| [time] | Findings | interview-writeup/P3 | F-1 | Complete |
-| [time] | Introduction | interview-bookends/P1 | I-1, I-2 | In progress |
+| [time] | Findings | qual-findings-writer/P3 | F-1 | Complete |
+| [time] | Introduction | article-bookends/P1 | I-1, I-2 | In progress |
 
 ### Item Status
 
@@ -435,10 +435,10 @@ Summarize:
 > Dispatch complete. 6 agents ran:
 > - Theory (argument-builder/P5): 3/3 items
 > - Methods (methods-writer/P2): 2/2 items
-> - Introduction (interview-bookends/P1): 2/2 items
-> - Findings (interview-writeup/P3): 1/1 items (required data return first)
+> - Introduction (article-bookends/P1): 2/2 items
+> - Findings (qual-findings-writer/P3): 1/1 items (required data return first)
 > - Discussion (argument-builder): 2/2 items
-> - Conclusion (interview-bookends/P2): 1/1 items
+> - Conclusion (article-bookends/P2): 1/1 items
 >
 > D-1 flagged [!] — user confirmed scope conditions.
 >

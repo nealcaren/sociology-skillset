@@ -101,8 +101,30 @@ IA.5 (Synthesis) ─────────────────────
   │                                           │           │            │
   │ (quote database)                          │           │            │
   │                                           │           │            │
-WRITING DOMAIN                                │           │            │
-══════════════                                │           │            │
+STATISTICAL ANALYSIS DOMAIN (Quantitative/Mixed)          │            │
+═════════════════════════════════════════════════          │            │
+                                                          │            │
+RA.0 (Design) ◄──────────────────────────────────┤        │            │
+  │                                               │        │            │
+  ▼                                               │        │            │
+RA.1 (Data Prep)                                  │        │            │
+  │                                               │        │            │
+  ▼                                               │        │            │
+RA.2 (EDA)                                        │        │            │
+  │                                               │        │            │
+  ▼                                               │        │            │
+RA.3 (Modeling) ◄────────────────────────────────┤        │            │
+  │                  (lit informs specification)  │        │            │
+  ▼                                               │        │            │
+RA.4 (Robustness)                                 │        │            │
+  │                                               │        │            │
+  ▼                                               │        │            │
+RA.5 (Output) ──────────────────────────┐         │        │            │
+  │                                     │         │        │            │
+  │ (tables + figures)                  │         │        │            │
+                                        │         │        │            │
+WRITING DOMAIN                          │         │        │            │
+══════════════                          │         │        │            │
                                               │           │            │
 MW.0 (Methods Pathway) ◄──────────────────────┤           │            │
   │                                           │           │            │
@@ -120,29 +142,59 @@ CJ.1 (Case Draft)                             │           │            │
   ▼                                           │           │            │
 CJ.2 (Case Revision)                          │           │            │
                                               │           │            │
-IW.0 (Findings Intake) ◄──────────────────────┼───────────┘            │
+QW.0 (Findings Intake) ◄──────────────────────┼───────────┘            │
   │                                           │                        │
   ▼                                           │                        │
-IW.1 (Methods via IW)                         │                        │
+QW.1 (Methods via QW)                         │                        │
   │                                           │                        │
   ▼                                           │                        │
-IW.2 (Findings) ◄─────────────────────────────┤                        │
+QW.2 (Findings) ◄─────────────────────────────┤                        │
   │              (lit informs interpretation) │                        │
   ▼                                           │                        │
-IW.3 (Findings Revision)                      │                        │
+QW.3 (Findings Revision)                      │                        │
+  │                                           │                        │
+                                              │                        │
+QF.1 (Assessment) ◄─────────────────────┘     │                        │
+  │                                           │                        │
+  ▼                                           │                        │
+QF.2 (Architecture)                           │                        │
+  │                                           │                        │
+  ▼                                           │                        │
+QF.3 (Drafting) ◄────────────────────────────┤                        │
+  │              (lit informs interpretation) │                        │
+  ▼                                           │                        │
+QF.4 (Calibration)                            │                        │
+  │                                           │                        │
+  ▼                                           │                        │
+QF.5 (Revision)                               │                        │
+  │                                           │                        │
+                                              │                        │
+MF.1 (Assessment) ◄──────── IA.5 (Quote DB) + RA.5 (Output)           │
+  │                                           │                        │
+  ▼                                           │                        │
+MF.2 (Architecture)                           │                        │
+  │                                           │                        │
+  ▼                                           │                        │
+MF.3 (Drafting)                               │                        │
+  │                                           │                        │
+  ▼                                           │                        │
+MF.4 (Calibration)                            │                        │
+  │                                           │                        │
+  ▼                                           │                        │
+MF.5 (Revision)                               │                        │
   │                                           │                        │
   │                                           │                        │
   ▼                                           ▼                        │
-IB.0 (Bookends Intake) ◄──────────────────────┴────────────────────────┘
+AB.0 (Bookends Intake) ◄──────────────────────┴────────────────────────┘
   │                       (needs theory + findings)
   ▼
-IB.1 (Introduction) ◄──────────────────────────┐
+AB.1 (Introduction) ◄──────────────────────────┐
   │                                            │
   ▼                                            │
-IB.2 (Conclusion)                              │
+AB.2 (Conclusion)                              │
   │                                            │
   ▼                                            │
-IB.3 (Coherence) ◄─────────────────────────────┘
+AB.3 (Coherence) ◄─────────────────────────────┘
                    (intro ↔ conclusion alignment)
 ```
 
@@ -157,7 +209,14 @@ When an output changes, all dependent outputs become potentially stale.
 Affected downstream:
 - LW.0-LW.5 (Theory section)
 - IA.0 (if Track A)
-- IB.0-IB.3 (Bookends)
+- AB.0-AB.3 (Bookends)
+
+**Example**: Changing model specification (RA.3 output)
+
+Affected downstream:
+- RA.4-RA.5 (Robustness and output)
+- QF.1-QF.5 (Results writing)
+- AB.0-AB.3 (Bookends)
 
 ### Rule 2: Severity Varies by Distance
 
@@ -258,18 +317,42 @@ resolution_notes: "Will address in next revision cycle; documenting for now"
 
 | Analysis Output | Writing Phases Affected | Nature of Dependency |
 |-----------------|------------------------|---------------------|
-| Codebook (IA.2) | IW.2 | Organizes evidence presentation |
-| Interpretation (IA.3) | IW.2 | Provides analytical claims |
-| Quote database (IA.5) | IW.2 | Source material for findings |
+| Codebook (IA.2) | QW.2 | Organizes evidence presentation |
+| Interpretation (IA.3) | QW.2 | Provides analytical claims |
+| Quote database (IA.5) | QW.2 | Source material for findings |
 
 **When to review**: If quote database changes, findings may need new/different quotes.
+
+### Statistical Analysis → Results Writing
+
+| Analysis Output | Writing Phases Affected | Nature of Dependency |
+|-----------------|------------------------|---------------------|
+| Tables (RA.5/SA.5) | QF.1-3 | Source material for results narrative |
+| Figures (RA.5/SA.5) | QF.1-3 | Visual evidence to interpret |
+| Model documentation (RA.5/SA.5) | QF.2, QF.3 | Determines results architecture |
+| Robustness results (RA.4) | QF.3, QF.4 | Must be discussed in results |
+
+**When to review**: If model specification changes, results section needs rewriting.
+
+### Both Strands → Mixed Methods Integration
+
+| Output | Writing Phases Affected | Nature of Dependency |
+|--------|------------------------|---------------------|
+| Quote database (IA.5) | MF.1-3 | Qualitative evidence for integration |
+| Statistical output (RA.5/SA.5) | MF.1-3 | Quantitative evidence for integration |
+| Qual interpretation (IA.3) | MF.2 | Informs integration architecture |
+| Quant model results (RA.3) | MF.2 | Informs integration architecture |
+
+**When to review**: Changes to either strand may require rethinking integration.
 
 ### Writing → Bookends
 
 | Writing Output | Bookends Phases Affected | Nature of Dependency |
 |----------------|-------------------------|---------------------|
-| Theory section (LW.5) | IB.0, IB.1, IB.2 | Intro promises theory delivers; conclusion restates |
-| Findings section (IW.3) | IB.0, IB.2 | Conclusion summarizes and projects from findings |
+| Theory section (LW.5) | AB.0, AB.1, AB.2 | Intro promises theory delivers; conclusion restates |
+| Qual findings section (QW.3) | AB.0, AB.2 | Conclusion summarizes and projects from findings |
+| Quant results section (QF.5) | AB.0, AB.2 | Conclusion summarizes results and implications |
+| Mixed findings section (MF.5) | AB.0, AB.2 | Conclusion integrates both strands |
 
 **When to review**: If main contribution/argument changes in theory section, bookends need realignment.
 
@@ -336,12 +419,12 @@ DEPENDENCIES FOR: analysis/quote-database.md
 ════════════════════════════════════════════
 
 DIRECTLY DEPENDS ON THIS:
-  • IW.2 (Findings Section) - uses quotes from database
-  • IB.2 (Conclusion) - may reference specific examples
+  • QW.2 (Findings Section) - uses quotes from database
+  • AB.2 (Conclusion) - may reference specific examples
 
 INDIRECTLY DEPENDS ON THIS:
-  • IW.3 (Findings Revision)
-  • IB.3 (Coherence Check)
+  • QW.3 (Findings Revision)
+  • AB.3 (Coherence Check)
 
 If you change quote-database.md, these outputs may need review.
 ```
