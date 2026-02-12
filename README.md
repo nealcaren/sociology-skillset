@@ -53,7 +53,8 @@ Start with `/research-coordinator` for full workflow orchestration. It drives th
 ```
 /research-coordinator
 
-I'm studying how journalists cover protests. I have 30 interviews with reporters.
+I have 15,000 news articles about immigration from 2010-2023. I want to identify
+how framing has shifted over time using topic models and sentiment analysis.
 ```
 
 The coordinator guides you through literature search, synthesis, data analysis, and writing.
@@ -75,8 +76,8 @@ Include context when invoking:
 ```
 /interview-analyst
 
-I have 25 interviews with first-generation college students about navigating campus.
-My theoretical interest is in cultural capital and belonging.
+I have 20 oral histories from retired steelworkers in Pittsburgh.
+My theoretical interest is in deindustrialization and identity.
 ```
 
 ## The Skills
