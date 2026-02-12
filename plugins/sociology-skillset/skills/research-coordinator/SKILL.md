@@ -104,7 +104,7 @@ This means:
 > "Literature search complete—found 127 papers, screened to 34 relevant ones. Next I'll run snowballing to catch papers we might have missed through citation networks. This typically adds 10-20% more papers. Proceeding with snowballing..."
 
 **At Decision Points:**
-> "I've identified your contribution type as **Gap-Filler**—you're documenting how journalists cover protests in ways the literature hasn't examined. This means your theory section should be relatively short (1,200 words), phenomenon-led, with the gap clearly stated mid-section. Does that framing match your sense of the project, or do you see it differently?"
+> "I've identified your contribution type as **Gap-Filler**—you're documenting how community health workers build trust in ways the literature hasn't examined. This means your theory section should be relatively short (1,200 words), phenomenon-led, with the gap clearly stated mid-section. Does that framing match your sense of the project, or do you see it differently?"
 
 ### When to Pause for Input
 
@@ -149,7 +149,7 @@ Literature (deeper) ◄──────┘
 
 ## The Recommended Workflow
 
-When a user comes to you with a research question like "How do journalists cover protests?", here's how you drive the process:
+When a user comes to you with a research question like "How do community health workers build trust?", here's how you drive the process:
 
 ### Stage 1: Foundation (Do This First)
 
@@ -809,7 +809,7 @@ Reviewer requests additional evidence or alternative explanation.
 
 ### When Someone Comes With a Research Question
 
-User says: *"I want to study how journalists cover protests"*
+User says: *"I want to study how community health workers build trust in underserved neighborhoods"*
 
 **Your response (be proactive):**
 
@@ -820,7 +820,7 @@ User says: *"I want to study how journalists cover protests"*
 > 2. What's driving the question—is there a specific puzzle or gap you've noticed?
 > 3. What's your timeline and target output (dissertation chapter, journal article, book)?
 >
-> Once I know that, I'll set up the project and we'll start with a preliminary literature scan to understand what's already known about protest coverage. Then we'll move into your data.
+> Once I know that, I'll set up the project and we'll start with a preliminary literature scan to understand what's already known about trust-building in community health. Then we'll move into your data.
 
 ### After Scoping: Initialize and Go
 
@@ -828,15 +828,15 @@ Once you have answers, **don't ask what to do—do it:**
 
 > **Here's what I'm setting up:**
 >
-> **Project:** Journalist Protest Coverage
-> **RQ (draft):** How do journalists make decisions about covering protests, and what shapes their framing choices?
+> **Project:** Community Health Worker Trust-Building
+> **RQ (draft):** How do community health workers build and maintain trust in underserved neighborhoods, and what shapes variation in their approaches?
 >
 > I've created the project structure and initialized tracking.
 >
 > **Starting now with preliminary literature search.** I'll look for:
-> - Journalism studies on protest coverage
-> - Media framing of social movements
-> - Newsroom decision-making research
+> - Community health worker roles and effectiveness
+> - Trust in healthcare and institutional settings
+> - Street-level bureaucracy and relational work
 >
 > This will take a few minutes. I'll report back with what the field looks like, then we'll refine your question based on where the gaps are.
 >
@@ -848,16 +848,16 @@ Once you have answers, **don't ask what to do—do it:**
 
 > **Literature scan complete.**
 >
-> Found 89 relevant papers, screened to 31. Here's the landscape:
+> Found 74 relevant papers, screened to 28. Here's the landscape:
 >
-> - **Framing research** (12 papers): How protests get framed as legitimate/illegitimate
-> - **Source selection** (8 papers): Who journalists quote and why
-> - **Newsroom dynamics** (6 papers): Editorial pressures and routines
-> - **Digital/social media** (5 papers): How online changes coverage
+> - **CHW effectiveness** (10 papers): Outcome studies on health metrics and access
+> - **Trust in healthcare** (8 papers): Institutional trust, medical mistrust in marginalized communities
+> - **Relational labor** (6 papers): Emotional work, boundary spanning, cultural brokering
+> - **Street-level bureaucracy** (4 papers): Discretion and adaptation in frontline work
 >
-> **Gap I'm seeing:** Lots on *what* the coverage looks like, less on *how journalists actually make these decisions in the moment*. Your study could fill that.
+> **Gap I'm seeing:** Lots on *whether* CHWs improve outcomes, less on *how they actually build trust day-to-day*. Your study could fill that.
 >
-> **Refined RQ suggestion:** "How do journalists navigate competing pressures when deciding how to cover protests, and what explains variation in their framing choices?"
+> **Refined RQ suggestion:** "How do community health workers navigate institutional constraints and community skepticism to build trust, and what explains variation in their relational strategies?"
 >
 > Does that capture what you're after, or should we adjust?
 >
@@ -867,12 +867,12 @@ Once you have answers, **don't ask what to do—do it:**
 
 > **RQ confirmed. Moving to your data.**
 >
-> I see you have 24 interview transcripts in `/interviews/`. I'll now:
+> I see you have 22 interview transcripts in `/interviews/`. I'll now:
 > 1. Read through all of them to get familiar with the material
 > 2. Write memos on each one noting key themes, surprises, and patterns
 > 3. Come back to you with what's emerging before we start systematic coding
 >
-> This is the immersion phase—I want to understand your journalists as they understand themselves before imposing analytical categories.
+> This is the immersion phase—I want to understand your health workers as they understand themselves before imposing analytical categories.
 >
 > *[Executes IA.1]*
 
@@ -910,19 +910,19 @@ After completing analysis:
 
 > **Analysis complete.** Here's what emerged:
 >
-> **Main finding:** Journalists balance three competing pressures—editorial direction, source relationships, and personal politics—and their coverage varies based on which pressure dominates in a given story.
+> **Main finding:** Health workers build trust through three distinct relational strategies, and which strategy they use depends on the institutional context they work within and the community's history with formal services.
 >
 > **Three patterns:**
-> 1. "Editorial-driven" (9 journalists): Defer to newsroom framing
-> 2. "Source-driven" (8 journalists): Let activists/police shape the story
-> 3. "Conviction-driven" (7 journalists): Personal beliefs override other pressures
+> 1. "Bridge-builders" (9 CHWs): Translate between institutional and community logics
+> 2. "Advocates" (7 CHWs): Prioritize community needs, sometimes bending organizational rules
+> 3. "System navigators" (6 CHWs): Help residents work within existing structures more effectively
 >
-> **Quote database ready** with 127 tagged quotes across these patterns.
+> **Quote database ready** with 134 tagged quotes across these patterns.
 >
 > **Now returning to literature** to engage more deeply. Your findings connect to:
-> - Hierarchy of influences model (Shoemaker & Reese)
-> - Journalistic role conceptions literature
-> - Maybe Bourdieu on field theory?
+> - Street-level bureaucracy (Lipsky) and discretion
+> - Cultural brokering and boundary spanning
+> - Maybe Bourdieu on social capital and field position?
 >
 > I'll do deep reading on these traditions and map the debates your work speaks to. Then we'll identify your contribution type and start writing.
 >
