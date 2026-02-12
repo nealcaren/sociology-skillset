@@ -314,6 +314,11 @@ Each skill folder contains:
 - `guides/` — Setup and usage guides (for zotero skills)
 - `references/` — Tool references and error patterns
 
+## Planned Skills
+
+- **replication-packager** — Assemble replication archives and document data pipelines for journal data availability requirements
+- **conference-slides** — Turn a manuscript into a conference presentation (ASA, regionals, invited talks)
+
 ## License
 
 MIT

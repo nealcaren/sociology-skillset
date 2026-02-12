@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-A Claude Code plugin marketplace containing the `sociology-skillset` plugin — 24 markdown-based skills for academic sociology writing covering qualitative, quantitative, and mixed methods research. No build system, no compiled code; skills are structured markdown files that Claude Code loads as instructions.
+A Claude Code plugin marketplace containing the `sociology-skillset` plugin — more than two dozen markdown-based skills for academic sociology research covering qualitative, quantitative, and mixed methods workflows. No build system, no compiled code; skills are structured markdown files that Claude Code loads as instructions.
 
 ## Repository Layout
 
@@ -17,7 +17,6 @@ plugins/sociology-skillset/
     phases/                              # Phase-specific guides (phase0-intake.md, etc.)
     clusters/ or pathways/               # Empirically-derived style variants
     techniques/                          # Craft reference guides
-to-add/                                  # Work-in-progress skills not yet released
 ```
 
 ## Skill Anatomy
@@ -51,11 +50,22 @@ See `PUBLISHING.md` for the full process. The critical rule: **versions must mat
 
 ## Version Sync Checklist
 
-When bumping versions or adding/removing skills, update:
+When bumping versions or adding/removing skills, update these **three things** in **both** files:
 1. `plugins/sociology-skillset/plugin.json` — `version` and `description`
-2. `.claude-plugin/marketplace.json` — `version` and `description`
+2. `.claude-plugin/marketplace.json` — `plugins[0].version` and `plugins[0].description`
 
-Both description fields should list the current skill count and names.
+The `description` field is duplicated verbatim between the two files. It must list the current skill count and all skill names grouped by category. Keep the descriptions identical.
+
+Also update the "Current Skills" section below and the skill count in this file's opening paragraph.
+
+## Adding a New Skill
+
+1. Create `plugins/sociology-skillset/skills/<skill-name>/SKILL.md` with YAML frontmatter (`name`, `description`)
+2. Add phase files in `phases/` subdirectory if the skill uses phased workflows
+3. Add cluster/pathway files if the skill offers style variants
+4. Update skill count and skill list in: this file (CLAUDE.md), `plugin.json`, and `marketplace.json`
+5. Bump the version in both `plugin.json` and `marketplace.json`
+6. Use `genre-skill-builder` to create new writing skills from corpus analysis
 
 ## Current Skills (26)
 
