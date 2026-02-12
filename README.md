@@ -75,8 +75,8 @@ Include context when invoking:
 ```
 /interview-analyst
 
-I have 30 interviews with activists about why they left social movements.
-My theoretical interest is in disengagement processes.
+I have 25 interviews with first-generation college students about navigating campus.
+My theoretical interest is in cultural capital and belonging.
 ```
 
 ## The Skills
@@ -99,6 +99,7 @@ Go from data to written manuscript sections:
 |-------|--------------|
 | `/r-analyst` | Statistical analysis in R (DiD, IV, matching, panel methods, etc.) |
 | `/stata-analyst` | Statistical analysis in Stata (same methods as r-analyst) |
+| `/text-analyst` | Computational text analysis — topic models, sentiment, classification, embeddings (R or Python) |
 | `/prompt-optimizer` | Optimize LLM prompts for text classification (sentiment, topic, stance, frame, etc.) |
 | `/quant-findings-writer` | Draft Results sections for quantitative papers |
 | `/article-bookends` | Draft Introduction, Discussion, and Conclusion |
@@ -109,6 +110,7 @@ Go from data to written manuscript sections:
 |-------|--------------|
 | `/interview-analyst` | Qualitative strand analysis |
 | `/r-analyst` or `/stata-analyst` | Quantitative strand analysis |
+| `/text-analyst` | Computational text analysis (if text data is part of the design) |
 | `/mixed-methods-findings-writer` | Draft integrated Findings sections |
 | `/article-bookends` | Draft Introduction, Discussion, and Conclusion |
 
@@ -173,7 +175,8 @@ These require the `mcp-zotero` server — see [Zotero Setup](#zotero-setup-optio
 ### Writing a Quantitative Paper
 
 1. `/r-analyst` or `/stata-analyst` — Run analysis (design → data → models → robustness → output)
-1b. `/prompt-optimizer` — If text classification is needed, optimize prompts for batch coding
+1b. `/text-analyst` — If text data, run topic models, sentiment, classification, or embeddings
+1c. `/prompt-optimizer` — If LLM-based text classification is needed, optimize prompts for batch coding
 2. `/methods-writer` — Write methods
 3. `/quant-findings-writer` — Draft Results section from statistical output
 4. `/lit-search` → `/reading-agent` → `/lit-synthesis` → `/argument-builder` — Build literature review
@@ -294,6 +297,7 @@ sociology-skillset/
 │           ├── research-coordinator/
 │           ├── revision-coordinator/
 │           ├── stata-analyst/
+│           ├── text-analyst/
 │           ├── verifier/
 │           ├── writing-editor/
 │           ├── zotero/

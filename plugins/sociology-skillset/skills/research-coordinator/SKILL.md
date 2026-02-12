@@ -52,14 +52,16 @@ Use the full skill suite as documented below.
 ### Quantitative Projects
 - Skip interview-analyst, qual-findings-writer (qual-specific)
 - Use **r-analyst** or **stata-analyst** for statistical analysis (RA/SA.0–5)
-- Use **prompt-optimizer** when the project involves text classification (sentiment, topic, stance, frame, etc.) — it systematically develops and evaluates prompts for batch API coding (PO.0–6)
+- Use **text-analyst** for computational text analysis — topic models, sentiment, classification, embeddings (TA.0–5). Supports both R and Python.
+- Use **prompt-optimizer** when LLM-based text classification is needed (sentiment, topic, stance, frame, etc.) — it systematically develops and evaluates prompts for batch API coding (PO.0–6)
 - Use **quant-findings-writer** to draft Results section (QF.1–5)
 - Use methods-writer for methods section
 - Use article-bookends for introduction/conclusion
 
 ### Mixed Methods Projects
 - Run qualitative (**interview-analyst**) and quantitative (**r-analyst/stata-analyst**) strands in parallel or sequence
-- Use **prompt-optimizer** if a text classification component is needed (PO.0–6)
+- Use **text-analyst** if the project includes computational text analysis (TA.0–5)
+- Use **prompt-optimizer** if LLM-based text classification is needed (PO.0–6)
 - Use **mixed-methods-findings-writer** to integrate both strands (MF.1–5)
 - Methods section covers both approaches
 - Use article-bookends for introduction/conclusion
@@ -76,7 +78,7 @@ This is a **meta-orchestration skill** that **drives the research process**:
 
 1. **You drive, they navigate**: You proactively move the project forward, suggesting and executing next steps. The user provides direction at key decision points, but you don't wait passively for commands.
 2. **Maintains project state** in `project-state.md`—tracking what's done, what's pending, and what depends on what
-3. **Routes to specialized skills** (lit-search, lit-synthesis, argument-builder, interview-analyst, prompt-optimizer, qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer, r-analyst, stata-analyst, methods-writer, case-justification, article-bookends, verifier, revision-coordinator, writing-editor)
+3. **Routes to specialized skills** (lit-search, lit-synthesis, argument-builder, interview-analyst, text-analyst, prompt-optimizer, qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer, r-analyst, stata-analyst, methods-writer, case-justification, article-bookends, verifier, revision-coordinator, writing-editor)
 4. **Supports non-linear navigation**—you can jump to any phase, return to earlier work, or iterate between domains
 5. **Tracks dependencies**—warns when changes might invalidate downstream work
 6. **Manages the research argument**—as it evolves through literature engagement and data analysis
@@ -326,6 +328,12 @@ This is why the workflow isn't strictly linear. You don't fully finish literatur
 | | | IA.3 | Interpretation & Explanation |
 | | | IA.4 | Quality Checkpoint |
 | | | IA.5 | Synthesis |
+| **text-analyst** | TA | TA.0 | Research Design & Method Selection |
+| | | TA.1 | Corpus Preparation & Exploration |
+| | | TA.2 | Method Specification |
+| | | TA.3 | Main Analysis |
+| | | TA.4 | Validation & Robustness |
+| | | TA.5 | Output & Interpretation |
 | **prompt-optimizer** | PO | PO.0 | Task Definition & Data Assessment |
 | | | PO.1 | Seed Prompt Construction |
 | | | PO.2 | Evaluation Setup |
@@ -1134,6 +1142,8 @@ This diagram shows how skills connect and depend on each other:
 | **interview-analyst** | Quote database | **qual-findings-writer** | Evidence for findings |
 | **interview-analyst** | Participant profiles | **qual-findings-writer** | Context for cases |
 | **interview-analyst** | Study details | **methods-writer** | Section content |
+| **text-analyst** | Topic models, sentiment scores, classification results | **quant-findings-writer** | Text analysis output for Results |
+| **text-analyst** | Preprocessing and analysis memos | **methods-writer** | Text analysis procedure details |
 | **prompt-optimizer** | Optimized prompt, batch code, methods narrative | **quant-findings-writer** | Classification results for Results |
 | **prompt-optimizer** | Prompt card, prompt book appendix | **methods-writer** | Classification procedure details |
 | **r-analyst/stata-analyst** | Tables, figures, memos | **quant-findings-writer** | Statistical output for Results |

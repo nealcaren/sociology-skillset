@@ -57,12 +57,13 @@ When bumping versions or adding/removing skills, update:
 
 Both description fields should list the current skill count and names.
 
-## Current Skills (25)
+## Current Skills (26)
 
 **Zotero**: zotero, zotero-rag
 **Literature**: lit-search, lit-synthesis, reading-agent, argument-builder
 **Qualitative analysis**: interview-analyst
 **Quantitative analysis**: r-analyst, stata-analyst
+**Computational text analysis**: text-analyst
 **Text classification**: prompt-optimizer
 **Findings writing**: qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer
 **Manuscript sections**: methods-writer, case-justification, article-bookends, abstract-builder
