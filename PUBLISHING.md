@@ -1,15 +1,15 @@
-# Publishing Updates to sociology-writing-suite
+# Publishing Updates to sociology-skillset
 
 This guide covers how to publish updates to the Claude Code plugin marketplace.
 
 ## File Structure
 
 ```
-sociology-writing-suite/
+sociology-skillset/
 ├── .claude-plugin/
 │   └── marketplace.json             # Marketplace catalog (lists plugins + versions)
 ├── plugins/
-│   └── sociology-writing-suite/
+│   └── sociology-skillset/
 │       ├── plugin.json              # Plugin manifest (name, version, description)
 │       └── skills/
 │           └── [skill-name]/
@@ -26,7 +26,7 @@ sociology-writing-suite/
 
 | File | Purpose | Version Location |
 |------|---------|------------------|
-| `plugins/sociology-writing-suite/plugin.json` | Defines the plugin itself | `"version": "X.Y.Z"` at root |
+| `plugins/sociology-skillset/plugin.json` | Defines the plugin itself | `"version": "X.Y.Z"` at root |
 | `.claude-plugin/marketplace.json` | What Claude Code displays | `plugins[0].version` field |
 
 ## Update Process
@@ -39,10 +39,10 @@ Edit skills, add new ones, fix bugs, etc.
 
 Decide on new version (e.g., `1.2.0` → `1.3.0`).
 
-**Edit `plugins/sociology-writing-suite/plugin.json`:**
+**Edit `plugins/sociology-skillset/plugin.json`:**
 ```json
 {
-  "name": "sociology-writing-suite",
+  "name": "sociology-skillset",
   "version": "1.3.0",  // <-- UPDATE THIS
   "description": "...",
   ...
@@ -52,11 +52,11 @@ Decide on new version (e.g., `1.2.0` → `1.3.0`).
 **Edit `.claude-plugin/marketplace.json`:**
 ```json
 {
-  "name": "sociology-writing-suite",
+  "name": "sociology-skillset",
   "owner": { ... },
   "plugins": [
     {
-      "name": "sociology-writing-suite",
+      "name": "sociology-skillset",
       "source": { ... },
       "description": "...",
       "version": "1.3.0",  // <-- UPDATE THIS TOO
@@ -89,19 +89,19 @@ In Claude Code, run:
 /plugin
 ```
 
-Go to **Marketplaces** tab → select `sociology-writing-suite` → **Update**.
+Go to **Marketplaces** tab → select `sociology-skillset` → **Update**.
 
 Or use the command:
 ```
-/plugin marketplace update sociology-writing-suite
+/plugin marketplace update sociology-skillset
 ```
 
 ### 6. Reinstall Plugin (if needed)
 
 If you already have it installed, you may need to uninstall and reinstall:
 ```
-/plugin uninstall sociology-writing-suite@sociology-writing-suite
-/plugin install sociology-writing-suite@sociology-writing-suite
+/plugin uninstall sociology-skillset@sociology-skillset
+/plugin install sociology-skillset@sociology-skillset
 ```
 
 Then restart Claude Code.
@@ -125,7 +125,7 @@ Follow semantic versioning:
 
 Before pushing an update:
 
-- [ ] Version updated in `plugins/sociology-writing-suite/plugin.json`
+- [ ] Version updated in `plugins/sociology-skillset/plugin.json`
 - [ ] Version updated in `.claude-plugin/marketplace.json`
 - [ ] Description updated in both files (if skills changed)
 - [ ] All new skill files are in place

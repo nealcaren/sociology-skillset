@@ -1,4 +1,4 @@
-# Sociology Writing Suite
+# Sociology Skillset
 
 A set of skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) to assist with sociology research projects—qualitative, quantitative, and mixed methods. Covers the full research-to-publication workflow: literature review, data analysis (interviews, R, Stata), and academic writing.
 
@@ -15,14 +15,14 @@ npm install -g @anthropic-ai/claude-code
 Then install the plugin:
 
 ```
-/plugin marketplace add nealcaren/sociology-writing-suite
-/plugin install sociology-writing-suite@sociology-writing-suite
+/plugin marketplace add nealcaren/sociology-skillset
+/plugin install sociology-skillset@sociology-skillset
 ```
 
 Or clone manually:
 
 ```bash
-git clone https://github.com/nealcaren/sociology-writing-suite.git
+git clone https://github.com/nealcaren/sociology-skillset.git
 ```
 
 And add to your Claude Code settings (`~/.claude/settings.json` or project `.claude/settings.json`):
@@ -33,7 +33,7 @@ And add to your Claude Code settings (`~/.claude/settings.json` or project `.cla
     "/path/to/your/project": {
       "mcpServers": {},
       "skills": [
-        "/path/to/sociology-writing-suite/plugins/sociology-writing-suite"
+        "/path/to/sociology-skillset/plugins/sociology-skillset"
       ]
     }
   }
@@ -99,6 +99,7 @@ Go from data to written manuscript sections:
 |-------|--------------|
 | `/r-analyst` | Statistical analysis in R (DiD, IV, matching, panel methods, etc.) |
 | `/stata-analyst` | Statistical analysis in Stata (same methods as r-analyst) |
+| `/prompt-optimizer` | Optimize LLM prompts for text classification (sentiment, topic, stance, frame, etc.) |
 | `/quant-findings-writer` | Draft Results sections for quantitative papers |
 | `/article-bookends` | Draft Introduction, Discussion, and Conclusion |
 
@@ -172,6 +173,7 @@ These require the `mcp-zotero` server — see [Zotero Setup](#zotero-setup-optio
 ### Writing a Quantitative Paper
 
 1. `/r-analyst` or `/stata-analyst` — Run analysis (design → data → models → robustness → output)
+1b. `/prompt-optimizer` — If text classification is needed, optimize prompts for batch coding
 2. `/methods-writer` — Write methods
 3. `/quant-findings-writer` — Draft Results section from statistical output
 4. `/lit-search` → `/reading-agent` → `/lit-synthesis` → `/argument-builder` — Build literature review
@@ -257,18 +259,18 @@ Configure in `.mcp.json`:
 }
 ```
 
-See `plugins/sociology-writing-suite/skills/zotero/guides/setup.md` for details.
+See `plugins/sociology-skillset/skills/zotero/guides/setup.md` for details.
 
 **Skills that use Zotero:** `zotero`, `zotero-rag`, `lit-synthesis`, `peer-reviewer`, `reading-agent`, `bibliography-builder`
 
 ## File Structure
 
 ```
-sociology-writing-suite/
+sociology-skillset/
 ├── .claude-plugin/
 │   └── marketplace.json        # Marketplace catalog
 ├── plugins/
-│   └── sociology-writing-suite/
+│   └── sociology-skillset/
 │       ├── plugin.json         # Plugin manifest
 │       └── skills/
 │           ├── abstract-builder/
@@ -284,6 +286,7 @@ sociology-writing-suite/
 │           ├── mixed-methods-findings-writer/
 │           ├── peer-reviewer/
 │           ├── project-scaffold/
+│           ├── prompt-optimizer/
 │           ├── qual-findings-writer/
 │           ├── quant-findings-writer/
 │           ├── r-analyst/

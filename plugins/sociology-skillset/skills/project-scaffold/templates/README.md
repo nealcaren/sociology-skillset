@@ -14,7 +14,7 @@ Run `/project-scaffold status` for current progress dashboard.
 
 ## Workflow
 
-This project uses the [Sociology Writing Suite](https://github.com/nealcaren/sociology-writing-suite) skills.
+This project uses the [Sociology Skillset](https://github.com/nealcaren/sociology-skillset) skills.
 
 {{WORKFLOW_BY_TYPE}}
 
