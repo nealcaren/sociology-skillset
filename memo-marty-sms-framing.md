@@ -24,7 +24,7 @@ Five structural patterns recur across SM introductions; for your paper, two are 
 
 #### Option A: Movement-Wave Survey
 
-The most common SM opening (~31% of articles). Open by naming the broader wave of campus protest — the post-2020 surge, the Gaza solidarity encampments, the broader landscape — then survey instances across campuses to establish the panoramic view before narrowing to the puzzle of decline. This works well because your CCC data lets you show the big picture before zooming in.
+The most common SM opening (~31% of articles). Open by naming the broader wave of campus protest, from the post-2020 surge through the Gaza solidarity encampments, then survey instances across campuses to establish the panoramic view before narrowing to the puzzle of decline. This works well because your CCC data lets you show the big picture before zooming in.
 
 **Structure:**
 1. Name the wave/cycle/era
@@ -75,7 +75,9 @@ Whichever option you choose:
 
 The Theory section is where you position your contribution within the literature. Two strategies map onto the introduction options above.
 
-**Key SM difference**: Social movement theory sections build arguments differently from generalist sociology. Based on argument-style coding of 25 SM articles (15 *Mobilization*, 10 *SMS*), the dominant arc structure is **building-blocks** (52%) — assembling concepts sequentially rather than funneling from broad to narrow. **Dialogue arcs** (staging Position A vs. Position B in the theory section) are **absent** (0%) in SM venues. If your paper adjudicates a debate, frame the debate in the introduction and use building-blocks or problem-response in the theory section. Additionally, **32% of SM theory sections weave case material into the theoretical discussion** — this is legitimate, not a sign of poor organization, provided each case reference advances the argument rather than just providing background.
+**Key SM difference**: Social movement theory sections build arguments differently from generalist sociology. Based on argument-style coding of 25 SM articles (15 *Mobilization*, 10 *SMS*), the dominant arc structure is **building-blocks** (52%), assembling concepts sequentially rather than funneling from broad to narrow. **Dialogue arcs** (staging Position A vs. Position B) are absent in SM venues. If your paper adjudicates a debate, frame the debate in the introduction and use building-blocks or problem-response in the theory section.
+
+A second distinctive feature: **32% of SM theory sections weave case material into the theoretical discussion**. This is legitimate, not a sign of poor organization, provided each case reference advances the argument rather than just providing background.
 
 ### Option A: Gap-Filler Minimalist
 
@@ -196,7 +198,7 @@ This works only if there's a **genuine scholarly debate** to adjudicate. If the 
 
 ## Part 3: Conclusion
 
-SM articles typically use a standalone "Conclusion" section rather than a separate Discussion + Conclusion (~66% do this). That means the conclusion needs to do more work — state the contribution, engage theory, point to future directions — while still providing closure. Plan for 350–1,130 words (median ~700) and 3–12 paragraphs (median ~6). *Mobilization* conclusions tend longer (~812 words median) because they include limitations and future directions as near-default elements; *SMS* conclusions are more compact (~600 words median).
+SM articles typically use a standalone "Conclusion" section rather than a separate Discussion + Conclusion (~66% do this). That means the conclusion does more work: stating the contribution, engaging theory, and pointing to future directions while still providing closure. Plan for 350–1,130 words (median ~700) and 3–12 paragraphs (median ~6). *Mobilization* conclusions run longer (~812 words median) because they include limitations and future directions as near-default elements. *SMS* conclusions are more compact (~600 words median).
 
 ### Opening the conclusion
 
