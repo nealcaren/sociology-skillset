@@ -16,7 +16,7 @@ The memo covers three sections: **Introduction**, **Theory/Background**, and **C
 
 ### Know your audience
 
-SM readers are specialists. They don't need to be told that protests matter or that studying movements is important. Stakes-led openings ("The right to protest is fundamental to democracy...") are rare in SM venues: only about 8% of articles open that way. The audience is pre-committed. Similarly, don't define basic concepts like repertoires, political opportunity, or protest cycles. Assume familiarity.
+SM readers are specialists. They don't need to be told that protests matter or that studying movements is important. Stakes-led openings ("The right to protest is fundamental to democracy...") are rare in SM venues: only about 8% of articles open that way. The audience is pre-committed. Don't define basic concepts like repertoires, political opportunity, or protest cycles. Assume familiarity.
 
 ### Pick the right opening strategy
 
@@ -56,7 +56,7 @@ The second most common SM opening (~26% of articles). Open by engaging SM theory
 
 **Benchmarks:** ~630 words median, 4 paragraphs, 76% cite in paragraph 1, theoretical gaps in ~53%. Roadmap venue-dependent (SMS ~69%, Moby ~22%).
 
-**Best when:** You're making a theoretical argument about *why* protests decline — not just documenting *that* they did. The public/private and red/blue state findings tell us something new about how political opportunity or repression works.
+**Best when:** You're making a theoretical argument about *why* protests decline, not just documenting *that* they did. The public/private and red/blue state findings tell us something new about how political opportunity or repression works.
 
 ### General SM introduction conventions
 
@@ -73,7 +73,7 @@ Whichever option you choose:
 
 ## Part 2: Theory / Background Section
 
-The Theory section is where you position your contribution within the literature. Two strategies map onto the introduction options above.
+Two strategies map onto the introduction options above.
 
 **Key SM difference**: Social movement theory sections build arguments differently from generalist sociology. Based on argument-style coding of 25 SM articles (15 *Mobilization*, 10 *SMS*), the dominant arc structure is **building-blocks** (52%), assembling concepts sequentially rather than funneling from broad to narrow. **Dialogue arcs** (staging Position A vs. Position B) are absent in SM venues. If your paper adjudicates a debate, frame the debate in the introduction and use building-blocks or problem-response in the theory section.
 
@@ -91,14 +91,14 @@ A second distinctive feature: **32% of SM theory sections weave case material in
 
 2. **Build the conceptual blocks** (2–3 paragraphs). Instead of "synthesizing what we know" as a generalist funnel would, build each concept that matters for your argument as a distinct block. For example: Block 1 = protest cycles and demobilization; Block 2 = institutional variation (public/private) and how it shapes mobilization; Block 3 = state-level political context and repression/chilling effects. Each block should feel like it's adding a piece to the argument, not just surveying literature.
 
-3. **Mark the turn** (1 paragraph). This is the most important paragraph in the section — the pivot from "what we know" to "what we don't." SM theory sections use several turn types:
+3. **Mark the turn** (1 paragraph). This is the most important paragraph in the section: the pivot from "what we know" to "what we don't." SM theory sections use several turn types:
 
    - **Gap statement** (40% of SM articles): "Research has documented the drivers of campus mobilization... Yet the dynamics of rapid *demobilization* remain largely unexplored, particularly how institutional characteristics and state-level political contexts mediate the pace and extent of protest decline."
    - **Limitation critique** (24% of SM articles, especially strong for *Mobilization* at 33%): "Existing theories of protest cycles cannot account for the speed of the 2024–2025 campus protest collapse, nor for the stark variation between institutional settings."
 
-   The turn should be **assertive** — confident that this gap or limitation exists. Don't hedge it.
+   The turn should be **assertive**: confident that this gap or limitation exists. Don't hedge it.
 
-4. **State your questions** (1 paragraph). Directly state what you're examining. If the paper is quantitative, consider numbered hypotheses — 40% of SM articles include them, and all are in quantitative studies.
+4. **State your questions** (1 paragraph). Directly state what you're examining. If the paper is quantitative, consider numbered hypotheses; 40% of SM articles include them, and all are in quantitative studies.
 
 **Key calibration points:**
 
@@ -120,7 +120,7 @@ A second distinctive feature: **32% of SM theory sections weave case material in
 
 ### Option B: Theory-Extension Framework Applier
 
-**Use this if** you're applying an established theoretical framework — political opportunity structure, repression/demobilization theory, the chilling effects literature — to the specific case of campus protest decline. The point is to show the framework illuminates something new in this context.
+**Use this if** you're applying an established theoretical framework (political opportunity structure, repression/demobilization theory, the chilling effects literature) to the specific case of campus protest decline. The point is to show the framework illuminates something new in this context.
 
 **Architecture:** Building-blocks arc (SM default), ~1,300–1,800 words, 8–12 paragraphs, 1–4 subsections. Funnel is possible but building-blocks is the natural fit for SM's multi-concept theoretical traditions.
 
@@ -133,9 +133,9 @@ A second distinctive feature: **32% of SM theory sections weave case material in
    > "According to Tarrow (1998), protest cycles are shaped by shifts in political opportunity..."
    > "Earl (2003) distinguishes between coercive and channeling forms of repression..."
 
-   Be **confident and unhedged** when describing the established theory — the theory is established and you're not defending it.
+   Be **confident and unhedged** when describing the established theory. The theory is established and you're not defending it.
 
-3. **Review prior applications** (2–3 paragraphs). Show where the framework has been applied before. This demonstrates it's a productive tool and sets up the extension.
+3. **Review prior applications** (2–3 paragraphs). Show where the framework has been applied before. This shows it's a productive tool and sets up the extension.
 
    > "Scholars have applied political opportunity theory to national-level protest cycles (Author Year), cross-national mobilization (Author Year), and movement-state interactions (Author Year)."
 
@@ -165,7 +165,7 @@ A second distinctive feature: **32% of SM theory sections weave case material in
 
 **Subsection headings might be:** "Political Opportunity and Protest Cycles," "Institutional Mediation of Repression," "The Campus Context."
 
-**Common pitfall:** If you find yourself *modifying* the framework rather than applying it — proposing a new mechanism, challenging its core claims, you're moving into concept-building territory. Theory-Extension means showing an existing tool does new work, not building a new tool.
+**Common pitfall:** If you find yourself *modifying* the framework rather than applying it, proposing a new mechanism or challenging its core claims, you're moving into concept-building territory. Theory-Extension means showing an existing tool does new work, not building a new tool.
 
 **Pairs with:** Field-Reflexive Pivot introduction.
 
@@ -173,7 +173,7 @@ A second distinctive feature: **32% of SM theory sections weave case material in
 
 ### A third possibility: Problem-Driven (Debate-Resolver)
 
-Worth mentioning since your red/blue state variable could frame a debate. If there's a genuine tension in the literature, say one camp argues protest decline is driven by state repression while another emphasizes internal movement dynamics (burnout, issue fatigue, strategic retreat), you could frame your Theory section as adjudicating that debate.
+Your red/blue state variable could frame a debate. If there's a genuine tension in the literature, say one camp argues protest decline is driven by state repression while another emphasizes internal movement dynamics (burnout, issue fatigue, strategic retreat), you could frame your Theory section as adjudicating that debate.
 
 **Important SM-specific note**: Do NOT use a dialogue arc (Position A vs. Position B staged as a back-and-forth) in the theory section. Dialogue arcs are **absent** (0%) in SM venues. Instead, use **building-blocks** or **problem-response** (28% of SM articles):
 
