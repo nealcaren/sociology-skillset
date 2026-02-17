@@ -1,4 +1,4 @@
-# Framing Your Campus Protest Decline Paper for SMS Venues
+# Framing Your Campus Protest Decline Paper for Social Movement Studies Venues
 
 **To:** Marty
 **From:** Neal
@@ -6,7 +6,7 @@
 
 ---
 
-This memo walks through how to position your paper — on the dramatic decline of campus protests between 2024 and 2025, using CCC data with public/private institution type and red/blue state context — for a social movement studies audience (*Mobilization*, *Social Movement Studies*, or an SMS-oriented special issue). The guidance draws on genre analysis of 80 social movement studies articles from *Mobilization* (n=41) and *Social Movement Studies* (n=39) for introduction and conclusion conventions, argument-style coding of 25 SM articles for Theory section architecture, and 80 *Social Problems*/*Social Forces* articles as generalist benchmarks.
+This memo walks through how to position your paper for a social movement studies audience (*Mobilization*, *Social Movement Studies*, or an SM-oriented special issue). Your paper documents the dramatic decline of campus protests between 2024 and 2025, using CCC data with public/private institution type and red/blue state context. The guidance draws on genre analysis of 80 SM articles from *Mobilization* (n=41) and *Social Movement Studies* (n=39) for introduction and conclusion conventions, argument-style coding of 25 SM articles for Theory section architecture, and 80 *Social Problems*/*Social Forces* articles as generalist benchmarks.
 
 The memo covers three sections: **Introduction**, **Theory/Background**, and **Conclusion**. For each, I present two strategic options depending on whether the paper's primary strength is the empirical picture (Option A) or a theoretical argument (Option B).
 
@@ -16,7 +16,7 @@ The memo covers three sections: **Introduction**, **Theory/Background**, and **C
 
 ### Know your audience
 
-SMS readers are specialists. They don't need to be told that protests matter or that studying movements is important. Stakes-led openings ("The right to protest is fundamental to democracy...") are rare in SM venues — only about 8% of articles open that way. The audience is pre-committed. Similarly, don't define basic concepts like repertoires, political opportunity, or protest cycles. Assume familiarity.
+SM readers are specialists. They don't need to be told that protests matter or that studying movements is important. Stakes-led openings ("The right to protest is fundamental to democracy...") are rare in SM venues — only about 8% of articles open that way. The audience is pre-committed. Similarly, don't define basic concepts like repertoires, political opportunity, or protest cycles. Assume familiarity.
 
 ### Pick the right opening strategy
 
@@ -24,7 +24,7 @@ Five structural patterns recur across SM introductions; for your paper, two are 
 
 #### Option A: Movement-Wave Survey
 
-The most common SMS opening (~31% of articles). Open by naming the broader wave of campus protest — the post-2020 surge, the Gaza solidarity encampments, the broader landscape — then survey instances across campuses to establish the panoramic view before narrowing to the puzzle of decline. This works well because your CCC data lets you show the big picture before zooming in.
+The most common SM opening (~31% of articles). Open by naming the broader wave of campus protest — the post-2020 surge, the Gaza solidarity encampments, the broader landscape — then survey instances across campuses to establish the panoramic view before narrowing to the puzzle of decline. This works well because your CCC data lets you show the big picture before zooming in.
 
 **Structure:**
 1. Name the wave/cycle/era
@@ -42,10 +42,10 @@ The most common SMS opening (~31% of articles). Open by naming the broader wave 
 
 #### Option B: Field-Reflexive Pivot
 
-The second most common SMS opening (~26% of articles). Open by engaging SMS theory directly — protest cycle theory, demobilization, the chilling effects literature — and diagnose what the field has missed or gotten wrong.
+The second most common SM opening (~26% of articles). Open by engaging SM theory directly — protest cycle theory, demobilization, the chilling effects literature — and diagnose what the field has missed or gotten wrong.
 
 **Structure:**
-1. State how SMS has approached protest cycles/demobilization
+1. State how SM has approached protest cycles/demobilization
 2. Diagnose a limitation or blind spot
 3. Propose an alternative or extension
 4. Preview the contribution
@@ -58,7 +58,7 @@ The second most common SMS opening (~26% of articles). Open by engaging SMS theo
 
 **Best when:** You're making a theoretical argument about *why* protests decline — not just documenting *that* they did. The public/private and red/blue state findings tell us something new about how political opportunity or repression works.
 
-### General SMS introduction conventions
+### General SM introduction conventions
 
 Whichever option you choose:
 
@@ -67,7 +67,7 @@ Whichever option you choose:
 - **Cite in your first paragraph.** About 76% of SM articles do. Engage the scholarly debate immediately.
 - **Frame the gap theoretically.** Over half of SM articles frame their gap as theoretical, not just empirical (~53%). "No one has looked at the 2024–2025 decline" is not enough — SM readers want to know what the decline *means for theory*. The empirical novelty gets you in the door; the theoretical stakes keep you in the room.
 - **Avoid stakes-led openings.** Only ~8% of SM articles open this way. The audience already cares.
-- **Assume specialist vocabulary.** Don't define repertoires, collective action frames, political opportunity structures, or other foundational SMS concepts.
+- **Assume specialist vocabulary.** Don't define repertoires, collective action frames, political opportunity structures, or other foundational SM concepts.
 
 ---
 
