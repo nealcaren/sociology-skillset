@@ -18,19 +18,33 @@ Generated skills should include project integration sections that:
 
 ## What This Skill Does
 
-This is a **meta-skill**—it creates other skills. The output is a fully-functional writing skill like `argument-builder` or `article-bookends`, with:
+This is a **meta-skill** with two modes:
+
+### Mode 1: Full Skill Generation (Default)
+Creates a complete, standalone writing skill like `argument-builder` or `article-bookends`, with:
 - A main `SKILL.md` with genre-based guidance
 - Phase files for a structured writing workflow
 - Cluster profiles based on discovered patterns
 - Technique guides for sentence-level craft
 
+### Mode 2: Field Profile Generation
+Creates a **field profile** for an existing skill — a `fields/{field}.md` file that adjusts benchmarks and adds field-specific patterns for a particular sociology subfield. No new skill is created; instead, the existing skill gains subfield-specific guidance.
+
+**When to use Mode 2 instead of Mode 1**: When you have a corpus from a specific subfield (e.g., social movement studies, medical sociology) for a section type already covered by an existing skill (e.g., article-bookends covers introductions/conclusions). The field profile adjusts the existing skill's benchmarks rather than creating a parallel skill.
+
+**Output**: A single `fields/{field}.md` file using the field profile template (`templates/field-profile-template.md`).
+
+**Template**: `templates/field-profile-template.md`
+
 ## When to Use This Skill
 
 Use this skill when you want to:
-- Create a writing guide for a **specific article section** (e.g., Discussion sections, Abstract, Methodology)
-- Base guidance on **empirical analysis** of a corpus rather than intuition
-- Generate a skill that follows the **repository's phased architecture**
-- Produce **cluster-based guidance** that recognizes different writing styles
+- **Mode 1**: Create a writing guide for a **specific article section** (e.g., Discussion sections, Abstract, Methodology)
+- **Mode 1**: Base guidance on **empirical analysis** of a corpus rather than intuition
+- **Mode 1**: Generate a skill that follows the **repository's phased architecture**
+- **Mode 1**: Produce **cluster-based guidance** that recognizes different writing styles
+- **Mode 2**: Create a **field profile** for an existing skill from a subfield corpus
+- **Mode 2**: Adjust benchmarks for a particular subfield without creating a new skill
 
 ## What You Need
 
@@ -164,6 +178,88 @@ This skill adapts the methodology from:
 
 ---
 
+## Mode 2: Field Profile Workflow
+
+When creating a field profile (not a full skill), follow this streamlined workflow:
+
+### FP Phase 0: Scope & Parent Skill Selection
+**Goal**: Identify the parent skill, target field, and corpus.
+
+**Process**:
+- Identify the existing skill to extend (e.g., `article-bookends`)
+- Identify the target field/subfield (e.g., medical sociology)
+- Review the parent skill's SKILL.md benchmarks (these are the generalist defaults to compare against)
+- Confirm corpus location and article count
+
+**Output**: Scope memo with parent skill, field name, abbreviation, corpus path.
+
+> **Pause**: User confirms scope.
+
+---
+
+### FP Phase 1: Comparative Immersion
+**Goal**: Build quantitative profile and compare to generalist benchmarks.
+
+**Process**:
+- Count articles, calculate word counts, paragraph counts for the field corpus
+- Compare each metric to the parent skill's generalist benchmarks
+- Identify statistically meaningful differences (use medians and IQRs)
+- Generate a "Key Findings" table showing generalist vs. field values
+- Note where field conventions diverge most from generalist norms
+
+**Output**: Comparative immersion report.
+
+> **Pause**: User reviews comparison data.
+
+---
+
+### FP Phase 2: Field-Specific Coding
+**Goal**: Code for field-specific patterns, moves, and phrases.
+
+**Process**:
+- Code opening/closing moves (same categories as parent skill)
+- Identify field-specific structural patterns not in generalist corpus
+- Extract field-specific signature phrases
+- Track citation patterns and density
+- Identify prohibited moves (things that work in generalist but not in field)
+- Look for field-specific clusters (optional — only if clear patterns emerge)
+
+**Output**: Field codebook, move distributions, pattern catalog.
+
+> **Pause**: User reviews coding and patterns.
+
+---
+
+### FP Phase 3: Profile Generation
+**Goal**: Generate the field profile file.
+
+**Process**:
+- Use `templates/field-profile-template.md` as the structural template
+- Fill in all benchmarks from Phase 1 comparison
+- Add structural patterns from Phase 2
+- Add signature phrases and prohibited moves
+- Generate writing checklists
+- Write the profile as `fields/{field}.md` within the parent skill directory
+
+**Output**: Complete `fields/{field}.md` file.
+
+> **Pause**: User reviews generated profile.
+
+---
+
+### FP Phase 4: Integration Verification
+**Goal**: Verify the profile integrates with the parent skill.
+
+**Process**:
+- Confirm parent skill's SKILL.md lists the new profile in its Field Profiles section
+- Confirm parent skill's Phase 0 file has a field identification step
+- Confirm all phase and technique files have generic hooks
+- Read the profile end-to-end to verify completeness
+
+**Output**: Integration checklist.
+
+---
+
 ## Folder Structure for Analysis
 
 ```
@@ -265,12 +361,13 @@ Reference these guides for phase-specific instructions:
 
 ## Templates
 
-| Template | Purpose |
-|----------|---------|
-| `templates/skill-template.md` | Main SKILL.md structure |
-| `templates/phase-template.md` | Phase file structure |
-| `templates/cluster-template.md` | Cluster profile structure |
-| `templates/technique-template.md` | Technique guide structure |
+| Template | Purpose | Mode |
+|----------|---------|------|
+| `templates/skill-template.md` | Main SKILL.md structure | Mode 1 |
+| `templates/phase-template.md` | Phase file structure | Mode 1 |
+| `templates/cluster-template.md` | Cluster profile structure | Mode 1 |
+| `templates/technique-template.md` | Technique guide structure | Mode 1 |
+| `templates/field-profile-template.md` | Field profile for existing skill | Mode 2 |
 
 ## Invoking Phase Agents
 
@@ -298,19 +395,37 @@ prompt: Read phases/phase2-coding.md and execute for [user's project]. Corpus is
 
 When the user is ready to begin:
 
-1. **Ask about the target**:
+1. **Determine the mode**:
+   > "Are you creating a new writing skill from scratch (Mode 1), or adding a field-specific profile to an existing skill (Mode 2)?"
+
+### Mode 1 Start (Full Skill)
+
+2. **Ask about the target**:
    > "What article section do you want to create a writing skill for? (e.g., introduction, conclusion, discussion, methods)"
 
-2. **Ask about the corpus**:
+3. **Ask about the corpus**:
    > "Where is your corpus of articles? How many articles do you have?"
 
-3. **Ask about the model skill**:
+4. **Ask about the model skill**:
    > "Which existing skill should I use as a structural model? Options include `argument-builder` (Theory sections) and `article-bookends` (intro/conclusion). I can also review other skills if you prefer."
 
-4. **Ask about output**:
+5. **Ask about output**:
    > "What should the new skill be named? (e.g., `discussion-writer`, `methods-guide`)"
 
-5. **Proceed with Phase 0** to formalize scope.
+6. **Proceed with Phase 0** to formalize scope.
+
+### Mode 2 Start (Field Profile)
+
+2. **Ask about the parent skill**:
+   > "Which existing skill do you want to create a field profile for? (e.g., `article-bookends`, `argument-builder`, `abstract-builder`)"
+
+3. **Ask about the field**:
+   > "What subfield or specialty area? What abbreviation should we use? (e.g., 'Social Movement Studies' / 'SMS', 'Medical Sociology' / 'MedSoc')"
+
+4. **Ask about the corpus**:
+   > "Where is your corpus of articles from this subfield? How many articles?"
+
+5. **Proceed with FP Phase 0** to formalize scope.
 
 ## Key Reminders
 

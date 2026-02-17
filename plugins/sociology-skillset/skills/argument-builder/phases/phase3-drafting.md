@@ -182,6 +182,21 @@ Draft the turn with special care. It's the most important paragraph.
 
 ---
 
+## Field-Specific Adjustments
+
+When a field profile was identified in Phase 0, apply the field-specific
+guidance from `fields/{field}.md`. Field profiles override generalist
+defaults where they conflict. Key areas that field profiles may adjust:
+
+- Target word count and paragraph count
+- Opening move distribution and structural patterns
+- Citation timing and density
+- Audience assumptions and vocabulary
+- Prohibited moves specific to the field
+
+Refer to the field profile's benchmarks table and writing checklist for
+this section.
+
 ## Output Files to Create
 
 1. **theory-section-draft.md** - Full draft prose organized by subsection

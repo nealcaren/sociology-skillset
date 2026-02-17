@@ -228,3 +228,11 @@ For each paragraph, ask:
 4. Is the function appropriate for my cluster?
 
 If you can't identify the function, the paragraph likely needs revision.
+
+---
+
+## Field-Specific Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific patterns, phrase templates, and move distributions.
+Field-specific patterns supplement the standard guidance above.

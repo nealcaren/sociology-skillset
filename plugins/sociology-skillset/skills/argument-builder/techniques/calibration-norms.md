@@ -212,3 +212,11 @@ Before finalizing, verify your draft against these norms:
 | **Over-cited** | Listing not synthesizing | Aggregate findings; cut citation strings |
 | **Too many subsections** | Over-structuring simple argument | Merge or eliminate |
 | **Too few subsections** | Complex argument needs organization | Add structure for clarity |
+
+---
+
+## Field-Specific Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific patterns, phrase templates, and move distributions.
+Field-specific patterns supplement the standard guidance above.

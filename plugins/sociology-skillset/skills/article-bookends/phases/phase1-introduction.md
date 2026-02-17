@@ -172,12 +172,28 @@ Match introduction claims to conclusion capacity:
 
 **The coherence rule**: Whatever the introduction promises, the conclusion must keep.
 
+## Field-Specific Adjustments
+
+When a field profile was identified in Phase 0, apply the field-specific
+guidance from `fields/{field}.md`. Field profiles override generalist
+defaults where they conflict. Key areas that field profiles may adjust:
+
+- Target word count and paragraph count
+- Opening move distribution and structural patterns
+- Citation timing and density
+- Audience assumptions and vocabulary
+- Prohibited moves specific to the field
+
+Refer to the field profile's benchmarks table and writing checklist for
+the introduction section.
+
 ## Output
 
 Provide:
-1. **Complete introduction draft** (target word count based on cluster)
+1. **Complete introduction draft** (target word count based on cluster and field profile)
 2. **Annotation** noting:
    - Opening move type used
+   - Field-specific structural pattern used (if applicable)
    - Where the turn/gap occurs
    - Key promises made (for conclusion coherence check)
 3. **Concerns or alternatives** if multiple approaches could work

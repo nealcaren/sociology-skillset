@@ -307,3 +307,11 @@ Introduce specific illustrations.
 - "This study examines..."
 - "I/We argue that..."
 - "This paper integrates..."
+
+---
+
+## Field-Specific Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific patterns, phrase templates, and move distributions.
+Field-specific patterns supplement the standard guidance above.

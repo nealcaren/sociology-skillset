@@ -212,3 +212,12 @@ Common phrases and formulations from sociology interview articles, organized by 
 - "Obviously..." / "Clearly..." (if obvious, don't state)
 - "The data revealed that..." (passive; prefer active)
 - Excessive hedging: "might," "perhaps," "seemingly," "possibly"
+
+---
+
+## Field-Specific Phrases
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific phrase templates, structural pattern phrases, and
+phrases to avoid. Field-specific phrases supplement the standard
+guidance above.

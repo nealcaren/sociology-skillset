@@ -135,18 +135,36 @@ Leave readers with something visual:
 - Callback returns to real-world stakes
 - Coda may escalate to policy urgency
 
+## Field-Specific Adjustments
+
+When a field profile was identified in Phase 0, apply the field-specific
+guidance from `fields/{field}.md`. Field profiles override generalist
+defaults where they conflict. Key areas that field profiles may adjust:
+
+- Target word count and paragraph count
+- Opening move distribution (e.g., summary vs. restatement)
+- Whether the conclusion absorbs Discussion functions
+- Limitations expectations
+- Callback style (formal vs. vocabulary echo)
+- Coda type distribution
+- Citation density
+
+Refer to the field profile's conclusion/discussion benchmarks, coda types,
+and writing checklist for this section.
+
 ## Output
 
 Provide:
-1. **Complete Conclusion draft** (300-500 words)
+1. **Complete Conclusion draft** (300-500 words; adjust per field profile if applicable)
 2. **Annotation** noting:
-   - Opening move used (restatement/summary)
+   - Opening move used (restatement/summary/theoretical-framing)
    - Where callback occurs
-   - Coda type (quote/statement/stakes/image)
+   - Coda type (quote/statement/stakes/image/field-reflexive)
    - Key vocabulary echoed from introduction
+   - If field profile applies: whether conclusion absorbs Discussion functions
 
 ## When You're Done
 
 Return the draft to the orchestrator for Phase 4 coherence check.
 
-**Remember**: The Conclusion is short and punchy. Don't repeat the Discussion. Close the circuit and get out.
+**Remember**: The Conclusion is short and punchy. Don't repeat the Discussion. Close the circuit and get out. When a field profile applies, the conclusion may be longer if it's the only closing section — but it should still feel efficient, not bloated.

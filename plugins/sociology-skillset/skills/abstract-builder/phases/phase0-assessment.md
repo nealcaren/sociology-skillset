@@ -159,6 +159,14 @@ If you realize during sequencing that a different archetype fits better, you can
 
 ---
 
+## Field Identification
+
+Determine whether a field-specific profile applies. Ask the user about their target venue or subfield, then check the `fields/` directory for available profiles.
+
+If a field profile exists for the user's target field, read the corresponding `fields/{field}.md` file. This file contains all field-specific benchmarks, structural patterns, and writing guidance. It will be the single reference for field-specific guidance throughout all remaining phases.
+
+Field profiles are additive — they adjust benchmarks on top of the archetype. Both dimensions apply simultaneously.
+
 ## Output Files to Create
 
 1. **assessment-memo.md** - Full assessment with archetype recommendation

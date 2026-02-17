@@ -214,6 +214,20 @@ Provide a **Coherence Memo** with:
 7. **Revision Recommendations**: Specific changes needed
 8. **Final Assessment**: Ready for submission or needs revision
 
+## Field-Specific Adjustments
+
+When a field profile was identified in Phase 0, apply the field-specific
+guidance from `fields/{field}.md`. Field profiles override generalist
+defaults where they conflict. Key areas that field profiles may adjust:
+
+- Coherence expectations (e.g., callback style, whether formal or vocabulary echo)
+- Section structure norms (e.g., whether combined Discussion+Conclusion is expected)
+- Limitations expectations (some fields conventionally omit them)
+- Coda type expectations
+
+Refer to the field profile's writing checklists for field-specific
+coherence verification items.
+
 ## Coherence Checklist
 
 Before finalizing, confirm:

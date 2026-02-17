@@ -179,3 +179,11 @@ Use this template to draft your turn:
 Think of the turn as your **Theory section thesis statement**. Just as a thesis in a paper tells readers what you'll argue, the turn tells readers what gap you're filling.
 
 If someone asks "What's your contribution?", you should be able to point to your turn sentence.
+
+---
+
+## Field-Specific Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific patterns, phrase templates, and move distributions.
+Field-specific patterns supplement the standard guidance above.

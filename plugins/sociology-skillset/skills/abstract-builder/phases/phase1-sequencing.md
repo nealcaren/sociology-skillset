@@ -202,6 +202,21 @@ With ~180 words across 6 sentences, each sentence is ~30 words. Plan accordingly
 
 ---
 
+## Field-Specific Adjustments
+
+When a field profile was identified in Phase 0, apply the field-specific
+guidance from `fields/{field}.md`. Field profiles override generalist
+defaults where they conflict. Key areas that field profiles may adjust:
+
+- Target word count and sentence count
+- Opening move distribution
+- Closing move preferences
+- Audience assumptions and vocabulary
+- Prohibited moves specific to the field
+
+Refer to the field profile's benchmarks table and writing checklist for
+this section.
+
 ## Output Files to Create
 
 1. **sequence-plan.md** - Full move sequence with content previews

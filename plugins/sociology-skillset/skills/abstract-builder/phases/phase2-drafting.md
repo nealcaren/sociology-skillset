@@ -295,6 +295,21 @@ Don't let it trail off. State your contribution explicitly.
 
 ---
 
+## Field-Specific Adjustments
+
+When a field profile was identified in Phase 0, apply the field-specific
+guidance from `fields/{field}.md`. Field profiles override generalist
+defaults where they conflict. Key areas that field profiles may adjust:
+
+- Target word count and sentence count
+- Opening move distribution
+- Closing move preferences
+- Audience assumptions and vocabulary
+- Prohibited moves specific to the field
+
+Refer to the field profile's benchmarks table and writing checklist for
+this section.
+
 ## Output Files to Create
 
 **Always save output to a markdown file** in the user's project directory.

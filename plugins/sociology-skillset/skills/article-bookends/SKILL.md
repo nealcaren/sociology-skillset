@@ -64,7 +64,7 @@ This skill completes the article writing workflow.
 
 ## Core Principles (from Genre Analysis)
 
-Based on systematic analysis of 80 sociology interview articles from *Social Problems* and *Social Forces*:
+Based on systematic analysis of 80 sociology interview articles from *Social Problems* and *Social Forces*. These are **generalist defaults** — field-specific profiles (see Field Profiles below) may adjust benchmarks for particular subfields:
 
 ### 1. Introductions Are Efficient; Conclusions Do Heavy Work
 - **Median introduction**: 761 words, 6 paragraphs
@@ -98,16 +98,17 @@ Five cluster styles require different approaches:
 ## Workflow Phases
 
 ### Phase 0: Intake & Assessment
-**Goal**: Review inputs, identify cluster, confirm scope.
+**Goal**: Review inputs, identify cluster and field profile, confirm scope.
 
 - Read the Theory section to understand positioning and contribution type
 - Read the Findings section to understand what was discovered
 - Identify which cluster the article inhabits
+- Identify target field for field-specific profile (e.g., SMS)
 - Confirm which sections user needs (introduction, discussion, conclusion, or all)
 
 **Guide**: `phases/phase0-intake.md`
 
-> **Pause**: Confirm cluster identification and scope before drafting.
+> **Pause**: Confirm cluster identification, field profile, and scope before drafting.
 
 ---
 
@@ -124,6 +125,7 @@ Five cluster styles require different approaches:
 - `phases/phase1-introduction.md` (main workflow)
 - `techniques/opening-moves.md` (opening strategies)
 - `clusters/` (cluster-specific guidance)
+- `fields/` (field-specific benchmarks and patterns, if applicable)
 
 > **Pause**: Review introduction draft for coherence with theory section.
 
@@ -164,7 +166,7 @@ The conclusion is shorter and more focused than discussion:
 
 **Guides**:
 - `phases/phase3-conclusion.md` (main workflow)
-- `techniques/callbacks.md` (closing the circuit)
+- `techniques/signature-phrases.md` (callback and coda phrases)
 
 > **Pause**: Review conclusion for callbacks and resonant ending.
 
@@ -197,17 +199,29 @@ Reference these guides for cluster-specific writing:
 | `clusters/synthesis.md` | Synthesis Integrator (17.5%) |
 | `clusters/problem-driven.md` | Problem-Driven Pragmatist (15.0%) |
 
+## Field Profiles
+
+Field profiles adjust benchmarks and add field-specific patterns for particular sociology subfields. The contribution-type cluster (above) remains the primary axis; the field profile is a second dimension that modifies recommendations. Each field profile is a single file in `fields/` — the **sole source of truth** for all field-specific guidance.
+
+| Field | File | Key Differences |
+|-------|------|-----------------|
+| **Generalist** (default) | — | Benchmarks from *Social Problems* and *Social Forces* (n=80) |
+| **Social Movement Studies (SMS)** | `fields/sms.md` | Shorter intros, more theory-led openings, 3 SMS-specific structural patterns, higher roadmap rate, earlier citations, conclusion-only default, field-reflexive codas |
+
+Phase 0 identifies the field profile alongside the contribution-type cluster. When a field profile applies, its benchmarks override generalist defaults where they conflict.
+
+**To add a new field**: Create a `fields/{field}.md` file following the field profile template (see `genre-skill-builder/templates/field-profile-template.md`). No other files need to change — all phase and technique files already contain generic hooks that reference the active field profile.
+
 ## Technique Guides
 
 | Guide | Purpose |
 |-------|---------|
 | `techniques/opening-moves.md` | Five opening move types with examples |
-| `techniques/discussion-elements.md` | Contribution, limitations, implications |
-| `techniques/callbacks.md` | Closing the circuit effectively |
-| `techniques/coherence-types.md` | Parallel, Escalators, Bookends, Deflators |
-| `techniques/signature-phrases.md` | Common phrases for intros, discussions, and conclusions |
+| `techniques/signature-phrases.md` | Common phrases for introductions, discussions, and conclusions |
 
 ## Key Statistics (Benchmarks)
+
+These are **generalist defaults** based on the *Social Problems* / *Social Forces* corpus. When a field profile applies (e.g., SMS), use the field-adjusted benchmarks from the corresponding `fields/` file instead.
 
 ### Introduction Benchmarks
 

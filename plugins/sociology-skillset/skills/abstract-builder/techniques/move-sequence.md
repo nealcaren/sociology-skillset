@@ -326,3 +326,11 @@ Every abstract should include:
 - [ ] Data description (N, population, location)
 - [ ] Findings preview (2-3 sentences)
 - [ ] Closing statement (contribution or implications)
+
+---
+
+## Field-Specific Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific patterns, phrase templates, and move distributions.
+Field-specific patterns supplement the standard guidance above.

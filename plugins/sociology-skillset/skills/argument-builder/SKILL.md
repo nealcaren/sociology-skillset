@@ -203,6 +203,18 @@ Detailed profiles in `clusters/`:
 | `synthesis-integrator.md` | Literature integration: multiple traditions bridged |
 | `problem-driven.md` | Debate resolution or empirical documentation |
 
+## Field Profiles
+
+Field profiles adjust benchmarks and add field-specific patterns for particular sociology subfields. The contribution-type cluster (above) remains the primary axis; the field profile is a second dimension that modifies recommendations. Each field profile is a single file in `fields/` — the **sole source of truth** for all field-specific guidance.
+
+| Field | File | Key Differences |
+|-------|------|-----------------|
+| **Generalist** (default) | — | Benchmarks from *Social Problems* and *Social Forces* (n=80) |
+
+Phase 0 identifies the field profile alongside the contribution-type cluster. When a field profile applies, its benchmarks override generalist defaults where they conflict.
+
+**To add a new field**: Create a `fields/{field}.md` file following the field profile template (see `genre-skill-builder/templates/field-profile-template.md`). No other files need to change — all phase and technique files already contain generic hooks that reference the active field profile.
+
 ## Calibration Benchmarks
 
 Based on 80 articles from *Social Problems* and *Social Forces*:

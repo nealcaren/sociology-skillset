@@ -16,6 +16,14 @@ Request these materials if not provided:
 - **Abstract** (helpful but optional)
 - **Target journal** (helpful for calibrating length/style)
 
+### 1.5. Identify Target Field
+
+Determine whether a field-specific profile applies. Ask the user about their target venue or subfield, then check the `fields/` directory for available profiles.
+
+If a field profile exists for the user's target field, read the corresponding `fields/{field}.md` file. This file contains all field-specific benchmarks, structural patterns, signature phrases, and writing checklists. It will be the single reference for field-specific guidance throughout all remaining phases.
+
+**Note**: Field profiles are additive — they adjust benchmarks and add field-specific patterns on top of the contribution-type cluster (Gap-Filler, Theory-Extension, etc.). Both dimensions apply simultaneously.
+
 ### 2. Read and Analyze the Theory Section
 
 Identify the **positioning move**:
@@ -88,20 +96,35 @@ Ask the user:
 - **Conclusion**: Policy implications, may escalate to broader claims
 - **Opportunity**: Escalation is common and acceptable
 
+## Field-Specific Implications
+
+When a field profile was identified in Step 1.5, consult the `fields/{field}.md` file for field-specific implications. The field profile will specify:
+
+- Adjusted word count and paragraph count targets
+- Field-specific opening move distributions
+- Structural patterns unique to the field
+- Roadmap and citation timing expectations
+- Audience assumptions and vocabulary conventions
+- Field-specific cluster selection guidance (if applicable)
+
+Include the field profile and relevant field-specific cluster in the output summary.
+
 ## Output
 
 Provide a summary with:
 
 1. **Cluster assignment** and rationale (which cluster, why)
-2. **Contribution type** (gap-filling, extension, building, synthesis, debate)
-3. **Main argument** (one sentence)
-4. **Key findings** (3-4 bullets)
-5. **Recommended approach**:
-   - Introduction opening move
-   - Introduction target length
+2. **Field profile** (if applicable — which field, which field-specific cluster if any)
+3. **Contribution type** (gap-filling, extension, building, synthesis, debate)
+4. **Main argument** (one sentence)
+5. **Key findings** (3-4 bullets)
+6. **Recommended approach**:
+   - Introduction opening move (adjusted for field profile if applicable)
+   - Introduction target length (field-adjusted benchmarks if applicable)
    - Conclusion target length
    - Key elements to include
-6. **Coherence considerations** (what promises must the intro make for the conclusion to deliver?)
+   - Field-specific structural pattern to use (if field profile applies)
+7. **Coherence considerations** (what promises must the intro make for the conclusion to deliver?)
 
 ## When You're Done
 

@@ -153,15 +153,31 @@ Identify productive next steps. This is a research agenda, not a limitations dum
 - Connect to real-world stakes
 - May be longer on implications, shorter on literature
 
+## Field-Specific Adjustments
+
+When a field profile was identified in Phase 0, apply the field-specific
+guidance from `fields/{field}.md`. Field profiles override generalist
+defaults where they conflict. Key areas that field profiles may adjust:
+
+- Whether a separate Discussion section is expected or whether Conclusion-only is the norm
+- Target word count and citation density
+- Limitations expectations (some fields omit them by convention)
+- Implications emphasis (theoretical vs. policy)
+- Future directions framing
+
+Refer to the field profile's conclusion/discussion benchmarks and writing
+checklist for this section.
+
 ## Output
 
 Provide:
-1. **Complete Discussion draft** (700-1,100 words)
+1. **Complete Discussion draft** (700-1,100 words; adjust per field profile if applicable)
 2. **Annotation** noting:
    - Contribution claim type
    - Literatures engaged
    - Limitations acknowledged
    - Implications scope (theoretical/policy/both)
+   - If field profile applies: whether separate Discussion is warranted or conclusion-only is preferable
 
 ## When You're Done
 

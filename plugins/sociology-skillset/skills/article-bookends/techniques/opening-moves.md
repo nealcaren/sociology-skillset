@@ -217,27 +217,41 @@ Opens with a direct question.
 
 ---
 
+## Field-Specific Opening Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific structural patterns, opening move distributions, and
+phrase templates. Field-specific patterns supplement the five standard
+moves above — they describe distinctive *structures* that overlay the
+standard opening move types.
+
+---
+
 ## Choosing Your Opening Move
 
 ### Decision Tree
 
-1. **Is the framework central to contribution?**
+1. **Is this for a field-specific audience?**
+   - Yes → Check field profile (`fields/{field}.md`) for adjusted opening move distributions and field-specific patterns
+   - No → Continue with generalist defaults
+
+2. **Is the framework central to contribution?**
    - Yes → Consider Theory-Led
    - No → Continue
 
-2. **Is there immediate policy/social urgency?**
-   - Yes → Consider Stakes-Led
+3. **Is there immediate policy/social urgency?**
+   - Yes → Consider Stakes-Led (but check field profile — some fields rarely use this move)
    - No → Continue
 
-3. **Is a specific case the entry point?**
-   - Yes → Consider Case-Led
+4. **Is a specific case the entry point?**
+   - Yes → Consider Case-Led (check field profile for field-specific case patterns)
    - No → Continue
 
-4. **Is the phenomenon inherently interesting?**
+5. **Is the phenomenon inherently interesting?**
    - Yes → Use Phenomenon-Led (default)
    - Uncertain → Use Phenomenon-Led
 
-5. **Is there a genuinely compelling paradox?**
+6. **Is there a genuinely compelling paradox?**
    - Yes → Consider Question-Led (rare)
    - No → Don't force it
 
@@ -250,3 +264,8 @@ Opens with a direct question.
 | Concept-Building | Phenomenon | Stakes |
 | Synthesis | Phenomenon | Case |
 | Problem-Driven | Stakes (25%) | Case (17%) |
+
+### Field-Specific Recommendations
+
+When a field profile applies, consult `fields/{field}.md` for field-specific
+cluster-to-opening-move mappings and pattern recommendations.

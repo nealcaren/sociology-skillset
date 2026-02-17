@@ -232,3 +232,11 @@ The opening must match your chosen archetype. A phenomenon opener with Research-
 
 ### 5. Buried Opening
 Don't hide your opening move in subordinate clauses. Lead with the key information.
+
+---
+
+## Field-Specific Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific patterns, phrase templates, and move distributions.
+Field-specific patterns supplement the standard guidance above.

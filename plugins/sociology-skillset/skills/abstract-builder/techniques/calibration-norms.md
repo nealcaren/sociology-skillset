@@ -215,3 +215,11 @@ Before finalizing, verify your abstract against these norms:
 - Under 4 sentences (missing moves)
 - Over 9 sentences (too detailed)
 - No explicit contribution claim
+
+---
+
+## Field-Specific Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific patterns, phrase templates, and move distributions.
+Field-specific patterns supplement the standard guidance above.

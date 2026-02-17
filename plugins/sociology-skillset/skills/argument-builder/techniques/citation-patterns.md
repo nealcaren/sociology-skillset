@@ -204,3 +204,11 @@ For each paragraph, verify:
 4. **Quotes only for definitions**: Are you quoting only when language precision matters?
 5. **Citation density**: Does the paragraph fall in the 2.4-5.0 range?
 6. **Cluster alignment**: Does your citation pattern match your cluster?
+
+---
+
+## Field-Specific Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific patterns, phrase templates, and move distributions.
+Field-specific patterns supplement the standard guidance above.

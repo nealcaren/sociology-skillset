@@ -229,3 +229,11 @@ CLOSE-FINDINGS acceptable but misses contribution claim opportunity.
 - Passive constructions
 - Trailing off without emphasis
 - "More research is needed" endings
+
+---
+
+## Field-Specific Patterns
+
+When a field profile applies, consult `fields/{field}.md` for
+field-specific patterns, phrase templates, and move distributions.
+Field-specific patterns supplement the standard guidance above.
