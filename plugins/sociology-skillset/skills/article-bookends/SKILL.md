@@ -206,7 +206,7 @@ Field profiles adjust benchmarks and add field-specific patterns for particular 
 | Field | File | Key Differences |
 |-------|------|-----------------|
 | **Generalist** (default) | — | Benchmarks from *Social Problems* and *Social Forces* (n=80) |
-| **Social Movement Studies (SMS)** | `fields/sms.md` | Shorter intros, more theory-led openings, 3 SMS-specific structural patterns, higher roadmap rate, earlier citations, conclusion-only default, field-reflexive codas |
+| **Social Movements** | `fields/social-movements.md` | Theory-led openings 4× generalist rate, balanced opening move distribution, early citations, conclusion-only default, field-reflexive codas, 5 structural patterns. Venue-specific calibration for roadmaps (*SMS* 69% vs *Moby* 22%) and limitations (*SMS* ~20% vs *Moby* 82%). Based on combined corpus (n=80). |
 
 Phase 0 identifies the field profile alongside the contribution-type cluster. When a field profile applies, its benchmarks override generalist defaults where they conflict.
 
