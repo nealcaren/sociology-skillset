@@ -106,14 +106,14 @@ Some concepts are themselves sites of debate:
 [How will you define/use this concept?]
 ```
 
-### 6. Write Debate Map
+### 6. Write Debate Map Section
 
-Create `debate-map.md`:
+Append a `## Debate Map` section to `field-synthesis.md`:
 
 ```markdown
-# Debate Map
+## Debate Map
 
-## Overview
+### Overview
 
 This field contains [N] identifiable debates and [N] unresolved questions.
 
@@ -124,25 +124,25 @@ This field contains [N] identifiable debates and [N] unresolved questions.
 
 ---
 
-## Debate 1: [Name]
+### Debate 1: [Name]
 
 [Full documentation using template above]
 
 ---
 
-## Debate 2: [Name]
+### Debate 2: [Name]
 
 [Full documentation]
 
 ---
 
-## Debate 3: [Name]
+### Debate 3: [Name]
 
 [Full documentation]
 
 ---
 
-## Unresolved Questions
+### Unresolved Questions
 
 1. **[Question 1]**
    - Raised by: [papers]
@@ -154,28 +154,28 @@ This field contains [N] identifiable debates and [N] unresolved questions.
 
 ---
 
-## Contested Concepts
+### Contested Concepts
 
-### [Concept 1]
+#### [Concept 1]
 [Documentation using template]
 
-### [Concept 2]
+#### [Concept 2]
 [Documentation using template]
 
 ---
 
-## Implications for Your Project
+### Implications for Your Project
 
-### Debates You Could Adjudicate
+#### Debates You Could Adjudicate
 - [Debate X]: Your data could show [how]
 
-### Questions You Could Address
+#### Questions You Could Address
 - [Question Y]: Your project directly addresses this
 
-### Positions You'll Take
+#### Positions You'll Take
 - On [Debate Z]: You align with [Position] because [reason]
 
-### Lit-Writeup Implications
+#### Lit-Writeup Implications
 - **If adjudicating a debate**: Use Problem-Driven (Debate) cluster
 - **If taking a side**: Cite both positions, then align
 - **If neither**: Note the debate but don't center it
@@ -204,13 +204,13 @@ If you're documenting a debate, present both sides fairly—even if you'll event
 
 ## Output Files to Create
 
-1. **debate-map.md** - Full documentation of debates and tensions
+1. **field-synthesis.md** - Append a `## Debate Map` section
 
 ---
 
 ## When You're Done
 
-Report to the orchestrator:
+The `## Debate Map` section has been appended to `field-synthesis.md`. Report to the orchestrator:
 - Number of debates identified
 - Number of unresolved questions
 - Key contested concepts
@@ -218,4 +218,4 @@ Report to the orchestrator:
 - Recommendation on whether Problem-Driven cluster is appropriate
 
 Example summary:
-> "Debate mapping complete. **3 major debates** identified: (1) structural vs. cultural explanations for legal cynicism, (2) whether police-calling indicates trust or desperation, (3) role of neighborhood context vs. individual disposition. **5 unresolved questions** documented. Key contested concept: 'cynicism' has 3 distinct definitions in circulation. User's project directly addresses Debate 2—recommend considering **Problem-Driven (Debate)** cluster if adjudicating, or noting the debate in a Gap-Filler turn. Ready for Phase 5."
+> "Debate mapping complete. **3 major debates** identified: (1) structural vs. cultural explanations for legal cynicism, (2) whether police-calling indicates trust or desperation, (3) role of neighborhood context vs. individual disposition. **5 unresolved questions** documented. Key contested concept: 'cynicism' has 3 distinct definitions in circulation. Debate Map section appended to field-synthesis.md. User's project directly addresses Debate 2—recommend considering **Problem-Driven (Debate)** cluster if adjudicating, or noting the debate in a Gap-Filler turn. Ready for Phase 5."

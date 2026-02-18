@@ -9,9 +9,9 @@ Validation catches errors before the skill is used. A skill with incorrect bench
 ## Inputs
 
 Before starting, read:
-1. All files in `/output/plugins/[skill-name]/`
-2. `/analysis/phase3-clusters/cluster-benchmarks.json` - Source data
-3. `/analysis/phase4-generation/generation-log.md` - Generation decisions
+1. All files in `/output/plugins/[skill-name]/` — the generated skill
+2. `analysis/corpus-data.json` — source benchmark data (including `"clusters"` key added in Phase 3)
+3. `analysis/genre-analysis-memo.md` — the full analysis record, including Phase 4 generation log
 4. The model skill (for comparison)
 
 ## Your Tasks
@@ -186,18 +186,13 @@ else:
     else:
         print(f"✓ Skills path valid: {skills_path}")
 
-# Check 4: Validate marketplace entry format
-marketplace_entry = Path(f"analysis/phase4-generation/marketplace-entry.json")
-if marketplace_entry.exists():
-    entry = json.loads(marketplace_entry.read_text())
-    if entry.get("strict") is not True:
-        print("❌ CRITICAL: marketplace entry must have 'strict': true")
-    else:
-        print("✓ Marketplace entry has strict: true")
-    if not entry.get("source", "").startswith("./plugins/"):
-        print(f"❌ WARNING: source should be './plugins/{skill_name}'")
-    else:
-        print(f"✓ Source path correct")
+# Check 4: Validate marketplace entry (extract from genre-analysis-memo.md Phase 4 section
+# or check the entry manually from the JSON block recorded there)
+# The marketplace entry JSON is recorded in analysis/genre-analysis-memo.md under Phase 4.
+# Manually verify:
+#   "strict": true is present
+#   "source" starts with "./plugins/"
+print("⚠ Manually verify marketplace entry JSON in analysis/genre-analysis-memo.md (Phase 4 section)")
 ```
 
 **Checklist**:
@@ -280,17 +275,64 @@ Compile all findings:
 
 ## Output Files to Create
 
-Save all outputs to `/analysis/phase5-validation/`:
+Append a `## Phase 5: Validation` section to `analysis/genre-analysis-memo.md`. The section should contain the full validation findings:
 
-1. **validation-report.md** - Complete validation findings
+```markdown
+## Phase 5: Validation
 
-2. **benchmark-verification.md** - Data accuracy checks
+### Summary
+- **Files generated**: [n]
+- **Validation checks passed**: [n]/[total]
+- **Critical issues**: [n]
+- **Minor issues**: [n]
+- **Overall status**: [Ready / Needs revision]
 
-3. **consistency-check.md** - Cross-file consistency results
+### Syntax Validation
+[YAML frontmatter, JSON, and markdown structure results]
 
-4. **test-run-results.md** - Test results (if test was run)
+### Benchmark Verification
+| Metric | In SKILL.md | In Analysis | Match? |
+|--------|-------------|-------------|--------|
+| Median word count | [X] | [Y] | [yes/no] |
+| Median paragraphs | [X] | [Y] | [yes/no] |
+| [Other metrics] | ... | ... | ... |
 
-5. **corrections-needed.md** - List of issues to fix (if any)
+### Cluster Coverage
+| Cluster | In SKILL.md | Has Profile | Has Exemplar | Complete? |
+|---------|-------------|-------------|--------------|-----------|
+| [name] | [yes/no] | [yes/no] | [yes/no] | [yes/no] |
+
+### Internal Consistency
+[Naming, reference integrity, and phase flow results]
+
+### Content Quality
+[Assessment of SKILL.md, cluster profiles, and technique guides]
+
+### Model Skill Comparison
+| Component | Model Skill | Generated Skill | Match? |
+|-----------|-------------|-----------------|--------|
+| Phase count | [n] | [n] | [yes/no] |
+| Cluster count | [n] | [n] | [yes/no] |
+| Technique guides | [n] | [n] | [yes/no] |
+
+### Marketplace Validation
+[plugin.json format checks, strict: true, source path]
+
+### Test Run Results (if applicable)
+[Test input, skill application, issues identified, verdict]
+
+### Critical Issues (must fix)
+1. [Issue and location]
+
+### Minor Issues (should fix)
+1. [Issue and location]
+
+### Warnings (consider fixing)
+1. [Issue and location]
+
+### Recommendations
+[Final recommendations]
+```
 
 ## Issue Severity Definitions
 

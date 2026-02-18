@@ -267,8 +267,9 @@ Policy-Driven sections have the highest citation density (1.8 per 100 words). Na
 
 ## Output Files to Create
 
-1. **case-section-draft.md** - Complete case justification section
-2. **drafting-notes.md** - Notes on word count, components included/omitted, areas needing revision
+1. **case-section.md** - Complete case justification section
+
+Present notes on word count, components included/omitted, and areas needing revision in the conversation. Do not create a separate drafting-notes file.
 
 ---
 

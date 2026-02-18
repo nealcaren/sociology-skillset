@@ -120,11 +120,9 @@ If grep finds citations not in your list, add them before proceeding.
 
 ## Output: Citations Extracted
 
-Create `citations-extracted.md`:
+Present extraction results in conversation using this format (do not save to a file):
 
 ```markdown
-# Extracted Citations
-
 **Document**: [filename]
 **Total instances**: [X]
 **Unique citations**: [X]
@@ -148,25 +146,17 @@ Create `citations-extracted.md`:
 ## Grep Verification
 
 **Parenthetical citations found:**
-```
 [paste grep output here]
-```
 
 **Narrative citations found:**
-```
 [paste grep output here]
-```
 
 **Verification result:** [X] citations extracted, [X] confirmed by grep. [Match/Discrepancies noted]
-
-## Raw Extraction Log
-
-[Optional: list of all raw matches for verification]
 ```
 
-## Pause Point
+## When You're Done
 
-Present the extracted citations to the user. Ask:
+Present the extraction results in conversation. Ask:
 1. Are all citations captured?
 2. Any obvious misses or misparsings?
 3. Ready to proceed to Zotero matching?

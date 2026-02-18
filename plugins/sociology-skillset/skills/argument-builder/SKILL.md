@@ -51,6 +51,24 @@ Use this skill when users want to:
 - Craft the "turn" sentence that marks their contribution
 - Calibrate hedging, citations, and structure to field norms
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "argument-builder: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
+Output files are consolidated into four files:
+
+```
+argument-builder/
+├── theory-memo.md       # Single memo appended at each phase
+├── theory-section.md    # The theory section draft (git tracks versions)
+├── citations.json       # Citation tracking (git tracks)
+└── bibliography.md      # Final bibliography
+```
+
 ## Core Principles
 
 1. **Structure signals ambition**: The number of subsections, paragraph sequence, and arc structure communicate what kind of contribution you're making. Match form to content.
@@ -138,7 +156,7 @@ See `clusters/` directory for detailed profiles with characteristic paragraph se
 - Build toward the turn sentence
 - **Track all citations used** (author, year, context) for bibliography generation
 
-**Output**: Full draft of Theory section + `citations-tracking.json`.
+**Output**: Full draft of Theory section (`theory-section.md`) + `citations.json`.
 
 > **Pause**: User reviews each subsection (if multiple) or full draft.
 
@@ -173,7 +191,7 @@ See `clusters/` directory for detailed profiles with characteristic paragraph se
 - **Compile citation list** with Zotero lookup (if MCP available)
 - **Generate bibliography** for reference section
 
-**Output**: Final Theory section + quality memo + `citations-final.json` + `bibliography.md`.
+**Output**: Final Theory section (`theory-section.md`) + quality assessment appended to `theory-memo.md` + `citations.json` (updated) + `bibliography.md`.
 
 > **Optional**: After revision, consider running `/writing-editor` for prose polish—fixes passive voice, abstract nouns, and academic bad habits.
 

@@ -142,7 +142,7 @@ Maintain a running list of every citation as you use it. For each citation, reco
 - Helps verify citation density during revision
 - Creates audit trail of sources used
 
-Save incrementally to `citations-tracking.json` as you draft.
+Save incrementally to `citations.json` as you draft.
 
 ---
 
@@ -199,9 +199,9 @@ this section.
 
 ## Output Files to Create
 
-1. **theory-section-draft.md** - Full draft prose organized by subsection
-2. **drafting-notes.md** - Notes on deviations, concerns, needs for revision
-3. **citations-tracking.json** - Running list of all citations used (author, year, context, paragraph, pattern)
+1. **theory-section.md** - Full draft prose organized by subsection
+2. **theory-memo.md** - Append a `## Phase 3: Drafting Notes` section with notes on deviations, concerns, and areas flagged for revision
+3. **citations.json** - Running list of all citations used (author, year, context, paragraph, pattern)
 
 ---
 
@@ -216,4 +216,4 @@ Report to the orchestrator:
 - Areas flagged for revision
 
 Example summary:
-> "**Draft complete**. 1,487 words across 10 paragraphs (target: 1,500). 36 citations (target: 35). Turn at paragraph 6: 'Yet while research documents the pursuit of recognition in various settings, there is less attention to how recognition-seeking shapes encounters with legal authorities specifically.' One deviation: Split planned paragraph 4 into two for clarity. Flagged paragraphs 7-8 for transition smoothing in revision. Ready for Phase 4: Turn refinement."
+> "**Draft complete** (`theory-section.md`). 1,487 words across 10 paragraphs (target: 1,500). 36 citations (target: 35). Turn at paragraph 6: 'Yet while research documents the pursuit of recognition in various settings, there is less attention to how recognition-seeking shapes encounters with legal authorities specifically.' One deviation: Split planned paragraph 4 into two for clarity. Flagged paragraphs 7-8 for transition smoothing in revision. Drafting notes appended to `theory-memo.md`. Ready for Phase 4: Turn refinement."

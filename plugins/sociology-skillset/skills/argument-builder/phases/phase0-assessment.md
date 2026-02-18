@@ -83,9 +83,11 @@ If no lit-search:
 
 ### 5. Write Assessment Memo
 
-Create `assessment-memo.md` with:
+Append a `## Phase 0: Assessment` section to `theory-memo.md` with:
 
 ```markdown
+## Phase 0: Assessment
+
 # Theory Section Assessment
 
 ## Project Summary
@@ -196,8 +198,7 @@ Field profiles are additive — they adjust benchmarks on top of the contributio
 
 ## Output Files to Create
 
-1. **assessment-memo.md** - Full assessment with cluster recommendation
-2. (Optional) **questions-for-user.md** - If clarification needed
+1. **theory-memo.md** - Append a `## Phase 0: Assessment` section with the full assessment and cluster recommendation. Ask any clarifying questions directly in the conversation rather than writing a separate file.
 
 ---
 

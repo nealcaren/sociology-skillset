@@ -63,13 +63,21 @@ Use this skill when users want to:
    - One strong alternative (e.g., Research-Report + Puzzle-Solver, or Empirical-Showcase + Research-Report)
    - Include a comparison table showing trade-offs
 
-2. **Save to markdown file**: Always save the final output to a markdown file in the user's project directory. The file should include:
+2. **Save to markdown file**: Save draft output to `abstract.md` in the user's project directory. The file should include:
    - All variants with archetype labels
    - Word count and sentence count for each
    - Comparison table
    - Generation note referencing abstract-builder
 
 **Rationale**: Users benefit from seeing multiple framings of their work. Different archetypes emphasize different strengths. Saving to file preserves the work and allows easy sharing/revision.
+
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "abstract-builder: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
 
 ## Core Principles
 
@@ -107,7 +115,7 @@ See `clusters/` directory for detailed profiles with sentence templates and exem
 - Recommend archetype with rationale
 - Confirm selection with user
 
-**Output**: Assessment memo with archetype recommendation.
+**Output**: Archetype recommendation presented in conversation.
 
 > **Pause**: User confirms archetype selection before sequencing.
 
@@ -122,7 +130,7 @@ See `clusters/` directory for detailed profiles with sentence templates and exem
 - Plan closing move (contribution, implications, or findings)
 - Map the complete sentence sequence
 
-**Output**: Move sequence plan.
+**Output**: Move sequence plan presented in conversation.
 
 > **Pause**: User approves sequence before drafting.
 
@@ -137,7 +145,7 @@ See `clusters/` directory for detailed profiles with sentence templates and exem
 - Use appropriate transition phrases
 - Track word count (target 180-200)
 
-**Output**: Draft abstract.
+**Output**: Draft abstract saved to `abstract.md`.
 
 > **Pause**: User reviews draft before revision.
 
@@ -153,7 +161,7 @@ See `clusters/` directory for detailed profiles with sentence templates and exem
 - Check contribution-claim closing
 - Polish prose for clarity and flow
 
-**Output**: Final abstract + quality memo.
+**Output**: `abstract.md` revised in place; quality assessment presented in conversation.
 
 ---
 
@@ -253,7 +261,7 @@ When the user is ready to begin:
 ## Key Reminders
 
 - **Draft multiple variants**: Always provide 2-3 variants using different archetypes so users can compare.
-- **Save to file**: Always save output to a markdown file in the user's project directory.
+- **Save to file**: Save draft output to `abstract.md` in the user's project directory.
 - **Archetype selection shapes the opening**: Don't skip assessment. Wrong archetype = wrong first impression.
 - **Findings are central**: Devote 2-4 sentences to findings preview. This is what readers remember.
 - **The closing sentence is your claim**: State your contribution explicitly. Use strong verbs: demonstrate, show, argue, reveal.

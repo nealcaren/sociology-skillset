@@ -144,9 +144,9 @@ Smith, Jane A., John B. Jones, and Mary C. Williams. 2020. "Movement
 
 Use hanging indent (4 spaces) for continuation lines.
 
-## Output: Final Bibliography
+## Output Files to Create
 
-Create `bibliography.md`:
+Create `bibliography/bibliography.md` with the formatted reference list. Git commit: `git add bibliography/bibliography.md && git commit -m "bibliography-builder: Phase 4 complete"`
 
 ```markdown
 # References
@@ -160,7 +160,7 @@ Create `bibliography.md`:
 - **Total references**: [X]
 - **Format**: [APA 7th / ASA / Chicago]
 - **Generated**: [Date]
-- **Skipped citations**: [X] (listed in issues-report.md)
+- **Skipped citations**: [X] (resolved in conversation during Phase 3)
 ```
 
 ## Quality Checks

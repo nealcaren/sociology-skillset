@@ -96,22 +96,22 @@ For each clustering dimension, note:
 - **Under-represented**: What's missing or sparse?
 - **Strategic gaps**: Where could your project contribute?
 
-### 6. Write Thematic Clusters Document
+### 6. Write Thematic Clusters Section
 
-Create `thematic-clusters.md`:
+Append a `## Thematic Clusters` section to `field-synthesis.md`:
 
 ```markdown
-# Thematic Clusters
+## Thematic Clusters
 
-## Overview
+### Overview
 
 Papers organized by empirical focus, method, and theoretical approach.
 
 ---
 
-## By Population
+### By Population
 
-### Cluster: [Population 1]
+#### Cluster: [Population 1]
 **Papers**: [N]
 - [Author 2020]: [brief description]
 - [Author 2019]: [brief description]
@@ -120,27 +120,27 @@ Papers organized by empirical focus, method, and theoretical approach.
 
 **What's Missing**: [Gaps in studying this population]
 
-### Cluster: [Population 2]
+#### Cluster: [Population 2]
 [Repeat structure]
 
 ---
 
-## By Setting
+### By Setting
 
-### Cluster: [Setting 1]
+#### Cluster: [Setting 1]
 **Papers**: [N]
 - [List with brief descriptions]
 
 **Dominant Findings**: [What do these papers collectively show?]
 
-### Cluster: [Setting 2]
+#### Cluster: [Setting 2]
 [Repeat]
 
 ---
 
-## By Phenomenon
+### By Phenomenon
 
-### Cluster: [Phenomenon 1]
+#### Cluster: [Phenomenon 1]
 **Papers**: [N]
 - [List]
 
@@ -149,7 +149,7 @@ Papers organized by empirical focus, method, and theoretical approach.
 
 ---
 
-## By Method
+### By Method
 
 | Method | Papers | Notes |
 |--------|--------|-------|
@@ -159,7 +159,7 @@ Papers organized by empirical focus, method, and theoretical approach.
 
 ---
 
-## Cross-Cluster Papers
+### Cross-Cluster Papers
 
 | Paper | Clusters Bridged | Significance |
 |-------|-----------------|--------------|
@@ -167,21 +167,21 @@ Papers organized by empirical focus, method, and theoretical approach.
 
 ---
 
-## Gap Analysis
+### Gap Analysis
 
-### Over-Represented
+#### Over-Represented
 - [Population/setting/phenomenon with extensive coverage]
 
-### Under-Represented
+#### Under-Represented
 - [Population/setting/phenomenon with sparse coverage]
 
-### Strategic Gaps for This Project
+#### Strategic Gaps for This Project
 1. **[Gap 1]**: [Description] — Papers touch on this but don't fully address
 2. **[Gap 2]**: [Description] — No papers in corpus address this
 
 ---
 
-## Implications for Writing
+### Implications for Writing
 
 Based on these clusters:
 - **Your project's empirical niche**: [Where it fits]
@@ -212,17 +212,17 @@ The same paper legitimately belongs in multiple clusters. That's information, no
 
 ## Output Files to Create
 
-1. **thematic-clusters.md** - Full clustering analysis
+1. **field-synthesis.md** - Append a `## Thematic Clusters` section
 
 ---
 
 ## When You're Done
 
-Report to the orchestrator:
+The `## Thematic Clusters` section has been appended to `field-synthesis.md`. Report to the orchestrator:
 - Number of clusters per dimension
 - Key over/under-represented areas
 - Papers that bridge clusters
 - Strategic gaps identified
 
 Example summary:
-> "Thematic clustering complete. **By population**: 4 clusters (working-class mothers, immigrants, youth, homeowners). **By setting**: 3 clusters (neighborhoods, courtrooms, schools). Notable gap: no papers study *renters specifically* despite housing focus. Cross-cluster paper: Desmond 2016 bridges neighborhoods + housing instability. Recommend highlighting renter gap in argument-builder turn. Ready for Phase 4."
+> "Thematic clustering complete. **By population**: 4 clusters (working-class mothers, immigrants, youth, homeowners). **By setting**: 3 clusters (neighborhoods, courtrooms, schools). Notable gap: no papers study *renters specifically* despite housing focus. Cross-cluster paper: Desmond 2016 bridges neighborhoods + housing instability. Thematic Clusters section appended to field-synthesis.md. Recommend highlighting renter gap in argument-builder turn. Ready for Phase 4."

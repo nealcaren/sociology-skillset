@@ -314,7 +314,7 @@ this section.
 
 **Always save output to a markdown file** in the user's project directory.
 
-1. **abstract_drafts.md** - All abstract variants in a single file:
+1. **abstract.md** - All abstract variants in a single file:
    ```markdown
    # Abstract Drafts: [Paper Title]
 
@@ -351,7 +351,7 @@ this section.
    *Generated using abstract-builder skill based on analysis of 91 Social Problems/Social Forces abstracts.*
    ```
 
-2. **drafting-notes.md** (optional) - Notes on challenges, decisions, concerns
+Present notes on challenges, decisions, and concerns in the conversation. Do not create a separate drafting-notes file.
 
 **File location**: Save in the same directory as the source paper, or ask the user where to save.
 
@@ -368,4 +368,4 @@ Report to the orchestrator:
 - Any concerns flagged for revision
 
 Example summary:
-> "**Draft complete**. 2 variants drafted: Research-Report (197 words, 7 sentences) and Puzzle-Solver (195 words, 8 sentences). Saved to `/path/to/abstract_drafts.md`. Research-Report recommended for specialist audience; Puzzle-Solver offers stronger hook for broader readership. Ready for Phase 3: Revision."
+> "**Draft complete**. 2 variants drafted: Research-Report (197 words, 7 sentences) and Puzzle-Solver (195 words, 8 sentences). Saved to `/path/to/abstract.md`. Research-Report recommended for specialist audience; Puzzle-Solver offers stronger hook for broader readership. Ready for Phase 3: Revision."

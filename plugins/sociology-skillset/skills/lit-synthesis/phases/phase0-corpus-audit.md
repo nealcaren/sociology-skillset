@@ -90,54 +90,54 @@ Use these criteria for "Must Read":
 - Introduces key concepts you'll use
 - Recent and relevant (last 3-5 years)
 
-### 6. Write Corpus Audit Memo
+### 6. Present Corpus Audit Results
 
-Create `corpus-audit.md`:
+Present the corpus audit results in the conversation using this structure:
 
 ```markdown
-# Corpus Audit
+## Corpus Audit Results
 
-## Corpus Summary
+### Corpus Summary
 - Source: [lit-search / Zotero collection / ad-hoc]
 - Total papers: [N]
 - Date range: [years]
 
-## Statistics
+### Statistics
 [Tables from Task 2]
 
-## Preliminary Theoretical Landscape
+### Preliminary Theoretical Landscape
 - Dominant traditions: [list]
 - Named frameworks: [list]
 - Methodological approaches: [list]
 
-## Coverage Assessment
+### Coverage Assessment
 
-### Strengths
+#### Strengths
 - [What's well covered]
 
-### Gaps Identified
+#### Gaps Identified
 - [Gap 1]: [description and significance]
 - [Gap 2]: [description and significance]
 
-### Recommendations
+#### Recommendations
 - [Any papers to add before proceeding]
 - [Any papers to exclude]
 
-## Reading Priorities
+### Reading Priorities
 
-### Must Read (Deep Reading - Phase 1)
+#### Must Read (Deep Reading - Phase 1)
 1. [Author Year] - [Reason]
 2. [Author Year] - [Reason]
 3. [Author Year] - [Reason]
 ... [aim for 10-20 papers]
 
-### Should Read (Careful Skim)
+#### Should Read (Careful Skim)
 - [List]
 
-### May Skim
+#### May Skim
 - [List or "remainder"]
 
-## Questions for User
+### Questions for User
 - [Any clarifying questions]
 ```
 
@@ -161,17 +161,17 @@ You can suggest priorities, but the user knows which papers matter most for thei
 
 ## Output Files to Create
 
-1. **corpus-audit.md** - Full audit with statistics and priorities
+No files created in this phase. Corpus audit results are presented in the conversation for the user to review.
 
 ---
 
 ## When You're Done
 
-Report to the orchestrator:
+Results have been presented in the conversation. Report to the orchestrator:
 - Corpus size and date range
 - Number of papers prioritized for deep reading
 - Key gaps identified
 - Any recommendations before proceeding
 
 Example summary:
-> "Corpus audit complete. **47 papers** spanning 2008-2024, concentrated in *Social Problems* and *American Sociological Review*. Theoretical landscape dominated by legal consciousness and neighborhood effects traditions. **15 papers** prioritized for deep reading; notable gap in comparative/non-US work. Recommend adding 2-3 foundational neighborhood effects papers before Phase 1. Ready for user review."
+> "Corpus audit complete. **47 papers** spanning 2008-2024, concentrated in *Social Problems* and *American Sociological Review*. Theoretical landscape dominated by legal consciousness and neighborhood effects traditions. **15 papers** prioritized for deep reading; notable gap in comparative/non-US work. Recommend adding 2-3 foundational neighborhood effects papers before Phase 1. Results presented in conversation — ready for user review."

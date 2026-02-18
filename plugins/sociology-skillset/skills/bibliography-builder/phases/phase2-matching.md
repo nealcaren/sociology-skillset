@@ -80,11 +80,9 @@ Create a comprehensive match record:
 
 ## Output: Citation Matches
 
-Create `citation-matches.md`:
+Present match results in conversation (do not save to a file):
 
 ```markdown
-# Citation Matches
-
 **Citations processed**: [X]
 **Found**: [X]
 **Ambiguous**: [X]
@@ -127,9 +125,9 @@ Create `citation-matches.md`:
 | García 2019 | Garcia 2019 (no accent) | Matched with variation |
 ```
 
-## Pause Point
+## When You're Done
 
-Present the match results to the user. Ask:
+Present the match results in conversation. Ask:
 1. For ambiguous matches: Which candidate is correct?
 2. For not found: Should we skip these or add to Zotero first?
 3. Any name variations need correction?

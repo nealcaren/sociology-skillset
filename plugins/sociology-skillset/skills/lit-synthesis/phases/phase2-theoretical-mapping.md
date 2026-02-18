@@ -98,14 +98,14 @@ LEGAL CONSCIOUSNESS TRADITION
 └── [Your corpus papers here]
 ```
 
-### 6. Write Theoretical Map
+### 6. Write Theoretical Map Section
 
-Create `theoretical-map.md`:
+Write a `## Theoretical Map` section into `field-synthesis.md`. If `field-synthesis.md` does not yet exist, create it with this as the first section.
 
 ```markdown
-# Theoretical Map
+## Theoretical Map
 
-## Overview
+### Overview
 
 This corpus engages [N] distinct theoretical traditions:
 1. [Tradition 1] ([N] papers)
@@ -114,36 +114,36 @@ This corpus engages [N] distinct theoretical traditions:
 
 ---
 
-## Tradition 1: [Name]
+### Tradition 1: [Name]
 
-### Foundational Texts
+#### Foundational Texts
 - [Text 1]: [one-line description]
 - [Text 2]: [one-line description]
 
-### Key Concepts
+#### Key Concepts
 - **[Concept A]**: [definition]
 - **[Concept B]**: [definition]
 
-### Papers in Corpus Using This Tradition
+#### Papers in Corpus Using This Tradition
 | Paper | How Tradition Is Used |
 |-------|----------------------|
 | [Author 2020] | [description/extension/critique] |
 | [Author 2019] | [description/extension/critique] |
 
-### Intellectual Lineage
+#### Intellectual Lineage
 [Text-based tree showing citations]
 
-### Key Quote
+#### Key Quote
 > "[Defining quote for the tradition]" (Foundational Text:page)
 
 ---
 
-## Tradition 2: [Name]
+### Tradition 2: [Name]
 [Repeat structure]
 
 ---
 
-## Cross-Traditional Connections
+### Cross-Traditional Connections
 
 | Connection | Papers | Significance |
 |------------|--------|--------------|
@@ -151,7 +151,7 @@ This corpus engages [N] distinct theoretical traditions:
 
 ---
 
-## Concepts Glossary
+### Concepts Glossary
 
 | Concept | Tradition | Definition | Key Source |
 |---------|-----------|------------|------------|
@@ -159,7 +159,7 @@ This corpus engages [N] distinct theoretical traditions:
 
 ---
 
-## Implications for Writing
+### Implications for Writing
 
 Based on this map:
 - **Most developed tradition**: [which one]
@@ -191,13 +191,13 @@ The traditions you identify become the subsections and literatures in argument-b
 
 ## Output Files to Create
 
-1. **theoretical-map.md** - Full map with traditions, concepts, lineages
+1. **field-synthesis.md** - Add a `## Theoretical Map` section (create the file if it doesn't exist yet)
 
 ---
 
 ## When You're Done
 
-Report to the orchestrator:
+The `## Theoretical Map` section has been written into `field-synthesis.md`. Report to the orchestrator:
 - Number of traditions identified
 - Key foundational texts
 - Any cross-traditional connections
@@ -205,4 +205,4 @@ Report to the orchestrator:
 - Preliminary cluster recommendation for argument-builder
 
 Example summary:
-> "Theoretical mapping complete. **Three traditions** identified: legal consciousness (anchored by Ewick & Silbey 1998), neighborhood effects (anchored by Sampson et al. 1997), and recognition theory (anchored by Honneth 2003). Cross-traditional connection noted: 3 papers bridge legal consciousness and recognition. Key concept variation: 'cynicism' means different things across papers. Recommend **Synthesis Integrator** cluster for argument-builder given opportunity to bridge traditions. Ready for Phase 3."
+> "Theoretical mapping complete. **Three traditions** identified: legal consciousness (anchored by Ewick & Silbey 1998), neighborhood effects (anchored by Sampson et al. 1997), and recognition theory (anchored by Honneth 2003). Cross-traditional connection noted: 3 papers bridge legal consciousness and recognition. Key concept variation: 'cynicism' means different things across papers. Theoretical Map section written to field-synthesis.md. Recommend **Synthesis Integrator** cluster for argument-builder given opportunity to bridge traditions. Ready for Phase 3."

@@ -148,13 +148,7 @@ Document any limitations for Phase 2:
 
 ## Output Files to Create
 
-Save to project analysis folder:
-
-1. **retrieval-log.md** - Complete log of Zotero queries and results
-2. **sources-reviewer1.md** - Organized sources for first reviewer
-3. **sources-reviewer2.md** - Organized sources for second reviewer
-4. **sources-reviewer3.md** - Organized sources for third reviewer (if applicable)
-5. **retrieval-summary.md** - Overall assessment and any flags for user
+None — present retrieval results (Zotero queries, source lists organized by reviewer, quality assessments, and any flags) in conversation for user review.
 
 ---
 

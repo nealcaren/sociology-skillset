@@ -9,12 +9,9 @@ Clusters are the heart of genre-based writing guidance. This phase transforms pr
 ## Inputs
 
 Before starting, read:
-1. `/analysis/phase0-scope/scope-definition.md` - Scope and model skill
-2. `/analysis/phase1-immersion/corpus-statistics.json` - Quantitative data
-3. `/analysis/phase2-coding/article-codes.json` - All article codes
-4. `/analysis/phase2-coding/preliminary-clusters.md` - Initial cluster assignments
-5. `/analysis/phase2-coding/co-occurrence-analysis.md` - Code patterns
-6. `/analysis/phase2-coding/coding-memo.md` - Coding insights
+1. `analysis/genre-analysis-memo.md` — Phase 0: Scope, Phase 1: Immersion, and Phase 2: Coding sections
+2. `analysis/corpus-data.json` — Structured per-article data with coding results
+3. The `article-codes/` folder — per-article codes from Phase 2
 
 ## Your Tasks
 
@@ -245,20 +242,44 @@ Write an interpretation memo:
 
 ## Output Files to Create
 
-Save all outputs to `/analysis/phase3-clusters/`:
+1. **Cluster profiles** — Write the full cluster profiles to `analysis/cluster-profiles.md`. This file should contain one section per cluster with benchmarks, signature moves, prohibited moves, exemplars, and the decision tree. Structure:
 
-1. **phase3-interpretation.md** - Main interpretation report:
-   - Cluster validation results
-   - Refinement decisions
-   - Final cluster definitions
-   - Interpretation memo
+```markdown
+# Cluster Profiles: [Skill Name]
 
-2. **cluster-profiles.md** - Consolidated cluster profiles:
-   - One section per cluster
-   - Benchmarks, signature moves, exemplars
-   - Decision tree for identification
+## Cluster Decision Tree
+[Decision tree for identifying which cluster an article belongs to]
 
-3. **cluster-benchmarks.json** - Structured benchmark data:
+## [Cluster 1 Name]
+**Prevalence**: [n] articles ([%] of corpus)
+**Contribution logic**: "[one-sentence description]"
+
+### Identifying Features
+- [criterion 1]
+- [criterion 2]
+
+### Key Statistics
+| Feature | Typical Value |
+|---------|---------------|
+| Word count | [range] |
+| Paragraphs | [range] |
+| [other] | [value] |
+
+### Signature Moves (Do This)
+1. **[Move]**: [description]
+   > "[Example quote from corpus]"
+
+### Prohibited Moves (Don't Do This)
+- **[Move]**: [why to avoid]
+
+### Exemplar
+**[Article identifier]** — [why exemplary]
+
+[Repeat for each cluster]
+```
+
+2. **Structured benchmark data** — Add a `"clusters"` key to `analysis/corpus-data.json` with the structured cluster benchmarks:
+
    ```json
    {
      "clusters": [
@@ -277,12 +298,50 @@ Save all outputs to `/analysis/phase3-clusters/`:
    }
    ```
 
-4. **exemplars/** folder with detailed exemplar analyses:
-   - `exemplar-gap-filler.md`
-   - `exemplar-theory-extension.md`
-   - etc.
+3. **Phase 3 memo section** — Append a `## Phase 3: Clusters` section to `analysis/genre-analysis-memo.md`. The section should contain:
 
-5. **decision-tree.md** - Standalone cluster identification guide
+```markdown
+## Phase 3: Clusters
+
+### Cluster Validation Results
+[For each preliminary cluster: coherence check outcome and verdict]
+
+### Refinement Decisions
+#### Merges
+[Any clusters merged, with rationale]
+
+#### Splits
+[Any clusters split, with rationale]
+
+#### Dissolutions
+[Any clusters dissolved, with rationale]
+
+### Final Cluster Summary
+| Cluster | N | % | Key Distinguishing Feature |
+|---------|---|---|---------------------------|
+| [name] | [n] | [%] | [feature] |
+
+### Interpretation Memo
+#### How Clusters Emerged
+[Narrative of the discovery process]
+
+#### Key Distinctions
+[The 2–3 most important features that differentiate clusters]
+
+#### Uncertainty and Ambiguity
+[Where cluster boundaries are fuzzy; articles that could go either way]
+
+#### Comparison to Model Skill
+- Similar clusters: [list]
+- Different clusters: [list]
+- Novel findings: [what the corpus revealed that the model didn't have]
+
+#### Confidence Assessment
+[How stable are these clusters?]
+
+### Questions for User
+[Cluster boundary decisions or naming questions requiring user input]
+```
 
 ## Guiding Principles
 

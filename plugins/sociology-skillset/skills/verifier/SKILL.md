@@ -35,6 +35,14 @@ artifacts:
   verification_report: verification/verification-report.md
 ```
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "verifier: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## What This Skill Does
 
 This is a **verification skill** that catches errors before they become problems:
@@ -93,7 +101,7 @@ Common scenarios:
 - Confirm verification scope (all quotes, specific sections, etc.)
 - Count approximate items to verify
 
-**Output**: Verification scope summary with source inventory.
+**Output**: Appends `## Scope Summary` section to `verification-report.md`.
 
 > **Pause**: User confirms scope and source locations.
 
@@ -113,7 +121,7 @@ Common scenarios:
   - Verification level (exact, near, paraphrase, aggregate)
 - Create extraction database
 
-**Output**: `verification-items.md` with all items to verify.
+**Output**: Appends `## Verification Items` section to `verification-report.md`.
 
 > **Pause**: User reviews extracted items. Can mark items to skip.
 
@@ -131,7 +139,7 @@ Common scenarios:
   - Ambiguous source references
 - Create source-to-item mapping
 
-**Output**: Updated `verification-items.md` with source mappings.
+**Output**: Updates `## Verification Items` section in `verification-report.md` with source mappings.
 
 > **Pause**: User resolves unmapped items.
 
@@ -173,14 +181,14 @@ For each item:
 | Paraphrase | Key terms grep | Terms found but context unclear |
 | Aggregate | Count matching instances | Need pattern confirmation |
 
-**Output**: `verification-results.md` with status for each item.
+**Output**: Appends `## Verification Results` section to `verification-report.md`.
 
 > **Pause**: After each batch of ~20 items to show progress.
 
 ---
 
 ### Phase 4: Report
-**Goal**: Generate actionable verification report.
+**Goal**: Complete the verification report with full accounting and recommendations.
 
 **Process**:
 - Summarize verification results:
@@ -196,7 +204,7 @@ For each item:
   - Missing attribution suggestions
   - Items to remove or rewrite
 
-**Output**: `verification-report.md` with full accounting.
+**Output**: Appends `## Verification Report` section to `verification-report.md`, completing the document.
 
 ---
 
@@ -264,9 +272,7 @@ project/
 │       ├── smith-2020.pdf
 │       └── ...
 ├── verification/
-│   ├── verification-items.md       # Phase 1 output: extracted items
-│   ├── verification-results.md     # Phase 3 output: per-item status
-│   └── verification-report.md      # Phase 4 output: summary report
+│   └── verification-report.md      # Single output: built up across phases; git tracks
 ```
 
 ## Model Recommendations

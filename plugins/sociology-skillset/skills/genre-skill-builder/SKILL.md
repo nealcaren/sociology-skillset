@@ -81,6 +81,14 @@ This skill adapts the methodology from:
 
 6. **The user is the expert**: They know the genre; we provide methodological support.
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "genre-skill-builder: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## Workflow Phases
 
 ### Phase 0: Scope Definition & Model Selection
@@ -264,18 +272,19 @@ When creating a field profile (not a full skill), follow this streamlined workfl
 
 ```
 project/
-├── corpus/                 # Article sections to analyze
+├── corpus/                         # Article sections to analyze
 │   ├── article-01.md
 │   ├── article-02.md
 │   └── ...
 ├── analysis/
-│   ├── phase0-scope/       # Scope definition
-│   ├── phase1-immersion/   # Quantitative profiling
-│   ├── phase2-coding/      # Genre coding
-│   ├── phase3-clusters/    # Pattern analysis
-│   ├── phase4-generation/  # Generated skill files
-│   └── phase5-validation/  # Quality assessment
-└── output/                 # Final skill plugin
+│   ├── genre-analysis-memo.md      # Single memo with sections per phase (Phases 0–3, 5)
+│   ├── corpus-data.json            # Structured corpus data (built up across Phases 1–3)
+│   └── cluster-profiles.md         # Cluster profiles and decision tree (Phase 3)
+├── article-profiles/               # Per-article profiles from Phase 1 (kept for batch production)
+│   └── author-year-slug.md
+├── article-codes/                  # Per-article codes from Phase 2 (kept for batch production)
+│   └── author-year-slug.md
+└── output/                         # Generated skill plugin (Phase 4)
     └── plugins/[skill-name]/
 ```
 

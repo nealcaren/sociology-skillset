@@ -194,16 +194,18 @@ Before declaring revision complete, confirm:
 - [ ] Response memo drafted (if R&R)
 - [ ] Revised manuscript assembled in correct order
 
-## Output Files
+## Output Files to Create
 
-Create in `revision/` directory:
-- `revision-summary.md` — Complete accounting of changes
-- `response-memo.md` — Reviewer response (if R&R)
-- `revised-draft.md` — Complete revised manuscript
+- Append a `## Revision Summary` section to `revision/revision-map.md` with the complete feedback accounting.
+- Create `revision/response-memo.md` if this is a journal R&R.
+- The manuscript has been edited in place across Phase 2 dispatches; git history tracks all changes.
+- Do NOT create `revision-summary.md` or `revised-draft.md` as separate files.
+
+Git commit: `git add revision/revision-map.md revision/response-memo.md && git commit -m "revision-coordinator: Phase 4 complete"`
 
 ## Final Assembly
 
-Assemble the revised manuscript in correct order:
+The manuscript is already complete and in place from Phase 2 edits. Confirm correct section order with the user:
 
 1. Title page (if required)
 2. Abstract
@@ -242,9 +244,9 @@ Summarize for user:
 > **Word count**: 9500 → 9348 (-152 words), within 10K limit
 >
 > **Deliverables**:
-> - `revised-draft.md` — Complete revised manuscript
-> - `revision-summary.md` — Full change documentation
-> - `response-memo.md` — Reviewer response ready for review
+> - Manuscript edited in place (git history tracks all phase changes)
+> - `revision/revision-map.md` — Full tracking document with Revision Summary section
+> - `revision/response-memo.md` — Reviewer response ready for review (if R&R)
 >
 > **Action needed**: Please confirm scope conditions choice (D-1) before finalizing.
 

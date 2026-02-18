@@ -226,8 +226,8 @@ prompt: |
   - Track all citations for bibliography
 
   OUTPUT:
-  - Save draft to: writing/theory-section/theory-section-draft.md
-  - Save citation tracking to: writing/theory-section/citations-tracking.json
+  - Save draft to: writing/theory-section/theory-section.md
+  - Save citation tracking to: writing/theory-section/citations.json
   - Return word count, citation count for state update
 ```
 

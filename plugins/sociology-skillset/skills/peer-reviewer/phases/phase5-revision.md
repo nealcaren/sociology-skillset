@@ -30,7 +30,17 @@ Start with the user-confirmed response strategy from Phase 4:
 - [ ] [Concern ID]: [Brief description] — Response drafted
 ```
 
-### 2. Work Through Revisions Systematically
+### 2. Commit Current State Before Revising
+
+Before making any edits to the manuscript, stage and commit the current state so git tracks the baseline:
+
+```bash
+git add [manuscript-file] && git commit -m "peer-reviewer: Phase 4 complete, beginning revisions"
+```
+
+Then edit the manuscript in place. Git history serves as the revision trail — do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`).
+
+### 3. Work Through Revisions Systematically
 
 Address concerns in priority order. For each:
 
@@ -45,7 +55,7 @@ Address concerns in priority order. For each:
 - Will this affect other sections?
 
 **Step 3: Draft the revision**
-- Write new/revised content
+- Write new/revised content directly into the manuscript file
 - Maintain consistency with rest of manuscript
 - Preserve author's voice
 
@@ -54,7 +64,7 @@ Address concerns in priority order. For each:
 - Does it create new problems?
 - Is it consistent with other sections?
 
-### 3. Section-Specific Revision Guidance
+### 4. Section-Specific Revision Guidance
 
 #### Theory Section Revisions
 
@@ -138,21 +148,6 @@ For findings concerns:
 - [Change 2]
 ```
 
-### 4. Track All Changes
-
-Maintain a revision log:
-
-```markdown
-## Revision Log
-
-| Concern ID | Section | Change Type | Description | Status |
-|------------|---------|-------------|-------------|--------|
-| M1 | Theory | Expansion | Added paragraph on concept application | Complete |
-| M2 | Methods | Rewrite | Revised sampling description | Complete |
-| M3 | Findings | Addition | Added coding examples table | In progress |
-| m1 | Theory | Citation | Updated Lareau citation | Complete |
-```
-
 ### 5. Cross-Check Revisions
 
 After completing revisions, verify:
@@ -171,7 +166,15 @@ After completing revisions, verify:
 - Is the word count still appropriate?
 - Does the argument still flow?
 
-### 6. Optional: Re-Run Affected Reviewers
+### 6. Commit Revisions
+
+After completing each batch of revisions, commit to track progress:
+
+```bash
+git add [manuscript-file] && git commit -m "peer-reviewer: [brief description of revisions made]"
+```
+
+### 7. Optional: Re-Run Affected Reviewers
 
 For major revisions, consider re-running the relevant reviewer persona:
 
@@ -187,7 +190,7 @@ For major revisions, consider re-running the relevant reviewer persona:
 
 This can verify that revisions actually satisfy the perspective that raised the concern.
 
-### 7. Prepare Response Document
+### 8. Prepare Response Document
 
 If this is for an actual R&R, draft the response to reviewers:
 
@@ -230,18 +233,9 @@ If this is for an actual R&R, draft the response to reviewers:
 
 ## Output Files to Create
 
-Save to project analysis folder:
+1. **response-to-reviewers.md** - Draft response document (if applicable, e.g., for an actual R&R submission)
 
-1. **revision-plan-confirmed.md** - User-confirmed revision priorities
-2. **revisions-theory.md** - All theory section revisions
-3. **revisions-methods.md** - All methods section revisions
-4. **revisions-findings.md** - All findings section revisions
-5. **revision-log.md** - Complete log of all changes
-6. **cross-check-results.md** - Consistency verification
-7. **response-to-reviewers.md** - Draft response document (if applicable)
-
-Also update:
-8. **[manuscript-file]** - The revised manuscript sections
+Revisions are made directly to the manuscript file. Git commits before and after revisions serve as the version trail — no separate revision log or section-specific files are needed.
 
 ---
 
@@ -256,8 +250,8 @@ Fix the concern without rewriting everything. Targeted revisions are better than
 ### Verify, Don't Assume
 After revising, check that the concern is actually addressed. It's easy to think you fixed something when you didn't.
 
-### Document Everything
-Track all changes. This helps with response documents and with catching inconsistencies.
+### Use Git as Your Log
+Commit before and after revisions. The git history is the revision trail — don't duplicate it in separate files.
 
 ### Iterate with User
 Major revisions should be reviewed by the user before moving on. Don't revise the entire manuscript without checkpoints.

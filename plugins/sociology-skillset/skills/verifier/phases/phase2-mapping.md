@@ -99,7 +99,7 @@ For each extracted item with a literature citation:
 
 ### Mapping Output
 
-Update `verification/verification-items.md` with mappings:
+Update the `## Verification Items` section of `verification/verification-report.md` with mappings. Git commit before proceeding: `git add verification/verification-report.md && git commit -m "verifier: Phase 2 complete"`
 
 ```markdown
 ## Item [number]
@@ -121,7 +121,7 @@ Update `verification/verification-items.md` with mappings:
 
 ### Create Mapping Summary
 
-Add to verification-items.md:
+Add to the `## Verification Items` section of `verification/verification-report.md`:
 
 ```markdown
 ## Mapping Summary

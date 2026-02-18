@@ -103,7 +103,7 @@ Read the entire section for prose quality:
 Transform the citation tracking from Phase 3 into final outputs.
 
 **Step 1: Deduplicate citations**
-Combine `citations-tracking.json` into a unique list of sources:
+Combine `citations.json` into a unique list of sources:
 
 ```json
 {
@@ -136,7 +136,7 @@ For each citation:
 
 **Step 3: Generate outputs**
 
-Create `citations-final.json`:
+Update `citations.json` in place (git tracks the version):
 ```json
 {
   "section": "Theory",
@@ -160,6 +160,8 @@ Create `citations-final.json`:
   ]
 }
 ```
+
+(This updates `citations.json` in place; the Phase 3 version is preserved in git history.)
 
 Create `bibliography.md`:
 ```markdown
@@ -196,15 +198,17 @@ Before completion, verify:
 - [ ] Citation patterns varied
 - [ ] Cluster style consistent throughout
 - [ ] Prose reads smoothly
-- [ ] Citation list compiled (citations-final.json)
+- [ ] Citation list compiled and updated (citations.json)
 - [ ] Bibliography generated (bibliography.md)
 - [ ] Unmatched citations flagged for user
 
 ### 10. Write Quality Memo
 
-Create `quality-memo.md`:
+Append a `## Phase 5: Quality Assessment` section to `theory-memo.md`:
 
 ```markdown
+## Phase 5: Quality Assessment
+
 # Theory Section Quality Assessment
 
 ## Calibration Results
@@ -312,11 +316,10 @@ this section.
 
 ## Output Files to Create
 
-1. **theory-section-final.md** - Final polished Theory section
-2. **quality-memo.md** - Full quality assessment
-3. **revision-log.md** - Record of changes made
-4. **citations-final.json** - Complete citation list with Zotero keys (if available)
-5. **bibliography.md** - Formatted bibliography ready for reference section
+1. **theory-section.md** - Edit in place to produce the final polished Theory section (do not create a new file; git tracks the version)
+2. **theory-memo.md** - Append a `## Phase 5: Quality Assessment` section with the full quality assessment and record of changes made
+3. **citations.json** - Update in place with complete citation list and Zotero keys (if available); git tracks the version
+4. **bibliography.md** - Formatted bibliography ready for reference section
 
 ---
 
@@ -327,13 +330,13 @@ Report to the orchestrator:
 - Final citation count
 - Calibration status (in range / deviations explained)
 - Confidence assessment (High/Medium/Low)
-- Citation outputs generated (citations-final.json, bibliography.md)
+- Citation outputs generated (citations.json updated, bibliography.md)
 - Zotero matches found / unmatched citations
 - Any remaining concerns
 
 Example summary:
 > "**Revision complete**. Final section: 1,523 words (target 1,145-1,744 ✓), 37 citations (target 26-43 ✓), 10 paragraphs, 2 subsections. All calibration metrics in range. Turn confirmed specific and well-placed at P6. Transitions smoothed throughout. Hedging calibrated. **High confidence** section is publication-ready.
 >
-> **Citation outputs**: `citations-final.json` with 35 unique sources. Zotero lookup: 32 matched, 3 unmatched (flagged in bibliography.md). `bibliography.md` ready for reference section.
+> **Citation outputs**: `citations.json` updated with 35 unique sources. Zotero lookup: 32 matched, 3 unmatched (flagged in bibliography.md). `bibliography.md` ready for reference section. Quality assessment appended to `theory-memo.md`.
 >
 > Minor consideration: paragraph 8 bridge could be strengthened if user wants to emphasize theoretical contribution more."

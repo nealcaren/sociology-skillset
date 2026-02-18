@@ -226,12 +226,14 @@ If using a demographic table:
 
 ---
 
-## Output Files to Create
+## Output
 
-1. **methods-final.md** - Revised Methods section ready for submission
-2. **revision-memo.md** - Notes on changes made and quality assessment
+Before making any revisions: commit the current `methods-section.md` with `git add methods-section.md && git commit -m "methods-writer: Phase 1 complete"`.
 
-**Revision memo structure**:
+Then revise `methods-section.md` in place.
+
+Present the revision memo in the conversation using this structure:
+
 ```markdown
 # Methods Section Revision Memo
 
@@ -255,6 +257,8 @@ If using a demographic table:
 ## Remaining Concerns
 - [Any issues user should review]
 ```
+
+Do not create a separate revision-memo file.
 
 ---
 

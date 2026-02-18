@@ -134,9 +134,9 @@ If user indicates the case must precede theory but doesn't fit Policy-Driven tri
 - The study actually IS Policy-Driven
 - There's a mismatch in how the article is structured
 
-### 6. Write Assessment Memo
+### 6. Present Assessment
 
-Create a summary with:
+Present in the conversation:
 
 ```markdown
 # Case Justification Assessment
@@ -219,10 +219,9 @@ If you have demographic or characteristic data to compare across sites or pre/po
 
 ---
 
-## Output Files to Create
+## Output
 
-1. **assessment-memo.md** - Full assessment with cluster recommendation
-2. (Optional) **questions-for-user.md** - If clarification needed
+Present the full assessment and recommendation in the conversation. Do not create output files.
 
 ---
 

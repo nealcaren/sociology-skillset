@@ -4,10 +4,10 @@
 
 ## Report Structure
 
-The verification report should be clear, actionable, and prioritized.
+Append this as the `## Verification Report` section of `verification/verification-report.md`. The section should be clear, actionable, and prioritized.
 
 ```markdown
-# Verification Report
+## Verification Report
 
 **Manuscript**: [filename]
 **Verified**: [date]
@@ -226,9 +226,11 @@ Before finalizing the report, verify:
 4. **Evidence is cited**: Issues reference specific source text
 5. **Report is actionable**: User can act on findings without further research
 
-## Delivering the Report
+## Output Files to Create
 
-Save to: `verification/verification-report.md`
+Append a `## Verification Report` section to `verification/verification-report.md` using the structure above. This completes the document. Git commit: `git add verification/verification-report.md && git commit -m "verifier: Phase 4 complete"`
+
+## Delivering the Report
 
 When presenting to user:
 
@@ -254,10 +256,4 @@ After delivering the report, offer:
 
 ## Archiving
 
-Recommend user keep:
-- `verification-report.md` (final report)
-- `verification-results.md` (detailed verification log)
-
-Can delete after verification is resolved:
-- `verification-items.md` (extraction working file)
-- `scope-summary.md` (intake working file)
+The single `verification-report.md` file contains all sections (Scope Summary, Verification Items, Verification Results, Verification Report). Git history preserves the state at the end of each phase. No additional files need to be kept or deleted.

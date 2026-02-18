@@ -8,7 +8,7 @@ This phase translates the scope document into actual data. Good API queries maxi
 
 ## Prerequisites
 
-- Read `memos/scope.md` for search terms and filters
+- Read `memos/search-memo.md` for search terms and filters
 - Read `api/openalex-reference.md` for API syntax
 
 ## Your Tasks
@@ -139,9 +139,9 @@ def corpus_stats(papers):
     return stats
 ```
 
-### 5. Save Raw Results
+### 5. Save Results
 
-Save to `data/raw/search_results.json`:
+Save to `data/database.json` (this is the single evolving database file that all subsequent phases will update):
 
 ```python
 output = {
@@ -154,9 +154,11 @@ output = {
     "papers": papers
 }
 
-with open("data/raw/search_results.json", "w") as f:
+with open("data/database.json", "w") as f:
     json.dump(output, f, indent=2)
 ```
+
+Then append a `## Phase 1: Initial Search` section to `memos/search-memo.md` summarizing the queries run and corpus statistics.
 
 ## Output Summary
 
@@ -201,6 +203,6 @@ Present to the user:
 ## When You're Done
 
 Tell the orchestrator:
-> "Phase 1 complete. Initial corpus of N papers saved to data/raw/search_results.json. Statistics and sample titles presented. Ready for user review before screening."
+> "Phase 1 complete. Initial corpus of N papers saved to data/database.json. Phase 1 summary appended to memos/search-memo.md. Statistics and sample titles presented. Ready for user review before screening."
 
 **Do not proceed to Phase 2 until the user reviews the corpus composition.**

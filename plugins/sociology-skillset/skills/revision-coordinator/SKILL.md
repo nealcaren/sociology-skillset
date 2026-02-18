@@ -29,7 +29,7 @@ status:
   revision: done
 artifacts:
   revision_map: revision/revision-map.md
-  revision_summary: revision/revision-summary.md
+  response_memo: revision/response-memo.md
 ```
 
 ---
@@ -78,8 +78,8 @@ This skill exists because:
 | Re-run statistical models | `r-analyst` Phase 3-4 or `stata-analyst` Phase 3-4 |
 
 **The ONLY prose you write directly:**
-- `revision-map.md` (tracking document)
-- `revision-summary.md` (final accounting)
+- `revision-map.md` (central tracking document; grows across phases)
+- `response-memo.md` (R&R deliverable)
 - Brief coordination notes between dispatches
 
 ---
@@ -146,6 +146,14 @@ Discussion revision often requires one of two approaches:
    - Original research question and argument
    - Data/analysis files
    - Prior versions (for tracking changes)
+
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "revision-coordinator: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
 
 ## Core Principles
 
@@ -326,7 +334,7 @@ When spawning a Task agent, provide:
   - Any items not addressed (with explanation)
 - Optionally: Draft response memo for reviewers
 
-**Output**: `revision-summary.md` with complete accounting.
+**Output**: Updated `revision-map.md` with complete feedback accounting; `response-memo.md` if R&R.
 
 > **Recommended**: Before final submission, run `/writing-editor` on the complete manuscript for prose polish—fixes passive voice, abstract nouns, throat-clearing, and academic bad habits using a top-down (Document → Paragraph → Sentence → Word) workflow with human checkpoints.
 
@@ -405,20 +413,19 @@ prompt: |
 ```
 project/
 ├── manuscript/
-│   ├── first-draft.md           # Original manuscript
-│   ├── feedback.md              # Reviewer/editor feedback
-│   └── revised-draft.md         # Output: revised manuscript
+│   ├── first-draft.md           # Original manuscript (edited in place by dispatched agents)
+│   └── feedback.md              # Reviewer/editor feedback
 ├── revision/
-│   ├── revision-map.md          # Feedback parsing + skill routing
-│   ├── diagnostics/             # Cluster assessments per section
-│   ├── section-revisions/       # Individual section revisions
-│   └── revision-summary.md      # Final accounting
+│   ├── revision-map.md          # Central tracking doc (grows across phases; git tracks)
+│   └── response-memo.md         # R&R deliverable (Phase 4, if applicable)
 ├── peer-review/                 # Peer-reviewer skill outputs
 │   ├── pre-empirical-review.md  # Phase 1.5 output (if used)
 │   ├── reviewer-personas/       # Generated reviewer profiles
 │   ├── reviews/                 # Individual simulated reviews
 │   └── final-review-synthesis.md # Phase 5 output (if used)
 ```
+
+Diagnostics are presented in conversation. Section revisions are made in place in the manuscript; git tracks each phase's state. No `diagnostics/`, `section-revisions/`, or `revised-draft.md` files are created.
 
 ## Feedback Parsing Guidelines
 
@@ -521,7 +528,7 @@ prompt: |
   the feedback while maintaining [Cluster] characteristics.
 
   OUTPUT:
-  - Save revised section to: revision/section-revisions/theory-revised.md
+  - Edit the theory section in place in the manuscript file. Git commit after.
   - Return: summary of changes, items addressed, remaining issues
 ```
 
@@ -570,7 +577,7 @@ prompt: |
   note this as "NEEDS DATA RETURN" - do not fabricate quotes.
 
   OUTPUT:
-  - Save revised section to: revision/section-revisions/findings-revised.md
+  - Edit the findings section in place in the manuscript file. Git commit after.
   - Return: summary of changes, items addressed, any NEEDS DATA RETURN flags
 ```
 
@@ -613,7 +620,7 @@ prompt: |
   - Roadmap previews actual structure
 
   OUTPUT:
-  - Save revised section to: revision/section-revisions/introduction-revised.md
+  - Edit the introduction in place in the manuscript file. Git commit after.
   - Return: summary of changes, opening move type used
 ```
 
@@ -653,7 +660,7 @@ prompt: |
   - Matches [Cluster] conclusion style
 
   OUTPUT:
-  - Save revised section to: revision/section-revisions/conclusion-revised.md
+  - Edit the conclusion in place in the manuscript file. Git commit after.
   - Return: summary of changes, callback phrases identified
 ```
 
@@ -697,7 +704,7 @@ prompt: |
   If pathway should change based on triggers, redraft accordingly.
 
   OUTPUT:
-  - Save revised section to: revision/section-revisions/methods-revised.md
+  - Edit the methods section in place in the manuscript file. Git commit after.
   - Return: pathway used, word count, components added/removed
 ```
 
@@ -736,7 +743,7 @@ prompt: |
   - Required position for cluster: [Policy-Driven = before; others = after]
 
   OUTPUT:
-  - Save revised section to: revision/section-revisions/case-revised.md
+  - Edit the case justification in place in the manuscript file. Git commit after.
   - Return: cluster used, word count, position recommendation
 ```
 
@@ -777,7 +784,7 @@ prompt: |
   study design and sample - do not invent limitations.
 
   OUTPUT:
-  - Save revised section to: revision/section-revisions/discussion-revised.md
+  - Edit the discussion section in place in the manuscript file. Git commit after.
   - Return: summary of changes, scope conditions added
 ```
 
@@ -865,7 +872,7 @@ prompt: |
   note this as "NEEDS REANALYSIS" - do not fabricate statistical results.
 
   OUTPUT:
-  - Save revised section to: revision/section-revisions/results-revised.md
+  - Edit the results section in place in the manuscript file. Git commit after.
   - Return: summary of changes, items addressed, any NEEDS REANALYSIS flags
 ```
 
@@ -915,7 +922,7 @@ prompt: |
   Do not fabricate quotes or statistical results.
 
   OUTPUT:
-  - Save revised section to: revision/section-revisions/mixed-findings-revised.md
+  - Edit the mixed methods findings section in place in the manuscript file. Git commit after.
   - Return: summary of changes, integration assessment, any data return flags
 ```
 
@@ -1001,8 +1008,8 @@ prompt: |
   - Deflators (6%): Delivery falls short (problematic - fix!)
 
   OUTPUT:
-  - Save coherence memo to: revision/coherence-memo.md
-  - If fixes needed, save revised sections
+  - Present coherence assessment in conversation; add findings to `revision/revision-map.md`.
+  - If fixes needed, edit sections in place in the manuscript file. Git commit after.
   - Return: coherence type, issues found, fixes made
 ```
 
@@ -1044,7 +1051,7 @@ prompt: |
   Generate 2-3 variants using different archetypes for comparison.
 
   OUTPUT:
-  - Save variants to: revision/section-revisions/abstract-variants.md
+  - Present 2-3 variants in conversation for user to select one, then edit the abstract in place in the manuscript file. Git commit after.
   - Return: recommended variant, word counts, archetype comparison
 ```
 
@@ -1201,7 +1208,7 @@ prompt: |
   - Keep substantive claims unchanged
 
   OUTPUT:
-  - Save to: revision/section-revisions/[section]-polished.md
+  - Edit the section in place in the manuscript file. Git commit after.
   - Return: summary of changes, word count before/after
 ```
 

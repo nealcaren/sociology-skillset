@@ -201,13 +201,7 @@ Ensure the 2-3 personas are complementary:
 
 ## Output Files to Create
 
-Save to project analysis folder:
-
-1. **persona-reviewer1.md** - Complete persona profile for first reviewer
-2. **persona-reviewer2.md** - Complete persona profile for second reviewer
-3. **persona-reviewer3.md** - Complete persona profile for third reviewer (if applicable)
-4. **persona-comparison.md** - Cross-comparison and coverage assessment
-5. **persona-summary.md** - Summary for user review
+None — present all persona profiles, the cross-comparison table, coverage assessment, and limitations in conversation for user approval. Users may refine characterizations before proceeding.
 
 ---
 

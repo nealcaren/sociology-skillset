@@ -9,12 +9,10 @@ This is where analysis becomes product. The cluster profiles, benchmarks, and ex
 ## Inputs
 
 Before starting, read:
-1. `/analysis/phase0-scope/scope-definition.md` - Skill name, description, target section
-2. `/analysis/phase0-scope/model-skill-summary.md` - Model skill structure
-3. `/analysis/phase3-clusters/cluster-profiles.md` - Final cluster definitions
-4. `/analysis/phase3-clusters/cluster-benchmarks.json` - Quantitative data
-5. `/analysis/phase3-clusters/decision-tree.md` - Cluster identification guide
-6. Template files in this skill's `templates/` folder
+1. `analysis/genre-analysis-memo.md` — Phase 0 (scope, skill name, description, model skill structure) through Phase 3 (cluster definitions, interpretation)
+2. `analysis/cluster-profiles.md` — Final cluster profiles and decision tree
+3. `analysis/corpus-data.json` — Quantitative benchmark data (including `"clusters"` key)
+4. Template files in this skill's `templates/` folder
 
 ## Your Tasks
 
@@ -298,7 +296,7 @@ Draft additions to CLAUDE.md:
 
 ## Output Files to Create
 
-Save all outputs to `/output/plugins/[skill-name]/`:
+Save all generated skill outputs to `/output/plugins/[skill-name]/`:
 
 1. **plugin.json** - Plugin metadata
 
@@ -319,13 +317,33 @@ Save all outputs to `/output/plugins/[skill-name]/`:
    - `opening-moves.md`
    - `[other-techniques].md`
 
-Also save to `/analysis/phase4-generation/`:
+Also append a `## Phase 4: Generation` section to `analysis/genre-analysis-memo.md`:
 
-6. **marketplace-entry.json** - Ready-to-add marketplace entry
+```markdown
+## Phase 4: Generation
 
-7. **claudemd-additions.md** - Documentation updates for CLAUDE.md
+### Files Generated
+[Complete list of files created, with their paths]
 
-8. **generation-log.md** - Record of what was generated and any decisions made
+### Skill Structure
+- **Phases**: [n] ([list phase names])
+- **Clusters**: [n] ([list cluster names])
+- **Technique guides**: [n] ([list guide names])
+
+### Key Benchmarks Included
+[List of benchmarks used in the generated SKILL.md, traced to Phase 1–3 data]
+
+### Adaptation Decisions
+[Any deliberate departures from the model skill, with rationale]
+
+### Marketplace Entry
+```json
+[The full marketplace entry JSON]
+```
+
+### CLAUDE.md Updates
+[Text to add to CLAUDE.md — plugin install command and Available Skills table entry]
+```
 
 ## Quality Checks
 

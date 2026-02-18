@@ -68,12 +68,10 @@ For each critical issue, document the resolution:
 
 ## Output: Issues Report
 
-Create `issues-report.md`:
+Present the issue report in conversation (do not save to a file):
 
 ```markdown
-# Issue Review Report
-
-## Summary
+## Issue Review Summary
 
 | Category | Count |
 |----------|-------|
@@ -126,15 +124,11 @@ Create `issues-report.md`:
 - **Total unique citations**: [X]
 - **With valid Zotero match**: [X]
 - **Skipped (unresolved)**: [X]
-
-## Ready for Bibliography Generation
-
-All issues have been reviewed and resolved. Proceeding to Phase 4.
 ```
 
-## Pause Point
+## When You're Done
 
-Present the issue report to the user. Confirm:
+Present the issue report in conversation. Confirm:
 1. All resolutions are correct?
 2. Skipped citations are intentional?
 3. Ready to generate the final bibliography?

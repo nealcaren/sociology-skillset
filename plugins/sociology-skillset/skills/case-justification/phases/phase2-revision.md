@@ -219,7 +219,11 @@ Check for common issues:
 
 ## Output
 
-Create a revision memo with:
+Before making any revisions: commit the current `case-section.md` with `git add case-section.md && git commit -m "case-justification: Phase 1 complete"`.
+
+Then revise `case-section.md` in place.
+
+Present the revision report in the conversation:
 
 ```markdown
 # Case Justification Revision Report
@@ -257,6 +261,8 @@ Create a revision memo with:
 - **Calibration**: [Matches norms / Minor deviations / Significant deviations]
 - **Ready for submission**: [Yes / Needs further work]
 ```
+
+Do not create a separate revision report file.
 
 ---
 

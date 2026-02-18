@@ -12,15 +12,15 @@ The outputs of this phase are the direct inputs to argument-builder. This is the
 
 ### 1. Synthesize Across Phases
 
-Pull together key insights from each phase:
+Pull together key insights from each phase. The theoretical map, thematic clusters, and debate map sections are already in `field-synthesis.md` from Phases 2–4. Review them alongside your reading notes before writing the synthesis narrative.
 
-| Phase | Key Takeaway for Synthesis |
-|-------|---------------------------|
-| **Corpus Audit** | What's in the literature? What's missing? |
-| **Deep Reading** | How do papers construct arguments? What works? |
-| **Theoretical Map** | What traditions? What concepts? What lineages? |
-| **Thematic Clusters** | What's studied? What's over/under-represented? |
-| **Debate Map** | Where's disagreement? What's unresolved? |
+| Phase | Key Takeaway for Synthesis | Where to Find It |
+|-------|---------------------------|-----------------|
+| **Corpus Audit** | What's in the literature? What's missing? | Conversation (Phase 0) |
+| **Deep Reading** | How do papers construct arguments? What works? | `reading-notes/` + conversation summary (Phase 1) |
+| **Theoretical Map** | What traditions? What concepts? What lineages? | `## Theoretical Map` in `field-synthesis.md` |
+| **Thematic Clusters** | What's studied? What's over/under-represented? | `## Thematic Clusters` in `field-synthesis.md` |
+| **Debate Map** | Where's disagreement? What's unresolved? | `## Debate Map` in `field-synthesis.md` |
 
 ### 2. Articulate the Field's State
 
@@ -131,7 +131,7 @@ Specify what argument-builder will need:
 
 ### 6. Write Field Synthesis Document
 
-Create `field-synthesis.md`:
+`field-synthesis.md` already contains the `## Theoretical Map`, `## Thematic Clusters`, and `## Debate Map` sections from Phases 2–4. This phase adds the remaining sections to complete the document:
 
 ```markdown
 # Field Synthesis
@@ -139,6 +139,24 @@ Create `field-synthesis.md`:
 ## Project
 - **Research question**: [From user]
 - **Main argument**: [From user]
+
+---
+
+## Theoretical Map
+
+[Written in Phase 2]
+
+---
+
+## Thematic Clusters
+
+[Written in Phase 3]
+
+---
+
+## Debate Map
+
+[Written in Phase 4]
 
 ---
 
@@ -172,11 +190,11 @@ Create `field-synthesis.md`:
 
 | Document | Location | Purpose |
 |----------|----------|---------|
-| Corpus Audit | `corpus-audit.md` | Coverage and gaps |
+| Corpus Audit | Conversation (Phase 0) | Coverage and gaps |
 | Reading Notes | `reading-notes/` | Deep engagement evidence |
-| Theoretical Map | `theoretical-map.md` | Traditions and lineages |
-| Thematic Clusters | `thematic-clusters.md` | Empirical landscape |
-| Debate Map | `debate-map.md` | Tensions and questions |
+| Theoretical Map | `## Theoretical Map` in this file | Traditions and lineages |
+| Thematic Clusters | `## Thematic Clusters` in this file | Empirical landscape |
+| Debate Map | `## Debate Map` in this file | Tensions and questions |
 
 ---
 
@@ -211,7 +229,7 @@ Your recommendations are informed suggestions. The user knows their project best
 
 ## Output Files to Create
 
-1. **field-synthesis.md** - Comprehensive synthesis and handoff document
+1. **field-synthesis.md** - Complete the document by adding the narrative synthesis, contribution opportunities, cluster recommendation, and handoff sections. The theoretical map, thematic clusters, and debate map sections were already written in Phases 2–4.
 
 ---
 

@@ -24,7 +24,9 @@ Updates `progress.yaml` when complete:
 status:
   peer_review_sim: done
 artifacts:
+  reviews: peer-review-analysis/reviews.md
   review_synthesis: peer-review-analysis/synthesis-memo.md
+  response_to_reviewers: peer-review-analysis/response-to-reviewers.md
 ```
 
 ## What This Skill Does
@@ -75,6 +77,14 @@ The skill adapts its review focus based on what you provide.
 
 6. **Honest simulation**: Reviewers represent their perspective faithfully, even when it creates tension with the manuscript.
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "peer-reviewer: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## The Review Focus Matrix
 
 | Reviewer Type | Primary Focus | Secondary Focus |
@@ -96,7 +106,7 @@ The skill adapts its review focus based on what you provide.
 - Propose 2-3 reviewer perspectives with rationale
 - Check Zotero availability for each perspective
 
-**Output**: Reviewer identification memo with proposed perspectives.
+**Output**: Manuscript summary, reviewer candidates, and recommended perspectives presented in conversation.
 
 > **Pause**: User confirms reviewer selection (may modify, add, or remove).
 
@@ -112,7 +122,7 @@ The skill adapts its review focus based on what you provide.
   - Note any gaps (perspectives without sufficient sources)
 - Compile source list for each perspective
 
-**Output**: Retrieved sources organized by reviewer perspective.
+**Output**: Retrieved sources organized by reviewer perspective, presented in conversation.
 
 > **Pause**: User reviews retrieved sources, may suggest additions.
 
@@ -131,7 +141,7 @@ The skill adapts its review focus based on what you provide.
 - Construct a reviewer persona profile
 - Assign review focus (theory + findings OR methods + findings)
 
-**Output**: Reviewer persona profiles with focus areas.
+**Output**: Reviewer persona profiles presented in conversation for user approval.
 
 > **Pause**: User approves personas (may refine characterizations).
 
@@ -149,7 +159,7 @@ The skill adapts its review focus based on what you provide.
   - Write a focused review (strengths, concerns, suggestions)
 - Present each review to the user
 
-**Output**: 2-3 simulated reviews.
+**Output**: `reviews.md` with each perspective as a `## Reviewer:` section.
 
 > **Pause**: User reads each review before synthesis.
 
@@ -169,7 +179,7 @@ The skill adapts its review focus based on what you provide.
 - Prioritize by impact and feasibility
 - Draft response strategy
 
-**Output**: Synthesis memo with prioritized recommendations.
+**Output**: `synthesis-memo.md` with all sub-analyses (feedback inventory, convergent/divergent concerns, response classification, strategy, and response drafts) as sections.
 
 > **Pause**: User confirms response strategy.
 
@@ -186,7 +196,7 @@ The skill adapts its review focus based on what you provide.
 - Track changes made
 - Optionally re-run affected reviewers to verify improvements
 
-**Output**: Revised sections + revision log.
+**Output**: Manuscript edited in place (git tracks changes); `response-to-reviewers.md` if applicable.
 
 > **Iterative**: User involved throughout revision process.
 
@@ -323,7 +333,9 @@ When the user is ready to begin:
 
 ## Key Reminders
 
-- **Save all outputs as files**: Reviews and synthesis memos MUST be saved as markdown files, not just displayed in conversation. Users need persistent documents they can reference.
+- **Phases 0-2 are conversation**: Manuscript summary, reviewer candidates, personas, and source lists are presented in conversation — no files created until Phase 3.
+- **Phases 3-4 produce files**: `reviews.md` (all reviewer perspectives as sections) and `synthesis-memo.md` (consolidated synthesis) are the key file outputs.
+- **Phase 5 edits in place**: Revisions go directly into the manuscript; git tracks changes. Only `response-to-reviewers.md` is a new file output.
 - **Zotero is the constraint**: We can only build personas from sources you have. Better library = better simulation.
 - **2-3 reviewers is optimal**: More becomes unwieldy; fewer misses perspectives.
 - **Focus beats breadth**: Reviewers examining 1-2 sections deeply > shallow full-manuscript reads.
@@ -333,15 +345,13 @@ When the user is ready to begin:
 
 ## Output File Structure
 
-All outputs are saved to a `peer-review-analysis/` folder in the manuscript directory.
-
-**Use theory-based names for files** (not person names):
+Phases 0-2 produce no files — all assessment, retrieval, and persona results are presented in conversation. Phases 3-5 produce the following files in a `peer-review-analysis/` folder in the manuscript directory:
 
 ```
 peer-review-analysis/
-├── review-disengagement-typology.md    # Named for theoretical perspective
-├── review-emotions-movements.md         # Named for theoretical perspective
-├── review-activist-careers.md           # Named for theoretical perspective
-├── synthesis-memo.md                    # Synthesis and response strategy
-└── [additional files]                   # Personas, revision logs, etc.
+├── reviews.md                   # All reviewer perspectives as ## Reviewer: sections
+├── synthesis-memo.md            # Consolidated synthesis with all sub-analyses as sections
+└── response-to-reviewers.md     # R&R response document (if applicable)
 ```
+
+The manuscript is edited in place during Phase 5. Git tracks all changes — no separate revision log files are created.

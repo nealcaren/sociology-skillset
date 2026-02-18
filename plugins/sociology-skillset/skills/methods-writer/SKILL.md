@@ -50,6 +50,14 @@ This skill assumes users have completed their data collection and analysis, and 
 | **qual-findings-writer** | Write findings sections | Draft findings |
 | **article-bookends** | Write intros/conclusions | Draft bookends |
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "methods-writer: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## Core Principles (from Genre Analysis)
 
 Based on systematic analysis of 77 Methods sections:
@@ -117,7 +125,7 @@ See `pathways/` directory for detailed profiles with benchmarks, signature moves
 - Confirm pathway selection with user
 - Note any special considerations (vulnerability, complexity)
 
-**Output**: Pathway selection memo with rationale.
+**Output**: Pathway selection presented in conversation.
 
 > **Pause**: User confirms pathway selection before drafting.
 
@@ -138,7 +146,7 @@ See `pathways/` directory for detailed profiles with benchmarks, signature moves
 - `techniques/component-checklist.md` (what to include)
 - `techniques/opening-moves.md` (how to start)
 
-**Output**: Complete Methods section draft.
+**Output**: Complete Methods section draft saved to `methods-section.md`.
 
 > **Pause**: User reviews draft.
 
@@ -156,7 +164,7 @@ See `pathways/` directory for detailed profiles with benchmarks, signature moves
 
 **Guide**: `phases/phase2-revision.md`
 
-**Output**: Revised Methods section with quality memo.
+**Output**: `methods-section.md` revised in place; quality assessment presented in conversation.
 
 > **Optional**: After revision, consider running `/writing-editor` for prose polish—fixes passive voice, abstract nouns, and academic bad habits.
 

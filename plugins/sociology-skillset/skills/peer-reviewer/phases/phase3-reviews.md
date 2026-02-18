@@ -176,17 +176,12 @@ Reviews should be:
 - **Major concern**: Would significantly affect the argument's validity or contribution
 - **Minor concern**: Worth addressing but doesn't undermine the core contribution
 
-### 6. Save and Present Reviews to User
+### 6. Write Reviews to Single File and Present to User
 
-**IMPORTANT**: After completing each review, you MUST save it to a markdown file before presenting it to the user. Do not just display reviews in the conversation—they must be persisted as files.
-
-**For each review**:
-1. Save the review to `[analysis-folder]/review-[reviewer-name].md`
-2. Then present a summary to the user
-3. Wait for user acknowledgment before proceeding to the next reviewer
+After completing each review, append it as a new section to `reviews.md` in the project analysis folder, then present a summary to the user. Wait for user acknowledgment before proceeding to the next reviewer.
 
 This allows the user to:
-- Access reviews as reference documents later
+- Access all reviews in a single reference document
 - See how each perspective reads the manuscript
 - Note any mischaracterizations of the persona
 - Ask clarifying questions
@@ -196,19 +191,7 @@ This allows the user to:
 
 ## Output Files to Create
 
-**MANDATORY**: All reviews must be saved as markdown files. Do not skip file creation.
-
-Save to project analysis folder (create if needed):
-
-1. **review-[perspective].md** - Complete review from first reviewer (use theoretical perspective name, not person name)
-2. **review-[perspective].md** - Complete review from second reviewer
-3. **review-[perspective].md** - Complete review from third reviewer (if applicable)
-4. **review-summary.md** - Brief summary of all reviews for user
-
-**Use theory-based file names** (not person names):
-- `review-disengagement-typology.md` (not `review-corrigall-brown.md`)
-- `review-emotions-movements.md` (not `review-gould.md`)
-- `review-activist-careers.md` (not `review-fillieule.md`)
+1. **reviews.md** - All reviewer perspectives as sections using `## Reviewer: [Perspective Name]` headings. Append each review as it is completed.
 
 ---
 

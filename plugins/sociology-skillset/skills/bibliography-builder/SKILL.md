@@ -27,6 +27,14 @@ artifacts:
   bibliography: drafts/sections/bibliography.md
 ```
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "bibliography-builder: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## What This Skill Does
 
 This is a **utility skill** that automates bibliography creation:
@@ -83,7 +91,7 @@ This skill requires the **Zotero MCP server** to be configured. The MCP provides
 - Create citation list with frequency counts
 - **Verify with grep**: Run shell commands to independently confirm extraction caught all citations (catches edge cases like McAdam, hyphenated names, accented characters)
 
-**Output**: `citations-extracted.md` with all unique citations + grep verification.
+**Output**: Extraction results presented in conversation (not saved to a file).
 
 > **Pause**: User reviews extracted citations for accuracy.
 
@@ -100,7 +108,7 @@ This skill requires the **Zotero MCP server** to be configured. The MCP provides
   - Record match status: Found, Ambiguous, Not Found
 - Build match table with Zotero item keys
 
-**Output**: `citation-matches.md` with match status for each citation.
+**Output**: Match results presented in conversation (not saved to a file).
 
 > **Pause**: User reviews matches, especially ambiguous/missing items.
 
@@ -118,7 +126,7 @@ This skill requires the **Zotero MCP server** to be configured. The MCP provides
 - Generate issue report with suggested actions
 - User provides resolutions for ambiguous cases
 
-**Output**: `issues-report.md` with flagged problems and resolutions.
+**Output**: Issues presented in conversation (not saved to a file).
 
 > **Pause**: User resolves any remaining issues.
 
@@ -189,11 +197,10 @@ Smith, John A., and Beth C. Jones. 2020. "Article Title in Title Case."
 project/
 ├── manuscript.md           # Input: document with citations
 ├── bibliography/
-│   ├── citations-extracted.md   # Phase 1 output
-│   ├── citation-matches.md      # Phase 2 output
-│   ├── issues-report.md         # Phase 3 output
-│   └── bibliography.md          # Phase 4 output (final)
+│   └── bibliography.md     # Final output (Phase 4)
 ```
+
+Phases 1–3 produce conversation output only. No intermediate files are saved.
 
 ## Zotero MCP Tools Used
 

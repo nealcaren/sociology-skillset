@@ -183,9 +183,9 @@ Sometimes fixing one integration issue creates another. For example:
 
 ## Output Files
 
-Update in `revision/` directory:
-- `revision-map.md` — Add integration findings section
-- `integration-report.md` — Detailed coherence analysis (optional)
+Update `revision/revision-map.md` — Add integration findings as a `## Integration Review` section. Git commit: `git add revision/revision-map.md && git commit -m "revision-coordinator: Phase 3 complete"`
+
+Do NOT create a separate `integration-report.md`. The revision map is the single tracking document.
 
 ## When You're Done
 

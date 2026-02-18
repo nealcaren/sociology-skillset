@@ -266,7 +266,7 @@ phases:
     status: not_started
     started: null
     completed: null
-    output: "writing/theory-section/theory-section-draft.md"
+    output: "writing/theory-section/theory-section.md"
     notes: null
     metadata:
       word_count: null
@@ -402,7 +402,7 @@ phases:
     status: not_started
     started: null
     completed: null
-    output: "writing/methods-section/methods-draft.md"
+    output: "writing/methods-section/methods-section.md"
     notes: null
     metadata:
       word_count: null

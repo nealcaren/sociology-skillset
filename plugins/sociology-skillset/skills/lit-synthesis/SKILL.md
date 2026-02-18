@@ -25,8 +25,6 @@ status:
   lit_synthesis: done
 artifacts:
   field_synthesis: literature/synthesis/field-synthesis.md
-  theoretical_map: literature/synthesis/theoretical-map.md
-  debate_map: literature/synthesis/debate-map.md
 ```
 
 ## The Lit Trilogy
@@ -36,7 +34,7 @@ This skill is the middle step in a three-skill workflow:
 | Skill | Role | Key Output |
 |-------|------|------------|
 | **lit-search** | Find papers via OpenAlex | `database.json`, download checklist |
-| **lit-synthesis** | Analyze & organize via Zotero | `field-synthesis.md`, `theoretical-map.md`, `debate-map.md` |
+| **lit-synthesis** | Analyze & organize via Zotero | `field-synthesis.md` (with theoretical map, thematic clusters, debate map as sections) |
 | **argument-builder** | Draft prose | Publication-ready Theory section |
 
 **Input**: Papers in Zotero (imported from lit-search or user's existing library)
@@ -62,6 +60,14 @@ Use this skill when users:
 4. **Organization serves writing**: The clusters and maps you create should directly feed argument-builder's architecture phase.
 
 5. **Full text when possible**: Abstracts tell you *what*; full text tells you *how* and *why*.
+
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "lit-synthesis: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
 
 ## Reading Modes
 
@@ -183,7 +189,7 @@ Located in `scripts/` directory:
 - Identify potential gaps in coverage
 - Prioritize which papers need deep reading vs. skimming
 
-**Output**: `corpus-audit.md` with statistics and reading priorities.
+**Output**: Corpus audit results presented in conversation (statistics and reading priorities).
 
 > **Pause**: User confirms corpus coverage and reading priorities.
 
@@ -214,7 +220,7 @@ Located in `scripts/` directory:
 - Identify "camps" or schools of thought
 - Document key concepts and how they're used
 
-**Output**: `theoretical-map.md` with traditions, key theorists, and concept definitions.
+**Output**: `## Theoretical Map` section written into `field-synthesis.md`.
 
 > **Pause**: User reviews theoretical landscape.
 
@@ -230,7 +236,7 @@ Located in `scripts/` directory:
 - Identify papers that bridge multiple clusters
 - Note within-cluster consensus and variation
 
-**Output**: `thematic-clusters.md` with organized paper groupings.
+**Output**: `## Thematic Clusters` section appended to `field-synthesis.md`.
 
 > **Pause**: User reviews clustering logic.
 
@@ -246,7 +252,7 @@ Located in `scripts/` directory:
 - Note where evidence is mixed or contested
 - Document the "state of the debate" for each tension
 
-**Output**: `debate-map.md` with positions, evidence, and unresolved questions.
+**Output**: `## Debate Map` section appended to `field-synthesis.md`.
 
 > **Pause**: User reviews debates and selects focus areas.
 
@@ -261,7 +267,7 @@ Located in `scripts/` directory:
 - Recommend which argument-builder cluster (Gap-Filler, Theory-Extender, etc.) fits
 - Create the handoff document for argument-builder
 
-**Output**: `field-synthesis.md` with integrated understanding and writing recommendations.
+**Output**: `field-synthesis.md` completed with integrated understanding and writing recommendations (builds on sections added in Phases 2–4).
 
 ---
 
@@ -269,15 +275,11 @@ Located in `scripts/` directory:
 
 ```
 lit-synthesis/
-├── corpus-audit.md           # Phase 0: What's in the corpus
-├── reading-notes/            # Phase 1: Per-paper notes
+├── reading-notes/            # Phase 1: Per-paper notes (kept for batch production)
 │   ├── smith2020-cultural-frames.md    # Filename: author-year-short-title
 │   ├── jones2019-institutional.md
 │   └── ...                             # Each file has identifier frontmatter
-├── theoretical-map.md        # Phase 2: Traditions and lineages
-├── thematic-clusters.md      # Phase 3: Paper groupings
-├── debate-map.md             # Phase 4: Tensions and positions
-└── field-synthesis.md        # Phase 5: Integrated understanding
+└── field-synthesis.md        # Comprehensive synthesis with sections for theoretical map, thematic clusters, debate map
 ```
 
 **Note**: Filenames use `author-year-short-title.md` for human readability, but the **frontmatter identifiers** (OpenAlex ID, DOI, Zotero key) are the authoritative way to match notes back to source papers.

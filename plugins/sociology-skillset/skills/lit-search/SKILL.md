@@ -43,6 +43,14 @@ artifacts:
 
 5. **Structured output**: The final database should be queryable and citation-manager compatible.
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "lit-search: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## API Backend
 
 This skill uses **OpenAlex** as the primary API:
@@ -176,22 +184,14 @@ See `api/openalex-reference.md` for query syntax and endpoints.
 ```
 lit-search/
 ├── data/
-│   ├── raw/                    # Raw API responses
-│   │   └── search_results.json
-│   ├── screened/              # After screening
-│   │   └── included.json
-│   └── annotated/             # Final annotated corpus
-│       └── database.json
+│   └── database.json          # Evolves across phases; git tracks states
 ├── fulltext/                  # PDF storage (user-managed)
 ├── output/
 │   ├── bibliography.md        # Annotated bibliography
-│   ├── database.json          # Queryable database
 │   ├── references.bib         # BibTeX export
 │   └── synthesis.md           # Thematic summary
 └── memos/
-    ├── scope.md               # Phase 0 output
-    ├── screening_log.md       # Phase 2 decisions
-    └── gaps.md                # Research gaps
+    └── search-memo.md         # Single memo appended at each phase
 ```
 
 ## Screening Logic

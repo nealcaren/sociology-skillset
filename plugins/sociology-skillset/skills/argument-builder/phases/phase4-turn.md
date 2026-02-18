@@ -125,9 +125,11 @@ Run these diagnostic questions:
 
 ### 9. Write Turn Refinement Memo
 
-Create `turn-memo.md`:
+Append a `## Phase 4: Turn Refinement` section to `theory-memo.md`:
 
 ```markdown
+## Phase 4: Turn Refinement
+
 # Turn Refinement
 
 ## Original Turn
@@ -216,8 +218,8 @@ this section.
 
 ## Output Files to Create
 
-1. **turn-memo.md** - Analysis and refined turn
-2. **theory-section-draft-v2.md** - Updated draft with refined turn
+1. **theory-memo.md** - Append a `## Phase 4: Turn Refinement` section with the analysis and refined turn
+2. **theory-section.md** - Edit in place to incorporate the refined turn (do not create a new file; git tracks the version)
 
 ---
 
@@ -231,4 +233,4 @@ Report to the orchestrator:
 - Placement confirmed
 
 Example summary:
-> "Turn refined. Original was generic ('housing dynamics remain understudied'). Refined to: **'Yet while research documents how housing instability affects parenting practices, there is less attention to how mothers in doubled-up arrangements manage maternal identity when they lack spatial authority over their children.'** Gap now specifies: (1) maternal identity (what), (2) guest mothers (who), (3) shared households without spatial authority (conditions). Directly motivates RQ1 about identity negotiation. Placement confirmed at P6 of 10. Ready for Phase 5: Revision."
+> "Turn refined. Original was generic ('housing dynamics remain understudied'). Refined to: **'Yet while research documents how housing instability affects parenting practices, there is less attention to how mothers in doubled-up arrangements manage maternal identity when they lack spatial authority over their children.'** Gap now specifies: (1) maternal identity (what), (2) guest mothers (who), (3) shared households without spatial authority (conditions). Directly motivates RQ1 about identity negotiation. Placement confirmed at P6 of 10. `theory-section.md` updated in place; turn analysis appended to `theory-memo.md`. Ready for Phase 5: Revision."

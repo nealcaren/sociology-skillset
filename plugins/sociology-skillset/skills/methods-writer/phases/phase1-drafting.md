@@ -254,8 +254,9 @@ If you name an approach (abductive, grounded theory, flexible coding), cite it.
 
 ## Output Files to Create
 
-1. **methods-draft.md** - Complete Methods section
-2. **drafting-notes.md** - Notes on word count, components included/omitted, areas needing revision
+1. **methods-section.md** - Complete Methods section
+
+Present notes on word count, components included/omitted, and areas needing revision in the conversation. Do not create a separate drafting-notes file.
 
 ---
 

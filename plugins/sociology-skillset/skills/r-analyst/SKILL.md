@@ -33,7 +33,7 @@ artifacts:
   analysis_script: code/03_analysis.R
   results_tables: output/tables/
   results_figures: output/figures/
-  interpretation_memo: memos/phase5-interpretation.md
+  interpretation_memo: memos/analysis-memo.md
 ```
 
 ## Connection to Other Skills
@@ -45,6 +45,14 @@ artifacts:
 | **methods-writer** | Parallel | Methods section documents the statistical approach |
 | **article-bookends** | Downstream | Takes results for framing introduction and conclusion |
 | **lit-synthesis** | Upstream | Provides theoretical framework guiding variable selection |
+
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "r-analyst: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
 
 ## Core Principles
 
@@ -169,7 +177,8 @@ project/
 ├── output/
 │   ├── tables/
 │   └── figures/
-└── memos/                # Phase outputs and decisions
+└── memos/
+│   └── analysis-memo.md  # Single memo appended at each phase
 ```
 
 ## Technique Guides

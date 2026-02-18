@@ -158,9 +158,11 @@ Based on cluster, set targets:
 
 ### 7. Write Architecture Memo
 
-Create `architecture-memo.md`:
+Append a `## Phase 1: Architecture` section to `theory-memo.md`:
 
 ```markdown
+## Phase 1: Architecture
+
 # Theory Section Architecture
 
 ## Cluster: [Name]
@@ -252,8 +254,7 @@ this section.
 
 ## Output Files to Create
 
-1. **architecture-memo.md** - Full architecture plan with outline
-2. **section-outline.md** - Clean outline for quick reference during drafting
+1. **theory-memo.md** - Append a `## Phase 1: Architecture` section with the full architecture plan and outline. The section outline is included within this memo rather than as a separate file.
 
 ---
 

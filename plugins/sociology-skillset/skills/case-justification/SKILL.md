@@ -25,7 +25,7 @@ Updates `progress.yaml` when complete:
 status:
   case_justification_draft: done
 artifacts:
-  case_justification: drafts/sections/case-justification.md
+  case_justification: drafts/sections/case-section.md
 ```
 
 ## When to Use This Skill
@@ -50,6 +50,14 @@ This skill assumes users have selected their research site and can describe its 
 | **article-bookends** | Write intros/conclusions | Draft bookends |
 
 This skill handles the case background that typically appears between the theory section and methods section.
+
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "case-justification: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
 
 ## Core Principles (from Genre Analysis)
 
@@ -146,6 +154,8 @@ See `clusters/` directory for detailed profiles with benchmarks, signature moves
 
 **Guide**: `phases/phase0-assessment.md`
 
+**Output**: Cluster selection presented in conversation.
+
 > **Pause**: User confirms cluster selection before drafting.
 
 ---
@@ -166,7 +176,7 @@ See `clusters/` directory for detailed profiles with benchmarks, signature moves
 - `techniques/justification-strategies.md` (how to justify)
 - `techniques/transitions.md` (how to end)
 
-**Output**: Complete case justification section draft.
+**Output**: Complete case justification section draft saved to `case-section.md`.
 
 > **Pause**: User reviews draft.
 
@@ -184,7 +194,7 @@ See `clusters/` directory for detailed profiles with benchmarks, signature moves
 
 **Guide**: `phases/phase2-revision.md`
 
-**Output**: Revised case justification section with quality memo.
+**Output**: `case-section.md` revised in place; quality assessment presented in conversation.
 
 > **Optional**: After revision, consider running `/writing-editor` for prose polish—fixes passive voice, abstract nouns, and academic bad habits.
 

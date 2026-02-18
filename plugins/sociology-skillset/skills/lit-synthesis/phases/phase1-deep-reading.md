@@ -122,43 +122,43 @@ Always include page numbers.
 
 ### 6. Compile Reading Summary
 
-After all priority papers are read, create a summary:
+After all priority papers are read, present a summary in the conversation:
 
 ```markdown
-# Reading Notes Summary
+## Reading Notes Summary
 
-## Papers Read
+### Papers Read
 - [N] papers deep-read
 - [Date range]
 
-## Emergent Patterns
+### Emergent Patterns
 
-### Theoretical Traditions Identified
+#### Theoretical Traditions Identified
 1. **[Tradition 1]**: [which papers, key ideas]
 2. **[Tradition 2]**: [which papers, key ideas]
 
-### Recurring Concepts
+#### Recurring Concepts
 - **[Concept A]**: Used by [papers], defined as [summary]
 - **[Concept B]**: Used by [papers], defined as [summary]
 
-### Methodological Patterns
+#### Methodological Patterns
 - [Dominant approach]
 - [Variations]
 
-### Preliminary Tensions Noted
+#### Preliminary Tensions Noted
 - [Tension 1]: [Paper A] vs [Paper B] on [issue]
 - [Tension 2]: [description]
 
-## Papers That Stand Out
+### Papers That Stand Out
 - **Most cited within corpus**: [papers]
 - **Most theoretically ambitious**: [papers]
 - **Most methodologically innovative**: [papers]
 - **Most relevant to user's project**: [papers]
 
-## Gaps Emerging
+### Gaps Emerging
 - [What's missing from the conversation]
 
-## Questions for Next Phases
+### Questions for Next Phases
 - [What to investigate in theoretical mapping]
 - [What to investigate in debate mapping]
 ```
@@ -368,7 +368,8 @@ Write notes that will make sense when you return to them in Phase 3-4. Be explic
 1. **reading-notes/*.md** - One file per paper (with identifier frontmatter)
    - Filename: `author-year-slug.md` (e.g., `smith2020-cultural-frames.md`)
    - Frontmatter: Must include at least one of: `openalex_id`, `doi`, `zotero_key`
-2. **reading-summary.md** - Compiled patterns and observations
+
+The reading summary (patterns, emergent tensions, papers that stand out) is presented in the conversation, not saved to a file.
 
 ---
 

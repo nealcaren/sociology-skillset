@@ -137,9 +137,9 @@ Before completion, verify:
 - [ ] Single paragraph format
 - [ ] No citations (unless rare exception)
 
-### 10. Write Quality Memo
+### 10. Present Quality Assessment
 
-Create quality assessment:
+Present in the conversation:
 
 ```markdown
 # Abstract Quality Assessment
@@ -237,10 +237,13 @@ defaults where they conflict. Key areas that field profiles may adjust:
 Refer to the field profile's benchmarks table and writing checklist for
 this section.
 
-## Output Files to Create
+## Output
 
-1. **abstract-final.md** - Final polished abstract
-2. **quality-memo.md** - Full quality assessment
+Before making any revisions: commit the current `abstract.md` with `git add abstract.md && git commit -m "abstract-builder: Phase 2 complete"`.
+
+Then revise `abstract.md` in place.
+
+Present the quality assessment in the conversation (using the template above). Do not create separate output files.
 
 ---
 

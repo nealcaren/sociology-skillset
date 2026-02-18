@@ -57,7 +57,7 @@ prompt: |
   - Argument: [main contribution]
   - Literatures: [list]
 
-  OUTPUT: Save to revision/section-revisions/theory-revised.md
+  OUTPUT: Edit the theory section in place in the manuscript file. Git commit after: `git add [manuscript path] && git commit -m "revision-coordinator: theory revised"`
 ```
 
 ---
@@ -89,7 +89,7 @@ prompt: |
   - Findings delivered: [what findings show]
   - Current conclusion: [for callback alignment]
 
-  OUTPUT: Save to revision/section-revisions/introduction-revised.md
+  OUTPUT: Edit the introduction in place in the manuscript file. Git commit after.
 ```
 
 ---
@@ -121,7 +121,7 @@ prompt: |
   - Key findings: [list]
   - Contribution claim: [the paper's core contribution]
 
-  OUTPUT: Save to revision/section-revisions/conclusion-revised.md
+  OUTPUT: Edit the conclusion in place in the manuscript file. Git commit after.
 ```
 
 ---
@@ -155,7 +155,7 @@ prompt: |
   - Interview format: [format]
   - Analysis: [method]
 
-  OUTPUT: Save to revision/section-revisions/methods-revised.md
+  OUTPUT: Edit the methods section in place in the manuscript file. Git commit after.
 ```
 
 ---
@@ -187,7 +187,7 @@ prompt: |
   - Population: [description]
   - Relationship to theory: [why this case?]
 
-  OUTPUT: Save to revision/section-revisions/case-revised.md
+  OUTPUT: Edit the case justification in place in the manuscript file. Git commit after.
 ```
 
 ---
@@ -234,7 +234,7 @@ prompt: |
 
   If quotes are insufficient, flag as NEEDS DATA RETURN.
 
-  OUTPUT: Save to revision/section-revisions/findings-revised.md
+  OUTPUT: Edit the findings section in place in the manuscript file. Git commit after.
 ```
 
 ---
@@ -269,7 +269,7 @@ prompt: |
 
   Ground scope conditions in actual study design. Do not invent.
 
-  OUTPUT: Save to revision/section-revisions/discussion-revised.md
+  OUTPUT: Edit the discussion section in place in the manuscript file. Git commit after.
 ```
 
 **For evidence issues** (claims need more support):
@@ -323,9 +323,7 @@ prompt: |
   - Findings: [2-3 key findings]
   - Data: [sample, population, location]
 
-  Generate 2-3 variants using different archetypes.
-
-  OUTPUT: Save to revision/section-revisions/abstract-variants.md
+  Generate 2-3 variants using different archetypes. Present variants in conversation for user to select one, then edit the abstract in place in the manuscript file. Git commit after.
 ```
 
 ---
@@ -359,7 +357,7 @@ If dependencies exist:
 
 ## Tracking Progress
 
-After each agent completes, update `revision-map.md`:
+After each agent completes, update `revision/revision-map.md`. Git commit the map after each section: `git add revision/revision-map.md && git commit -m "revision-coordinator: [section] dispatched"`
 
 ```markdown
 ### Dispatch Log

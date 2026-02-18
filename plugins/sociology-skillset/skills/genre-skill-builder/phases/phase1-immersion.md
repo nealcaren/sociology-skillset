@@ -9,9 +9,8 @@ Quantitative profiling establishes the baseline. Before coding rhetorical moves,
 ## Inputs
 
 Before starting, read:
-1. `/analysis/phase0-scope/scope-definition.md` - Scope and model skill
-2. `/analysis/phase0-scope/corpus-manifest.md` - List of articles
-3. The corpus files themselves (in the location specified)
+1. `analysis/genre-analysis-memo.md` — Phase 0: Scope section (scope and model skill, corpus manifest)
+2. The corpus files themselves (in the location specified)
 
 ## Your Tasks
 
@@ -169,24 +168,66 @@ Structure the data for later phases:
 
 ## Output Files to Create
 
-Save all outputs to `/analysis/phase1-immersion/`:
+1. **Per-article profiles** — Save each article's profile to `article-profiles/[author-year-slug].md`. Keep these as individual files; they are needed for batch production in later phases.
 
-1. **phase1-immersion-report.md** - Main report with:
-   - Corpus overview (size, sources)
-   - Statistical summaries (word count, paragraphs, etc.)
-   - Structural pattern observations
-   - Outliers and exemplars flagged
-   - Initial cluster hypotheses
-   - Questions for the user
+2. **Structured corpus data** — Save the `corpus-statistics.json` output (see Section 6) to `analysis/corpus-data.json`. If the file already exists (from a prior phase), merge the new data into it rather than overwriting.
 
-2. **corpus-statistics.json** - Structured data for later phases
+3. **Phase 1 memo section** — Append a `## Phase 1: Immersion` section to `analysis/genre-analysis-memo.md`. The section should contain:
 
-3. **article-profiles/** folder with individual article summaries:
-   - `article-01-profile.md`
-   - `article-02-profile.md`
-   - etc.
+```markdown
+## Phase 1: Immersion
 
-4. **benchmark-reference.md** - Quick-reference table of key statistics
+### Corpus Statistics
+
+#### Word Count
+- **Median**: [n]
+- **Mean**: [n]
+- **IQR**: [Q1]–[Q3]
+- **Range**: [min]–[max]
+- **Outliers**: [articles significantly above/below]
+
+#### Paragraph Count
+- **Median**: [n]
+- **IQR**: [Q1]–[Q3]
+- **Range**: [min]–[max]
+
+#### Subsections
+- **Articles with subsections**: [n] ([%])
+- **Median subsection count** (when present): [n]
+- **Common headings**: [top 3–5]
+
+#### Words per Paragraph
+- **Median**: [n]
+- **Range**: [min]–[max]
+
+### Structural Patterns
+
+#### Opening Patterns
+[Percentages for context-setting, literature reference, claims, questions]
+
+#### Organizational Patterns
+[Notes on paragraph sequence, subsection use, pivot points]
+
+#### Closing Patterns
+[Notes on how sections typically end]
+
+### Outliers and Exemplars
+[List notable articles with brief rationale]
+
+### Comparison with Model Skill
+| Metric | Model Skill | This Corpus | Difference |
+|--------|-------------|-------------|------------|
+| Median word count | [X] | [Y] | [note] |
+| Median paragraphs | [X] | [Y] | [note] |
+| % with subsections | [X] | [Y] | [note] |
+
+### Initial Cluster Hypotheses
+1. **[Observation]**: [hypothesis about possible cluster distinction]
+2. [...]
+
+### Questions for User
+[Any patterns that need user input before proceeding]
+```
 
 ## Guiding Principles
 

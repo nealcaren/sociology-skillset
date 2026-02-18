@@ -138,39 +138,40 @@ Get user confirmation on:
 
 ## Output Files to Create
 
-Save all outputs to `/analysis/phase0-scope/`:
+Append a `## Phase 0: Scope` section to `analysis/genre-analysis-memo.md`. Create the file if it does not exist. The section should contain:
 
-1. **scope-definition.md** - Core scope document:
-   ```markdown
-   # Scope Definition: [Skill Name]
+```markdown
+## Phase 0: Scope
 
-   ## Target Section
-   **Section type**: [name]
-   **Alternative names**: [...]
-   **Key functions**: [what this section does rhetorically]
+### Target Section
+**Section type**: [name]
+**Alternative names**: [...]
+**Key functions**: [what this section does rhetorically]
 
-   ## Corpus
-   **Location**: [path]
-   **Article count**: [n]
-   **Venues**: [list]
-   **Date range**: [if known]
+### Corpus
+**Location**: [path]
+**Article count**: [n]
+**Venues**: [list]
+**Date range**: [if known]
 
-   ## Model Skill
-   **Selected model**: [skill name]
-   **Rationale**: [why this model]
+### Model Skill
+**Selected model**: [skill name]
+**Rationale**: [why this model]
+**Phase structure**: [list phases and goals]
+**Cluster categories**: [list clusters from model]
+**Benchmarks tracked**: [list metrics]
 
-   ## Output Skill
-   **Name**: [skill-name]
-   **Description**: [one sentence]
-   **Keywords**: [tags]
+### Output Skill
+**Name**: [skill-name]
+**Description**: [one sentence]
+**Keywords**: [tags]
 
-   ## Code Categories
-   [list of features to code]
-   ```
+### Code Categories
+[list of features to code by category]
 
-2. **model-skill-summary.md** - Extracted structure from model skill
-
-3. **corpus-manifest.md** - List of all articles in corpus with file paths
+### Corpus Manifest
+[List of all article filenames/paths in the corpus]
+```
 
 ## Guiding Principles
 

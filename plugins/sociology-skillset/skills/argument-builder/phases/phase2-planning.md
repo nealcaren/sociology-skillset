@@ -97,9 +97,11 @@ Verify the paragraph sequence matches cluster expectations:
 
 ### 6. Write Paragraph Map
 
-Create `paragraph-map.md`:
+Append a `## Phase 2: Citation Plan` section to `theory-memo.md`, including the full paragraph map and citation deployment plan:
 
 ```markdown
+## Phase 2: Citation Plan
+
 # Paragraph Map
 
 ## Overview
@@ -199,8 +201,7 @@ this section.
 
 ## Output Files to Create
 
-1. **paragraph-map.md** - Full paragraph-by-paragraph plan
-2. **citation-plan.md** - Citation inventory with deployment strategy
+1. **theory-memo.md** - Append a `## Phase 2: Citation Plan` section containing the full paragraph-by-paragraph plan and citation deployment strategy.
 
 ---
 

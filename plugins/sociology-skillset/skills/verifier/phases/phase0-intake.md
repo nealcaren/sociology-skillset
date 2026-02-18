@@ -100,9 +100,9 @@ Document the verification task:
 - [Any unclear attributions]
 ```
 
-## Output
+## Output Files to Create
 
-Save to: `verification/scope-summary.md`
+Append a `## Scope Summary` section to `verification/verification-report.md` (create the file if it doesn't exist yet). Git commit before proceeding: `git add verification/verification-report.md && git commit -m "verifier: Phase 0 complete"`
 
 ## Checkpoint Questions for User
 

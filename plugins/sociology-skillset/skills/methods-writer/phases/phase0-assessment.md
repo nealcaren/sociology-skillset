@@ -95,9 +95,9 @@ Based on study characteristics, determine whether to include:
 - [ ] Significant refusal rate that affects sample interpretation
 - [ ] Institutional recruitment with documented response
 
-### 5. Write Assessment Memo
+### 5. Present Assessment
 
-Create a summary with:
+Present in the conversation:
 
 ```markdown
 # Methods Section Assessment
@@ -169,10 +169,9 @@ Only 17% of corpus articles include positionality. Include it when specific trig
 
 ---
 
-## Output Files to Create
+## Output
 
-1. **assessment-memo.md** - Full assessment with pathway recommendation
-2. (Optional) **questions-for-user.md** - If clarification needed
+Present the full assessment and recommendation in the conversation. Do not create output files.
 
 ---
 

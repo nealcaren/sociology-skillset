@@ -74,9 +74,9 @@ If the decision tree isn't definitive, consider:
 | **Findings** | Surprising/dramatic | Extends literature | Has implications | Answers question |
 | **Length need** | Standard (6.5 sent) | Flexible (6.4 sent) | Longer (7 sent) | Standard (6.6 sent) |
 
-### 5. Write Assessment Memo
+### 5. Present Assessment
 
-Create the assessment memo with:
+Present in the conversation:
 
 ```markdown
 # Abstract Assessment
@@ -167,9 +167,9 @@ If a field profile exists for the user's target field, read the corresponding `f
 
 Field profiles are additive — they adjust benchmarks on top of the archetype. Both dimensions apply simultaneously.
 
-## Output Files to Create
+## Output
 
-1. **assessment-memo.md** - Full assessment with archetype recommendation
+Present the full assessment and recommendation in the conversation. Do not create output files.
 
 ---
 

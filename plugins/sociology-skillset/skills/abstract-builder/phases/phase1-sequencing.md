@@ -110,9 +110,9 @@ Plan the connections between moves:
 - "These findings suggest..."
 - "Taken together..."
 
-### 7. Write Sequencing Memo
+### 7. Present Sequencing Plan
 
-Create the sequencing memo:
+Present in the conversation:
 
 ```markdown
 # Move Sequence Plan
@@ -217,9 +217,9 @@ defaults where they conflict. Key areas that field profiles may adjust:
 Refer to the field profile's benchmarks table and writing checklist for
 this section.
 
-## Output Files to Create
+## Output
 
-1. **sequence-plan.md** - Full move sequence with content previews
+Present the full move sequence plan in the conversation. Do not create output files.
 
 ---
 

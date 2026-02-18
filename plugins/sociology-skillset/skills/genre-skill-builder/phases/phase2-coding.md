@@ -9,10 +9,9 @@ Coding transforms impressions into data. By applying consistent categories acros
 ## Inputs
 
 Before starting, read:
-1. `/analysis/phase0-scope/scope-definition.md` - Code categories planned
-2. `/analysis/phase0-scope/model-skill-summary.md` - Model skill structure
-3. `/analysis/phase1-immersion/phase1-immersion-report.md` - Quantitative profile
-4. `/analysis/phase1-immersion/corpus-statistics.json` - Article data
+1. `analysis/genre-analysis-memo.md` — Phase 0: Scope section (code categories, model skill structure) and Phase 1: Immersion section (quantitative profile)
+2. `analysis/corpus-data.json` — Structured per-article data from Phase 1
+3. The `article-profiles/` folder — per-article profiles from Phase 1
 
 ## Your Tasks
 
@@ -221,21 +220,22 @@ Document your coding process and emerging insights:
 
 ## Output Files to Create
 
-Save all outputs to `/analysis/phase2-coding/`:
+1. **Per-article codes** — Save each article's codes to `article-codes/[author-year-slug].md`. Keep these as individual files; they are needed for batch production in later phases.
 
-1. **codebook.md** - Full codebook with all codes defined
+2. **Structured coding data** — Merge the per-article coding data (see the `article-codes.json` template in Section 3) into `analysis/corpus-data.json`. Add a `"coding"` key at the top level so Phase 1 data is preserved:
 
-2. **article-codes/** folder with per-article coding:
-   - `article-01-codes.md`
-   - `article-02-codes.md`
-   - etc.
-
-3. **article-codes.json** - Structured coding data:
    ```json
    {
+     "corpus_size": 80,
+     "section_type": "introduction",
+     "statistics": { ... },
      "articles": [
        {
          "filename": "article-01.md",
+         "word_count": 756,
+         "paragraph_count": 6,
+         "has_subsections": false,
+         "opening_type": "phenomenon",
          "opening_move": "phenomenon",
          "has_roadmap": true,
          "has_data_preview": true,
@@ -246,20 +246,57 @@ Save all outputs to `/analysis/phase2-coding/`:
    }
    ```
 
-4. **code-frequency.md** - Frequency tables for all codes
+3. **Phase 2 memo section** — Append a `## Phase 2: Coding` section to `analysis/genre-analysis-memo.md`. The section should contain:
 
-5. **co-occurrence-analysis.md** - Code co-occurrence patterns
+```markdown
+## Phase 2: Coding
 
-6. **preliminary-clusters.md** - Cluster assignments with rationale
+### Codebook
 
-7. **coding-memo.md** - Process reflections and emerging insights
+[Full codebook: all code categories and their definitions, indicators, and examples]
 
-8. **phase2-report.md** - Executive summary:
-   - Codebook overview
-   - Key frequency findings
-   - Preliminary cluster structure
-   - Uncertainties and edge cases
-   - Questions for user
+### Code Frequency Summary
+
+#### Opening Moves
+| Code | Count | Percentage |
+|------|-------|------------|
+| [code] | [n] | [%] |
+
+#### Structural Elements
+| Element | Present | Percentage |
+|---------|---------|------------|
+| [element] | [n] | [%] |
+
+[Continue for all categories]
+
+### Co-occurrence Patterns
+[Key code combinations and what they suggest about clusters]
+
+### Preliminary Cluster Assignments
+
+#### Cluster A: [Working Name]
+**Signature pattern**: [key codes]
+**Articles**: [list]
+**Count**: [n] ([%])
+
+[Continue for each cluster]
+
+#### Uncertain / Mixed
+[Articles that don't fit cleanly, with notes on ambiguity]
+
+### Coding Memo
+#### Process Notes
+[How codes evolved, what was difficult, what distinctions proved useful or useless]
+
+#### Surprises
+[Unexpected patterns; assumptions from model skill that didn't hold]
+
+#### Cluster Hypotheses Refined
+[How preliminary clusters compare to Phase 1 hypotheses]
+
+#### Questions for Phase 3
+[What needs interpretation, where cluster boundaries are unclear]
+```
 
 ## Guiding Principles
 

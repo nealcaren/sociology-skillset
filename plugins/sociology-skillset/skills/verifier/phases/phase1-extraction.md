@@ -140,18 +140,18 @@ Note items with unclear attribution:
 - Citation with no page number for direct quote
 - Secondary citation (Author A citing Author B)
 
-## Output Format
+## Output Files to Create
 
-Create `verification/verification-items.md`:
+Append a `## Verification Items` section to `verification/verification-report.md` using the format below. Git commit before proceeding: `git add verification/verification-report.md && git commit -m "verifier: Phase 1 complete"`
 
 ```markdown
-# Verification Items
+## Verification Items
 
 **Extracted from**: [manuscript path]
 **Extraction date**: [date]
 **Total items**: [count]
 
-## Summary
+### Summary
 
 | Type | Count |
 |------|-------|
@@ -161,11 +161,11 @@ Create `verification/verification-items.md`:
 | Aggregate claims | X |
 | **Total** | **X** |
 
-## Items by Section
+### Items by Section
 
-### [Section Name]
+#### [Section Name]
 
-#### Item 1
+##### Item 1
 **Type**: exact-quote
 **Text**: "I didn't really think about it until my kids started asking questions"
 **Source**: Maria
@@ -176,21 +176,21 @@ Create `verification/verification-items.md`:
 
 ---
 
-#### Item 2
+##### Item 2
 ...
 
-### [Next Section]
+#### [Next Section]
 ...
 
-## Flagged Items
+### Flagged Items
 
-### Ambiguous Attribution
+#### Ambiguous Attribution
 - Item X: [description of issue]
 
-### Missing Page Numbers
+#### Missing Page Numbers
 - Item Y: Direct quote from Author (2020) without page number
 
-### Aggregate Claims Needing Multiple Sources
+#### Aggregate Claims Needing Multiple Sources
 - Item Z: "Most participants" - need to verify across multiple transcripts
 ```
 
@@ -213,6 +213,10 @@ Before completing this phase, verify:
 4. **Coverage**: Are all verification-relevant claims included?
    - Not just quotes but also paraphrases
    - Aggregate claims that make empirical assertions
+
+## When You're Done
+
+After appending the Verification Items section and committing, pause for user review.
 
 ## Checkpoint for User
 

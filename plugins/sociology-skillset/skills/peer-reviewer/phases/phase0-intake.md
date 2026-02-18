@@ -136,18 +136,13 @@ Document perspectives you considered but didn't recommend, with reasons:
 
 ### 6. Prepare Intake Memo
 
-Compile findings into a complete intake memo for user review.
+Compile findings into a complete intake memo and present it in the conversation for user review.
 
 ---
 
 ## Output Files to Create
 
-Save to project analysis folder:
-
-1. **manuscript-summary.md** - Summary of manuscript content and engagement
-2. **reviewer-candidates.md** - All candidate perspectives with Zotero availability
-3. **recommended-reviewers.md** - 2-3 recommended perspectives with rationale
-4. **intake-memo.md** - Complete intake memo for user review
+None — present all assessment results (manuscript summary, reviewer candidates, Zotero availability check, recommended reviewers, and intake memo) in conversation for user review.
 
 ---
 

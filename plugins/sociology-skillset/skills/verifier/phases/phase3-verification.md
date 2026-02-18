@@ -257,7 +257,7 @@ With 15 participants:
 
 ## Recording Results
 
-Update `verification/verification-results.md`:
+Append a `## Verification Results` section to `verification/verification-report.md`. After completing all batches, git commit: `git add verification/verification-report.md && git commit -m "verifier: Phase 3 complete"`
 
 ```markdown
 ## Item [number]: [first few words of quote...]
@@ -355,8 +355,9 @@ Continue to next batch?
 ## Transition to Phase 4
 
 Once all items are verified:
-1. All results recorded in verification-results.md
+1. All results recorded in the `## Verification Results` section of `verification-report.md`
 2. User has been notified of progress
 3. Outstanding issues are documented
+4. Git commit made
 
 Proceed to Phase 4: Report.

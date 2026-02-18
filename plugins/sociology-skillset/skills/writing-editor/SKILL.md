@@ -19,28 +19,26 @@ paths:
 
 **Project type:** This skill works for **all project types**. Prose editing improves writing regardless of methodology.
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "writing-editor: Pre-editing snapshot"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## Workflow: Four Levels with Checkpoints
 
 Work through each level, presenting proposed changes for user approval before moving to the next.
 
 ### Step 0: Document Protection
 
-**Before making any edits**, ask the user how they want to track changes:
+**Before making any edits**:
+- Check if the file is in a git repo; if not, offer to `git init`
+- Commit the original state before any edits: `git add [file] && git commit -m "writing-editor: Pre-editing snapshot"`
+- After each level's approved changes, commit with a message like: `"Writing editor: Level 1 (Document) complete"`
 
-| Option | How it works |
-|--------|--------------|
-| **Copy (default)** | Create `filename-working.md` and edit only that copy. Original is never touched. |
-| **Git tracking** | Initialize or use existing git repo. Commit after each phase with descriptive message (e.g., "Level 1: Document structure edits"). |
-
-If user chooses **copy**: Create the working copy immediately. All subsequent edits go to the copy.
-
-If user chooses **git**:
-- Check if file is in a git repo; if not, offer to `git init`
-- Commit the original state before any edits
-- After each level's approved changes, commit with message like: `"Writing editor: Level 1 (Document) complete"`
-- This creates a full revision history the user can diff or revert
-
-**Never edit the original file directly unless git tracking is active.**
+This creates a full revision history the user can diff or revert. The input file IS the output — edit it in place. Do not create a working copy or a separate output file.
 
 ### Levels with Checkpoints
 
@@ -154,11 +152,11 @@ Present word-level changes. Wait for user approval.
 
 ## Output
 
-After all levels approved, write final version to:
-- Input `draft.md` → output `draft-edited.md`
-- Pasted text → output `edited-[timestamp].md`
+After all levels approved, the edited file IS the output — it was edited in place. Commit the final state: `git add [file] && git commit -m "writing-editor: Level 4 (Word) complete"`.
 
-Include brief summary of changes at each level.
+For pasted text (no file), write the final edited text to `edited-[timestamp].md`.
+
+Include a brief summary of changes at each level in the conversation.
 
 ## Calibration
 

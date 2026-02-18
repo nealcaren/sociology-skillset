@@ -267,13 +267,9 @@ Based on diagnostics:
 
 ## Output Files
 
-Update in `revision/` directory:
-- `revision-map.md` — add Phase 1 diagnostics section
+Update `revision/revision-map.md` — add Phase 1 diagnostics section. Git commit: `git add revision/revision-map.md && git commit -m "revision-coordinator: Phase 1 complete"`
 
-Optionally create:
-- `diagnostics/intro-diagnostic.md`
-- `diagnostics/theory-diagnostic.md`
-- etc.
+Diagnostic details are presented in conversation. Do NOT create `diagnostics/` files.
 
 ## When You're Done
 
