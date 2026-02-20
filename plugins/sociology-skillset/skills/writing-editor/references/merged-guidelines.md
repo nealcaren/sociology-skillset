@@ -57,7 +57,7 @@ Start here. Fix structure, openings, and overall architecture before touching se
 
 ## 1.1 Open with a Hook
 
-75% of articles open with bland formulas. Join the 25% that hook readers.
+Most nonfiction opens with bland formulas. Hook readers instead.
 
 **Hook types**:
 - Opening question
@@ -85,8 +85,10 @@ Long titles with variable lists and colons don't increase citations.
 
 If your opening announces four topics, your section headings must follow that order.
 
-**Structural options**:
-- IMRAD (Introduction, Method, Results, Discussion)
+**Structural options** (genre-dependent):
+- IMRAD (Introduction, Method, Results, Discussion) — academic papers
+- Executive summary → details → recommendations — reports and memos
+- Narrative arc — essays and blog posts
 - Hybrid: Generic headings with unique subsections
 - Thematic: Metaphor-driven architecture throughout
 
@@ -99,14 +101,16 @@ Violating your announced structure signals shoddy thinking.
 
 Include humans. Make claims. Minimize hedging.
 
-## 1.5 Cite with Purpose
+## 1.5 Cite and Reference with Purpose
 
-**Audit each citation**: Does this author's idea do work here, or am I just name-dropping?
+**For genres that use citations** (academic papers, technical reports): Audit each citation — does this author's idea do work here, or is it just name-dropping?
 
 - Remove citations that only signal allegiance
 - Break 16+ citation sentences into multiple sentences
 - Always include page numbers
 - Read citations aloud—if they disrupt rhythm, fix them
+
+**For genres without formal citations** (memos, blog posts, essays): Check that any references to sources, studies, or authorities earn their place. Drop vague appeals ("research shows") — either name the source or cut the claim.
 
 ## 1.6 Ground Abstract Claims in Concrete Examples
 
@@ -139,12 +143,19 @@ If three paragraphs start the same way, rewrite one.
 
 **Fix**: Let one paragraph be shorter, more direct, or structured differently.
 
-## 2.3 Break the Triplet Habit
+## 2.3 Cut Ornamental Triplets
 
-Lists of three feel rhetorical. Two feels human.
+Cut triplets that are purely rhetorical filler—where the third item adds rhythm but not meaning. Keep conceptual triplets that name distinct, analytically necessary categories.
 
-**Before**: "The revision improves clarity, coherence, and empirical grounding."
-**After**: "The revision improves clarity and grounding."
+**Cut** (ornamental—"coherence" adds nothing the other two don't cover):
+"The revision improves clarity, coherence, and empirical grounding." → "The revision improves clarity and grounding."
+
+**Keep** (conceptual—each term names a distinct theoretical category):
+- "Race, class, and gender"
+- "State, market, and civil society"
+- "Costs, risks, and benefits"
+
+**Test**: Can you drop one item without losing analytical precision? If yes, it's ornamental. If no, keep all three.
 
 ## 2.4 Avoid Over-Balanced Contrast
 
@@ -187,10 +198,7 @@ Passive voice hides who acted. Show who did what.
 
 ## 3.2 Use First Person
 
-The myth that academics avoid "I/we" is false. Data shows:
-- Medicine: 92% use personal pronouns
-- Evolutionary biology: 100%
-- Philosophy: 92%
+First person is fine in most genres. In academic writing, the myth of avoidance is false (92% of medical papers, 100% of evolutionary biology papers use personal pronouns). In memos, reports, and essays, first person is the default.
 
 | Impersonal | Personal |
 |------------|----------|
@@ -305,20 +313,26 @@ Replace abstract reflection language with causal explanation.
 
 ## 3.14 Replace Em/En Dashes with Commas or Restructure
 
-Em dashes (—) and en dashes (–) create artificial drama and interrupt reading flow. Replace with commas or restructure the sentence.
+Em dashes (—) and en dashes (–) create artificial drama and interrupt reading flow. Don't default to swapping every dash for a comma—that just trades one tic for another. Instead, consider the full range of rewrites: split into two sentences, fold the aside into the main clause, move it to a different position, use a colon, or drop it entirely if it's not pulling its weight.
 
-| With dashes | Without dashes |
-|-------------|----------------|
-| "The respondents—who had previously expressed happiness—decided to leave" | "The respondents, who had previously expressed happiness, decided to leave" |
-| "Three factors—cost, time, and risk—drove the decision" | "Three factors drove the decision: cost, time, and risk" |
-| "She found—surprisingly—that wages had fallen" | "She found, surprisingly, that wages had fallen" |
-| "The policy—implemented in 2019—failed immediately" | "The policy, implemented in 2019, failed immediately" |
+**Strategies** (vary these to avoid repetitive comma-for-dash swaps):
+
+| Strategy | With dashes | Rewritten |
+|----------|-------------|-----------|
+| **Comma pair** | "The respondents—who had previously expressed happiness—decided to leave" | "The respondents, who had previously expressed happiness, decided to leave" |
+| **Colon** | "Three factors—cost, time, and risk—drove the decision" | "Three factors drove the decision: cost, time, and risk" |
+| **Split into two sentences** | "The policy—implemented in 2019—failed immediately" | "The policy was implemented in 2019. It failed immediately." |
+| **Fold into main clause** | "She found—surprisingly—that wages had fallen" | "She was surprised to find that wages had fallen" |
+| **Move the aside** | "Workers—especially those in rural areas—faced longer commutes" | "Workers faced longer commutes, especially those in rural areas" |
+| **Drop it** | "The results—which were largely consistent—supported the hypothesis" | "The results supported the hypothesis" |
+
+When offering suggestions, present at least two rewrite options (e.g., one comma swap and one restructure) so the author can choose the version that best fits the surrounding prose.
 
 **When dashes might stay**:
 - Abrupt interruption that's the point: "He started to explain—but then stopped."
 - Range notation: "pages 12–15" (en dash is standard here)
 
-**Rule**: For parenthetical insertions, commas almost always work better. Dashes signal "pay attention to this aside!" when the aside rarely deserves that emphasis.
+**Rule**: For parenthetical insertions, commas are only one option. Dashes signal "pay attention to this aside!" when the aside rarely deserves that emphasis. The best fix often isn't punctuation surgery—it's rethinking the sentence.
 
 ---
 
@@ -397,7 +411,7 @@ Ceremonial language that means the same as plain language.
 
 ## 4.7 Reduce Excessive Praise
 
-Academic reviewers understate. Enthusiasm reads as synthetic.
+Stacked adjectives read as synthetic regardless of genre. Let the work speak.
 
 **Before**: "This is a thoughtful, rigorous, and sophisticated analysis."
 **After**: "This is a careful analysis." / "The analysis is solid."
@@ -427,8 +441,10 @@ Academic reviewers understate. Enthusiasm reads as synthetic.
 
 **Not the goal**: Perfect prose. Functional prose is human. Allow mild awkwardness.
 
+**Genre awareness**: Detect the genre from the input and respect its conventions. Academic papers keep citations and hedging where warranted. Memos stay short and direct. Blog posts can be conversational. Reports keep structure tight. Proposals foreground the ask. Don't flatten genre differences — adapt the intensity of each rule to the context.
+
 **Final test**: Read aloud. Warning signs:
-- "This sounds like a report"
+- "This sounds like a report" (when it shouldn't)
 - "This feels over-controlled"
 - "This could be a template"
 - "This sounds translated from German"

@@ -1,11 +1,11 @@
 ---
 name: writing-editor
-description: Edit academic prose to sound more natural, direct, and engaging. Works top-down through four levels (Document → Paragraph → Sentence → Word) with human checkpoints at each stage. Fixes LLM patterns, academic bad habits, and style deficits. Use when prose sounds robotic, dull, or inaccessible.
+description: Edit prose to sound more natural, direct, and engaging. Works top-down through four levels (Document → Paragraph → Sentence → Word) with human checkpoints at each stage. Fixes LLM patterns, writerly bad habits, and style deficits. Works for academic papers, reports, memos, essays, blog posts, proposals, and other nonfiction. Use when prose sounds robotic, dull, or inaccessible.
 ---
 
 # Writing Editor
 
-Edit academic prose using a top-down workflow with human review at each level.
+Edit prose using a top-down workflow with human review at each level. Works for any nonfiction genre — academic papers, reports, memos, essays, blog posts, proposals.
 
 ## Project Integration
 
@@ -98,8 +98,8 @@ Before touching sentences, fix:
 - **Opening hook**: Does it grab attention or start with a bland formula?
 - **Title**: Short and unified, or bloated with variables and colons?
 - **Structure**: Do section headings match what the opening promises?
-- **Abstract**: Active voice with humans and claims, or passive hedging?
-- **Citations**: Do they advance the argument or just signal allegiance?
+- **Abstract/summary**: Active voice with humans and claims, or passive hedging? (Skip if genre has no abstract.)
+- **Citations/references**: Do they advance the argument or just signal allegiance? (Adjust for genre — academic papers cite; memos and blog posts may not.)
 - **Concrete examples**: Is each major concept grounded in specifics?
 
 Present document-level changes. Wait for user approval.
@@ -110,7 +110,7 @@ After document structure is sound:
 
 - **Paragraph endings**: Do they moralize ("Together, these underscore...") or just stop?
 - **Symmetry**: Do three paragraphs start the same way?
-- **Triplets**: Lists of three that could be two?
+- **Triplets**: Ornamental lists of three that could be two? (Keep conceptual triplets like "race, class, and gender")
 - **Over-balanced contrast**: "Not X, but Y" that could be one clause?
 - **Syntax-logic match**: Does grammar show which ideas are subordinate?
 
@@ -132,7 +132,7 @@ After paragraphs are structured:
 - **Meta-commentary**: Cut sentences about process/intent
 - **Grand evaluations**: Replace abstract praise with observable effects
 - **Over-justification**: Allow judgment without explaining every reason
-- **Em/en dashes**: Replace with commas or restructure. Dashes create artificial drama and interrupt flow.
+- **Em/en dashes**: Rewrite the sentence—don't just swap for commas. Split into two sentences, fold the aside into the main clause, use a colon, reposition the aside, or drop it. Offer multiple options.
 
 Present sentence-level changes. Wait for user approval.
 
@@ -164,6 +164,6 @@ Include a brief summary of changes at each level in the conversation.
 
 **Not the goal**: Perfect prose. Functional prose is human. Allow mild awkwardness.
 
-**Genre constraint**: Academic writing. Maintain formality, citation practices, argumentative structure.
+**Genre awareness**: Detect the genre from the input and respect its conventions. Academic papers keep citations and hedging where warranted. Memos stay short. Blog posts can be conversational. Reports keep structure tight. Don't flatten genre differences — adapt the rules to the context.
 
-**Final test**: Read aloud. If it sounds like a report, a template, or translated from German—keep editing.
+**Final test**: Read aloud. If it sounds like a report when it should be an essay, or a template when it should be a memo — keep editing.
