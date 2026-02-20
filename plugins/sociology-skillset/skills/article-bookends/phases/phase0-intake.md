@@ -31,6 +31,7 @@ Identify the **positioning move**:
 | Positioning | Indicators |
 |-------------|------------|
 | **Gap-filling** | "Little research has examined...", "We know less about...", identifies empirical gap |
+| **Mechanism-identification** | "We identify the mechanism...", "How does X produce Y?", names a causal process, spells out causal chain |
 | **Theory-extension** | Names specific framework, "X theory suggests...", applies existing framework to new domain |
 | **Concept-building** | Introduces new term, critiques existing concepts, presents typology |
 | **Synthesis** | Connects multiple literatures, "Drawing together...", integrates traditions |
@@ -51,15 +52,18 @@ Identify:
 
 ### 4. Assign Cluster Membership
 
-Based on your analysis, assign the article to one of five clusters:
+Based on your analysis, assign the article to one of six clusters:
 
 | Cluster | Key Indicators | Prevalence |
 |---------|----------------|------------|
-| **Gap-Filler Minimalist** | Empirical gap, funnel structure, substantive focus | 38.8% |
-| **Theory-Extension** | Named framework, application to new domain | 22.5% |
-| **Concept-Building** | New term introduced, conceptual critique | 15.0% |
-| **Synthesis Integrator** | Multiple traditions connected, integration claims | 17.5% |
-| **Problem-Driven Pragmatist** | Policy stakes, debate framing, empirical focus | 15.0% |
+| **Gap-Filler Minimalist** | Empirical gap, funnel structure, substantive focus | 38.8% (SP/SF) |
+| **Theory-Extension** | Named framework, application to new domain | 22.5% (SP/SF) |
+| **Concept-Building** | New term introduced, conceptual critique | 15.0% (SP/SF) |
+| **Synthesis Integrator** | Multiple traditions connected, integration claims | 17.5% (SP/SF) |
+| **Problem-Driven Pragmatist** | Policy stakes, debate framing, empirical focus | 15.0% (SP/SF) |
+| **Mechanism-Identifier** | Names causal mechanism, how/why question, mechanism developed over 2–4 paragraphs | 55% (AJS) |
+
+**Target journal matters**: If the user is targeting *AJS* or *ASR*, check for Mechanism-Identifier first — it is the dominant cluster at high-status journals. If targeting *Social Problems* or *Social Forces*, the original five clusters are the primary options.
 
 ### 5. Confirm Scope
 
@@ -95,6 +99,12 @@ Ask the user:
 - **Introduction**: Stakes-led or case-led opening, policy context
 - **Conclusion**: Policy implications, may escalate to broader claims
 - **Opportunity**: Escalation is common and acceptable
+
+### If Mechanism-Identifier:
+- **Introduction**: Phenomenon, case, or question-led opening. Name the mechanism and develop it over 2–4 paragraphs. No roadmap, no contribution list. Aim for 900–1,400 words.
+- **Conclusion**: Affirm the mechanism worked. Return to opening case/puzzle. (Provisional — conclusion benchmarks pending empirical analysis.)
+- **Ratio**: Estimated ~1.2–1.5x
+- **Risk**: Named mechanisms create clear expectations — deflation occurs if conclusion retreats to "consistent with" rather than "demonstrates"
 
 ## Field-Specific Implications
 

@@ -60,12 +60,14 @@ Opens with a theoretical framework.
 
 **Best for**: Theory-Extension (30% use this)
 
-### Question-Led (1%)
+### Question-Led (1% SP/SF; 15% AJS)
 Opens with a direct question.
 
 > "How do people make sense of their reliance on unjust institutions?"
 
-**Use sparingly**: Rare and can feel performative. Only use when the question is genuinely compelling.
+> "Does the residential context of police officers influence their workplace behavior?" (Donahue & Torrats-Espinosa 2025, AJS)
+
+**Use sparingly at SP/SF**: Rare and can feel performative. **More common at AJS**, where question-led openings directly pose a mechanism question. Best for: Mechanism-Identifier.
 
 ## Step 2: Establish Context
 
@@ -99,6 +101,13 @@ This is the **turn**—the moment you identify what needs explaining.
 
 ### Debate Turn
 > "Scholars disagree about whether [X] or [Y] better explains [phenomenon]. This study adjudicates by examining [case]."
+
+### Mechanism Turn
+> "Yet in both cases the mechanisms of persistence often remain obscure." (Clegg 2025)
+
+> "We don't know *how* [X produces Y]. This article identifies the mechanism: [named process]."
+
+The mechanism turn is distinctive: it does not just identify a gap but pivots to **naming a causal process**. The mechanism then receives 2–4 paragraphs of development — more space than the gap itself.
 
 ## Step 4: Preview Data and Argument
 
@@ -151,6 +160,15 @@ If the article is complex (multiple findings, synthesis of traditions), include 
 - Policy context can dominate
 - Connect to real-world urgency
 
+### Mechanism-Identifier
+- Phenomenon, case, or question-led opening (not theory, not stakes)
+- Name the mechanism if you can give it a memorable label
+- Develop the mechanism over 2–4 paragraphs (the Mechanism Move)
+- Spell out the causal chain: A → B → C
+- Do NOT use a roadmap or enumerate contributions
+- Aim for 900–1,400 words
+- Keep data mention brief (1–2 sentences)
+
 ## Prohibited Moves
 
 - **Opening with "This paper argues..."** — Too abrupt; establish context first
@@ -169,6 +187,7 @@ Match introduction claims to conclusion capacity:
 | "Introduces concept Y" | Demonstration that Y does analytic work |
 | "Connects literatures A and B" | Integration of both in interpretation |
 | "Resolves debate" | Evidence favoring one position |
+| "Identifies mechanism X" | Demonstration that X explains the outcome — not just "consistent with" |
 
 **The coherence rule**: Whatever the introduction promises, the conclusion must keep.
 

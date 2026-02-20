@@ -64,7 +64,7 @@ This skill completes the article writing workflow.
 
 ## Core Principles (from Genre Analysis)
 
-Based on systematic analysis of 80 sociology interview articles from *Social Problems* and *Social Forces*. These are **generalist defaults** — field-specific profiles (see Field Profiles below) may adjust benchmarks for particular subfields:
+Based on systematic analysis of 80 sociology interview articles from *Social Problems* and *Social Forces*, plus 33 articles from *American Journal of Sociology*. These are **generalist defaults** — field-specific profiles (see Field Profiles below) may adjust benchmarks for particular subfields:
 
 ### 1. Introductions Are Efficient; Conclusions Do Heavy Work
 - **Median introduction**: 761 words, 6 paragraphs
@@ -85,7 +85,7 @@ Based on systematic analysis of 80 sociology interview articles from *Social Pro
 - **Callbacks to introduction are universal (100%)**
 
 ### 4. Match Framing to Contribution Type
-Five cluster styles require different approaches:
+Six cluster styles require different approaches:
 
 | Cluster | Intro Signature | Conclusion Signature |
 |---------|-----------------|---------------------|
@@ -94,6 +94,9 @@ Five cluster styles require different approaches:
 | **Concept-Building** | Long, motivate conceptual need | Balanced length, concept consolidation |
 | **Synthesis** | Multiple traditions named | Integration claims, no deflation |
 | **Problem-Driven** | Stakes-led (25%), policy focus | Escalation to implications |
+| **Mechanism-Identifier** | Phenomenon/case/question-led, mechanism named and developed (2–4 paras), no roadmap | Mechanism affirmation (provisional) |
+
+**Note**: Mechanism-Identifier is primarily associated with very high-status journals (*AJS*, *ASR*). If targeting these venues, it is the default cluster.
 
 ## Workflow Phases
 
@@ -198,6 +201,7 @@ Reference these guides for cluster-specific writing:
 | `clusters/concept-building.md` | Concept-Building Architect (15.0%) |
 | `clusters/synthesis.md` | Synthesis Integrator (17.5%) |
 | `clusters/problem-driven.md` | Problem-Driven Pragmatist (15.0%) |
+| `clusters/mechanism-identifier.md` | Mechanism-Identifier (55% of AJS; high-status journals) |
 
 ## Field Profiles
 
@@ -270,7 +274,7 @@ These are **generalist defaults** based on the *Social Problems* / *Social Force
 ## Prohibited Moves
 
 ### In Introductions
-- Opening with a direct question (unless theory-extension)
+- Opening with a direct question (unless theory-extension or mechanism-identifier at AJS)
 - Claiming the literature "has overlooked" without justification
 - Promising more than the findings deliver
 - Lengthy method description (save for Methods section)

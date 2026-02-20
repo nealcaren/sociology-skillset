@@ -4,13 +4,13 @@ This guide details the five types of opening moves used in sociology interview a
 
 ## Overview
 
-| Opening Move | Frequency | Best For |
-|--------------|-----------|----------|
-| Phenomenon-led | 74% | Gap-Filler, Concept-Building, Synthesis |
-| Stakes-led | 11% | Problem-Driven, Gap-Filler |
-| Case-led | 8% | Problem-Driven, Synthesis |
-| Theory-led | 6% | Theory-Extension |
-| Question-led | 1% | Rare; use sparingly |
+| Opening Move | Frequency (SP/SF) | Frequency (AJS) | Best For |
+|--------------|-------------------|------------------|----------|
+| Phenomenon-led | 74% | 55% | Gap-Filler, Concept-Building, Synthesis, Mechanism-Identifier |
+| Stakes-led | 11% | 9% | Problem-Driven, Gap-Filler |
+| Case-led | 8% | 12% | Mechanism-Identifier (puzzle), Problem-Driven, Synthesis |
+| Theory-led | 6% | 3% | Theory-Extension |
+| Question-led | 1% | 15% | Mechanism-Identifier (at AJS) |
 
 ---
 
@@ -198,20 +198,19 @@ Opens with a direct question.
 **Puzzle question**:
 > "Why do residents of high-crime neighborhoods call the police despite widespread distrust?"
 
-### Why It's Rare (1%)
-- Can feel rhetorically performative
-- Implies the answer is unknown (requires justification)
-- "Showing" is usually more persuasive than "asking"
-- Questions can feel like a gimmick
+### Why It's Rare at SP/SF (1%) but Common at AJS (15%)
+- At SP/SF: can feel rhetorically performative
+- At AJS: question-led openings directly pose a mechanism question ("How does X produce Y?")
+- The difference: AJS question-led openings signal theoretical ambition; SP/SF question-led openings can feel like a gimmick
 
 ### When to Use
+- Mechanism-Identifier articles at AJS where the question is a how/why mechanism question
 - When the question is genuinely compelling
 - When the paradox is the central puzzle
 - When the question format captures something assertions don't
-- Synthesis articles where the question bridges literatures
 
 ### When to Avoid
-- As a default (it's overused in student writing)
+- As a default at SP/SF (it's overused in student writing)
 - When the question isn't actually puzzling
 - When showing would be more effective than asking
 
@@ -264,6 +263,7 @@ standard opening move types.
 | Concept-Building | Phenomenon | Stakes |
 | Synthesis | Phenomenon | Case |
 | Problem-Driven | Stakes (25%) | Case (17%) |
+| Mechanism-Identifier | Phenomenon (56%) | Case (17%), Question (17%) |
 
 ### Field-Specific Recommendations
 
