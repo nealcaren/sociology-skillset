@@ -102,9 +102,9 @@ Ask the user:
 
 ### If Mechanism-Identifier:
 - **Introduction**: Phenomenon, case, or question-led opening. Name the mechanism and develop it over 2–4 paragraphs. No roadmap, no contribution list. Aim for 900–1,400 words.
-- **Conclusion**: Affirm the mechanism worked. Return to opening case/puzzle. (Provisional — conclusion benchmarks pending empirical analysis.)
-- **Ratio**: Estimated ~1.2–1.5x
-- **Risk**: Named mechanisms create clear expectations — deflation occurs if conclusion retreats to "consistent with" rather than "demonstrates"
+- **Conclusion**: Affirm the mechanism worked. Use the mechanism's name. Extend to new domains. Return to opening case if case-led. Aim for 1,200–2,200 words.
+- **Ratio**: Conclusion is typically 1.4× the introduction length (median ratio 0.71). Plan for a longer conclusion, not a brief wrap-up.
+- **Risk**: Named mechanisms create clear expectations — deflation occurs if conclusion retreats to "consistent with" rather than "demonstrates." Zero deflation observed in AJS corpus.
 
 ## Field-Specific Implications
 

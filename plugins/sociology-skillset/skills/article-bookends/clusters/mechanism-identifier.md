@@ -175,56 +175,147 @@ The data mention is typically brief — 1–2 sentences, not an extended methods
 
 ## Conclusion Signature
 
-**NOTE: Conclusion data for high-status journal articles has not yet been collected. The guidance below is PROVISIONAL, inferred from the introduction framing and from analogous patterns in the SP/SF corpus. This section should be updated with empirical conclusion analysis.**
+Based on empirical analysis of all 18 Mechanism-Identifier conclusions from AJS (2024–2025).
 
-### Provisional Structure
-1. **Restatement opening** (1 paragraph): Return to the mechanism claim
-2. **Mechanism summary** (1–2 paragraphs): Recap how the mechanism was demonstrated
-3. **Broader implications** (1–2 paragraphs): What the mechanism tells us beyond the specific case
-4. **Limitations** (1 paragraph): Bound the mechanism's scope
-5. **Future directions** (1 paragraph): Where else the mechanism might operate
-6. **Coda** (2–3 sentences): Return to opening phenomenon or case
+### Key Statistics
+| Feature | Typical Value |
+|---------|---------------|
+| Word count | 1,200–2,200 words (median ~1,614) |
+| Paragraphs | 11–17 (median 13) |
+| Intro:Conclusion ratio | 0.71 (conclusion is ~1.4× longer than intro) |
+| Citation density | 0.69/100 words (lower than intro's 0.99) |
+| Mechanism affirmed | 100% |
+| Mechanism name returned | 72% |
+| Mechanism extended | 67% |
+| Limitations | 56% |
+| Future directions | 67% |
+| Coda | 44% |
 
-### Provisional Key Principles
+**Key insight**: AJS mechanism conclusions are typically **longer than their introductions**. This is the opposite of SP/SF norms. Plan for a substantive conclusion, not a brief wrap-up.
 
-- **Affirm the mechanism**: The conclusion must confirm that the named mechanism did explanatory work. Use the mechanism's name explicitly.
-- **Extend scope cautiously**: Show where else the mechanism might operate, but ground claims in evidence.
-- **Avoid deflation**: If you named a specific mechanism, the conclusion must show it worked. Retreating to "our findings are consistent with" after "we identify the mechanism of X" is deflation.
-- **Return to the case or puzzle**: If the introduction opened with a case or puzzle, the conclusion should close the loop.
+### Opening Move
 
-### Provisional Statistics
-| Feature | Estimated Value |
-|---------|----------------|
-| Word count | 1,000–1,400 words (estimated) |
-| Paragraphs | 6–9 (estimated) |
-| Intro:Conclusion ratio | ~1.2–1.5x (estimated) |
-| Limitations | Likely present (~60%) |
-| Future directions | Likely present (~70%) |
+No single dominant opening — four strategies are roughly equally common:
+
+**MECHANISM-RETURN (22%)** — Opens by immediately returning to the named mechanism. **Exclusive to this cluster** — no other cluster uses it.
+
+> "By studying the diffusion of 'Un violador en tu camino' as a case of complex contagion, I have highlighted the pivotal role of Chilean emigrants in exporting the anthem to their host societies through solidarity performances." (Saetre 2025)
+
+> "Contacts help job seekers get hired, but how? ...we show that contacts affect hiring decisions by drawing on the social resources embedded in their workplace networks..." (Henriksen et al. 2025)
+
+> "Our analysis of health-protecting behavior during the early months of the COVID-19 pandemic demonstrates how territoriality enhanced the emergence of new norms." (Bergemann & Brandtner 2025)
+
+**BROADENING (28%)** — Opens by situating the study in a wider context before stating findings.
+
+**RESTATEMENT (22%)** — Returns directly to the main argument or question.
+
+**SUMMARY (22%)** — Opens with a direct recap of what the study found.
+
+### Structure
+
+Three typical paragraph sequences, aligned with the introduction sub-variants:
+
+**Standard Mechanism Conclusion (most common, ~10 articles):**
+1. Mechanism affirmation + main finding (often opens with mechanism name)
+2. Evidence integration and sub-mechanism findings (1–2 paragraphs)
+3. Literature positioning — what this adds (1–2 paragraphs)
+4. Scope conditions and/or limitations (1 paragraph)
+5. Future directions and extensions (1 paragraph)
+6. Coda (optional — 1–3 sentences)
+
+**Case-Return Conclusion (~4 articles with case-led intros):**
+1. Return to opening case or quotation
+2. Mechanism affirmation
+3. Core contribution statement
+4. Extension to other domains (1–2 paragraphs)
+5. Policy or future work (optional)
+6. Coda
+
+**Adjudication Conclusion (~4 articles):**
+1. Summary of main finding
+2. Falsification of alternative mechanism
+3. Confirmation of proposed mechanism
+4. Interpretation and implication
+5. Broader extension
+6. Coda (optional)
+
+### Mandatory Elements (100%)
+
+These four elements appear in every Mechanism-Identifier conclusion:
+1. **Findings recap** — Summary of key findings
+2. **Mechanism affirmation** — Explicit statement that the mechanism worked as proposed
+3. **Literature integration** — Connection of findings to prior literature
+4. **Contribution claim** — Statement of what the article adds
+
+### Strongly Expected Elements (67–72%)
+
+5. **Mechanism name return (72%)** — Uses the coined mechanism name from the introduction
+6. **Mechanism extension (67%)** — Extends the mechanism to new domains, populations, or levels of analysis
+7. **Future directions (67%)** — Suggests next steps
+
+### The Mechanism Affirmation
+
+The conclusion **must** confirm that the named mechanism did explanatory work. This is the defining move.
+
+> "The replacement thesis fares particularly poorly in light of the evidence... By contrast, an approach that situates incarceration within a wider structure of coercively reinforced economic dependency is consistent with my findings." (Clegg 2025)
+
+For adjudication articles, explicitly **falsify the competing mechanism** before affirming your own.
+
+### The Mechanism Extension
+
+67% of conclusions extend the mechanism to new settings. This elevates the conclusion from summary to contribution:
+
+> "As global mobility continues to rise, studying and documenting these diffusion infrastructures holds increasing relevance for the field of sociology." (Saetre 2025)
+
+Ask: where else does this mechanism operate? What does it predict in other contexts?
+
+### Case Return
+
+If the introduction opened with a case, the conclusion **must** return to it. This produces BOOKENDS coherence and is observed with 100% frequency in case-led mechanism articles:
+
+> Diamond returns to Eduardo's village and the road that symbolizes state formation
+> Saetre returns to "Un violador en tu camino" and Chile
+> Krippner returns to the insurance market puzzle
+
+### The Coda
+
+44% of conclusions end with a resonant closing sentence that states the mechanism's broader significance without repeating findings:
+
+> "Through shaping educational chances intergenerationally and in a racialized manner, incarceration may have more fundamental and intractable consequences for society and as a mechanism for social stratification and inequality." (McCauley 2025)
+
+> "It can thus generate a new, globally hegemonic cultural script that then propels itself further across the globe through imitation, competition, and emulation." (Wimmer et al. 2025)
+
+> "Consistent with the objectives of feminists who launched the campaign for comparable worth a generation ago, the aspiration of this article is that the concept as elaborated here might offer insights into how these hierarchies can be deconstructed as well." (Krippner 2024)
+
+### What NOT to Do in the Conclusion
+
+- **Do NOT enumerate contributions** ("this article makes three contributions...") — only 1 of 18 mechanism articles does this. The mechanism *is* the contribution; demonstrate it, don't list it.
+- **Do NOT lead with limitations** — limitations appear in paragraph 4–5 after the mechanism has been affirmed.
+- **Do NOT cite more than the introduction** — conclusion citation density (0.69/100W) is lower than introduction density (0.99/100W). The conclusion is your argument, not a literature positioning exercise.
+- **Do NOT retreat from the mechanism** — saying "our findings are consistent with" after "we identify the mechanism of X" is deflation.
 
 ---
 
 ## Coherence Pattern
 
-**NOTE: Provisional — based on introduction analysis only.**
+Based on empirical analysis of all 18 Mechanism-Identifier articles.
 
-### Expected Dominant Type
-**Parallel** (estimated 55–65%): The introduction names a mechanism; the conclusion affirms it. Promises are specific and testable, making parallel delivery natural.
+### Dominant Type
+**Parallel (67%)**: The introduction names a mechanism; the conclusion affirms it. Named mechanisms create clear, testable promises that make parallel delivery natural.
+
+### Escalation
+**Present (11%)**: Mechanism explains more than initially claimed. Young & Lurie and Stitt both escalate — findings exceed introduction promises. Escalation is acceptable when grounded in evidence.
+
+### Bookends
+**Present (22%)**: Strong mirror structure between introduction and conclusion. Saetre, Clegg, Alshaibi, and Krippner all achieve bookends coherence — the conclusion returns to the opening case or puzzle with the mechanism now identified. **Case-led introductions produce bookends conclusions with 100% frequency.**
 
 ### Deflation Risk
-**Low to Moderate** (estimated 5–15%): Named mechanisms create clear expectations. If findings don't support the proposed mechanism, the article has a coherence problem.
+**Low (0% observed)**: No Mechanism-Identifier article in this corpus deflates. Named mechanisms create accountability — the article must deliver. This is the lowest deflation risk of any cluster.
 
-**Warning signs**:
+**Warning signs to monitor**:
 - Introduction names mechanism X; conclusion discusses mechanism Y
 - Multiple competing mechanisms proposed; conclusion can't distinguish between them
-- Mechanism is described as "consistent with" rather than "demonstrated by" findings
-
-### Escalation Opportunity
-**Moderate** (estimated 20–30%): Mechanism may explain more than initially claimed:
-
-> "Beyond identifying [mechanism X] in [domain A], our findings suggest the same process operates in [domain B]..."
-
-### Bookends Potential
-**Moderate**: Case-led and puzzle-led openings create natural bookend opportunities. The conclusion can return to the opening case with the mechanism now identified.
+- Mechanism described as "consistent with" rather than "demonstrated by" findings
 
 ---
 
@@ -232,7 +323,7 @@ The data mention is typically brief — 1–2 sentences, not an extended methods
 
 **Clegg 2025 — Slavery's Carceral Legacy**
 
-Selected because it is the most mechanism-dense introduction in the corpus. It names four mechanisms, tests and refutes one, proposes an alternative, then identifies sub-mechanisms.
+Selected because it demonstrates the full range of mechanism moves in both introduction and conclusion.
 
 - **Introduction**: ~1,009 words, 11 paragraphs, phenomenon-led
 - **Opening sentence**: "Scholars and activists often assume that racial inequality in the United States is in some sense a legacy of slavery."
@@ -241,14 +332,18 @@ Selected because it is the most mechanism-dense introduction in the corpus. It n
 - **Empirical puzzle**: "Cross-nationally, I find no evidence that slavery is positively correlated with later rates of incarceration. On the contrary I find a persistent negative association."
 - **Mechanism 2 (named, proposed)**: "I call this the 'economic dependency thesis.'"
 - **Sub-mechanisms (named)**: "judicial paternalism" and "judicial peonage"
-- **Citation density**: 0.51/100W (sparse — argument carried by analytical logic)
-- **Why exemplary**: Demonstrates the full range of mechanism moves — naming, testing, refuting, replacing, decomposing into sub-mechanisms.
+- **Conclusion**: 1,151 words, 12 paragraphs
+- **Conclusion opening**: Summary of findings, then explicit adjudication — "The replacement thesis fares particularly poorly in light of the evidence..."
+- **Mechanism affirmation**: Confirms economic dependency thesis; falsifies replacement thesis
+- **Extension**: "I would venture that more attention to the mechanism of elite interests might also shed light on less surprising patterns commonly associated with the legacy of slavery."
+- **Coherence**: BOOKENDS — puzzle stated in intro, resolved in conclusion
+- **Why exemplary**: Full mechanism arc — naming, testing, refuting, replacing, decomposing in intro; falsifying, affirming, extending in conclusion.
 
 ### Runner-up Exemplars
 
-**Saetre 2025 — How Protests Spread** (best puzzle-variant exemplar): Case-led opening with the Chilean anthem spreading to 60 countries. Mechanism ("complex contagion" via "wide bridges" provided by "diasporic networks") is named with three interlocking labels. Purely puzzle-driven — no gap statement at all.
+**Saetre 2025 — How Protests Spread** (best bookends exemplar): Case-led opening with Chilean anthem → puzzle → "complex contagion" mechanism. Conclusion opens with MECHANISM-RETURN: "By studying the diffusion of 'Un violador en tu camino' as a case of complex contagion..." Returns to Chile and extends to global migration. Shortest mechanism conclusion (820 words) but perfectly executed.
 
-**Krippner 2024 — Gendered Market Devices** (best concept-naming exemplar): Case-led opening with California regulation. Longest introduction in corpus (2,247 words). Demonstrates how Mechanism-Identifier and Concept-Building can overlap when the concept *is* the mechanism.
+**Krippner 2024 — Gendered Market Devices** (best concept-naming exemplar): Case-led opening with California regulation. Conclusion returns to insurance market, affirms "gendered market devices," and closes with feminist aspiration coda. Demonstrates how Mechanism-Identifier and Concept-Building overlap when the concept *is* the mechanism.
 
 ---
 
@@ -267,14 +362,17 @@ Selected because it is the most mechanism-dense introduction in the corpus. It n
 - [ ] Aim for 900–1,400 words total
 - [ ] Ensure mechanism receives more space than gap
 
-### Conclusion (Provisional)
-- [ ] Open by returning to the mechanism claim
-- [ ] Use the mechanism's name explicitly
-- [ ] Show how findings confirmed/refined the mechanism
-- [ ] Extend scope cautiously — where else might this mechanism operate?
-- [ ] Return to opening case or puzzle in the coda
-- [ ] Include limitations (bound the mechanism's scope)
-- [ ] Aim for 1,000–1,400 words
+### Conclusion
+- [ ] Plan for substantial length — at least as long as the introduction (1,200–2,200 words)
+- [ ] Open with mechanism affirmation or mechanism-return (use the mechanism's name in paragraph 1–2)
+- [ ] If case-led intro, return to the opening case
+- [ ] Affirm the mechanism explicitly — show it worked, not just that findings are "consistent with" it
+- [ ] If adjudicating: falsify the competing mechanism before affirming yours
+- [ ] Extend the mechanism to new domains, populations, or levels of analysis
+- [ ] Do NOT enumerate contributions ("this article makes three contributions...")
+- [ ] Do NOT lead with limitations — place them after mechanism affirmation (paragraph 4–5)
+- [ ] Cite less than in the introduction — the conclusion is your argument
+- [ ] End with a resonant coda (1–3 sentences) that states broader significance
 
 ### Coherence
 - [ ] Mechanism named in introduction appears in conclusion
