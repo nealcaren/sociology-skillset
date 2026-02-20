@@ -1,6 +1,6 @@
 ---
 name: contribution-framer
-description: Identify your article's contribution type and generate a cross-section vocabulary threading template. Feeds into argument-builder, article-bookends, and abstract-builder for consistent framing across all sections. Based on analysis of 115 articles from AJS, ASR, Social Problems, and Social Forces.
+description: Identify your article's contribution type and generate a cross-section vocabulary threading template. Feeds into argument-builder, article-bookends, and abstract-builder for consistent framing across all sections. Based on analysis of 197 articles from AJS, ASR, Social Problems, Social Forces, Social Movement Studies, and Mobilization.
 ---
 
 # Contribution Framer
@@ -192,6 +192,19 @@ See `clusters/` directory for detailed profiles with cross-section templates, si
 | `clusters/factor-identifying.md` | Factor-Identifying (~24%) |
 | `clusters/theory-extension.md` | Theory-Extension (~11%) |
 | `clusters/gap-filler.md` | Gap-Filler (~9%) |
+
+## Field Profiles
+
+Field profiles adjust distribution expectations and calibration guidance for particular sociology subfields. The contribution type (above) remains the primary axis; the field profile is a second dimension that modifies recommendations. Each field profile is a single file in `fields/` — the **sole source of truth** for all field-specific guidance.
+
+| Field | File | Key Differences |
+|-------|------|-----------------|
+| **Generalist** (default) | — | Benchmarks from *AJS*, *ASR*, *SP*, *SF* (n=115) |
+| **Social Movements** | `fields/social-movements.md` | PT drops to 6% (vs 27%), GF rises to 21% (vs 9%), CB is mid-range/domain-specific, FI dominates at *Mobilization* (38%). Threading moderate. Based on 82 articles from *SMS* and *Mobilization*. |
+
+Phase 0 identifies the field profile alongside the contribution type. When a field profile applies, its calibration guidance overrides generalist defaults where they conflict.
+
+**To add a new field**: Create a `fields/{field}.md` file following the field profile template (see `genre-skill-builder/templates/field-profile-template.md`). No other files need to change.
 
 ## Invoking Phase Agents
 
