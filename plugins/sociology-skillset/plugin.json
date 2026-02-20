@@ -1,6 +1,6 @@
 {
   "name": "sociology-skillset",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "Complete academic research toolkit for sociology research with 26 integrated skills supporting qualitative, quantitative, and mixed methods workflows. Use research-coordinator to orchestrate the full workflow. Skills: Zotero integration (zotero, zotero-rag), literature review (lit-search, lit-synthesis, reading-agent, argument-builder), qualitative analysis (interview-analyst), quantitative analysis (r-analyst, stata-analyst), computational text analysis (text-analyst), text classification (prompt-optimizer), findings writing (qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer), manuscript drafting (methods-writer, case-justification, article-bookends with field-specific profiles, abstract-builder), revision support (verifier, peer-reviewer, revision-coordinator, writing-editor, bibliography-builder), and meta-skills (genre-skill-builder, project-scaffold, research-coordinator).",
   "author": {
     "name": "Neal Caren"
