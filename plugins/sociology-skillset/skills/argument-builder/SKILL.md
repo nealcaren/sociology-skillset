@@ -28,19 +28,20 @@ artifacts:
   theory_section: drafts/sections/theory-section.md
 ```
 
-## The Lit Trilogy
+## The Lit Trilogy (+ Contribution Framer)
 
-This skill is part of a three-skill workflow:
+This skill is part of a multi-skill workflow:
 
 | Skill | Role | Key Output |
 |-------|------|------------|
 | **lit-search** | Find papers via OpenAlex | `database.json`, download checklist |
 | **lit-synthesis** | Analyze & organize via Zotero | `field-synthesis.md`, `theoretical-map.md`, `debate-map.md` |
+| **contribution-framer** | Identify contribution type & threading template | `contribution-profile.md` |
 | **argument-builder** | Craft argument & draft prose | Publication-ready Theory section |
 
-**Ideal input**: If users ran lit-synthesis, request their `field-synthesis.md`, `theoretical-map.md`, and `debate-map.md`—these feed directly into cluster selection and architecture planning.
+**Ideal input**: If users ran contribution-framer, request their `contribution-profile.md` — it specifies the contribution type, threading vocabulary, and theory section architecture. If they also ran lit-synthesis, request `field-synthesis.md`, `theoretical-map.md`, and `debate-map.md`.
 
-**Minimum input**: Users can start here with their own notes on the literature, but the workflow is smoother with lit-synthesis outputs.
+**Minimum input**: Users can start here with their own notes on the literature, but the workflow is smoother with upstream outputs.
 
 ## When to Use This Skill
 

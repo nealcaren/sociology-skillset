@@ -10,6 +10,19 @@ This phase ensures you make a deliberate, informed choice about which style fits
 
 ## Your Tasks
 
+### 0. Check for Contribution Profile
+
+Before doing your own cluster selection, check whether the user has a contribution profile from **contribution-framer** (`drafts/contribution-profile.md` or specified in `progress.yaml`).
+
+If a contribution profile exists:
+- Read it for the contribution type, threading vocabulary, and theory section template
+- Use the profile's contribution type to select the matching cluster (Gap-Filler → Cluster 1, Theory-Extension → Cluster 2, Concept-Building → Cluster 3, etc.)
+- Use the profile's threading vocabulary to guide term selection in the theory section
+- Skip the cluster decision tree below — the contribution-framer already made this determination
+- Proceed directly to Step 3 (Confirm with User)
+
+If no contribution profile exists, proceed with Steps 1-2 below.
+
 ### 1. Gather Project Information
 
 Collect from the user:
@@ -24,6 +37,7 @@ Collect from the user:
 - Target journal (if known)
 - Existing drafts (if revising)
 - Theoretical framework (if applicable)
+- Contribution profile from contribution-framer (if available)
 
 ### 2. Apply the Cluster Decision Tree
 

@@ -8,6 +8,24 @@ The introduction and conclusion must match the contribution type. A gap-filler a
 
 ## Your Tasks
 
+### 0. Check for Contribution Profile
+
+Before doing your own cluster assignment, check whether the user has a contribution profile from **contribution-framer** (`drafts/contribution-profile.md` or specified in `progress.yaml`).
+
+If a contribution profile exists:
+- Read it for the contribution type, threading vocabulary, and introduction/conclusion templates
+- Map the contribution type to the matching cluster:
+  - Process-Tracing → Mechanism-Identifier cluster
+  - Factor-Identifying → Mechanism-Identifier cluster (use adjudication variant)
+  - Concept-Building → Concept-Building cluster
+  - Theory-Extension → Theory-Extension cluster
+  - Gap-Filler → Gap-Filler Minimalist cluster
+- Use the profile's threading vocabulary to ensure introduction and conclusion echo the same key terms
+- Skip Step 4 (Assign Cluster Membership) below — the contribution-framer already made this determination
+- Still complete Steps 1-3 and Step 5 to gather materials and confirm scope
+
+If no contribution profile exists, proceed with all steps below.
+
 ### 1. Gather Required Materials
 
 Request these materials if not provided:
@@ -15,6 +33,7 @@ Request these materials if not provided:
 - **Findings section** (required)
 - **Abstract** (helpful but optional)
 - **Target journal** (helpful for calibrating length/style)
+- **Contribution profile** from contribution-framer (helpful — determines cluster selection)
 
 ### 1.5. Identify Target Field
 

@@ -54,11 +54,14 @@ Many sociology articles combine Discussion and Conclusion into one section. This
 
 | Skill | Purpose | Key Output |
 |-------|---------|------------|
+| **contribution-framer** | Identifies contribution type & threading template | `contribution-profile.md` — determines cluster selection here |
 | **interview-analyst** | Analyzes interview data | Codes, patterns, quote database |
 | **qual-findings-writer** | Drafts qualitative methods and findings | Methods & Findings sections |
 | **quant-findings-writer** | Drafts quantitative results sections | Publication-ready Results |
 | **mixed-methods-findings-writer** | Drafts mixed-methods findings | Integrated findings prose |
 | **article-bookends** | Drafts introduction and conclusion | Complete framing prose |
+
+**Ideal input**: If users ran contribution-framer, request their `contribution-profile.md`. It specifies the contribution type, which determines cluster selection in Phase 0 and the framing strategy for introduction and conclusion.
 
 This skill completes the article writing workflow.
 

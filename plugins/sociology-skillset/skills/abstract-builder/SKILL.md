@@ -33,11 +33,12 @@ This skill works best as part of a larger writing workflow:
 
 | Skill | Role | Key Output |
 |-------|------|------------|
+| **contribution-framer** | Identify contribution type & threading template | `contribution-profile.md` — determines archetype selection here |
 | **argument-builder** | Craft Theory/Literature section | Strategic contribution positioning |
 | **abstract-builder** | Craft abstract | Publication-ready abstract |
 | **article-bookends** | Craft introduction/conclusion | Full article framing |
 
-**Ideal sequence**: Argument-builder helps you clarify your contribution type. Abstract-builder then communicates that contribution efficiently. Introduction/conclusion expand on the same framing.
+**Ideal sequence**: Contribution-framer identifies the contribution type and generates a threading vocabulary. Argument-builder uses it to craft the Theory section. Abstract-builder then communicates that contribution efficiently. Introduction/conclusion expand on the same framing.
 
 ## When to Use This Skill
 

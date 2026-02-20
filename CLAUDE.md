@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-A Claude Code plugin marketplace containing the `sociology-skillset` plugin — more than two dozen markdown-based skills for academic sociology research covering qualitative, quantitative, and mixed methods workflows. No build system, no compiled code; skills are structured markdown files that Claude Code loads as instructions.
+A Claude Code plugin marketplace containing the `sociology-skillset` plugin — 27 markdown-based skills for academic sociology research covering qualitative, quantitative, and mixed methods workflows. No build system, no compiled code; skills are structured markdown files that Claude Code loads as instructions.
 
 ## Repository Layout
 
@@ -36,9 +36,9 @@ Skills follow a **phase-based workflow** pattern: numbered phases with pause poi
 **Project coordination**: Skills read/write `project.yaml` (canonical paths, metadata) and `progress.yaml` (workflow state, artifact registry) in the user's research project directory. The `project-scaffold` skill creates these files; `research-coordinator` orchestrates the full workflow across skills.
 
 **Skill composition**: Skills chain together with documented inputs/outputs. Example chains:
-- Qualitative: `lit-search` → `lit-synthesis` → `argument-builder` → `interview-analyst` → `qual-findings-writer` → `article-bookends`
-- Quantitative: `lit-search` → `lit-synthesis` → `argument-builder` → `r-analyst`/`stata-analyst` → `quant-findings-writer` → `article-bookends`
-- Mixed: Both qualitative and quantitative strands → `mixed-methods-findings-writer` → `article-bookends`
+- Qualitative: `lit-search` → `lit-synthesis` → `contribution-framer` → `argument-builder` → `interview-analyst` → `qual-findings-writer` → `article-bookends`
+- Quantitative: `lit-search` → `lit-synthesis` → `contribution-framer` → `argument-builder` → `r-analyst`/`stata-analyst` → `quant-findings-writer` → `article-bookends`
+- Mixed: Both qualitative and quantitative strands → `contribution-framer` → `mixed-methods-findings-writer` → `article-bookends`
 
 **Three project types**: qualitative, quantitative, and mixed methods. Skills check project type from `project.yaml` and adapt their workflows accordingly.
 
@@ -67,7 +67,7 @@ Also update the "Current Skills" section below and the skill count in this file'
 5. Bump the version in both `plugin.json` and `marketplace.json`
 6. Use `genre-skill-builder` to create new writing skills from corpus analysis
 
-## Current Skills (26)
+## Current Skills (27)
 
 **Zotero**: zotero, zotero-rag
 **Literature**: lit-search, lit-synthesis, reading-agent, argument-builder
@@ -76,6 +76,6 @@ Also update the "Current Skills" section below and the skill count in this file'
 **Computational text analysis**: text-analyst
 **Text classification**: prompt-optimizer
 **Findings writing**: qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer
-**Manuscript sections**: methods-writer, case-justification, article-bookends, abstract-builder
+**Manuscript sections**: methods-writer, case-justification, contribution-framer, article-bookends, abstract-builder
 **Revision**: verifier, peer-reviewer, revision-coordinator, writing-editor, bibliography-builder
 **Meta**: genre-skill-builder, project-scaffold, research-coordinator

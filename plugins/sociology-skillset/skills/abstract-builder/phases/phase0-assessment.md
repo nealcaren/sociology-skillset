@@ -10,6 +10,19 @@ This phase ensures you make a deliberate, informed choice about which style fits
 
 ## Your Tasks
 
+### 0. Check for Contribution Profile
+
+Before doing your own archetype selection, check whether the user has a contribution profile from **contribution-framer** (`drafts/contribution-profile.md` or specified in `progress.yaml`).
+
+If a contribution profile exists:
+- Read it for the contribution type, threading vocabulary, and abstract template
+- Use the profile's contribution type to inform archetype selection (the contribution type suggests which opening move and sentence sequence will work best)
+- Use the profile's threading vocabulary to select key terms for the abstract
+- The profile does not override archetype selection entirely (opening move is a separate dimension from contribution type), but it strongly constrains the options
+- Still complete Steps 1-2 below, using the profile to pre-populate answers
+
+If no contribution profile exists, proceed with all steps below.
+
 ### 1. Gather Project Information
 
 Collect from the user:
@@ -23,6 +36,7 @@ Collect from the user:
 **Helpful**:
 - Target journal (if known)
 - Existing draft (if revising)
+- Contribution profile from contribution-framer (if available)
 - How they want to position the research (phenomenon-led, gap-filling, etc.)
 
 ### 2. Apply the Archetype Decision Tree

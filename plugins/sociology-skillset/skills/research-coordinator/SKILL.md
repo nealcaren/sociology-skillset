@@ -34,9 +34,9 @@ Ask scoping questions, then scaffold:
 1. Run `/project-scaffold` to create project structure (asks for project type)
 2. Initialize `project.yaml` with their responses
 3. Route to appropriate workflow based on project type:
-   - **Qualitative**: Literature → interview-analyst → qual-findings-writer → article-bookends
-   - **Quantitative**: Literature → r-analyst/stata-analyst → quant-findings-writer → article-bookends
-   - **Mixed**: Literature → interview-analyst + r-analyst/stata-analyst → mixed-methods-findings-writer → article-bookends
+   - **Qualitative**: Literature → contribution-framer → interview-analyst → qual-findings-writer → article-bookends
+   - **Quantitative**: Literature → contribution-framer → r-analyst/stata-analyst → quant-findings-writer → article-bookends
+   - **Mixed**: Literature → contribution-framer → interview-analyst + r-analyst/stata-analyst → mixed-methods-findings-writer → article-bookends
 
 ## Project Type Routing
 
@@ -55,6 +55,7 @@ Use the full skill suite as documented below.
 - Use **text-analyst** for computational text analysis — topic models, sentiment, classification, embeddings (TA.0–5). Supports both R and Python.
 - Use **prompt-optimizer** when LLM-based text classification is needed (sentiment, topic, stance, frame, etc.) — it systematically develops and evaluates prompts for batch API coding (PO.0–6)
 - Use **quant-findings-writer** to draft Results section (QF.1–5)
+- Use **contribution-framer** to identify contribution type and generate threading template before writing sections
 - Use methods-writer for methods section
 - Use article-bookends for introduction/conclusion
 
@@ -78,7 +79,7 @@ This is a **meta-orchestration skill** that **drives the research process**:
 
 1. **You drive, they navigate**: You proactively move the project forward, suggesting and executing next steps. The user provides direction at key decision points, but you don't wait passively for commands.
 2. **Maintains project state** in `project-state.md`—tracking what's done, what's pending, and what depends on what
-3. **Routes to specialized skills** (lit-search, lit-synthesis, argument-builder, interview-analyst, text-analyst, prompt-optimizer, qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer, r-analyst, stata-analyst, methods-writer, case-justification, article-bookends, verifier, revision-coordinator, writing-editor)
+3. **Routes to specialized skills** (lit-search, lit-synthesis, contribution-framer, argument-builder, interview-analyst, text-analyst, prompt-optimizer, qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer, r-analyst, stata-analyst, methods-writer, case-justification, article-bookends, abstract-builder, verifier, revision-coordinator, writing-editor)
 4. **Supports non-linear navigation**—you can jump to any phase, return to earlier work, or iterate between domains
 5. **Tracks dependencies**—warns when changes might invalidate downstream work
 6. **Manages the research argument**—as it evolves through literature engagement and data analysis
