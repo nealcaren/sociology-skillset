@@ -84,7 +84,10 @@ The introduction's opening move (phenomenon-led, theory-led, etc.) is a separate
 Each contribution type produces a distinctive structure at every section level. Process-Tracing organizes findings by mechanism stages. Concept-Building organizes findings by concept dimensions. Factor-Identifying organizes findings by comparative tests. The contribution type isn't just framing — it's architecture.
 
 ### 5. Journal Calibration Matters
-ASR runs heavier on Concept-Building (32%) and lighter on Gap-Filler (6%). SP/SF have more balanced distributions. Gap-Filling alone is risky at high-status journals; consider whether the contribution can be reframed.
+ASR runs heavier on Concept-Building (32%) and lighter on Gap-Filler (6%). SP and SF have different profiles despite often being grouped together. Gap-Filling alone is risky at high-status journals; consider whether the contribution can be reframed.
+
+### 6. Venue Positioning Is a Separate Dimension from Contribution Type
+Based on coding ~230 articles on dimensions beyond contribution type, the single strongest differentiator between flagship and field-journal articles is **theoretical reach** — whether an article connects to sociology writ large or stays within its subfield. An article's contribution type (PT, CB, FI, etc.) and its venue positioning (flagship vs. field journal) are independent dimensions. The same Factor-Identifying article can be domain-internal (→ Mobilization) or domain-bridging (→ flagship).
 
 ## The 5 Contribution Types
 
@@ -128,13 +131,14 @@ See `clusters/` directory for detailed profiles with cross-section templates, si
 ## Workflow Phases
 
 ### Phase 0: Intake & Classification
-**Goal**: Gather materials and identify the contribution type.
+**Goal**: Gather materials, identify the contribution type, and assess venue positioning.
 
 **Process**:
 - Collect available materials (theory section, findings, abstract, research question)
 - Apply the decision tree to classify contribution type
+- Assess venue positioning (theoretical reach, claim scope, methods fit)
+- Identify target field and journal for calibration
 - Confirm classification with the user
-- Identify target journal for calibration
 
 **Guide**: `phases/phase0-intake.md`
 
@@ -192,6 +196,44 @@ See `clusters/` directory for detailed profiles with cross-section templates, si
 | `clusters/factor-identifying.md` | Factor-Identifying (~24%) |
 | `clusters/theory-extension.md` | Theory-Extension (~11%) |
 | `clusters/gap-filler.md` | Gap-Filler (~9%) |
+
+## Venue Positioning
+
+Beyond contribution type, venue selection depends on how the article positions itself along two key dimensions. Based on analysis of ~230 articles across six journals (sample sizes are modest — treat as suggestive patterns, not hard rules):
+
+### Theoretical Reach
+
+The sharpest differentiator between flagship and field-journal articles:
+
+- **Domain-bridging**: The article connects its findings to sociological theory beyond its immediate subfield. Flagships tend to expect this (roughly 80–97% of articles).
+- **Domain-internal**: The article advances understanding within its subfield without reaching outward. Field journals are comfortable with this (roughly 60% of articles).
+
+An article about protest decline that speaks only to social movement theory is well-positioned for SMS or Mobilization. The same article reframed to connect to institutional theory or political sociology becomes a flagship candidate. The empirical content can be identical.
+
+### Claim Scope
+
+How broadly the article's conclusions reach:
+
+- **Context-bounded** ("in this case, we found..."): Essentially absent at AJS, ASR, and SF. More common at SP and at field journals.
+- **Domain-bounded** ("for [topic area], these patterns hold..."): Accepted everywhere — the floor for most flagships.
+- **Generalizing** ("this tells us about how [broad process] works"): Especially common at ASR and SF.
+
+### Journal Profiles (Suggestive)
+
+Each journal tends toward a distinctive character. These patterns are based on small samples (n=20–69 per journal) and should be treated as tendencies, not requirements:
+
+| Venue | Methods tendency | Theoretical reach | Claim scope tendency |
+|-------|-----------------|-------------------|---------------------|
+| **AJS** (n=33) | Quantitative-heavy; mechanism-focused | Very high domain-bridging | Domain-bounded is the norm; context-bounded rare |
+| **ASR** (n=69) | Broad; all methods | High domain-bridging | Frequently generalizing |
+| **Social Problems** (n=28) | Qualitative-friendly; interviews and ethnography common | High domain-bridging | More tolerant of context-bounded than other flagships |
+| **Social Forces** (n=20) | Quantitative; admin data, experiments, computational | High domain-bridging | Frequently generalizing; context-bounded rare |
+| **SMS** (n=38) | Qualitative; single-case; non-US; theoretical pieces | Often domain-internal | Context-bounded common |
+| **Mobilization** (n=41) | Quantitative; large-N | Often domain-internal | Context-bounded common |
+
+**Key pattern**: SF and Mobilization tend to use similar methods (quantitative, large-N), but differ on theoretical reach and claim scope. SP and SMS share qualitative methods, but SP tends to demand domain-bridging theory where SMS does not.
+
+Phase 0 includes a venue positioning check alongside contribution type classification.
 
 ## Field Profiles
 

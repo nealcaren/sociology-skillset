@@ -65,29 +65,56 @@ If a field profile exists for the user's target field, read the corresponding `f
 
 **Note**: Field profiles are additive — they adjust distribution expectations on top of the contribution-type classification. Both dimensions apply simultaneously.
 
-### 5. Calibrate for Target Journal
+### 5. Assess Venue Positioning
+
+Before calibrating for a specific journal, assess two dimensions that shape venue fit. These patterns are based on small samples (~20–70 articles per journal) and should be treated as suggestive tendencies:
+
+**a. Theoretical reach**: Does the article connect to sociological theory beyond its subfield?
+
+- **Domain-bridging** → flagship positioning is viable. The article speaks to general sociological questions (inequality, institutions, culture, power) through its specific topic.
+- **Domain-internal** → field journal is the natural home. The article advances understanding within its subfield. This is a legitimate and valued contribution at field-specific venues.
+
+**b. Claim scope**: How broadly do the conclusions reach?
+
+- **Context-bounded** ("in this case, we found...") → tends to be uncommon at AJS, ASR, and SF. More accepted at SP and at field journals.
+- **Domain-bounded** ("for [topic area], these patterns hold...") → accepted at all venues.
+- **Generalizing** ("this tells us about [broad social process]") → common at ASR and SF.
+
+**c. Methods-venue fit** (suggestive patterns):
+
+- Interview-only or ethnographic work tends to appear at SP, ASR (occasionally), or field journals — less common at AJS or SF
+- Large-N administrative/archival work appears everywhere but is especially concentrated at AJS, SF, and Mobilization
+- SP tends to be the most methodologically diverse flagship
+
+Present these observations to the user as tendencies, not rules. A single article can always be the exception.
+
+### 6. Calibrate for Target Journal
 
 If the user names a target journal, apply these calibrations:
 
-| Journal | Note |
-|---------|------|
-| AJS | Mechanism-heavy (PT + FI combined ~55%). Concept-Building also strong. Gap-Filler rare |
-| ASR | Concept-Building is modal (32%). Gap-Filler very rare (6%). Theory-Extension at ~12% |
-| SP/SF | Most balanced distribution. Gap-Filler more accepted (~10%). All types viable |
-| SMS | CB-heavy (33%), GF-tolerant (31%). PT rare (6%). Qualitative-friendly |
-| Mobilization | FI-heavy (38%), CB strong (36%). PT rare (7%). Quantitative adjudication niche |
+| Journal | Contribution type notes | Venue positioning notes |
+|---------|------------------------|------------------------|
+| AJS | Mechanism-heavy (PT + FI combined ~55%). CB also strong. GF rare | Quantitative-leaning; very high domain-bridging; context-bounded claims rare |
+| ASR | CB is modal (32%). GF very rare (6%). TE at ~12% | Broad methods; high domain-bridging; frequently generalizing claims |
+| Social Problems | Balanced distribution. GF more accepted (~10%). All types viable | Qualitative-friendly (interviews, ethnography common); high domain-bridging; more tolerant of context-bounded claims than other flagships |
+| Social Forces | Balanced distribution. GF more accepted (~10%). All types viable | Quantitative-leaning (admin data, experiments, computational); high domain-bridging; frequently generalizing; context-bounded rare |
+| SMS | CB-heavy (33%), GF-tolerant (31%). PT rare (6%). Qualitative-friendly | Single-case and non-US work common; often domain-internal; context-bounded accepted |
+| Mobilization | FI-heavy (38%), CB strong (36%). PT rare (7%). Quantitative adjudication niche | Large-N and US-centric; often domain-internal; context-bounded accepted |
 
 **Flagship warning**: If the user has a Gap-Filler article targeting AJS or ASR, flag this and discuss whether reframing as PT (add a mechanism) or CB (coin a term) would strengthen the submission.
 
 **Field journal note**: If targeting SMS or Mobilization, GF is a normal, accepted contribution type — do not pressure users to reframe. PT framing may be better positioned at a flagship.
 
-### 6. Confirm with User
+**SP vs. SF note**: These two journals have different tendencies despite often being grouped together. SP tends to welcome qualitative, case-based work with theoretical ambition. SF tends toward quantitative work with generalizing claims. Consider which journal fits the article's methods and claim scope.
+
+### 7. Confirm with User
 
 Present your classification with:
 1. **Contribution type** and rationale (which decision tree question triggered it)
 2. **Confidence level** (high if clear, moderate if borderline, low if hybrid)
 3. **Alternative type** (if the article could go either way, name the runner-up)
-4. **Journal fit** (if target journal named, how this type fits)
+4. **Venue positioning** (theoretical reach and claim scope assessment)
+5. **Journal fit** (if target journal named, how this type and positioning fit)
 
 ## Output
 
@@ -106,7 +133,12 @@ Present your classification with:
 
 **Field profile**: [Social Movements / None — which field profile applies, if any]
 
-**Journal fit**: [How this type fits the target journal's distribution]
+**Venue positioning**:
+- Theoretical reach: [Domain-bridging / Domain-internal — with brief rationale]
+- Claim scope: [Context-bounded / Domain-bounded / Generalizing]
+- Methods fit: [Brief note on how methods align with target venue tendencies]
+
+**Journal fit**: [How this type and positioning fit the target journal]
 
 **Key terms identified** (preliminary):
 1. [Term 1 — likely threading term]

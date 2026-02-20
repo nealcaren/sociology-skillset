@@ -48,9 +48,12 @@ Also apply when the article's core topic involves protest, collective action, ac
 |---------|----|----|----|----|-----|-----------|
 | *Social Movement Studies* | **33%** | 22% | **31%** | 6% | 11% | CB-heavy, GF-tolerant, qualitative-friendly |
 | *Mobilization* | 36% | **38%** | 13% | 7% | 7% | FI-heavy, quantitative adjudication niche |
-| *AJS* | ~27% | ~27% | ~6% | **~33%** | ~6% | PT-dominant, mechanism-heavy |
-| *ASR* | **32%** | ~21% | 6% | ~24% | ~12% | CB-modal, GF-rare |
-| *SP/SF* | ~24% | ~22% | ~12% | ~24% | ~14% | Most balanced distribution |
+| *AJS* | ~27% | ~27% | ~6% | **~33%** | ~6% | PT-dominant, mechanism-heavy, quantitative |
+| *ASR* | **32%** | ~21% | 6% | ~24% | ~12% | CB-modal, GF-rare, broad methods |
+| *Social Problems* | ~24% | ~22% | ~12% | ~24% | ~14% | Qualitative-friendly flagship; interviews and ethnography common |
+| *Social Forces* | ~24% | ~22% | ~12% | ~24% | ~14% | Quantitative flagship; admin data, experiments, computational |
+
+**Note on SP vs. SF**: These two journals have different methodological tendencies despite similar contribution type distributions. SP tends to publish qualitative, case-based work; SF tends toward quantitative, large-N work. Both require domain-bridging theory, but SP is more tolerant of context-bounded claims. For SM articles: qualitative SM work with domain-bridging theory fits SP; quantitative SM work with domain-bridging theory fits SF.
 
 ## Decision Tree Adjustments for SM
 

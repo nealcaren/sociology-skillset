@@ -1,30 +1,47 @@
-# Framing Your Campus Protest Decline Paper for Social Movement Studies Venues
+# Framing Your Campus Protest Decline Paper: Two Paths
 
 **To:** Marty
 **From:** Neal
-**Re:** How to frame the CCC campus protest paper for social movement studies journals
+**Re:** How to frame the CCC campus protest paper — flagship journals vs. social movement journals
 
 ---
 
-This memo walks through how to position your paper for a social movement studies audience (*Mobilization*, *Social Movement Studies*, or an SM-oriented special issue). Your paper documents the dramatic decline of campus protests between 2024 and 2025, using CCC data with public/private institution type and red/blue state context. The guidance draws on genre analysis of 80 SM articles from *Mobilization* (n=41) and *Social Movement Studies* (n=39) for introduction and conclusion conventions, argument-style coding of 25 SM articles for Theory section architecture, and 80 *Social Problems*/*Social Forces* articles as generalist benchmarks.
+Your paper documents the dramatic decline of campus protests between 2024 and 2025, using CCC data with public/private institution type and red/blue state context. The core question is: **where do you send it, and how does that change everything?**
 
-The memo covers three sections: **Introduction**, **Theory/Background**, and **Conclusion**. For each, I present two strategic options depending on whether the paper's primary strength is the empirical picture (Option A) or a theoretical argument (Option B).
+The venue choice isn't just about prestige — it determines what kind of contribution you're making and how you frame the entire article. Based on genre analysis of 197 articles across six journals, flagship and field-specific journals reward fundamentally different contribution types. This memo walks through both paths.
 
 ---
 
-## Part 1: Introduction
+## The Fork: What Kind of Contribution Are You Making?
 
-### Know your audience
+| | Path A: Social Movement Journals | Path B: Flagship Journals |
+|---|---|---|
+| **Target venues** | *Mobilization*, *Social Movement Studies* | *ASR*, *AJS*, *Social Problems*, *Social Forces* |
+| **Viable contribution types** | Gap-Filler (21% of SM articles), Factor-Identifying (30%), Concept-Building (34%) | Process-Tracing (~27%), Factor-Identifying (~24%), Concept-Building (~27%) |
+| **What the data needs to do** | Document a pattern the field hasn't seen | Explain HOW or WHY something works, or adjudicate competing accounts |
+| **Theoretical ambition** | Can be moderate — the empirical picture can carry the paper | Must be high — the data must speak to general social theory |
+| **Gap-Filler risk** | Low — GF is routine and accepted | High — GF is rare at AJS (6%) and ASR (6%); risky without reframing |
+| **Audience** | Specialists who know SM theory; don't define basic concepts | Generalists who need context; define your terms |
 
-SM readers are specialists. They don't need to be told that protests matter or that studying movements is important. Stakes-led openings ("The right to protest is fundamental to democracy...") are rare in SM venues: only about 8% of articles open that way. The audience is pre-committed. Don't define basic concepts like repertoires, political opportunity, or protest cycles. Assume familiarity.
+---
+
+# PATH A: Social Movement Journals
+
+**Best if**: The empirical pattern is the main contribution — the CCC data showing what happened to campus protest, and how the decline varied by institution type and state politics. You're not proposing a new theory; you're documenting something the field hasn't seen.
+
+**Contribution type**: Gap-Filler or Factor-Identifying (both well-accepted at SM venues).
+
+SM readers are specialists. They don't need to be told that protests matter. Stakes-led openings ("The right to protest is fundamental to democracy...") are rare (~8%). The audience is pre-committed. Assume familiarity with repertoires, political opportunity, protest cycles.
+
+## Path A Introduction
 
 ### Pick the right opening strategy
 
-Five structural patterns recur across SM introductions; for your paper, two are strong candidates:
+Two SM structural patterns fit your paper:
 
-#### Option A: Movement-Wave Survey
+#### Option A1: Movement-Wave Survey (Gap-Filler)
 
-The most common SM opening (~31% of articles). Open by naming the broader wave of campus protest, from the post-2020 surge through the Gaza solidarity encampments, then survey instances across campuses to establish the panoramic view before narrowing to the puzzle of decline. This works well because your CCC data lets you show the big picture before zooming in.
+The most common SM opening (~31%). Name the broader wave of campus protest, survey instances, then narrow to the puzzle of decline.
 
 **Structure:**
 1. Name the wave/cycle/era
@@ -36,222 +53,214 @@ The most common SM opening (~31% of articles). Open by naming the broader wave o
 
 > "Campus protest surged in [period], with mobilizations at [types of institutions] around [issues]. Yet by 2025, [dramatic decline]. This article examines [what happened and why]."
 
-**Benchmarks:** ~630 words median, 3–5 paragraphs, mention data in the intro, cite in paragraph 1 (76%). Roadmap is venue-dependent: include for *SMS* (~69%), omit for *Mobilization* (~22%) unless the structure is complex.
+**Benchmarks:** ~630 words median, 3–5 paragraphs, mention data in the intro, cite in paragraph 1 (76%). Roadmap is venue-dependent: include for *SMS* (~69%), omit for *Mobilization* (~22%).
 
-**Best when:** The paper's strength is the empirical picture: the CCC data showing what happened and how it varied by institution type and state politics.
+**Best when**: The CCC data showing what happened is the story.
 
-#### Option B: Field-Reflexive Pivot
+#### Option A2: Field-Reflexive Pivot (Factor-Identifying)
 
-The second most common SM opening (~26% of articles). Open by engaging SM theory directly (protest cycle theory, demobilization, the chilling effects literature) and diagnose what the field has missed or gotten wrong.
+The second most common SM opening (~26%). Engage SM theory directly and diagnose what the field has missed.
 
 **Structure:**
 1. State how SM has approached protest cycles/demobilization
 2. Diagnose a limitation or blind spot
-3. Propose an alternative or extension
+3. Propose adjudication criteria
 4. Preview the contribution
 
 **Example opening logic:**
 
-> "Social movement scholars have developed robust theories of protest escalation, but the dynamics of rapid demobilization remain undertheorized. Existing accounts of movement decline emphasize [X], yet the speed of the 2024–2025 campus protest collapse suggests [Y]."
+> "Social movement scholars have developed robust theories of protest escalation, but the dynamics of rapid demobilization remain undertheorized. One camp argues decline is driven by state repression; another emphasizes internal movement dynamics. The speed of the 2024–2025 campus protest collapse offers a natural test."
 
-**Benchmarks:** ~630 words median, 4 paragraphs, 76% cite in paragraph 1, theoretical gaps in ~53%. Roadmap venue-dependent (SMS ~69%, Moby ~22%).
-
-**Best when:** You're making a theoretical argument about *why* protests decline, not just documenting *that* they did. The public/private and red/blue state findings tell us something new about how political opportunity or repression works.
+**Best when**: The red/blue state and public/private patterns let you adjudicate between competing explanations — repression vs. internal dynamics, institutional vs. political context.
 
 ### General SM introduction conventions
 
-Whichever option you choose:
+- **Keep it short.** ~630 words, 3–5 paragraphs.
+- **Roadmaps are venue-dependent.** *SMS* ~69%; *Mobilization* ~22%.
+- **Cite in your first paragraph.** ~76% of SM articles do.
+- **Frame the gap theoretically.** "No one has looked at this" isn't enough. SM readers want to know what the decline means for theory.
+- **Assume specialist vocabulary.** Don't define repertoires, political opportunity structures, or protest cycles.
 
-- **Keep it short.** SM introductions average ~630 words and 3–5 paragraphs. Don't pad.
-- **Roadmaps are venue-dependent.** ~69% of *SMS* articles include roadmaps; only ~22% of *Mobilization* articles do. If targeting Moby, omit unless the structure is complex.
-- **Cite in your first paragraph.** About 76% of SM articles do. Engage the scholarly debate immediately.
-- **Frame the gap theoretically.** Over half of SM articles frame their gap as theoretical, not just empirical (~53%). "No one has looked at the 2024–2025 decline" is not enough; SM readers want to know what the decline *means for theory*. The empirical novelty gets you in the door; the theoretical stakes keep you in the room.
-- **Avoid stakes-led openings.** Only ~8% of SM articles open this way. The audience already cares.
-- **Assume specialist vocabulary.** Don't define repertoires, collective action frames, political opportunity structures, or other foundational SM concepts.
+## Path A Theory Section
 
----
+**Key SM difference**: The dominant arc structure is **building-blocks** (52%), assembling concepts sequentially rather than funneling from broad to narrow. Dialogue arcs (Position A vs. Position B) are absent (0%) in SM venues.
 
-## Part 2: Theory / Background Section
+A second distinctive feature: 32% of SM theory sections weave case material into the theoretical discussion. This is legitimate, provided each case reference advances the argument.
 
-Two strategies map onto the introduction options above.
+### If Gap-Filler (pairs with Movement-Wave Survey intro)
 
-**Key SM difference**: Social movement theory sections build arguments differently from generalist sociology. Based on argument-style coding of 25 SM articles (15 *Mobilization*, 10 *SMS*), the dominant arc structure is **building-blocks** (52%), assembling concepts sequentially rather than funneling from broad to narrow. **Dialogue arcs** (staging Position A vs. Position B) are absent in SM venues. If your paper adjudicates a debate, frame the debate in the introduction and use building-blocks or problem-response in the theory section.
-
-A second distinctive feature: **32% of SM theory sections weave case material into the theoretical discussion**. This is legitimate, not a sign of poor organization, provided each case reference advances the argument rather than just providing background.
-
-### Option A: Gap-Filler Minimalist
-
-**Use this if** your primary contribution is the empirical picture: the CCC data showing what happened to campus protest between 2024 and 2025, and how the decline varies by institution type and state politics. You're not proposing a new theory; you're documenting a pattern the field hasn't seen yet.
-
-**Architecture:** Building-blocks arc (SM default, 52% of SM articles), ~1,000–1,400 words, 6–10 paragraphs, 0–2 subsections. Unlike the generalist funnel (broad → narrow), building-blocks assembles concepts sequentially: Concept A → Concept B → Concept C → synthesis.
+**Architecture:** Building-blocks arc, ~1,000–1,400 words, 6–10 paragraphs, 0–2 subsections.
 
 **Paragraph sequence:**
-
-1. **Establish the phenomenon** (1–2 paragraphs). Situate campus protest within the broader protest cycle, from the post-2020 surge through issue diversification to the 2024 campus mobilizations. Cite broadly to show you know the landscape. *SM-specific option*: you can weave case context into this section (32% of SM theory sections do this). If your CCC data illuminates the concepts as you introduce them, brief illustrations are legitimate, e.g., "The campus protest wave peaked in spring 2024, with CCC recording [N] events in a single month."
-
-2. **Build the conceptual blocks** (2–3 paragraphs). Instead of "synthesizing what we know" as a generalist funnel would, build each concept that matters for your argument as a distinct block. For example: Block 1 = protest cycles and demobilization; Block 2 = institutional variation (public/private) and how it shapes mobilization; Block 3 = state-level political context and repression/chilling effects. Each block should feel like it's adding a piece to the argument, not just surveying literature.
-
-3. **Mark the turn** (1 paragraph). This is the most important paragraph in the section: the pivot from "what we know" to "what we don't." SM theory sections use several turn types:
-
-   - **Gap statement** (40% of SM articles): "Research has documented the drivers of campus mobilization... Yet the dynamics of rapid *demobilization* remain largely unexplored, particularly how institutional characteristics and state-level political contexts mediate the pace and extent of protest decline."
-   - **Limitation critique** (24% of SM articles, especially strong for *Mobilization* at 33%): "Existing theories of protest cycles cannot account for the speed of the 2024–2025 campus protest collapse, nor for the stark variation between institutional settings."
-
-   The turn should be **assertive**: confident that this gap or limitation exists. Don't hedge it.
-
-4. **State your questions** (1 paragraph). Directly state what you're examining. If the paper is quantitative, consider numbered hypotheses; 40% of SM articles include them, and all are in quantitative studies.
-
-**Key calibration points:**
+1. **Establish the phenomenon** (1–2 paras). Situate campus protest within the broader cycle. You can weave CCC data into this section — 32% of SM theory sections do this.
+2. **Build the conceptual blocks** (2–3 paras). Block 1 = protest cycles and demobilization; Block 2 = institutional variation (public/private); Block 3 = state-level political context and repression.
+3. **Mark the turn** (1 para). Gap statement (40% of SM articles) or limitation critique (24%, strong at *Mobilization*): "Yet the dynamics of rapid demobilization remain largely unexplored, particularly how institutional characteristics and state-level political contexts mediate the pace and extent of protest decline."
+4. **State your questions** (1 para). Consider numbered hypotheses if quantitative (40% of SM articles include them).
 
 | Feature | Target |
 |---------|--------|
 | Word count | 1,000–1,400 |
-| Paragraphs | 6–10 |
-| Subsections | 0–2 |
 | Unique citations | 25–35 |
 | Literature balance | Substantive-heavy or balanced |
-| Citation style | Efficient parenthetical strings |
 | Hedging on gap claim | Assertive |
 
-**Common pitfall:** A generic gap. "More research is needed on protest decline" is weak. "We don't know how the interaction of university governance structure and state political context shaped the unprecedented speed of the 2024–2025 campus protest collapse" is strong.
+### If Factor-Identifying (pairs with Field-Reflexive Pivot intro)
 
-**Pairs with:** Movement-Wave Survey introduction.
-
----
-
-### Option B: Theory-Extension Framework Applier
-
-**Use this if** you're applying an established theoretical framework (political opportunity structure, repression/demobilization theory, the chilling effects literature) to the specific case of campus protest decline. The point is to show the framework illuminates something new in this context.
-
-**Architecture:** Building-blocks arc (SM default), ~1,300–1,800 words, 8–12 paragraphs, 1–4 subsections. Funnel is possible but building-blocks is the natural fit for SM's multi-concept theoretical traditions.
+**Architecture:** Building-blocks arc, ~1,000–1,600 words, 6–12 paragraphs.
 
 **Paragraph sequence:**
+1. **Build Block 1**: Present the repression/chilling effects literature
+2. **Build Block 2**: Present the internal dynamics literature (burnout, issue fatigue, strategic retreat)
+3. **Show the tension**: Brief paragraph noting competing predictions
+4. **Position your study**: "This study uses CCC data to evaluate whether decline patterns vary systematically by political context (supporting repression accounts) or appear uniformly (supporting internal dynamics accounts)."
 
-1. **Establish the empirical phenomenon** (1 paragraph). Brief grounding in the decline, just enough to motivate the theory.
+**Important**: Do NOT use a dialogue arc. Build each competing account as a separate block, then show the tension. SM readers expect building-blocks, not Point/Counterpoint.
 
-2. **Introduce the framework** (2–3 paragraphs). Give the framework a full exposition. Use **author-as-subject citations** for the canonical theorists:
+## Path A Conclusion
 
-   > "According to Tarrow (1998), protest cycles are shaped by shifts in political opportunity..."
-   > "Earl (2003) distinguishes between coercive and channeling forms of repression..."
+SM articles typically use a standalone "Conclusion" rather than separate Discussion + Conclusion (~66%). Plan for 350–1,130 words (median ~700).
 
-   Be **confident and unhedged** when describing the established theory. The theory is established and you're not defending it.
-
-3. **Review prior applications** (2–3 paragraphs). Show where the framework has been applied before. This shows it's a productive tool and sets up the extension.
-
-   > "Scholars have applied political opportunity theory to national-level protest cycles (Author Year), cross-national mobilization (Author Year), and movement-state interactions (Author Year)."
-
-4. **Mark the extension gap** (1 paragraph). Two turn types work well here:
-
-   **Extension claim** (28% of SM turns): Show the framework hasn't been applied to your domain:
-   > "Yet scholars have not examined how [framework] operates in the context of campus-specific protest, where institutional governance structures (public vs. private) introduce a distinct mediating layer between state-level political opportunity and movement outcomes."
-
-   **Limitation critique** (24% of SM turns, strong for *Mobilization*): Challenge what the framework misses:
-   > "Yet [framework] assumes [X], which cannot account for the institutional variation between public and private university settings, where the mechanisms of political opportunity operate through fundamentally different governance structures."
-
-5. **Bridge to your study** (1 paragraph). Explain *why* this extension matters. What does applying the framework to campus protest decline reveal that we couldn't see otherwise?
-
-   > "We argue that extending [framework] to the campus context reveals how institutional type mediates the translation of state-level political signals into protest suppression, a mechanism obscured in studies of non-institutional protest."
-
-**Key calibration points:**
-
-| Feature | Target |
-|---------|--------|
-| Word count | 1,300–1,800 |
-| Paragraphs | 8–12 |
-| Subsections | 1–4 |
-| Unique citations | 30–45 |
-| Literature balance | Theory-heavy (~78%) |
-| Citation style | Author-as-subject for canonical theorists; parenthetical for applications |
-| Hedging | Confident on the framework; modest on the extension |
-
-**Subsection headings might be:** "Political Opportunity and Protest Cycles," "Institutional Mediation of Repression," "The Campus Context."
-
-**Common pitfall:** If you find yourself *modifying* the framework rather than applying it, proposing a new mechanism or challenging its core claims, you're moving into concept-building territory. Theory-Extension means showing an existing tool does new work, not building a new tool.
-
-**Pairs with:** Field-Reflexive Pivot introduction.
+- **Open with findings summary** (~57%). "This study examined X and found Y."
+- **State the contribution** (required). "This study contributes to our understanding of protest demobilization by documenting how [pattern]" (GF) or "These findings support [account] over [rival account]" (FI).
+- **Include future directions** (~81%; near-universal at *Mobilization* at ~97%).
+- **Limitations**: *Mobilization* ~82%; *SMS* ~20%. Match to venue.
+- **Skip policy implications** unless problem-driven (only ~19% include them).
+- **Callback to introduction** (~89%).
+- **End with a field-reflexive coda** (~44%): "Scholars of protest cycles will need to attend to the role of institutional type in mediating demobilization."
 
 ---
 
-### A third possibility: Problem-Driven (Debate-Resolver)
+# PATH B: Flagship Journals
 
-Your red/blue state variable could frame a debate. If there's a genuine tension in the literature, say one camp argues protest decline is driven by state repression while another emphasizes internal movement dynamics (burnout, issue fatigue, strategic retreat), you could frame your Theory section as adjudicating that debate.
+**Best if**: The findings tell us something genuinely new about how political opportunity, repression, or institutional mediation works — not just in the campus context, but as general social theory. The empirical decline is the vehicle; the theoretical insight is the destination.
 
-**Important SM-specific note**: Do NOT use a dialogue arc (Position A vs. Position B staged as a back-and-forth) in the theory section. Dialogue arcs are **absent** (0%) in SM venues. Instead, use **building-blocks** or **problem-response** (28% of SM articles):
+**Contribution type**: You need Process-Tracing, Factor-Identifying, or Concept-Building. Gap-Filler alone is risky (6% at AJS, 6% at ASR).
 
-**Building-blocks structure:**
+Flagship readers are generalists. They may study inequality, culture, organizations — not necessarily movements. You need to make them care about campus protest, and you do that by connecting to broader theoretical questions.
 
-1. **Build Block 1**: Present the repression/chilling effects literature as a conceptual block
-2. **Build Block 2**: Present the internal dynamics literature as a separate block
-3. **Show the tension**: A brief paragraph noting the competing predictions
-4. **Position your study**: "This study uses CCC data to evaluate whether decline patterns vary systematically by political context (supporting repression accounts) or appear uniformly across contexts (supporting internal dynamics accounts)."
+## Path B: Three Framing Options
 
-**Problem-response structure** (alternative):
+### Option B1: Factor-Identifying (Adjudication)
 
-1. **Establish the problem**: Why existing accounts of protest decline are insufficient
-2. **Show what each approach gets right and wrong**
-3. **Propose your data as a way to discriminate**
+**Punchline**: Not X but Y. Your red/blue state and public/private data let you adjudicate competing accounts of protest decline.
 
-**Calibration:** ~1,000–1,600 words, 6–12 paragraphs, substantive-heavy literature balance, 20–40 unique citations.
+**How it works**: Frame two (or three) competing explanations for rapid demobilization — state repression, institutional governance, internal dynamics — and show which one the data supports. The CCC data becomes a natural experiment.
 
-This works only if there's a **genuine scholarly debate** to adjudicate. If the field mostly agrees on one explanation and you're extending it, go with Theory-Extension. If there's no theoretical debate and you're documenting an empirical pattern, go with Gap-Filler.
+**Introduction** (~750–950 words):
+- Open with the phenomenon (campus protest decline — phenomenon-led, 74% of flagship intros)
+- Establish that scholars disagree about what drives rapid demobilization
+- Name the competing accounts explicitly
+- Preview that the public/private × red/blue variation discriminates between them
+- No roadmap needed unless the paper is complex
+
+**Theory section** (~1,400–1,800 words):
+- Funnel arc (the flagship default, not building-blocks)
+- Give each competing account equal theoretical weight
+- Show what each predicts about institutional and political variation
+- The turn: "Existing studies cannot discriminate between these accounts because they lack cross-institutional variation in political context. The 2024–2025 campus protest decline, observed across public and private institutions in both red and blue states, provides a natural test."
+
+**Conclusion** (~1,200–1,500 words):
+- Affirm which account the evidence supports
+- Explain why the losing account falls short
+- Extend to implications beyond campus protest — what does this tell us about repression/demobilization writ large?
+- Callback to opening phenomenon
+
+**Best for**: *ASR* (FI ~21%), *SP/SF* (FI ~22%), *AJS* (FI ~27%).
+
+**Signal phrases**: "contrary to," "not X but Y," "which factor explains."
+
+### Option B2: Process-Tracing (Mechanism)
+
+**Punchline**: Shows HOW rapid demobilization works, step by step.
+
+**How it works**: Name a mechanism — something like "institutional chill" or "cascading demobilization" — and trace how political signals translate into protest suppression through institutional intermediaries.
+
+**Introduction** (~900–1,400 words, the AJS mode):
+- Open with phenomenon or case (a specific campus, a specific moment of collapse)
+- Name the mechanism within the first 2–4 paragraphs
+- Develop the mechanism over 2–4 paragraphs (this is distinctive to AJS/ASR — don't do this at SM venues)
+- No roadmap, no contribution list
+
+**Theory section** (~1,400–1,800 words):
+- Derive the mechanism steps from existing theory
+- Show how political opportunity + institutional structure + repression chain together
+- Each step should be named and traceable in the data
+
+**Findings**: Organized by mechanism stages, not by variable or theme.
+
+**Conclusion** (~1,200–2,200 words):
+- Affirm the mechanism worked
+- Use the mechanism's name
+- Extend to new domains ("If institutional chill operates on campuses, where else might it suppress mobilization?")
+- Zero deflation — if you name a mechanism, you must deliver it
+
+**Best for**: *AJS* (PT ~33%), *ASR* (PT ~24%).
+
+**Signal phrases**: "works through," "the mechanism by which," "produces."
+
+**Risk**: You need to actually trace a multi-step process. If the data shows patterns but not stages, FI is safer.
+
+### Option B3: Concept-Building
+
+**Punchline**: Names WHAT is happening with a new term.
+
+**How it works**: Coin a concept — "institutional chill," "partisan demobilization," "governance-mediated repression" — that captures something the existing vocabulary misses. The concept must do work in the analysis.
+
+**Introduction** (~800–1,000 words):
+- Open with phenomenon
+- Motivate the conceptual lacuna: why don't existing terms (repression, chilling effects, movement decline) capture what's happening?
+- Introduce the coined term and define it
+- Preview how the concept organizes the analysis
+
+**Theory section** (~1,500–2,000 words):
+- Building-blocks arc: assemble the components of the new concept
+- Show what existing concepts miss
+- Define the concept's dimensions and boundaries
+- The turn: "We introduce [concept] to capture [what existing vocabulary cannot]"
+
+**Findings**: Organized by concept dimensions.
+
+**Conclusion**: Consolidate the concept, show portability to other contexts.
+
+**Best for**: *ASR* (CB 32% — the modal type), *AJS* (CB ~27%).
+
+**Signal phrases**: "we introduce," "we term," "the concept of."
+
+**Risk**: The concept must do genuine work. If "institutional chill" just means "repression by universities," it's jargon, not a contribution. The concept needs to capture something the existing vocabulary cannot.
+
+## Path B Conclusion Conventions
+
+Flagship conclusions are longer and do heavier work than SM conclusions:
+
+| Feature | SM Venues | Flagships |
+|---------|-----------|-----------|
+| Word count | ~700 median | ~1,173 median |
+| Limitations | Venue-dependent (20–82%) | ~69% |
+| Future directions | ~81% | ~76% |
+| Callback | ~89% | **100%** |
+| Policy implications | ~19% | More common if problem-driven |
 
 ---
 
-## Part 3: Conclusion
+## Decision Guide
 
-SM articles typically use a standalone "Conclusion" section rather than a separate Discussion + Conclusion (~66% do this). That means the conclusion does more work: stating the contribution, engaging theory, and pointing to future directions while still providing closure. Plan for 350–1,130 words (median ~700) and 3–12 paragraphs (median ~6). *Mobilization* conclusions run longer (~812 words median) because they include limitations and future directions as near-default elements. *SMS* conclusions are more compact (~600 words median).
+| Question | If yes... |
+|----------|-----------|
+| Is the main story the empirical pattern of decline? | **Path A (SM venues), Gap-Filler** |
+| Does the data adjudicate between competing explanations? | **Either path, Factor-Identifying** — but sharper at flagships |
+| Can you name a multi-step mechanism? | **Path B (flagships), Process-Tracing** — unusual at SM venues |
+| Can you coin a term that captures something new? | **Path B (flagships), Concept-Building** — domain-specific CB also works at SM venues |
+| Are the findings context-specific to campus protest? | Leans **Path A** — SM readers value context-bound contributions |
+| Do the findings speak to general social theory? | Leans **Path B** — flagships want generalizable insight |
 
-### Opening the conclusion
+### My Take
 
-Open with a findings summary, not a restatement of the puzzle. SM readers prefer "This study examined X and found Y" over "This study set out to understand..."
+The data's natural strength — CCC showing the decline across institution types and state contexts — supports **Factor-Identifying** at either venue type. The red/blue × public/private variation is a natural adjudication design. The question is scope:
 
-| Conclusion Opening Move | SM Frequency |
-|--------------------------|---------------|
-| Summary-of-findings | ~57% |
-| Theoretical-framing | ~19% |
-| Contribution-claim | ~14% |
-| Puzzle-restatement | ~5% |
+- **At *Mobilization***: Frame as adjudicating within SM theory (repression vs. internal dynamics). FI is the plurality mode there (38%). Use building-blocks arc. Moderate threading. Include limitations.
+- **At a flagship**: Frame as adjudicating competing accounts of how political context mediates rapid demobilization, with implications beyond campus protest. Funnel arc. Strong threading. Higher word counts. Must connect to general theory.
 
-### What to include
-
-- **Contribution claim** (required). Since there's often no separate Discussion section, the conclusion must state explicitly what the article adds to SM theory. For Option A: "This study contributes to our understanding of protest demobilization by documenting how [pattern]." For Option B: "These findings extend [framework] by showing how [mechanism] operates at the campus level."
-
-- **Future directions** (~81% of SM conclusions include them; near-universal in *Mobilization* at ~97%). Frame as productive next steps for the field, not as apologies for what you didn't do. "Future research might examine whether the institutional mechanisms we identify operate similarly in non-campus protest contexts."
-
-- **Callback to introduction** (~89% of SM conclusions, usually via vocabulary echo). Return to the key theoretical terms from your introduction. If you opened with a wave survey, echo the wave language. If you opened with a field-reflexive pivot, echo the theoretical vocabulary. Formal "We began by noting..." callbacks are optional.
-
-### What to skip or minimize (venue-dependent)
-
-- **Limitations.** This is the biggest venue-level split. *Mobilization* includes limitations in ~82% of conclusions because it's a methods-serious journal where bounding claims is expected. *SMS* includes them in only ~20%. **If targeting Moby**, include a limitations paragraph. **If targeting SMS**, include only if methodological constraints genuinely affect interpretation. Don't add boilerplate.
-
-- **Policy implications.** Only ~19% of SM conclusions discuss policy. The default ending is theoretical/field-level, not practical. Unless the paper is explicitly problem-driven, emphasize what the findings mean for theory over what administrators should do.
-
-### How to end
-
-End with a field-reflexive or resonant statement, not "more research is needed."
-
-| Coda Type | SM Frequency | Example Logic |
-|-----------|---------------|---------------|
-| Field-reflexive | ~44% | "Scholars of protest cycles will need to attend to the role of institutional type in mediating demobilization." |
-| Future-vision | ~23% | "Whether the campus protest infrastructure dismantled in 2024–2025 can be rebuilt depends on factors this study begins to illuminate." |
-| Resonant-statement | ~21% | "What appears as movement decline may be better understood as movement dispersal into less visible repertoires." |
-
----
-
-## Choosing Between the Options
-
-| | Option A: Gap-Filler + Movement-Wave Survey | Option B: Theory-Extension + Field-Reflexive Pivot |
-|---|---|---|
-| **Primary contribution** | The empirical picture | The theoretical insight |
-| **Theory section arc** | Building-blocks (SM default) | Building-blocks (SM default) |
-| **Theory section weight** | Lean (1,000–1,400 words) | Moderate (1,300–1,800 words) |
-| **Literature balance** | Substantive-heavy | Theory-heavy |
-| **Opening move** | Name the wave, survey campuses, narrow to decline | Engage demobilization theory, diagnose blind spot |
-| **Turn type** | Gap statement (40% of SM articles) | Extension claim (28%) or limitation critique (24%, strong for Moby) |
-| **Conclusion emphasis** | What the CCC data shows the field didn't know | What the campus case reveals about the theory |
-| **Risk** | Can feel incremental ("here's more data") without theoretical stakes | Framework must actually organize the analysis, not just decorate it |
-| **Best if** | The public/private × red/blue patterns are the story | The public/private × red/blue patterns *explain* something about how POS/repression works |
-
-My recommendation: **Start with Option A** if the empirical pattern is the main contribution, **Option B** if the findings tell us something genuinely new about how political opportunity or repression theory works. Either way, use a **building-blocks arc** in the Theory section (the SM default). Assemble your conceptual pieces one by one rather than funneling from broad to narrow. The turn sentence needs to be specific about what the CCC data can show that we didn't know before. If targeting *Mobilization*, a limitation-critique turn is a strong choice.
+If you want to aim high, **FI at a flagship** (especially *SP/SF*, which has the most balanced distribution) is the strongest positioning. If the theoretical stakes feel like a stretch, **FI or GF at *Mobilization*** is a strong, well-calibrated submission.
 
 Happy to talk through any of this.
 
