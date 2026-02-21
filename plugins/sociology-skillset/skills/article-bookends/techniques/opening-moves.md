@@ -4,19 +4,21 @@ This guide details the five types of opening moves used in sociology interview a
 
 ## Overview
 
-| Opening Move | Frequency (SP/SF) | Frequency (AJS) | Best For |
-|--------------|-------------------|------------------|----------|
-| Phenomenon-led | 74% | 55% | Gap-Filler, Concept-Building, Synthesis, Mechanism-Identifier |
-| Stakes-led | 11% | 9% | Problem-Driven, Gap-Filler |
-| Case-led | 8% | 12% | Mechanism-Identifier (puzzle), Problem-Driven, Synthesis |
-| Theory-led | 6% | 3% | Theory-Extension |
-| Question-led | 1% | 15% | Mechanism-Identifier (at AJS) |
+| Opening Move | SP/SF | AJS | ASR | Combined (~) | Best For |
+|---|---|---|---|---|---|
+| Phenomenon-led | 74% | 55% | 33% | ~50% | Gap-Filler, Concept-Building, Synthesis, Mechanism-Identifier |
+| Stakes-led | 11% | 9% | 23% | ~18% | Problem-Driven, Gap-Filler |
+| Theory-led | 6% | 3% | 25% | ~15% | Theory-Extension, all clusters at ASR |
+| Case-led | 8% | 12% | 13% | ~10% | Mechanism-Identifier (puzzle), Problem-Driven, Synthesis |
+| Question-led | 1% | 15% | 6% | ~5% | Mechanism-Identifier (at AJS) |
+
+**Venue note**: Phenomenon-led dominates at SP/SF but is only one of three roughly equal strategies at ASR (phenomenon, theory, stakes). When targeting ASR, theory-led and stakes-led openings are fully conventional, not marked choices.
 
 ---
 
-## 1. Phenomenon-Led Opening (74%)
+## 1. Phenomenon-Led Opening (~50%; 74% at SP/SF, 33% at ASR)
 
-Opens with an empirical statement about the world. The most common approach.
+Opens with an empirical statement about the world. The most common approach overall, though less dominant at ASR.
 
 ### What It Does
 - Grounds the article in observable reality
@@ -55,7 +57,7 @@ Opens with an empirical statement about the world. The most common approach.
 
 ---
 
-## 2. Stakes-Led Opening (11%)
+## 2. Stakes-Led Opening (~18%; 11% at SP/SF, 23% at ASR)
 
 Opens with an importance claim about why the topic matters.
 
@@ -94,7 +96,7 @@ Opens with an importance claim about why the topic matters.
 
 ---
 
-## 3. Case-Led Opening (8%)
+## 3. Case-Led Opening (~10%; 8% at SP/SF, 13% at ASR)
 
 Opens with a concrete case, scene, or vignette.
 
@@ -133,7 +135,7 @@ Opens with a concrete case, scene, or vignette.
 
 ---
 
-## 4. Theory-Led Opening (6%)
+## 4. Theory-Led Opening (~15%; 6% at SP/SF, 25% at ASR)
 
 Opens with a theoretical framework or concept.
 
@@ -172,7 +174,7 @@ Opens with a theoretical framework or concept.
 
 ---
 
-## 5. Question-Led Opening (1%)
+## 5. Question-Led Opening (~5%; 1% at SP/SF, 6% at ASR, 15% at AJS)
 
 Opens with a direct question.
 

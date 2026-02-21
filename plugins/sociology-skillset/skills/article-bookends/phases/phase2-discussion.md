@@ -27,9 +27,19 @@ The Discussion is where your article earns its contribution. Findings alone are 
 | **Project implications** | Theoretical/policy significance | 1-2 paragraphs |
 | **Future directions** | Point to next steps | 1 paragraph |
 
-**Total target**: 700-1,100 words, 4-6 paragraphs
+**Total target**: 700-1,500 words, 4-10 paragraphs (ASR articles tend toward the upper end)
 
-## Step 1: Claim the Contribution
+## Step 1: Choose Your Opening Move
+
+Discussion sections open in one of three ways:
+
+- **Restatement** (~42%): Return to the motivating question or puzzle. "This study set out to understand..."
+- **Contribution claim** (~28%): Lead with what you add. "This article advances our understanding of..."
+- **Findings summary** (~26%): Open with the key result. "Our analysis reveals that..."
+
+Choose based on your emphasis: restatement if the puzzle drives the article, contribution claim if the theoretical addition is central, findings summary if the results speak loudest.
+
+## Step 2: Claim the Contribution
 
 State explicitly what your article adds. Match to your cluster type:
 
@@ -50,7 +60,7 @@ State explicitly what your article adds. Match to your cluster type:
 
 **Key**: Be specific. "Contributes to our understanding" is weak; "documents how X leads to Y through Z mechanism" is strong.
 
-## Step 2: Integrate with Prior Literature
+## Step 3: Integrate with Prior Literature
 
 Connect your findings to existing scholarship. This demonstrates field knowledge and positions your contribution.
 
@@ -69,7 +79,7 @@ Connect your findings to existing scholarship. This demonstrates field knowledge
 
 **Avoid**: Listing every paper you read. Focus on the 3-5 most relevant works.
 
-## Step 3: Acknowledge Limitations
+## Step 4: Acknowledge Limitations
 
 Limitations are expected (present in 69% of articles). Handle them confidently, not apologetically.
 
@@ -91,7 +101,7 @@ Limitations are expected (present in 69% of articles). Handle them confidently, 
 
 **Critical**: End limitations paragraph by pivoting back to what you CAN claim.
 
-## Step 4: Project Implications
+## Step 5: Project Implications
 
 Draw out what your findings mean beyond the immediate study.
 
@@ -111,7 +121,7 @@ Draw out what your findings mean beyond the immediate study.
 - Theory-Extension: Affirm framework's broader applicability
 - Problem-Driven: Emphasize policy implications
 
-## Step 5: Point to Future Directions
+## Step 6: Point to Future Directions
 
 Identify productive next steps. This is a research agenda, not a limitations dump.
 
@@ -171,7 +181,7 @@ checklist for this section.
 ## Output
 
 Provide:
-1. **Complete Discussion draft** (700-1,100 words; adjust per field profile if applicable)
+1. **Complete Discussion draft** (700-1,500 words; adjust per field profile if applicable)
 2. **Annotation** noting:
    - Contribution claim type
    - Literatures engaged

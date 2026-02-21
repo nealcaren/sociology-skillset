@@ -32,35 +32,35 @@ Not every introduction includes every move, but the order is fairly consistent.
 
 Based on cluster assignment:
 
-### Phenomenon-Led (74% of corpus)
+### Phenomenon-Led (~50%; 74% at SP/SF, 33% at ASR)
 Opens with an empirical statement about the world.
 
 > "Neighborhood is an important theme in research on prisoner reentry and desistance from offending, but scholars and practitioners typically use this to refer to a single location."
 
 **Best for**: Gap-Filler, Concept-Building, Synthesis
 
-### Stakes-Led (11%)
+### Stakes-Led (~18%; 23% at ASR)
 Opens with an importance claim.
 
 > "The unprecedented growth in rates of U.S. incarceration since the early 1970s has prompted scholars to rethink basic understandings of punishment, inequality, and the state."
 
-**Best for**: Problem-Driven, Gap-Filler
+**Best for**: Problem-Driven, Gap-Filler. Fully conventional at ASR.
 
-### Case-Led (8%)
-Opens with a concrete case or scene.
-
-> "In Cleveland, Ohio, the federal Department of Justice declared that the city's police department engaged in a 'pattern or practice' of using excessive force."
-
-**Best for**: Problem-Driven, Synthesis
-
-### Theory-Led (6%)
+### Theory-Led (~15%; 25% at ASR)
 Opens with a theoretical framework.
 
 > "The concept of the 'glass cliff' refers to the tendency for women and racial/ethnic minorities to be appointed to leadership positions during times of crisis."
 
-**Best for**: Theory-Extension (30% use this)
+**Best for**: Theory-Extension. At ASR, theory-led openings are common across all clusters, not just theory-extension.
 
-### Question-Led (1% SP/SF; 15% AJS)
+### Case-Led (~10%)
+Opens with a concrete case or scene.
+
+> "In Cleveland, Ohio, the federal Department of Justice declared that the city's police department engaged in a 'pattern or practice' of using excessive force."
+
+**Best for**: Problem-Driven, Synthesis, Mechanism-Identifier
+
+### Question-Led (~5%; 15% at AJS, 6% at ASR)
 Opens with a direct question.
 
 > "How do people make sense of their reliance on unjust institutions?"
@@ -130,25 +130,25 @@ If the article is complex (multiple findings, synthesis of traditions), include 
 
 > "The article proceeds as follows. We first review [literature], developing our theoretical framework. We then describe our methods and setting. The findings section demonstrates [X]. We conclude by discussing implications for [Y]."
 
-**When to skip**: If the structure is obvious (standard empirical article), the roadmap can feel formulaic. Use your judgment.
+**When to skip**: If the structure is obvious (standard empirical article), the roadmap can feel formulaic. **ASR almost never includes roadmaps (4%)**; SP/SF includes them more often (~40%). Match venue conventions.
 
 ## Cluster-Specific Adjustments
 
 ### Gap-Filler
-- Keep short: 600-750 words
+- Keep short: 600-850 words (longer at ASR)
 - Mention data early (within first 3 paragraphs)
 - Efficient positioning; don't overexplain
 
 ### Theory-Extension
-- Consider theory-led opening
+- Consider theory-led opening (especially at ASR)
 - Name the framework clearly
 - Explain why extension to this domain matters
 
 ### Concept-Building
-- Longer introduction justified: 800-1,000 words
+- Longer introduction justified: 800-1,200 words
 - Motivate why existing concepts fail
 - Introduce the new concept with precision
-- Include roadmap
+- Include roadmap at SP/SF; skip at ASR
 
 ### Synthesis
 - Name multiple traditions explicitly

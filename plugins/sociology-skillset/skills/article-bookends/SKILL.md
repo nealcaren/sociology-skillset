@@ -67,25 +67,24 @@ This skill completes the article writing workflow.
 
 ## Core Principles (from Genre Analysis)
 
-Based on systematic analysis of 80 sociology interview articles from *Social Problems* and *Social Forces*, plus 33 articles from *American Journal of Sociology*. These are **generalist defaults** — field-specific profiles (see Field Profiles below) may adjust benchmarks for particular subfields:
+Based on systematic analysis of 80 sociology interview articles from *Social Problems* and *Social Forces*, 33 articles from *American Journal of Sociology*, and 69 articles from *American Sociological Review* (n=182). These are **generalist defaults** — field-specific profiles (see Field Profiles below) may adjust benchmarks for particular subfields:
 
 ### 1. Introductions Are Efficient; Conclusions Do Heavy Work
-- **Median introduction**: 761 words, 6 paragraphs
-- **Median conclusion**: 1,173 words, 8 paragraphs
-- **Ratio**: Conclusions are 67% longer than introductions
+- **Median introduction**: ~850 words, 7 paragraphs (longer at ASR: median 1,092)
+- **Median discussion/conclusion**: ~1,500 words, 12 paragraphs (longer at ASR: median 1,947)
 - Introductions *subtract* (narrow to the gap); conclusions *expand* (project to significance)
 
-### 2. Phenomenon-Led Openings Dominate (74%)
-- Most introductions open with empirical phenomena, not questions
-- Question-led openings are rare (1%)—they feel performative
-- Theory-led openings cluster in theory-extension articles (30%)
-- Show the puzzle; don't just assert it exists
+### 2. Opening Move Diversity
+- **Phenomenon-led** is most common (~50%) but not overwhelming
+- **Theory-led** (~20%) and **stakes-led** (~18%) are substantial alternatives
+- **Case-led** (~10%) and **question-led** (~5%) are less common but legitimate
+- The distribution varies by venue: phenomenon-led dominates at SP/SF (74%) but is only one of three roughly equal strategies at ASR (33% phenomenon, 25% theory, 23% stakes)
 
 ### 3. Parallel Coherence Is Normative (66%)
 - Introductions make promises; conclusions must keep them
 - Escalation (20%) is acceptable—exceeding promises reads as discovery
 - Deflation (6%) is penalized—overpromising damages credibility
-- **Callbacks to introduction are universal (100%)**
+- **Callbacks to introduction are common at SP/SF** but less frequent at ASR (~10%); aim for vocabulary echoes at minimum
 
 ### 4. Match Framing to Contribution Type
 Six cluster styles require different approaches:
@@ -125,7 +124,7 @@ Six cluster styles require different approaches:
 - Establish stakes and context
 - Identify the gap/puzzle
 - Preview data and argument
-- Include roadmap (optional but recommended for complex articles)
+- Include roadmap (optional; common at SP/SF but rare at ASR)
 
 **Guides**:
 - `phases/phase1-introduction.md` (main workflow)
@@ -212,7 +211,7 @@ Field profiles adjust benchmarks and add field-specific patterns for particular 
 
 | Field | File | Key Differences |
 |-------|------|-----------------|
-| **Generalist** (default) | — | Benchmarks from *Social Problems* and *Social Forces* (n=80) |
+| **Generalist** (default) | — | Benchmarks from *SP*, *SF*, *AJS*, and *ASR* (n=182) |
 | **Social Movements** | `fields/social-movements.md` | Theory-led openings 4× generalist rate, balanced opening move distribution, early citations, conclusion-only default, field-reflexive codas, 5 structural patterns. Venue-specific calibration for roadmaps (*SMS* 69% vs *Moby* 22%) and limitations (*SMS* ~20% vs *Moby* 82%). Based on combined corpus (n=80). |
 
 Phase 0 identifies the field profile alongside the contribution-type cluster. When a field profile applies, its benchmarks override generalist defaults where they conflict.
@@ -228,42 +227,43 @@ Phase 0 identifies the field profile alongside the contribution-type cluster. Wh
 
 ## Key Statistics (Benchmarks)
 
-These are **generalist defaults** based on the *Social Problems* / *Social Forces* corpus. When a field profile applies (e.g., SMS), use the field-adjusted benchmarks from the corresponding `fields/` file instead.
+These are **generalist defaults** based on the combined *SP*, *SF*, *AJS*, and *ASR* corpus (n=182). When a field profile applies (e.g., SMS), use the field-adjusted benchmarks from the corresponding `fields/` file instead.
 
 ### Introduction Benchmarks
 
-| Feature | Typical Value |
-|---------|---------------|
-| Word count | 600-950 words |
-| Paragraphs | 4-8 |
-| Opening move | Phenomenon-led (74%) |
-| Data mention | Middle of section |
-| Roadmap | Present in 40% |
+| Feature | Typical Value | ASR Note |
+|---------|---------------|----------|
+| Word count | 600–1,100 words | ASR median 1,092; SP/SF shorter |
+| Paragraphs | 5–10 | ASR median 10; SP/SF median 6 |
+| Opening move | Phenomenon-led (~50%), theory-led (~20%), stakes-led (~18%) | ASR more evenly distributed |
+| Data mention | Middle of section | Consistent across venues |
+| Roadmap | Present in ~25% | Rare at ASR (4%); more common at SP/SF (40%) |
 
 ### Discussion Benchmarks
 
-| Feature | Typical Value |
-|---------|---------------|
-| Word count | 700-1,100 words |
-| Paragraphs | 4-6 |
-| Contribution claim | Required |
-| Literature integration | 1-2 paragraphs |
-| Limitations | Present in 69% |
-| Implications | 1-2 paragraphs |
-| Future directions | Present in 76% |
+| Feature | Typical Value | ASR Note |
+|---------|---------------|----------|
+| Word count | 700–1,500 words | ASR runs longer |
+| Paragraphs | 4–10 | ASR median higher |
+| Contribution claim | Required | |
+| Opening move | Restatement (42%), contribution claim (28%), findings summary (26%) | |
+| Literature integration | 1-2 paragraphs | |
+| Limitations | Present in ~67% | Consistent across venues |
+| Implications | 1-2 paragraphs | |
+| Future directions | Present in ~77% | Consistent across venues |
 
 ### Conclusion Benchmarks
 
-| Feature | Typical Value |
-|---------|---------------|
-| Word count | 300-500 words |
-| Paragraphs | 2-4 |
-| Opening move | Restatement (71%) |
-| Findings summary | Brief (1-2 paragraphs) |
-| Callback | **Required (100%)** |
-| Coda | Resonant closing sentence |
+| Feature | Typical Value | ASR Note |
+|---------|---------------|----------|
+| Word count | 300–600 words | Longer when combined with discussion |
+| Paragraphs | 2-4 | |
+| Opening move | Restatement (~50%) | Contribution claim and findings summary also common |
+| Findings summary | Brief (1-2 paragraphs) | |
+| Callback | **Strongly recommended** | Universal at SP/SF; ~10% explicit at ASR |
+| Coda | Resonant closing sentence | |
 
-**Note**: When Discussion and Conclusion are combined (common), total word count is 900-1,450 words across 6-10 paragraphs.
+**Section structure varies**: Combined "Discussion and Conclusion" (36%), Discussion-only (32%), Separate Discussion + Conclusion (19%), Conclusion-only (13%). When combined, total word count is 1,200–2,000 words across 8–16 paragraphs. ASR articles tend toward the upper end of these ranges.
 
 ### Coherence Benchmarks
 

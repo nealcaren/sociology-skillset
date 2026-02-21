@@ -27,9 +27,9 @@ A weak conclusion just repeats findings or fades out. Don't let that happen.
 | **Callback to introduction** | Return to opening themes/images | 2-3 sentences |
 | **Resonant coda** | Memorable closing | 1-3 sentences |
 
-**Total target**: 300-500 words, 2-4 paragraphs
+**Total target**: 300-600 words, 2-4 paragraphs
 
-**Note**: This is shorter than old-style "Discussion and Conclusion" sections because the Discussion (Phase 2) handled most of the interpretive work.
+**Note**: This is shorter than old-style "Discussion and Conclusion" sections because the Discussion (Phase 2) handled most of the interpretive work. When Discussion and Conclusion are combined into a single section, the total target is 1,200-2,000 words (ASR articles tend toward the upper end).
 
 ## Step 1: Restate the Puzzle
 
@@ -62,7 +62,7 @@ Recap the main findings efficiently. This is NOT a rewrite of Findings or Discus
 
 ## Step 3: Craft the Callback
 
-**The callback is REQUIRED** (100% of benchmark articles have them). Return to the introduction—same themes, vocabulary, or images.
+**Callbacks are strongly recommended.** They are near-universal at SP/SF but less explicit at ASR (~10% have overt callbacks). At minimum, echo key vocabulary from the introduction. Return to the introduction's themes, vocabulary, or images.
 
 **Callback strategies**:
 
