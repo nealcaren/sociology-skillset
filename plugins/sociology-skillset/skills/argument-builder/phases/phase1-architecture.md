@@ -85,11 +85,11 @@ Example for a Gap-Filler:
 ```
 1. Housing instability literature (2 paragraphs)
    - Key: Desmond, Pattillo
-   - Function: Context + synthesis
+   - Function: Synthesis of findings
 
 2. Family identity literature (2 paragraphs)
    - Key: Lareau, Hays
-   - Function: Theoretical lens
+   - Function: Theoretical framework
 
 3. Doubled-up households specifically (1 paragraph)
    - Key: Pilkauskas
@@ -124,23 +124,26 @@ Example outline for Theory-Extender:
 ## Overall Arc: Funnel
 ## Target Length: 1,500 words (10 paragraphs)
 
-### Introduction (no subsection)
-- P1: PROVIDE_CONTEXT - Housing precarity context [3 citations]
-- P2: SYNTHESIZE - Literature on housing instability [5 citations]
-
 ### [Framework Name] (subsection)
-- P3: DESCRIBE_THEORY - Introduce framework [3-4 citations]
-- P4: DESCRIBE_THEORY - Elaborate dimensions [3 citations]
-- P5: SYNTHESIZE - Prior applications [6 citations]
+- P1: DESCRIBE_THEORY - Introduce framework [3-4 citations]
+- P2: DESCRIBE_THEORY - Elaborate dimensions [3 citations]
+- P3: SYNTHESIZE - Prior applications [6 citations]
+
+### [Substantive Domain] (subsection)
+- P4: SYNTHESIZE - What we know about [domain] [5 citations]
+- P5: SYNTHESIZE - Patterns and findings [4 citations]
 
 ### Extending to [Domain]
 - P6: IDENTIFY_GAP - Framework not applied to X [2 citations] ← TURN
 - P7: BRIDGE - Why framework fits this domain [3 citations]
 
 ### This Study
-- P8: STATE_QUESTIONS - Research questions [1-2 citations]
-- P9: PREVIEW - Argument preview [0 citations]
+- P8: STATE_HYPOTHESES - Directional predictions [1-2 citations]
+  *or* STATE_QUESTIONS - Research questions [0-1 citations]
+- P9: BRIDGE_TO_METHODS - Transition to data [1-2 citations]
 ```
+
+**Note on opening**: The theory section opens with the scholarly conversation (DESCRIBE_THEORY or SYNTHESIZE), not with phenomenon framing. The introduction already established the stakes. If a subsection shifts to new empirical terrain not covered in the introduction, use PROVIDE_CONTEXT to ground it — but this is rare and mid-section, not the default opener.
 
 ### 6. Estimate Calibration Targets
 

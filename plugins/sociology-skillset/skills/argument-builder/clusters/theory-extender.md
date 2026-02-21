@@ -28,13 +28,13 @@ Use the Theory-Extender approach when:
 
 The standard Theory-Extender follows this sequence:
 
-1. **PROVIDE_CONTEXT** - Establish the empirical phenomenon
-2. **DESCRIBE_THEORY** - Introduce framework X (the named theorist/framework)
-3. **SYNTHESIZE** - Review prior applications of framework X
-4. **IDENTIFY_GAP** - Show that framework X has not been applied to domain Y
-5. **BRIDGE** - Explain how X illuminates Y
+1. **DESCRIBE_THEORY** - Introduce framework X (the named theorist/framework)
+2. **SYNTHESIZE** - Review prior applications of framework X
+3. **IDENTIFY_GAP** - Show that framework X has not been applied to domain Y
+4. **BRIDGE** - Explain how X illuminates Y
+5. **BRIDGE_TO_METHODS** *or* **STATE_HYPOTHESES** - Transition to your study
 
-The key move is showing that an **existing tool** can do **new work**.
+The key move is showing that an **existing tool** can do **new work**. The section opens with the framework, not with phenomenon framing — the introduction already established the empirical context.
 
 ## Signature Sentence Patterns
 

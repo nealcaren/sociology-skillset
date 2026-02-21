@@ -81,10 +81,12 @@ Debate-Resolvers must be **even-handed** in presenting both sides. Don't tip you
 
 ### Characteristic Paragraph Sequence
 
-1. **PROVIDE_CONTEXT** - Establish the phenomenon (extensive)
-2. **PROVIDE_CONTEXT** - Additional contextual detail
-3. **SYNTHESIZE** - Review prior research (often policy-focused)
-4. **IDENTIFY_GAP** - What we don't yet know
+1. **SYNTHESIZE** - Review prior research on the phenomenon (often policy-focused)
+2. **SYNTHESIZE** - Additional findings or contextual patterns
+3. **IDENTIFY_GAP** - What we don't yet know
+4. **BRIDGE_TO_METHODS** *or* **STATE_QUESTIONS** - Transition to your study
+
+Note: If the empirical context requires substantial grounding not covered in the introduction, one PROVIDE_CONTEXT paragraph may open the section. But default to SYNTHESIZE — let the literature do the contextual work.
 
 ### Signature Sentence Patterns
 

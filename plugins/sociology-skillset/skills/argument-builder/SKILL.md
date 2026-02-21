@@ -134,7 +134,7 @@ See `clusters/` directory for detailed profiles with characteristic paragraph se
 **Goal**: Map paragraph functions and sequence.
 
 **Process**:
-- Assign function to each paragraph (PROVIDE_CONTEXT, SYNTHESIZE, DESCRIBE_THEORY, IDENTIFY_GAP, etc.)
+- Assign function to each paragraph (DESCRIBE_THEORY, SYNTHESIZE, IDENTIFY_GAP, BRIDGE_TO_METHODS, STATE_HYPOTHESES, etc.)
 - Plan citation deployment for each paragraph
 - Identify anchor sources for key claims
 - Sequence paragraphs to build toward the turn
@@ -205,7 +205,7 @@ The skill includes detailed reference guides in `techniques/`:
 | Guide | Purpose |
 |-------|---------|
 | `sentence-toolbox.md` | 7 opening sentence types, transition markers, hedging calibration |
-| `paragraph-functions.md` | 9 paragraph functions with exemplars |
+| `paragraph-functions.md` | 12 paragraph functions with exemplars and empirical frequencies |
 | `citation-patterns.md` | 4 citation integration patterns |
 | `turn-formula.md` | 4-part turn structure with placement guidance |
 | `calibration-norms.md` | Statistical benchmarks from the analysis |

@@ -1,44 +1,59 @@
 # Paragraph Functions
 
-Every paragraph in a Theory section serves a recognizable function. Readers should be able to identify what each paragraph is *doing* even without subheadings. This guide catalogs the 9 primary paragraph functions.
+Every paragraph in a Theory section serves a recognizable function. Readers should be able to identify what each paragraph is *doing* even without subheadings. This guide catalogs the 12 primary paragraph functions.
+
+**Empirical basis**: Function frequencies and sequences were derived from analysis of 102 articles published in *American Journal of Sociology* (2024-2025) and *American Sociological Review* (2024-2026).
 
 ---
 
-## The 9 Functions
+## The 12 Functions
 
 | Function | Purpose | Typical Position |
 |----------|---------|------------------|
-| **PROVIDE_CONTEXT** | Establish phenomenon, population, or setting | Early; often opens section |
-| **DESCRIBE_THEORY** | Explicate a theoretical framework or concept | After context; throughout |
-| **SYNTHESIZE** | Summarize patterns across multiple studies | Middle; builds cumulative case |
+| **DESCRIBE_THEORY** | Explicate a theoretical framework or concept | Often opens section (~70% of articles); throughout |
+| **SYNTHESIZE** | Summarize patterns across multiple studies | Early-to-middle; builds cumulative case |
+| **PROVIDE_CONTEXT** | Ground a subsection in empirical reality | Mid-section when shifting domains; rare as opener |
 | **CONTRAST** | Present competing positions or perspectives | Middle; debate framing |
 | **CRITIQUE** | Identify limitations of existing approaches | Before gap or new concept |
 | **IDENTIFY_GAP** | Mark what remains unknown or unstudied | Middle; the "turn" |
 | **BRIDGE** | Connect literatures or show how framework applies | After gap; synthesis payoff |
-| **STATE_QUESTIONS** | Articulate research questions or previews | Late; often closes section |
-| **PREVIEW** | Summarize what's coming in the findings | Final paragraph |
+| **BRIDGE_TO_METHODS** | Transition from theory to the data/methods section | Final paragraph (~34% of articles) |
+| **STATE_HYPOTHESES** | Articulate formal directional predictions | Late; often closes section in quant work (~28%) |
+| **STATE_QUESTIONS** | Articulate open-ended research questions | Late; closes section in qual/interpretive work (~7%) |
+| **THEORETICAL_SYNTHESIS** | Restate the core argument in summary form | Final paragraph in theory-building work (~11%) |
+| **PREVIEW** | Summarize what the findings will show | Final paragraph; rare (~4% of articles) |
+
+---
+
+## How Theory Sections Actually Open
+
+The introduction has already established the phenomenon and stakes. The theory section's job is to engage the scholarly conversation. In AJS and ASR:
+
+- **~70% open with DESCRIBE_THEORY or SYNTHESIZE** — jumping directly into the scholarly conversation
+- **~20% open with PROVIDE_CONTEXT** — but only when the theory section shifts to a new empirical domain not covered in the introduction
+- **~6% open with a conceptual definition** (a variant of DESCRIBE_THEORY)
+
+**Default opening**: DESCRIBE_THEORY or SYNTHESIZE. Use PROVIDE_CONTEXT only when the subsection's empirical terrain genuinely differs from what the introduction established.
+
+---
+
+## How Theory Sections Actually Close
+
+The closing move depends on the article's epistemological stance:
+
+| Closing Function | Frequency | Typical In |
+|---|:-:|---|
+| **BRIDGE_TO_METHODS** | 34% | All types; the section simply hands off to methods |
+| **STATE_HYPOTHESES** | 28% | Quantitative, experimental, deductive designs |
+| **THEORETICAL_SYNTHESIS** | 11% | Qualitative, interpretive, theory-building |
+| **STATE_QUESTIONS** | 7% | Qualitative, interpretive |
+| **PREVIEW** | 4% | Rare; mostly qualitative |
+
+**Journal difference**: ASR closes on hypotheses at ~35%; AJS at ~12%. AJS has more theoretical synthesis and argument preview closings, reflecting its stronger interpretive tradition.
 
 ---
 
 ## Detailed Function Profiles
-
-### PROVIDE_CONTEXT
-
-**Purpose**: Ground the reader in the empirical world—the phenomenon, population, setting, or historical moment under study.
-
-**Typical markers**:
-- Opens with phenomena, not scholars
-- Statistics, trends, or historical developments
-- "As [condition] has [changed]..."
-- "The [phenomenon] affects..."
-- "In [year/decade], [development]..."
-
-**Example paragraph**:
-> As housing costs have outpaced wage growth, many parents face difficulty housing their families. Over 3 million households with children doubled up with friends or family in 2019, and doubling-up rates have risen since the Great Recession. Low-income and Black families are disproportionately likely to double up, often as a strategy to avoid homelessness or manage poverty.
-
-**When to use**: Opening the section; grounding each subsection in empirical reality.
-
----
 
 ### DESCRIBE_THEORY
 
@@ -53,7 +68,7 @@ Every paragraph in a Theory section serves a recognizable function. Readers shou
 **Example paragraph**:
 > The concept of "recognition" draws on several conceptual traditions. According to Honneth (2003), recognition operates through three spheres: love (intimate relationships), rights (legal status), and esteem (social value). When individuals are denied recognition—through disrespect, exclusion, or degradation—they experience psychological harm and may struggle to develop positive self-relations. Recognition thus serves as both a psychological resource and a political demand.
 
-**When to use**: After context; whenever introducing theoretical apparatus.
+**When to use**: The most common opening function for the theory section. Also used throughout whenever introducing theoretical apparatus.
 
 ---
 
@@ -70,7 +85,24 @@ Every paragraph in a Theory section serves a recognizable function. Readers shou
 **Example paragraph**:
 > Research on legal cynicism demonstrates that distrust of legal institutions is patterned by neighborhood context, race, and prior contact with police (Kirk and Papachristos 2011; Sampson and Bartusch 1998). Studies consistently find that residents of high-crime neighborhoods express cynicism about police responsiveness and fairness, even as they continue to call 911 for emergencies (Desmond et al. 2016). This literature highlights the coexistence of cynicism and reliance—a paradox that existing frameworks have struggled to explain.
 
-**When to use**: Building the evidence base before identifying the gap; showing what "we know."
+**When to use**: Building the evidence base before identifying the gap; showing what "we know." Also a common opening move, especially for Gap-Fillers.
+
+---
+
+### PROVIDE_CONTEXT
+
+**Purpose**: Ground a subsection in the empirical world when shifting to a new domain, population, or setting not already established in the introduction.
+
+**Typical markers**:
+- Opens with phenomena, not scholars
+- Statistics, trends, or historical developments
+- "As [condition] has [changed]..."
+- "In [year/decade], [development]..."
+
+**Example paragraph**:
+> Congress passed the WWII Serviceman's Readjustment Act of 1944, better known as the GI Bill of 1944, to ease the transition back into civilian life for returning veterans. The law provided benefits to returning soldiers, including free healthcare, education subsidies, and business, home, and farm loans on favorable terms (Altschuler and Blumin 2009). The focus of the present study is the housing benefits of the GI Bill.
+
+**When to use**: Mid-section when a new subsection shifts to different empirical terrain. **Not the default section opener** — the introduction has already established the phenomenon. Use only when the theory section engages a new domain the introduction did not cover.
 
 ---
 
@@ -143,26 +175,85 @@ Every paragraph in a Theory section serves a recognizable function. Readers shou
 
 ---
 
+### BRIDGE_TO_METHODS
+
+**Purpose**: Transition from the theoretical framework to the data/methods section. The most common closing move in AJS and ASR (~34%).
+
+**Typical markers**:
+- "To address these questions, we use..."
+- "We now turn to the data..."
+- "I examine this using..."
+- Statement of analytical strategy without full methods detail
+- May briefly name the data source or research design
+
+**Example paragraph**:
+> To test these expectations, we draw on linked administrative records from the Swedish population registers, which allow us to observe the full earnings trajectories of parents and their adult children across all employers in the Swedish economy. These data offer several advantages over the survey-based approaches used in prior research, including complete coverage of the labor market and the ability to identify firm-level wage premiums directly. We describe the data and analytical strategy in the next section.
+
+**When to use**: Final paragraph of the theory section. Especially common when hypotheses or questions were stated in an earlier paragraph and the section simply needs to hand off to methods.
+
+---
+
+### STATE_HYPOTHESES
+
+**Purpose**: Articulate formal directional predictions. The second most common closing move overall (~28%), and the dominant closing in quantitative and experimental designs.
+
+**Typical markers**:
+- "H1:" or "HYPOTHESIS 1:" followed by a directional prediction
+- "We expect that..."
+- "This leads to the prediction that..."
+- Numbered or labeled hypothesis statements
+- Directional language: "will increase," "is associated with," "should reduce"
+
+**Example paragraph**:
+> This reasoning leads to our first hypothesis:
+>
+> HYPOTHESIS 1. — Officers will exhibit more discriminatory responses in discretionary encounters than in nondiscretionary encounters.
+>
+> Drawing on the framework above, we further expect that the relationship between officer discretion and discrimination will be moderated by departmental accountability structures:
+>
+> HYPOTHESIS 2. — The discriminatory effect of officer discretion will be attenuated in departments with stronger accountability mechanisms.
+
+**When to use**: Closing the section in quantitative, experimental, or deductive designs. May appear as the final subsection ("Hypotheses") or as the last paragraphs of the final subsection. More common at ASR (~35%) than AJS (~12%).
+
+---
+
 ### STATE_QUESTIONS
 
-**Purpose**: Articulate the research questions, hypotheses, or analytical focus of the study.
+**Purpose**: Articulate open-ended research questions that guide the analysis.
 
 **Typical markers**:
 - "This study examines..."
 - "I ask: [question]?"
 - "Three questions guide this analysis..."
-- "We investigate whether..."
+- Open-ended: "How do...?" "What processes...?" "In what ways...?"
 
 **Example paragraph**:
-> This study examines how mothers in doubled-up households negotiate identity and dignity in shared living arrangements. Three questions guide the analysis: (1) How do guest mothers understand their position within host households? (2) What strategies do they use to maintain maternal identity when authority is constrained? (3) How do these negotiations vary by the character of the host-guest relationship? I address these questions through interviews with 47 mothers who doubled up with family or friends.
+> This study examines how mothers in doubled-up households negotiate identity and dignity in shared living arrangements. Three questions guide the analysis: (1) How do guest mothers understand their position within host households? (2) What strategies do they use to maintain maternal identity when authority is constrained? (3) How do these negotiations vary by the character of the host-guest relationship?
 
-**When to use**: After the gap; usually the penultimate or final paragraph.
+**When to use**: Closing the section in qualitative, interpretive, or exploratory designs. **Do not add methods detail here** — the methods section handles that. Keep the focus on what you're asking, not how you'll answer it.
+
+---
+
+### THEORETICAL_SYNTHESIS
+
+**Purpose**: Restate the core theoretical argument in summary form at the end of the section. Crystallizes what the framework predicts or explains without previewing specific empirical findings.
+
+**Typical markers**:
+- "Thus..." "In sum, I argue that..."
+- "To paraphrase the theoretical argument..."
+- A concise restatement of the causal logic or analytical framework
+- Draws together threads from multiple subsections
+
+**Example paragraph**:
+> Thus, when state formation is in its nascent stages, embedding ideas and practices of the state is less a matter of constructing abstract mutual obligations between states and citizens than of establishing tangible ongoing relationships between individual officials who represent the state and individual leaders who credibly represent their communities' shared interests. A relational perspective shows that establishing the state as sole authority would require state officials to monopolize collective problem-solving to undercut these relationships with their competitors.
+
+**When to use**: Final paragraph in theory-building or interpretive articles. Most common in qualitative work and in articles where the theory section has been complex or multi-stranded.
 
 ---
 
 ### PREVIEW
 
-**Purpose**: Summarize the argument or outline what the findings will show. Provides a roadmap.
+**Purpose**: Summarize the argument or outline what the findings will show.
 
 **Typical markers**:
 - "I find that..." "We show that..."
@@ -171,37 +262,34 @@ Every paragraph in a Theory section serves a recognizable function. Readers shou
 - Brief statement of main claims (without evidence)
 
 **Example paragraph**:
-> In what follows, I show that guest mothers deploy three strategies to maintain maternal identity: boundary work (carving out private space), deference management (navigating host authority), and temporal framing (emphasizing the temporary nature of arrangements). I argue that these strategies reveal how structural housing precarity intersects with gendered expectations of motherhood to produce distinctive identity work. I conclude by discussing implications for understanding family instability and housing policy.
+> In what follows, I show that guest mothers deploy three strategies to maintain maternal identity: boundary work (carving out private space), deference management (navigating host authority), and temporal framing (emphasizing the temporary nature of arrangements). I argue that these strategies reveal how structural housing precarity intersects with gendered expectations of motherhood to produce distinctive identity work.
 
-**When to use**: Final paragraph of the section; optional but common for complex arguments.
+**When to use**: Final paragraph of the section. **Rare in AJS and ASR** (~4% of articles). When it appears, it is most common in qualitative or interpretive articles. Do not treat this as a default closing move.
 
 ---
 
 ## Paragraph Sequences by Cluster
 
 ### Gap-Filler Sequence
-1. PROVIDE_CONTEXT
+1. SYNTHESIZE
 2. SYNTHESIZE
-3. SYNTHESIZE
-4. IDENTIFY_GAP
-5. STATE_QUESTIONS
+3. IDENTIFY_GAP
+4. BRIDGE_TO_METHODS *or* STATE_HYPOTHESES
 
 ### Theory-Extender Sequence
-1. PROVIDE_CONTEXT
-2. DESCRIBE_THEORY
-3. SYNTHESIZE (prior applications)
-4. IDENTIFY_GAP
-5. BRIDGE
-6. STATE_QUESTIONS
+1. DESCRIBE_THEORY
+2. SYNTHESIZE (prior applications)
+3. IDENTIFY_GAP
+4. BRIDGE
+5. BRIDGE_TO_METHODS *or* STATE_HYPOTHESES
 
 ### Concept-Builder Sequence
-1. PROVIDE_CONTEXT
-2. DESCRIBE_THEORY (tradition 1)
-3. CRITIQUE
-4. DESCRIBE_THEORY (tradition 2)
-5. SYNTHESIZE + concept introduction
-6. DESCRIBE_THEORY (new concept explication)
-7. STATE_QUESTIONS
+1. DESCRIBE_THEORY (tradition 1)
+2. CRITIQUE
+3. DESCRIBE_THEORY (tradition 2)
+4. SYNTHESIZE + concept introduction
+5. DESCRIBE_THEORY (new concept explication)
+6. BRIDGE_TO_METHODS *or* THEORETICAL_SYNTHESIS
 
 ### Synthesis Integrator Sequence
 1. DESCRIBE_THEORY (tradition A)
@@ -209,13 +297,15 @@ Every paragraph in a Theory section serves a recognizable function. Readers shou
 3. DESCRIBE_THEORY (tradition B)
 4. SYNTHESIZE (B applications)
 5. BRIDGE
-6. STATE_QUESTIONS
+6. BRIDGE_TO_METHODS *or* STATE_QUESTIONS
 
 ### Problem-Driven (Debate) Sequence
 1. DESCRIBE_THEORY (position 1)
 2. CONTRAST (position 2)
 3. CRITIQUE (both limited)
-4. STATE_QUESTIONS
+4. STATE_QUESTIONS *or* STATE_HYPOTHESES
+
+**Choosing the closing function**: The closing depends on the article's design, not just its cluster. Quantitative and experimental articles close on STATE_HYPOTHESES or BRIDGE_TO_METHODS. Qualitative and interpretive articles close on STATE_QUESTIONS, THEORETICAL_SYNTHESIS, or BRIDGE_TO_METHODS. When in doubt, BRIDGE_TO_METHODS is the safest default — it is the most common closing move across all designs.
 
 ---
 
@@ -226,6 +316,7 @@ For each paragraph, ask:
 2. Is the function clear from the first sentence?
 3. Does the function fit its position in the sequence?
 4. Is the function appropriate for my cluster?
+5. **Is this function duplicating work the introduction already did?** If so, cut or reframe.
 
 If you can't identify the function, the paragraph likely needs revision.
 

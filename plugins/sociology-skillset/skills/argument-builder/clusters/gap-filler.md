@@ -26,22 +26,24 @@ Use the Gap-Filler approach when:
 
 ## Characteristic Paragraph Sequence
 
-The standard Gap-Filler follows this 5-paragraph backbone (expand as needed):
+The standard Gap-Filler follows this backbone (expand as needed):
 
-1. **PROVIDE_CONTEXT** - Establish the phenomenon or population
-2. **SYNTHESIZE** - Review existing findings on the topic
-3. **SYNTHESIZE** - Additional synthesis (what we know)
-4. **IDENTIFY_GAP** - Mark what remains unknown
-5. **STATE_QUESTIONS** - Articulate research questions
+1. **SYNTHESIZE** - Review existing findings on the topic
+2. **SYNTHESIZE** - Additional synthesis (what we know)
+3. **IDENTIFY_GAP** - Mark what remains unknown
+4. **BRIDGE_TO_METHODS** *or* **STATE_HYPOTHESES** - Transition to your study
 
-This funnel structure moves from broad context → specific gap → your study.
+This funnel structure moves from the scholarly conversation → specific gap → your study. The introduction already established the phenomenon; the theory section opens with what scholars have found.
+
+**Closing move**: Quantitative Gap-Fillers typically close with hypotheses or a bridge to methods. Qualitative Gap-Fillers may close with research questions (STATE_QUESTIONS) or a bridge to methods.
 
 ## Signature Sentence Patterns
 
 ### Opening the Section
 > "A growing body of research examines [phenomenon]..."
-> "As [social condition] has [changed/expanded/intensified], scholars have..."
+> "Scholars have increasingly turned to [topic]..."
 > "A burgeoning literature documents [pattern]..."
+> "The study of [topic] is tied to a larger set of concerns about [broader question]..."
 
 ### Building Synthesis
 > "Research shows [finding] (Author Year; Author Year)."

@@ -28,14 +28,14 @@ Use the Concept-Builder approach when:
 
 The Concept-Builder follows a critique-then-build sequence:
 
-1. **PROVIDE_CONTEXT** - Present the puzzle or problem
-2. **DESCRIBE_THEORY** - Review tradition 1 / existing approach
-3. **CRITIQUE** - Identify limitations of existing approach
-4. **DESCRIBE_THEORY** - Review tradition 2 / alternative approach
-5. **SYNTHESIZE** - Draw together limitations → need for new concept
-6. **DESCRIBE_THEORY** - Introduce and explicate the new concept
+1. **DESCRIBE_THEORY** - Review tradition 1 / existing approach
+2. **CRITIQUE** - Identify limitations of existing approach
+3. **DESCRIBE_THEORY** - Review tradition 2 / alternative approach
+4. **SYNTHESIZE** - Draw together limitations → need for new concept
+5. **DESCRIBE_THEORY** - Introduce and explicate the new concept
+6. **BRIDGE_TO_METHODS** *or* **THEORETICAL_SYNTHESIS** - Transition to your study
 
-The structure builds toward your conceptual contribution as the payoff.
+The structure builds toward your conceptual contribution as the payoff. Open with the scholarly conversation — the introduction already framed the puzzle.
 
 ## Signature Sentence Patterns
 

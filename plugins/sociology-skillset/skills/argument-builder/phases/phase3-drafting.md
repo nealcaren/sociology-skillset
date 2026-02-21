@@ -39,15 +39,6 @@ Work through the paragraph map one paragraph at a time. For each:
 
 Apply function-specific guidance:
 
-#### PROVIDE_CONTEXT Paragraphs
-- Open with phenomena, not scholars
-- Use statistics, trends, or historical developments
-- Keep citations minimal (2-3)
-- Establish stakes or scope
-
-**Example**:
-> As housing costs have outpaced wage growth, many parents face difficulty housing their families. Over 3 million households with children doubled up with friends or family in 2019, and doubling-up rates have risen since the Great Recession (Pilkauskas et al. 2020). Low-income and Black families are disproportionately likely to double up, often as a strategy to avoid homelessness or manage poverty (Desmond 2016; Harvey 2018). These arrangements affect household composition, family relationships, and parenting dynamics in ways that remain poorly understood.
-
 #### DESCRIBE_THEORY Paragraphs
 - Name the framework/theorist explicitly
 - Explain how the concept works
@@ -66,6 +57,16 @@ Apply function-specific guidance:
 **Example**:
 > Research on legal cynicism demonstrates that distrust of legal institutions is patterned by neighborhood context, race, and prior contact with police (Kirk and Papachristos 2011; Sampson and Bartusch 1998). Studies consistently find that residents of high-crime neighborhoods express cynicism about police responsiveness and fairness, even as they continue to call 911 for emergencies (Desmond et al. 2016; Gau and Brunson 2010). This literature highlights the coexistence of cynicism and reliance—a paradox that existing frameworks have struggled to explain.
 
+#### PROVIDE_CONTEXT Paragraphs
+- Open with phenomena, not scholars
+- Use statistics, trends, or historical developments
+- Keep citations minimal (2-3)
+- Ground a subsection in empirical reality
+- **Only use when shifting to empirical terrain the introduction did not cover**
+
+**Example**:
+> Congress passed the WWII Serviceman's Readjustment Act of 1944, better known as the GI Bill of 1944, to ease the transition back into civilian life for returning veterans. The law provided benefits to returning soldiers, including free healthcare, education subsidies, and business, home, and farm loans on favorable terms (Altschuler and Blumin 2009). The focus of the present study is the housing benefits of the GI Bill.
+
 #### IDENTIFY_GAP Paragraphs
 - Use the 4-part turn structure (see `techniques/turn-formula.md`)
 - Be specific about what's unknown
@@ -74,13 +75,41 @@ Apply function-specific guidance:
 **Example**:
 > This literature highlights the importance of recognition for understanding how marginalized groups engage with institutions. Yet while research documents the pursuit of recognition in various settings, there is less attention to how recognition-seeking shapes encounters with legal authorities specifically. How do residents of high-crime neighborhoods understand their calls to police as demands for recognition? What meaning-making processes allow them to reconcile cynicism with reliance? These questions remain largely unexplored.
 
+#### BRIDGE_TO_METHODS Paragraphs
+- Transition from theory to the empirical analysis
+- May briefly name the data or research design
+- Do not write a full methods paragraph — just hand off
+- Keep citations minimal (0-2)
+
+**Example**:
+> To test these expectations, we draw on linked administrative records from the Swedish population registers, which allow us to observe the full earnings trajectories of parents and their adult children across all employers in the Swedish economy. We describe the data and analytical strategy in the next section.
+
+#### STATE_HYPOTHESES Paragraphs
+- State formal directional predictions
+- Number or label hypotheses clearly
+- Connect each hypothesis to the theoretical reasoning above
+- Use directional language ("will increase," "is associated with," "should reduce")
+
+**Example**:
+> This reasoning leads to our first hypothesis:
+>
+> HYPOTHESIS 1. — The more central students become in a peer network, the more ideologically consistent their beliefs will become.
+
 #### STATE_QUESTIONS Paragraphs
 - Articulate research questions clearly
 - Connect questions to the gap
-- Preview methods briefly if appropriate
+- **Do not add methods detail** — the methods section handles that
 
 **Example**:
-> This study examines how mothers in doubled-up households negotiate identity and dignity in shared living arrangements. Three questions guide the analysis: How do guest mothers understand their position within host households? What strategies do they use to maintain maternal identity when authority is constrained? How do these negotiations vary by the character of the host-guest relationship? I address these questions through in-depth interviews with 47 mothers who doubled up with family or friends in the Chicago metropolitan area.
+> This study examines how mothers in doubled-up households negotiate identity and dignity in shared living arrangements. Three questions guide the analysis: (1) How do guest mothers understand their position within host households? (2) What strategies do they use to maintain maternal identity when authority is constrained? (3) How do these negotiations vary by the character of the host-guest relationship?
+
+#### THEORETICAL_SYNTHESIS Paragraphs
+- Restate the argument in concise, summary form
+- Draw together threads from multiple subsections
+- Do not preview findings — synthesize the theoretical logic
+
+**Example**:
+> Thus, when state formation is in its nascent stages, embedding ideas and practices of the state is less a matter of constructing abstract mutual obligations between states and citizens than of establishing tangible ongoing relationships between individual officials who represent the state and individual leaders who credibly represent their communities' shared interests. A relational perspective shows that establishing the state as sole authority would require state officials to monopolize collective problem-solving to undercut these relationships with their competitors.
 
 ### 3. Draft Subsection by Subsection
 
@@ -154,6 +183,9 @@ Get prose on the page. Revision comes in Phases 4-5.
 ### Follow the Map
 The paragraph map exists for a reason. Stick to it unless you discover a structural problem.
 
+### Don't Duplicate the Introduction
+The theory section picks up where the introduction left off. If your opening paragraph reads like a second introduction — phenomenon framing, statistics, stakes — you're writing a "mini paper." Start with the scholarly conversation.
+
 ### Topic Sentences Are Anchors
 If you're struggling with a paragraph, return to the topic sentence. What is this paragraph trying to accomplish?
 
@@ -179,6 +211,8 @@ Draft the turn with special care. It's the most important paragraph.
 | Buried turn | Move turn sentence to start of paragraph; add contrastive marker |
 | Hedging definitions | Definitions are assertions; remove "may," "might" |
 | Over-asserting mechanisms | Mechanisms are claims; add appropriate hedging |
+| Opening duplicates intro | Cut phenomenon framing; start with scholars or concepts |
+| Closing previews findings | Replace PREVIEW with BRIDGE_TO_METHODS or THEORETICAL_SYNTHESIS |
 
 ---
 
@@ -212,8 +246,9 @@ Report to the orchestrator:
 - Word count achieved
 - Citation count achieved
 - Turn drafted (provide sentence)
+- Closing function used
 - Any structural changes from plan
 - Areas flagged for revision
 
 Example summary:
-> "**Draft complete** (`theory-section.md`). 1,487 words across 10 paragraphs (target: 1,500). 36 citations (target: 35). Turn at paragraph 6: 'Yet while research documents the pursuit of recognition in various settings, there is less attention to how recognition-seeking shapes encounters with legal authorities specifically.' One deviation: Split planned paragraph 4 into two for clarity. Flagged paragraphs 7-8 for transition smoothing in revision. Drafting notes appended to `theory-memo.md`. Ready for Phase 4: Turn refinement."
+> "**Draft complete** (`theory-section.md`). 1,487 words across 10 paragraphs (target: 1,500). 36 citations (target: 35). Turn at paragraph 6: 'Yet while research documents the pursuit of recognition in various settings, there is less attention to how recognition-seeking shapes encounters with legal authorities specifically.' Closing: BRIDGE_TO_METHODS. One deviation: Split planned paragraph 4 into two for clarity. Flagged paragraphs 7-8 for transition smoothing in revision. Drafting notes appended to `theory-memo.md`. Ready for Phase 4: Turn refinement."
