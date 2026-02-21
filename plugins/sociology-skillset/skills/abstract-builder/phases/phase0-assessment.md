@@ -157,16 +157,19 @@ Present to user with clear structure:
 ## Guiding Principles
 
 ### When in Doubt, Choose Research-Report
-It's the most common (43%) and safest approach. Clear, efficient, professional.
+It's the most common archetype overall (43% at SP/SF, 71% at ASR, 79% at AJS) and the safest approach. Clear, efficient, professional. **At ASR/AJS, Research-Report is the strong default.**
 
 ### Empirical-Showcase Requires Compelling Phenomena
-Don't use this archetype unless your phenomenon is genuinely compelling or dramatic. Otherwise, it may feel underdeveloped.
+Don't use this archetype unless your phenomenon is genuinely compelling or dramatic. Less common at ASR (15%) and AJS (12%) than at SP/SF (39%).
 
-### Stakes-Driven Requires Genuine Significance
-Only choose Stakes-Driven if you can articulate why the topic is important without it sounding like throat-clearing.
+### Stakes-Driven Requires Genuine Significance — and the Right Venue
+Only choose Stakes-Driven if you can articulate why the topic is important without it sounding like throat-clearing. **Near-absent at ASR/AJS (~3%)** — these journals prefer scholarly framing over urgency appeals.
 
 ### Puzzle-Solver is Rare for a Reason
-Only 6% of abstracts use this form. It requires a genuine, answerable question—not a rhetorical one.
+Only ~5% of abstracts use this form across all venues. It requires a genuine, answerable question—not a rhetorical one.
+
+### Venue Matters for Archetype Selection
+If the user is targeting ASR or AJS, the default recommendation should be **Research-Report** unless there's a strong reason to deviate. At SP/SF, the archetype choice is more open.
 
 ### Archetype Can Shift
 If you realize during sequencing that a different archetype fits better, you can adjust. But starting with the right archetype prevents rewrites.

@@ -38,8 +38,8 @@ Work through the sequence plan one sentence at a time. For each:
 - Match the expected style for this move
 
 **Step 3: Track word count**
-- Target ~29 words per sentence
-- Adjust to stay within 180-200 total
+- Target ~28–31 words per sentence
+- Adjust to stay within venue target: SP/SF 180–200, ASR 180–220, AJS 140–170
 
 **Step 4: Connect to next sentence**
 - Ensure logical flow
@@ -237,7 +237,7 @@ State broader implications.
 After each sentence:
 - Record word count
 - Adjust if running long or short
-- Target 180-200 words total
+- Target by venue: SP/SF 180–200, ASR 180–220, AJS 140–170
 
 ### 4. Check Transition Flow
 
@@ -252,10 +252,12 @@ Ensure smooth connections:
 ### 5. Apply First-Person Appropriately
 
 **First-person usage patterns** (from corpus):
-- 62% of abstracts use first person
+- SP/SF: 62% use first person
+- ASR: 35% use first person
+- AJS: 24% use first person
 - "We find that..." is most common
 - "I argue that..." for single-authored work
-- "This study shows..." as alternative
+- "This study shows..." as alternative (preferred at ASR/AJS)
 
 ### 6. Assemble Complete Draft
 
@@ -348,7 +350,7 @@ this section.
 
    ---
 
-   *Generated using abstract-builder skill based on analysis of 91 Social Problems/Social Forces abstracts.*
+   *Generated using abstract-builder skill based on analysis of 193 SP/SF/ASR/AJS abstracts.*
    ```
 
 Present notes on challenges, decisions, and concerns in the conversation. Do not create a separate drafting-notes file.

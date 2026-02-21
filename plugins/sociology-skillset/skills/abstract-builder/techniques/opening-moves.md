@@ -1,6 +1,6 @@
 # Opening Moves
 
-A vocabulary of opening sentence types for abstract writing, based on analysis of 91 abstracts from *Social Problems* and *Social Forces*.
+A vocabulary of opening sentence types for abstract writing, based on analysis of 193 abstracts from *SP*, *SF* (n=91), *ASR* (n=69), and *AJS* (n=33).
 
 ---
 
@@ -8,17 +8,19 @@ A vocabulary of opening sentence types for abstract writing, based on analysis o
 
 The opening sentence sets the tone for your entire abstract. It signals to readers what kind of contribution you're making and how they should engage with your research.
 
-| Opening Move | Frequency | Function | Archetype |
-|--------------|-----------|----------|-----------|
-| OPEN-PHENOMENON | 38.5% | Describe observable phenomenon | Empirical-Showcase |
-| PRIOR-RESEARCH | ~25% | Position in scholarly conversation | Research-Report |
-| OPEN-RESEARCH | ~18% | State study directly | Research-Report |
-| OPEN-STAKES | 13.2% | Establish importance/urgency | Stakes-Driven |
-| OPEN-PUZZLE | 5.5% | Pose explicit question | Puzzle-Solver |
+| Opening Move | SP/SF | ASR | AJS | Function | Archetype |
+|--------------|-------|-----|-----|----------|-----------|
+| OPEN-PHENOMENON | 38.5% | 34.8% | 15.2% | Describe observable phenomenon | Empirical-Showcase |
+| PRIOR-RESEARCH | ~25% | 26.1% | 36.4% | Position in scholarly conversation | Research-Report |
+| OPEN-RESEARCH | ~18% | 27.5% | 39.4% | State study directly | Research-Report |
+| OPEN-STAKES | 13.2% | 2.9% | 3.0% | Establish importance/urgency | Stakes-Driven |
+| OPEN-PUZZLE | 5.5% | 4.3% | 3.0% | Pose explicit question | Puzzle-Solver |
+
+**Venue note**: AJS heavily favors OPEN-RESEARCH and PRIOR-RESEARCH (76% combined). ASR balances three strategies roughly equally (phenomenon, prior-research, open-research). Stakes openings are near-absent at both ASR and AJS (~3%).
 
 ---
 
-## 1. OPEN-PHENOMENON (38.5%)
+## 1. OPEN-PHENOMENON (SP/SF 38.5%; ASR 34.8%; AJS 15.2%)
 
 Describe an observable social phenomenon that grounds your research.
 
@@ -53,7 +55,7 @@ Describe an observable social phenomenon that grounds your research.
 
 ---
 
-## 2. PRIOR-RESEARCH (~25%)
+## 2. PRIOR-RESEARCH (SP/SF ~25%; ASR 26.1%; AJS 36.4%)
 
 Position study within scholarly conversation by referencing what scholars know.
 
@@ -83,7 +85,7 @@ Position study within scholarly conversation by referencing what scholars know.
 
 ---
 
-## 3. OPEN-RESEARCH (~18%)
+## 3. OPEN-RESEARCH (SP/SF ~18%; ASR 27.5%; AJS 39.4%)
 
 State what the study does directly, without literature preamble.
 
@@ -109,7 +111,7 @@ State what the study does directly, without literature preamble.
 
 ---
 
-## 4. OPEN-STAKES (13.2%)
+## 4. OPEN-STAKES (SP/SF 13.2%; ASR 2.9%; AJS 3.0%)
 
 Establish why the topic matters by foregrounding importance, urgency, or change.
 
@@ -144,7 +146,7 @@ Establish why the topic matters by foregrounding importance, urgency, or change.
 
 ---
 
-## 5. OPEN-PUZZLE (5.5%)
+## 5. OPEN-PUZZLE (SP/SF 5.5%; ASR 4.3%; AJS 3.0%)
 
 Pose an explicit question that the study answers.
 

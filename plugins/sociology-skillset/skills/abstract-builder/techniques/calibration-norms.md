@@ -1,45 +1,50 @@
 # Calibration Norms
 
-Statistical benchmarks from analysis of 91 abstracts in interview-based articles from *Social Problems* and *Social Forces*. Use these norms to calibrate your abstract against field expectations.
+Statistical benchmarks from analysis of 193 abstracts from *Social Problems*, *Social Forces* (n=91), *American Sociological Review* (n=69), and *American Journal of Sociology* (n=33). Use these norms to calibrate your abstract against venue expectations.
 
 ---
 
-## Overall Benchmarks
+## Overall Benchmarks by Venue
 
-| Metric | Min | Q25 | Median | Q75 | Max |
-|--------|-----|-----|--------|-----|-----|
-| **Word count** | 116 | 166 | 189 | 201 | 250 |
-| **Sentence count** | 4 | 5 | 6 | 7 | 10 |
-| **Words per sentence** | ~25 | ~27 | ~29 | ~32 | ~35 |
+| Metric | SP/SF | ASR | AJS |
+|--------|-------|-----|-----|
+| **Word count (median)** | 189 | 196 | 157 |
+| **Word count (IQR)** | 166–201 | 183–208 | 149–170 |
+| **Word count (range)** | 116–250 | 131–295 | 104–186 |
+| **Sentence count (median)** | 6 | 7 | 5 |
+| **Sentence count (IQR)** | 5–7 | 6–8 | 5–6 |
+| **Words per sentence** | ~29 | ~28 | ~31 |
 
 ---
 
-## Target Ranges
+## Target Ranges by Venue
 
-Use the interquartile range (Q25-Q75) as your target. Deviations should be intentional.
+Use the interquartile range (IQR) as your target. Deviations should be intentional.
 
 ### Word Count
-- **Target**: 166-201 words
-- **Median**: 189 words
-- **Under 165 words**: May signal underdeveloped findings
-- **Over 210 words**: May signal over-elaboration
+| Venue | Target (IQR) | Median | Red Flags |
+|-------|-------------|--------|-----------|
+| **SP/SF** | 166–201 | 189 | Under 165 or over 210 |
+| **ASR** | 183–208 | 196 | Under 180 or over 220 |
+| **AJS** | 149–170 | 157 | Under 140 or over 180 |
 
 ### Sentence Count
-- **Target**: 5-7 sentences
-- **Median**: 6 sentences
-- **Under 5 sentences**: May miss essential moves
-- **Over 8 sentences**: May be too detailed for abstract
+| Venue | Target (IQR) | Median | Red Flags |
+|-------|-------------|--------|-----------|
+| **SP/SF** | 5–7 | 6 | Under 5 or over 8 |
+| **ASR** | 6–8 | 7 | Under 5 or over 9 |
+| **AJS** | 5–6 | 5 | Under 4 or over 7 |
 
 ### Words per Sentence
-- **Target**: ~29 words per sentence
+- **Target**: ~28–31 words per sentence (consistent across venues)
 - **Under 25 words**: May feel choppy
 - **Over 35 words**: May need splitting
 
 ---
 
-## Archetype-Specific Norms
+## Archetype-Specific Norms (SP/SF baseline)
 
-### Empirical-Showcase (38.5%)
+### Empirical-Showcase (SP/SF 39%; ASR 15%; AJS 12%)
 
 | Metric | Value | Range |
 |--------|-------|-------|
@@ -47,11 +52,11 @@ Use the interquartile range (Q25-Q75) as your target. Deviations should be inten
 | Sentence count (median) | 6.5 | 5-9 |
 | Words per sentence | 29.1 | -- |
 
-**Key**: Standard length. Phenomenon-led opening. 2-4 findings sentences.
+**Key**: Standard length. Phenomenon-led opening. 2-4 findings sentences. Less common at ASR/AJS — use when the phenomenon is genuinely compelling.
 
 ---
 
-### Research-Report (42.9%)
+### Research-Report (SP/SF 43%; ASR 71%; AJS 79%)
 
 | Metric | Value | Range |
 |--------|-------|-------|
@@ -59,11 +64,11 @@ Use the interquartile range (Q25-Q75) as your target. Deviations should be inten
 | Sentence count (median) | 6.4 | 4-10 |
 | Words per sentence | 28.6 | -- |
 
-**Key**: Most flexible range. Can be very compact (116 words) or extended (250 words).
+**Key**: Most flexible range. **Default archetype at ASR/AJS.** Can be very compact (116 words at SP/SF, 104 words at AJS) or extended (250 words at SP/SF, 295 at ASR).
 
 ---
 
-### Stakes-Driven (13.2%)
+### Stakes-Driven (SP/SF 13%; ASR 3%; AJS 3%)
 
 | Metric | Value | Range |
 |--------|-------|-------|
@@ -71,11 +76,11 @@ Use the interquartile range (Q25-Q75) as your target. Deviations should be inten
 | Sentence count (median) | 7.0 | 5-10 |
 | Words per sentence | 28.0 | -- |
 
-**Key**: Longest archetype. Needs space for stakes + gap + implications.
+**Key**: Longest archetype. Needs space for stakes + gap + implications. **Near-absent at ASR/AJS** — these journals prefer scholarly framing over urgency appeals.
 
 ---
 
-### Puzzle-Solver (5.5%)
+### Puzzle-Solver (SP/SF 6%; ASR 6%; AJS 3%)
 
 | Metric | Value | Range |
 |--------|-------|-------|
@@ -83,24 +88,34 @@ Use the interquartile range (Q25-Q75) as your target. Deviations should be inten
 | Sentence count (median) | 6.6 | 4-10 |
 | Words per sentence | 28.0 | -- |
 
-**Key**: Standard length. Quick transition from question to data.
+**Key**: Standard length. Quick transition from question to data. Viable at all venues but always uncommon.
 
 ---
 
 ## Content Benchmarks
 
 ### Theory Mention
-- **Rate**: 17% of abstracts mention a named theory or framework
-- **Guidance**: Theory mention is optional, not expected
+| Venue | Rate | Guidance |
+|-------|------|----------|
+| SP/SF | 17% | Optional, not expected |
+| ASR | 73% | **Expected** — signal theoretical contribution |
+| AJS | 67% | **Expected** — signal theoretical contribution |
+
 - **If included**: Brief (1-2 phrases, not extended exposition)
+- **At ASR**: Naming a novel concept is very common (>40% introduce a named term like "selective empathy," "portfolio routing," "cultural tariffing")
 
 ### Sample Size Mention
-- **Rate**: 24% explicitly state sample size (N)
+- **Rate**: ~24% explicitly state sample size (N); ~88% describe data source
 - **Guidance**: Including N is helpful but not universal
 - **Format**: "Drawing on [N] interviews with..."
 
 ### First-Person Usage
-- **Rate**: 62% of abstracts use first person
+| Venue | Rate | Notes |
+|-------|------|-------|
+| SP/SF | 62% | "We find" / "I argue" is common |
+| ASR | 35% | Acceptable but not the norm |
+| AJS | 24% | Less common; "The authors" occasionally used |
+
 - **Forms**: "We find that...", "I argue that...", "Our results..."
 - **Alternative**: "This study finds...", "Findings show..."
 
@@ -129,42 +144,45 @@ Use the interquartile range (Q25-Q75) as your target. Deviations should be inten
 
 ## Closing Move Distribution
 
-| Closing Type | Frequency |
-|--------------|-----------|
-| CLOSE-CONTRIBUTION | 72.5% |
-| CLOSE-IMPLICATIONS | 16.5% |
-| CLOSE-FINDINGS | 9.9% |
-| CLOSE-GENERALIZATION | 1.1% |
+| Closing Type | SP/SF | ASR | AJS |
+|--------------|-------|-----|-----|
+| CLOSE-CONTRIBUTION | 72.5% | 53.6% | 42.4% |
+| CLOSE-IMPLICATIONS | 16.5% | 18.8% | 18.2% |
+| CLOSE-FINDINGS | 9.9% | 26.1% | 39.4% |
+| CLOSE-GENERALIZATION | 1.1% | 1.4% | 0% |
 
-**Guidance**: Default to CLOSE-CONTRIBUTION unless you have strong policy implications.
+**Guidance**: Default to CLOSE-CONTRIBUTION at SP/SF. At ASR, contribution still leads but findings closings are common (26%). At AJS, contribution and findings closings are nearly equal — closing on a strong finding is fully acceptable when word count is tight.
 
 ---
 
 ## Opening Move Distribution
 
-| Opening Type | Frequency | Archetype |
-|--------------|-----------|-----------|
-| OPEN-PHENOMENON | 38.5% | Empirical-Showcase |
-| PRIOR-RESEARCH | ~25% | Research-Report |
-| OPEN-RESEARCH | ~18% | Research-Report |
-| OPEN-STAKES | 13.2% | Stakes-Driven |
-| OPEN-PUZZLE | 5.5% | Puzzle-Solver |
+| Opening Type | SP/SF | ASR | AJS | Archetype |
+|--------------|-------|-----|-----|-----------|
+| OPEN-PHENOMENON | 38.5% | 34.8% | 15.2% | Empirical-Showcase |
+| PRIOR-RESEARCH | ~25% | 26.1% | 36.4% | Research-Report |
+| OPEN-RESEARCH | ~18% | 27.5% | 39.4% | Research-Report |
+| OPEN-STAKES | 13.2% | 2.9% | 3.0% | Stakes-Driven |
+| OPEN-PUZZLE | 5.5% | 4.3% | 3.0% | Puzzle-Solver |
+
+**Venue note**: AJS strongly favors OPEN-RESEARCH and PRIOR-RESEARCH (76% combined) over phenomenon openings. ASR has a more balanced three-way split between phenomenon, prior-research, and open-research. Stakes openings are nearly absent at both ASR and AJS.
 
 ---
 
 ## Calibration Checklist
 
-Before finalizing, verify your abstract against these norms:
+Before finalizing, verify your abstract against venue norms:
 
-| Metric | Your Draft | Target | Status |
-|--------|------------|--------|--------|
-| Word count | ___ | 166-201 | [ ] OK / [ ] Adjust |
-| Sentence count | ___ | 5-7 | [ ] OK / [ ] Adjust |
-| Words per sentence | ___ | ~29 | [ ] OK / [ ] Adjust |
-| STUDY-FOCUS present | ___ | Yes | [ ] OK / [ ] Add |
-| DATA-DESCRIBE present | ___ | Yes | [ ] OK / [ ] Add |
-| FINDINGS sentences | ___ | 2-3 | [ ] OK / [ ] Adjust |
-| Closing type | ___ | CONTRIBUTION | [ ] OK / [ ] Revise |
+| Metric | Your Draft | SP/SF Target | ASR Target | AJS Target | Status |
+|--------|------------|-------------|------------|------------|--------|
+| Word count | ___ | 166–201 | 183–208 | 149–170 | [ ] OK / [ ] Adjust |
+| Sentence count | ___ | 5–7 | 6–8 | 5–6 | [ ] OK / [ ] Adjust |
+| Words per sentence | ___ | ~29 | ~28 | ~31 | [ ] OK / [ ] Adjust |
+| STUDY-FOCUS present | ___ | Yes | Yes | Yes | [ ] OK / [ ] Add |
+| DATA-DESCRIBE present | ___ | Yes | Yes | Yes | [ ] OK / [ ] Add |
+| FINDINGS sentences | ___ | 2–3 | 2–3 | 2–3 | [ ] OK / [ ] Adjust |
+| Closing type | ___ | CONTRIBUTION | CONTRIBUTION or FINDINGS | CONTRIBUTION or FINDINGS | [ ] OK / [ ] Revise |
+| Theory mention | ___ | Optional | Expected | Expected | [ ] OK / [ ] Add |
 
 ---
 
@@ -172,49 +190,60 @@ Before finalizing, verify your abstract against these norms:
 
 | Deviation | Possible Reason | Action |
 |-----------|-----------------|--------|
-| **Under 165 words** | Underdeveloped findings | Expand findings preview |
-| **Over 210 words** | Over-elaboration | Cut secondary details |
-| **Under 5 sentences** | Missing essential moves | Add STUDY-FOCUS, DATA, or FINDINGS |
-| **Over 8 sentences** | Too detailed | Combine or cut sentences |
-| **No closing claim** | Abstract trails off | Add CLOSE-CONTRIBUTION |
+| **Under word count floor** | Underdeveloped findings | Expand findings preview |
+| **Over word count ceiling** | Over-elaboration | Cut secondary details |
+| **Under sentence count floor** | Missing essential moves | Add STUDY-FOCUS, DATA, or FINDINGS |
+| **Over sentence count ceiling** | Too detailed | Combine or cut sentences |
+| **No closing claim** | Abstract trails off | Add CLOSE-CONTRIBUTION (or CLOSE-FINDINGS at AJS) |
 | **Weak findings** | Only 1 sentence | Expand to 2-3 sentences |
+| **No theory mention at ASR/AJS** | Missing expected signal | Add brief theoretical positioning |
 
 ---
 
 ## Journal-Specific Notes
 
-*Social Problems* and *Social Forces* do not specify abstract word limits, but typical ranges are:
+| Journal | Typical Range | Median | Archetype Default | Key Notes |
+|---------|---------------|--------|-------------------|-----------|
+| Social Problems | 150–250 words | ~189 | Balanced mix | Prefers informative abstracts |
+| Social Forces | 150–250 words | ~189 | Balanced mix | Allows structured or unstructured |
+| ASR | 131–295 words | 196 | Research-Report (71%) | Theory mention expected (73%); novel concept naming very common |
+| AJS | 104–186 words | 157 | Research-Report (79%) | Extremely concise; open with research/prior-research; findings closings acceptable (39%) |
 
-| Journal | Typical Range | Notes |
-|---------|---------------|-------|
-| Social Problems | 150-250 words | Prefers informative abstracts |
-| Social Forces | 150-250 words | Allows structured or unstructured |
-| ASR | 150-200 words | Tighter word limits |
-| AJS | 150-200 words | Tighter word limits |
-
-**Guidance**: Target 180-200 words for maximum compatibility across journals.
+**Guidance by venue**:
+- **SP/SF**: Target 180–200 words
+- **ASR**: Target 180–220 words; name your concept if you have one
+- **AJS**: Target 140–170 words; every word must earn its place
 
 ---
 
 ## Quick Reference
 
-### Target Abstract
-- **Words**: 180-200
+### SP/SF Target
+- **Words**: 180–200
 - **Sentences**: 6
 - **Structure**: Opening -> Study Focus -> Data -> Findings (2-3) -> Contribution
 - **Closing**: CONTRIBUTION with strong verb
 
-### Acceptable Range
-- **Words**: 165-210
-- **Sentences**: 5-7
-- **Closing**: CONTRIBUTION or IMPLICATIONS
+### ASR Target
+- **Words**: 180–220
+- **Sentences**: 7
+- **Structure**: Opening -> Study Focus -> Data -> Findings (2-3) -> Contribution
+- **Closing**: CONTRIBUTION (54%) or FINDINGS (26%)
+- **Theory mention**: Expected; name novel concepts
 
-### Red Flags
-- Under 150 words (underdeveloped)
-- Over 250 words (over-elaborated)
+### AJS Target
+- **Words**: 140–170
+- **Sentences**: 5
+- **Structure**: Opening -> Study Focus -> Data -> Findings (2) -> Contribution/Findings
+- **Closing**: CONTRIBUTION (42%) or FINDINGS (39%)
+- **Concision**: Critical — AJS maxes out around 186 words
+
+### Red Flags (all venues)
+- Under venue word count floor (underdeveloped)
+- Over venue word count ceiling (over-elaborated)
 - Under 4 sentences (missing moves)
 - Over 9 sentences (too detailed)
-- No explicit contribution claim
+- No explicit contribution or findings claim at closing
 
 ---
 

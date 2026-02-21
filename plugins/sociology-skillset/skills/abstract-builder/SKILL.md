@@ -1,11 +1,11 @@
 ---
 name: abstract-builder
-description: Craft publication-ready abstracts for interview-based sociology articles. Guides archetype selection, move sequencing, and calibration based on analysis of 91 Social Problems/Social Forces abstracts.
+description: Craft publication-ready abstracts for sociology articles. Guides archetype selection, move sequencing, and calibration based on analysis of 193 abstracts from SP, SF, AJS, and ASR.
 ---
 
 # Abstract Builder
 
-You help sociologists craft publication-ready abstracts for interview-based articles. This is not just summarizing—it's strategic communication of your contribution in approximately 180-200 words. Your guidance is grounded in systematic analysis of 91 abstracts from *Social Problems* and *Social Forces*.
+You help sociologists craft publication-ready abstracts for research articles. This is not just summarizing—it's strategic communication of your contribution. Your guidance is grounded in systematic analysis of 193 abstracts from *Social Problems*, *Social Forces* (n=91), *American Sociological Review* (n=69), and *American Journal of Sociology* (n=33).
 
 ## Project Integration
 
@@ -88,20 +88,24 @@ Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The g
 
 3. **Findings dominate**: Abstracts typically devote 2-4 sentences (about 40% of space) to previewing findings. Don't shortchange this.
 
-4. **The closing sentence matters**: 73% of abstracts close with an explicit contribution claim using verbs like "demonstrate," "show," "argue," or "extend." This is your chance to state what readers should take away.
+4. **The closing sentence matters**: At SP/SF, 73% close with an explicit contribution claim. At ASR (54%) and especially AJS (42%), closing on findings is also common and acceptable. State what readers should take away.
 
-5. **Calibration to norms**: Field expectations for length (~189 words), sentence count (~6), and structure are learnable. Deviation should be intentional, not accidental.
+5. **Calibration to norms**: Expectations vary by venue. SP/SF targets ~189 words and 6 sentences; ASR runs slightly longer (~196 words, 7 sentences); AJS is substantially shorter (~157 words, 5 sentences). Deviation should be intentional, not accidental.
+
+6. **Venue shapes archetype**: Research-Report dominates at ASR (71%) and AJS (79%), while SP/SF has a more balanced mix between Research-Report (43%) and Empirical-Showcase (39%). Match venue conventions.
 
 ## The Four Archetypes
 
 Abstracts cluster into four recognizable styles based on their opening move:
 
-| Archetype | Prevalence | Opens With | Best For |
-|-----------|------------|------------|----------|
-| **Empirical-Showcase** | 39% | Observable social phenomenon | Compelling empirics, broad audience |
-| **Research-Report** | 43% | Literature positioning or "This study..." | Specialists, gap-filling |
-| **Stakes-Driven** | 13% | Importance/urgency/change | Policy relevance, justification |
-| **Puzzle-Solver** | 6% | Explicit question | Curiosity hook, clear answers |
+| Archetype | SP/SF | ASR | AJS | Opens With | Best For |
+|-----------|-------|-----|-----|------------|----------|
+| **Research-Report** | 43% | 71% | 79% | Literature positioning or "This study..." | Specialists, gap-filling; **default at ASR/AJS** |
+| **Empirical-Showcase** | 39% | 15% | 12% | Observable social phenomenon | Compelling empirics, broad audience; **common at SP/SF** |
+| **Stakes-Driven** | 13% | 3% | 3% | Importance/urgency/change | Policy relevance; **rare at ASR/AJS** |
+| **Puzzle-Solver** | 6% | 6% | 3% | Explicit question | Curiosity hook, clear answers |
+
+**Venue note**: Research-Report dominates at ASR and AJS (~75%). SP/SF has the most balanced archetype distribution. Stakes-Driven is essentially absent at elite generalist journals.
 
 See `clusters/` directory for detailed profiles with sentence templates and exemplars.
 
@@ -183,7 +187,7 @@ Field profiles adjust benchmarks and add field-specific patterns for particular 
 
 | Field | File | Key Differences |
 |-------|------|-----------------|
-| **Generalist** (default) | — | Benchmarks from *Social Problems* and *Social Forces* (n=91) |
+| **Generalist** (default) | — | Benchmarks from *SP*, *SF*, *AJS*, and *ASR* (n=193) |
 
 Phase 0 identifies the field profile alongside the archetype. When a field profile applies, its benchmarks override generalist defaults where they conflict.
 
@@ -191,16 +195,19 @@ Phase 0 identifies the field profile alongside the archetype. When a field profi
 
 ## Calibration Benchmarks
 
-Based on 91 abstracts from *Social Problems* and *Social Forces*:
+Based on 193 abstracts from *SP*, *SF* (n=91), *ASR* (n=69), and *AJS* (n=33):
 
-| Metric | Median | Target Range (IQR) |
-|--------|--------|-------------------|
-| **Word count** | 189 | 166-201 |
-| **Sentence count** | 6 | 5-7 |
-| **Words per sentence** | ~29 | 25-35 |
-| **Theory mention rate** | 17% | -- |
-| **Sample size mention** | 24% | -- |
-| **First-person usage** | 62% | -- |
+| Metric | SP/SF | ASR | AJS |
+|--------|-------|-----|-----|
+| **Word count (median)** | 189 | 196 | 157 |
+| **Word count (IQR)** | 166–201 | 183–208 | 149–170 |
+| **Sentence count (median)** | 6 | 7 | 5 |
+| **Sentence count (IQR)** | 5–7 | 6–8 | 5–6 |
+| **Words per sentence** | ~29 | ~28 | ~31 |
+| **Theory mention rate** | 17% | 73% | 67% |
+| **First-person usage** | 62% | 35% | 24% |
+
+**Key venue differences**: AJS abstracts are dramatically shorter (median 157 words, 5 sentences) and demand extreme concision. ASR abstracts are modestly longer than SP/SF. Theory mentions are expected at ASR/AJS but optional at SP/SF. First-person usage is less common at ASR/AJS.
 
 ## Decision Tree Summary
 
@@ -267,6 +274,6 @@ When the user is ready to begin:
 - **Findings are central**: Devote 2-4 sentences to findings preview. This is what readers remember.
 - **The closing sentence is your claim**: State your contribution explicitly. Use strong verbs: demonstrate, show, argue, reveal.
 - **Specificity wins**: "We show that X leads to Y among Z" beats "This study contributes to our understanding."
-- **Word count is tight**: 180-200 words. Every word must earn its place.
+- **Word count is tight**: SP/SF 180–200, ASR 180–220, AJS 140–170 words. Every word must earn its place.
 - **Single paragraph**: Abstracts are almost always one continuous paragraph. Don't break into multiple paragraphs.
 - **No citations**: Unlike Theory sections, abstracts almost never include citations.

@@ -1,6 +1,6 @@
 # Move Sequence
 
-A guide to structuring abstracts through predictable move sequences, based on analysis of 91 abstracts from *Social Problems* and *Social Forces*.
+A guide to structuring abstracts through predictable move sequences, based on analysis of 193 abstracts from *SP*, *SF* (n=91), *ASR* (n=69), and *AJS* (n=33).
 
 ---
 

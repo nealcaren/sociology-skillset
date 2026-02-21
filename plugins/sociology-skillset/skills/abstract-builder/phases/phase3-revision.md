@@ -10,19 +10,19 @@ Good writing is rewriting. The draft from Phase 2 needs polishing: checking cali
 
 ### 1. Calibration Check
 
-Compare draft against benchmarks:
+Compare draft against venue-appropriate benchmarks:
 
-| Metric | Target (IQR) | Your Draft | Status |
-|--------|-------------|------------|--------|
-| Word count | 166-201 | [actual] | [ ] OK / [ ] Adjust |
-| Sentence count | 5-7 | [actual] | [ ] OK / [ ] Adjust |
-| Words per sentence | ~29 | [actual] | [ ] OK / [ ] Adjust |
+| Metric | SP/SF Target | ASR Target | AJS Target | Your Draft | Status |
+|--------|-------------|------------|------------|------------|--------|
+| Word count | 166–201 | 183–208 | 149–170 | [actual] | [ ] OK / [ ] Adjust |
+| Sentence count | 5–7 | 6–8 | 5–6 | [actual] | [ ] OK / [ ] Adjust |
+| Words per sentence | ~29 | ~28 | ~31 | [actual] | [ ] OK / [ ] Adjust |
 
 **If outside target range**:
-- **Under 165 words**: Expand findings, add specificity
-- **Over 210 words**: Cut elaboration, tighten prose
-- **Under 5 sentences**: Add essential moves or split long sentences
-- **Over 8 sentences**: Combine sentences or cut redundancy
+- **Under word count floor**: Expand findings, add specificity
+- **Over word count ceiling**: Cut elaboration, tighten prose (critical at AJS)
+- **Under sentence count floor**: Add essential moves or split long sentences
+- **Over sentence count ceiling**: Combine sentences or cut redundancy
 
 ### 2. Essential Moves Audit
 
@@ -52,17 +52,17 @@ Verify the opening matches the archetype:
 
 ### 4. Closing Sentence Check
 
-The closing is your contribution claim. Verify:
+The closing is your contribution claim (or, at ASR/AJS, may be a strong findings statement). Verify:
 
 1. **Strong verb**: Does it use argue, demonstrate, show, reveal, extend, illuminate, or similar?
-2. **Explicit contribution**: Does it state what the study contributes (not just what it finds)?
+2. **Explicit contribution or strong finding**: At SP/SF, prefer explicit contribution claim. At ASR/AJS, a strong findings close is also acceptable (26–39% of abstracts).
 3. **Specific claim**: Is it concrete rather than vague?
 
 **Weak closing signs**:
-- Ends with a finding rather than a claim
+- Trails off without emphasis
 - Uses passive construction
 - Is vague ("contributes to our understanding")
-- Trails off without emphasis
+- At SP/SF: ends with findings when contribution claim is possible
 
 **Strong closing patterns**:
 > "This research demonstrates that [specific contribution]."
@@ -122,16 +122,17 @@ Verify the abstract maintains archetype style throughout:
 
 ### 9. Final Checklist
 
-Before completion, verify:
+Before completion, verify against venue target:
 
-- [ ] Word count in target range (166-201)
-- [ ] Sentence count in target range (5-7)
-- [ ] Opening move matches archetype
+- [ ] Word count in venue target range (SP/SF 166–201; ASR 183–208; AJS 149–170)
+- [ ] Sentence count in venue target range (SP/SF 5–7; ASR 6–8; AJS 5–6)
+- [ ] Opening move matches archetype and venue conventions
 - [ ] STUDY-FOCUS present
 - [ ] DATA-DESCRIBE present (number, population, location)
 - [ ] FINDINGS present (2-3 sentences)
 - [ ] Closing sentence has strong verb
-- [ ] Closing states contribution (not just findings)
+- [ ] Closing states contribution or strong finding (contribution preferred at SP/SF; findings acceptable at ASR/AJS)
+- [ ] Theory mention present (if targeting ASR/AJS)
 - [ ] Transitions smooth
 - [ ] Prose reads clearly
 - [ ] Single paragraph format

@@ -1,19 +1,21 @@
 # Closing Moves
 
-A vocabulary of closing sentence types for abstract writing, based on analysis of 91 abstracts from *Social Problems* and *Social Forces*.
+A vocabulary of closing sentence types for abstract writing, based on analysis of 193 abstracts from *SP*, *SF* (n=91), *ASR* (n=69), and *AJS* (n=33).
 
 ---
 
 ## Overview
 
-The closing sentence is your last chance to tell readers what to take away. It should state your contribution explicitly, not trail off with a final finding.
+The closing sentence is your last chance to tell readers what to take away. At SP/SF, the default is an explicit contribution claim. At ASR and especially AJS, closing on findings is also common and acceptable.
 
-| Closing Move | Frequency | Function | Strong Verbs |
-|--------------|-----------|----------|--------------|
-| CLOSE-CONTRIBUTION | 72.5% | State what study demonstrates | argue, demonstrate, show, reveal |
-| CLOSE-IMPLICATIONS | 16.5% | State broader implications | suggest, have implications for |
-| CLOSE-FINDINGS | 9.9% | End with final finding | find, reveal, show |
-| CLOSE-GENERALIZATION | 1.1% | Broader claim | illustrate, highlight |
+| Closing Move | SP/SF | ASR | AJS | Function | Strong Verbs |
+|--------------|-------|-----|-----|----------|--------------|
+| CLOSE-CONTRIBUTION | 72.5% | 53.6% | 42.4% | State what study demonstrates | argue, demonstrate, show, reveal |
+| CLOSE-IMPLICATIONS | 16.5% | 18.8% | 18.2% | State broader implications | suggest, have implications for |
+| CLOSE-FINDINGS | 9.9% | 26.1% | 39.4% | End with final finding | find, reveal, show |
+| CLOSE-GENERALIZATION | 1.1% | 1.4% | 0% | Broader claim | illustrate, highlight |
+
+**Venue note**: At AJS, contribution and findings closings are nearly equal. This reflects AJS's shorter abstracts — with fewer words, authors often let the final finding serve as the implicit contribution rather than adding an explicit claim.
 
 ---
 
@@ -110,15 +112,17 @@ State the broader implications of findings, often for policy or practice.
 
 ---
 
-## 3. CLOSE-FINDINGS (9.9%)
+## 3. CLOSE-FINDINGS (SP/SF 9.9%; ASR 26.1%; AJS 39.4%)
 
 End with a final finding rather than explicit contribution claim.
 
 ### When to Use
-- Word count is very tight
+- Word count is very tight (especially at AJS)
 - Final finding is particularly striking
 - Contribution is implicit in the findings
 - Puzzle-Solver archetype (40% use this)
+- **At AJS**: This is a common and fully acceptable strategy (39.4%)
+- **At ASR**: Also legitimate (26.1%), especially when findings are the main event
 
 ### Template Patterns
 
@@ -132,7 +136,7 @@ End with a final finding rather than explicit contribution claim.
 
 > "The households that stayed had long-term plans to remain in their homes before the flood, while the small number who decided to move generally had well-defined plans to do so in the near future before the storm hit."
 
-**Note**: CLOSE-FINDINGS is less common because it misses the opportunity to make an explicit contribution claim. Use sparingly.
+**Note**: At SP/SF, CLOSE-FINDINGS is less common and misses the contribution claim opportunity. At ASR/AJS, it is a recognized strategy — the contribution is implicit in the strength of the findings themselves.
 
 ---
 
@@ -204,25 +208,27 @@ Use when suggesting implications:
 
 ## Archetype-Specific Guidance
 
-| Archetype | Recommended Closing | Notes |
-|-----------|--------------------|----- |
-| **Empirical-Showcase** | CLOSE-CONTRIBUTION (83%) | Use demonstrate, show, reveal |
-| **Research-Report** | CLOSE-CONTRIBUTION (78%) | Use extend, advance, contribute |
-| **Stakes-Driven** | Split: CONTRIBUTION (58%) / IMPLICATIONS (42%) | Consider policy implications |
-| **Puzzle-Solver** | Split: CONTRIBUTION (60%) / FINDINGS (40%) | Illuminate or reveal |
+| Archetype | SP/SF Closing | ASR/AJS Closing | Notes |
+|-----------|--------------|-----------------|-------|
+| **Empirical-Showcase** | CONTRIBUTION (83%) | CONTRIBUTION or FINDINGS | Use demonstrate, show, reveal |
+| **Research-Report** | CONTRIBUTION (78%) | CONTRIBUTION (50–55%) or FINDINGS (25–40%) | Use extend, advance, contribute; FINDINGS acceptable at ASR/AJS |
+| **Stakes-Driven** | Split: CONTRIBUTION (58%) / IMPLICATIONS (42%) | Rare archetype at ASR/AJS | Consider policy implications |
+| **Puzzle-Solver** | Split: CONTRIBUTION (60%) / FINDINGS (40%) | Similar split | Illuminate or reveal |
 
 ---
 
 ## Quick Reference
 
 ### Default Choice
-Use CLOSE-CONTRIBUTION with strong verb (demonstrate, show, argue).
+- **SP/SF**: CLOSE-CONTRIBUTION with strong verb (demonstrate, show, argue)
+- **ASR**: CLOSE-CONTRIBUTION preferred (54%), but CLOSE-FINDINGS is legitimate (26%)
+- **AJS**: CLOSE-CONTRIBUTION or CLOSE-FINDINGS — roughly equal; choose based on what's strongest
 
 ### For Policy-Relevant Topics
 Consider CLOSE-IMPLICATIONS ("Our findings have implications for...").
 
-### For Tight Word Counts
-CLOSE-FINDINGS acceptable but misses contribution claim opportunity.
+### For Tight Word Counts (especially AJS)
+CLOSE-FINDINGS is a recognized strategy at ASR/AJS. At SP/SF, use only when word count is critical.
 
 ### Always Avoid
 - Vague contribution statements

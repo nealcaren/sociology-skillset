@@ -59,13 +59,16 @@ The middle typically includes:
 
 Determine closing strategy:
 
-| Closing Type | Frequency | Function | Verbs |
-|--------------|-----------|----------|-------|
-| CLOSE-CONTRIBUTION | 73% | State what study demonstrates/shows | argue, demonstrate, show, reveal |
-| CLOSE-IMPLICATIONS | 17% | State broader implications | have implications for, suggest |
-| CLOSE-FINDINGS | 10% | End with final finding | find, reveal, show |
+| Closing Type | SP/SF | ASR | AJS | Function | Verbs |
+|--------------|-------|-----|-----|----------|-------|
+| CLOSE-CONTRIBUTION | 73% | 54% | 42% | State what study demonstrates/shows | argue, demonstrate, show, reveal |
+| CLOSE-IMPLICATIONS | 17% | 19% | 18% | State broader implications | have implications for, suggest |
+| CLOSE-FINDINGS | 10% | 26% | 39% | End with final finding | find, reveal, show |
 
-**Recommendation**: Use CLOSE-CONTRIBUTION unless you have strong policy implications (then CLOSE-IMPLICATIONS) or a tight word count (then CLOSE-FINDINGS).
+**Recommendation by venue**:
+- **SP/SF**: Default to CLOSE-CONTRIBUTION
+- **ASR**: CLOSE-CONTRIBUTION preferred, but CLOSE-FINDINGS is legitimate (~26%)
+- **AJS**: CLOSE-CONTRIBUTION or CLOSE-FINDINGS — roughly equal; choose based on what's strongest given tight word counts
 
 ### 5. Map Complete Sequence
 
@@ -170,7 +173,9 @@ Plan for 2-3 findings sentences. This is what readers remember.
 Don't let the abstract trail off. Plan a strong closing sentence.
 
 ### Word Budget is Tight
-With ~180 words across 6 sentences, each sentence is ~30 words. Plan accordingly.
+- **SP/SF**: ~180 words across 6 sentences (~30 words each)
+- **ASR**: ~196 words across 7 sentences (~28 words each)
+- **AJS**: ~157 words across 5 sentences (~31 words each — every word counts)
 
 ---
 
