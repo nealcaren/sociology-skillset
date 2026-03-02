@@ -1,0 +1,20 @@
+{
+  "name": "socibook-skillset",
+  "version": "1.0.0",
+  "description": "Academic monograph writing toolkit with 10 skills for planning and drafting book-length scholarly works, grounded in genre analysis of 22 political sociology and American politics monographs. Skills: architecture (book-architecture), chapter writing (book-introduction, book-theory-chapter, book-context-chapter, book-parallel-case, book-cross-issue, book-quant-chapter, book-conclusion), and revision support (book-editor, book-continuity).",
+  "author": {
+    "name": "Neal Caren"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sociology",
+    "academic-writing",
+    "monograph",
+    "book-writing",
+    "political-sociology",
+    "qualitative-research",
+    "quantitative-research",
+    "mixed-methods"
+  ],
+  "skills": "./skills/"
+}

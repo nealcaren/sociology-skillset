@@ -2,6 +2,10 @@
 
 A set of skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) to assist with sociology research projects—qualitative, quantitative, and mixed methods. Covers the full research-to-publication workflow: literature review, data analysis (interviews, R, Stata), and academic writing.
 
+This marketplace contains two plugins:
+- **sociology-skillset** — 27 skills for journal article research and writing
+- **socibook-skillset** — 10 skills for academic monograph (book) writing
+
 **This project is actively under development.** Skills and workflows may change.
 
 ## Installation
@@ -12,11 +16,12 @@ Requires [Claude Code](https://docs.anthropic.com/en/docs/claude-code):
 npm install -g @anthropic-ai/claude-code
 ```
 
-Then install the plugin:
+Then install the plugins:
 
 ```
 /plugin marketplace add nealcaren/sociology-skillset
 /plugin install sociology-skillset@sociology-skillset
+/plugin install sociology-skillset@socibook-skillset
 ```
 
 Or clone manually:
@@ -42,7 +47,7 @@ And add to your Claude Code settings (`~/.claude/settings.json` or project `.cla
 
 ### Verify Installation
 
-Restart Claude Code and type `/help`. You should see skills like `/interview-analyst`, `/r-analyst`, `/lit-search`, `/argument-builder`, etc.
+Restart Claude Code and type `/help`. You should see skills like `/interview-analyst`, `/r-analyst`, `/lit-search`, `/argument-builder`, `/book-introduction`, etc.
 
 ## Quick Start
 
@@ -274,35 +279,49 @@ sociology-skillset/
 ├── .claude-plugin/
 │   └── marketplace.json        # Marketplace catalog
 ├── plugins/
-│   └── sociology-skillset/
+│   ├── sociology-skillset/
+│   │   ├── plugin.json         # Plugin manifest
+│   │   └── skills/             # 27 journal article skills
+│   │       ├── abstract-builder/
+│   │       ├── argument-builder/
+│   │       ├── bibliography-builder/
+│   │       ├── case-justification/
+│   │       ├── genre-skill-builder/
+│   │       ├── article-bookends/
+│   │       ├── interview-analyst/
+│   │       ├── lit-search/
+│   │       ├── lit-synthesis/
+│   │       ├── methods-writer/
+│   │       ├── mixed-methods-findings-writer/
+│   │       ├── peer-reviewer/
+│   │       ├── project-scaffold/
+│   │       ├── prompt-optimizer/
+│   │       ├── qual-findings-writer/
+│   │       ├── quant-findings-writer/
+│   │       ├── r-analyst/
+│   │       ├── reading-agent/
+│   │       ├── research-coordinator/
+│   │       ├── revision-coordinator/
+│   │       ├── stata-analyst/
+│   │       ├── text-analyst/
+│   │       ├── verifier/
+│   │       ├── writing-editor/
+│   │       ├── zotero/
+│   │       └── zotero-rag/
+│   └── socibook-skillset/
 │       ├── plugin.json         # Plugin manifest
-│       └── skills/
-│           ├── abstract-builder/
-│           ├── argument-builder/
-│           ├── bibliography-builder/
-│           ├── case-justification/
-│           ├── genre-skill-builder/
-│           ├── article-bookends/
-│           ├── interview-analyst/
-│           ├── lit-search/
-│           ├── lit-synthesis/
-│           ├── methods-writer/
-│           ├── mixed-methods-findings-writer/
-│           ├── peer-reviewer/
-│           ├── project-scaffold/
-│           ├── prompt-optimizer/
-│           ├── qual-findings-writer/
-│           ├── quant-findings-writer/
-│           ├── r-analyst/
-│           ├── reading-agent/
-│           ├── research-coordinator/
-│           ├── revision-coordinator/
-│           ├── stata-analyst/
-│           ├── text-analyst/
-│           ├── verifier/
-│           ├── writing-editor/
-│           ├── zotero/
-│           └── zotero-rag/
+│       ├── GUIDE.md            # Monograph writing overview
+│       └── skills/             # 10 monograph writing skills
+│           ├── book-architecture/
+│           ├── book-introduction/
+│           ├── book-theory-chapter/
+│           ├── book-context-chapter/
+│           ├── book-parallel-case/
+│           ├── book-cross-issue/
+│           ├── book-quant-chapter/
+│           ├── book-conclusion/
+│           ├── book-editor/
+│           └── book-continuity/
 └── README.md
 ```
 
@@ -313,6 +332,46 @@ Each skill folder contains:
 - `techniques/` — Craft reference guides
 - `guides/` — Setup and usage guides (for zotero skills)
 - `references/` — Tool references and error patterns
+
+## Socibook Skillset (Monograph Writing)
+
+A separate plugin for writing academic monographs, grounded in genre analysis of 22 political sociology and American politics books. Works across qualitative, quantitative, mixed-methods, and ethnographic books.
+
+### Book Architecture
+
+| Skill | What It Does |
+|-------|--------------|
+| `/book-architecture` | Design overall book structure — chapter count, sequencing, theory placement, part structure |
+
+### Chapter Writing
+
+| Skill | What It Does |
+|-------|--------------|
+| `/book-introduction` | Write the opening chapter (7,000–10,000 words, 5 cluster options) |
+| `/book-theory-chapter` | Write theory/framework chapters (9,500–16,000 words, 5 clusters) |
+| `/book-context-chapter` | Write historical background or context chapters (9,000–16,000 words, 5 clusters) |
+| `/book-parallel-case` | Write case study chapters — one case per chapter (9,000–14,000 words, 4 clusters) |
+| `/book-cross-issue` | Write thematic chapters examining patterns across cases (9,000–14,000 words, 4 templates) |
+| `/book-quant-chapter` | Write sequential quantitative evidence chapters (8,000–15,000 words, 4 clusters) |
+| `/book-conclusion` | Write the conclusion chapter (5,000–10,500 words, 5 clusters) |
+
+### Book Revision
+
+| Skill | What It Does |
+|-------|--------------|
+| `/book-editor` | Evaluate a chapter against genre norms with revision recommendations |
+| `/book-continuity` | Audit inter-chapter connections: bridges, evidence reuse, vocabulary, argument arc |
+
+### Monograph Workflow
+
+1. `/book-architecture` — Plan the structure
+2. `/book-introduction` — Write the opening
+3. `/book-theory-chapter` — Build the framework
+4. `/book-context-chapter` — Set the stage (if needed)
+5. `/book-parallel-case`, `/book-cross-issue`, `/book-quant-chapter` — Empirical chapters
+6. `/book-conclusion` — Close the book
+7. `/book-editor` — Diagnose individual chapters
+8. `/book-continuity` — Audit full manuscript connections
 
 ## Planned Skills
 
