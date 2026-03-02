@@ -51,7 +51,8 @@ DOI: 10.1086/123456
 
 Ask the user for:
 1. **Paper source**: PDF path, Zotero reference, or pasted text
-2. **Identifiers** (at least one):
+2. **Identifiers** (at least one, prefer citation key):
+   - Citation key (e.g., `smithCulturalFrames2020`) — from lit-search database or Zotero `data.citationKey`
    - OpenAlex ID (e.g., `W2123456789`)
    - DOI (e.g., `10.1086/123456`)
    - Zotero key (e.g., `ABC123XY`)
@@ -65,7 +66,7 @@ Convert using docling:
 # Creates: /path/to/paper.md (cached for reuse)
 ```
 
-**If Zotero reference**: Use `zotero_get_item_metadata` and `zotero_get_annotations` via MCP.
+**If Zotero reference**: Use `zotero_get_item_metadata` and `zotero_get_annotations` via MCP. Capture `data.citationKey` from the item metadata for the note frontmatter.
 
 **If markdown/text**: Use directly.
 
@@ -96,7 +97,8 @@ All reading notes **must** follow this structure with required frontmatter:
 
 ```markdown
 ---
-openalex_id: W2123456789    # From lit-search database (preferred)
+citation_key: smithCulturalFrames2020  # From database.json or Zotero data.citationKey (preferred)
+openalex_id: W2123456789    # From lit-search database
 doi: 10.1086/123456         # Digital Object Identifier
 zotero_key: ABC123XY        # Zotero item key (if in library)
 first_author: Smith
@@ -186,6 +188,7 @@ When spawning agents for batch processing, use this prompt template:
 You are a research assistant creating structured reading notes for a sociology literature synthesis project.
 
 ## Paper Identifiers
+- Citation Key: {citation_key}
 - OpenAlex ID: {openalex_id}
 - DOI: {doi}
 - Zotero Key: {zotero_key}
@@ -309,7 +312,7 @@ When the user invokes this skill:
 
 ## Key Reminders
 
-- **Identifiers are essential**: Every note needs at least one unique identifier in frontmatter
+- **Identifiers are essential**: Every note needs at least one unique identifier in frontmatter (prefer `citation_key`)
 - **Quotes need page numbers**: Include (p. X) for every quote
 - **Arguments over summaries**: Capture what the paper argues, not just what it describes
 - **Tensions are valuable**: Note unresolved questions and potential gaps

@@ -148,6 +148,7 @@ Maintain a running list of every citation as you use it. For each citation, reco
 {
   "citations": [
     {
+      "citation_key": "kirkCulturalMechanisms2011",
       "author": "Kirk and Papachristos",
       "year": "2011",
       "context": "legal cynicism patterning",
@@ -155,6 +156,7 @@ Maintain a running list of every citation as you use it. For each citation, reco
       "pattern": "parenthetical"
     },
     {
+      "citation_key": "connellMasculinities2005",
       "author": "Connell",
       "year": "2005",
       "context": "hegemonic masculinity concept",
@@ -166,10 +168,11 @@ Maintain a running list of every citation as you use it. For each citation, reco
 ```
 
 **Why track citations?**
+- The `citation_key` enables deterministic Zotero lookup in Phase 5 (no fuzzy matching needed)
 - Enables bibliography generation without parsing the document
-- Allows Zotero ID lookup in Phase 5
 - Helps verify citation density during revision
 - Creates audit trail of sources used
+- Keys map directly to `[@citationKey]` Pandoc syntax in the draft
 
 Save incrementally to `citations.json` as you draft.
 

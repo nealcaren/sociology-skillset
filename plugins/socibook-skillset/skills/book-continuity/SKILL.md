@@ -40,6 +40,20 @@ The output is a **continuity report** with a chapter inventory, pass-by-pass fin
 
 **Goal:** Build a chapter-by-chapter inventory that serves as the raw material for all subsequent passes.
 
+**Implementation:** Dispatch parallel subagents (one per chapter) to build the inventory. Loading the full manuscript into a single context risks exceeding memory and losing detail. Each subagent reads one chapter file and returns its inventory row. The orchestrator collects and assembles the rows into the inventory table.
+
+```
+For each chapter file:
+  Spawn a subagent (sonnet) with:
+    - The chapter file path
+    - The master framework term list (from the theory chapter)
+    - Instructions to return: chapter type, cluster, word count,
+      verdict sentence, bridge sentence, opening sentence,
+      framework terms used, cases featured, block quotes
+```
+
+Run all chapter agents in parallel using the Agent tool with multiple calls in a single message. Once all agents return, assemble the inventory table.
+
 **For each chapter, record:**
 
 | Field | What to Capture |

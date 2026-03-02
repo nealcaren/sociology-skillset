@@ -105,7 +105,14 @@ Look for these patterns:
 
 **For Literature Quotes**:
 
-Look for these patterns:
+Look for these patterns (Pandoc format):
+- `"[text]" [@citationKey, p. X]`
+- `@citationKey [p. X]` following quoted text
+- `@citationKey states/argues/claims "[text]"`
+- `As @citationKey writes, "[text]"`
+- Block quotes with `[@key]` citation
+
+Also recognize legacy format:
 - `"[text]" (Author Year, p. X)`
 - `(Author Year: X)` following quoted text
 - `Author (Year, p. X) states/argues/claims "[text]"`
@@ -114,7 +121,12 @@ Look for these patterns:
 
 **For Paraphrases**:
 
-Look for these patterns:
+Look for these patterns (Pandoc format):
+- `According to @citationKey, [claim]`
+- `@citationKey argues that [claim]`
+- `Research shows that [claim] [@citationKey]`
+
+Also recognize legacy format:
 - `According to [source], [claim]`
 - `[Name] described [claim]`
 - `[Name] felt/thought/believed [claim]`

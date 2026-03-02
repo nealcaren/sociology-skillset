@@ -19,7 +19,25 @@ Key tools:
 
 ### 2. Search Strategy
 
-For each citation, search in this order:
+The strategy depends on the citation format detected in Phase 0.
+
+#### Pandoc Format (Primary — Direct Key Lookup)
+
+For manuscripts using `[@citationKey]` syntax, matching is deterministic:
+
+```
+For each extracted citation key:
+1. Search: search_items(query=citation_key)
+2. Check results for data.citationKey == citation_key
+3. If exact match: record as Found
+4. If no match: flag as Not Found (may need to add to Zotero)
+```
+
+This replaces the entire fuzzy search pipeline. One search per citation, no ambiguity.
+
+#### Legacy Format (Fallback — Fuzzy Search)
+
+For manuscripts using `(Author Year)` format, search in this order:
 
 **Step 1: Author + Year search**
 ```
@@ -36,6 +54,12 @@ Search: author:Smith AND year:2020
 - Present options to user if needed
 
 ### 3. Handle Different Citation Types
+
+#### Pandoc Format
+
+All citation keys are handled identically — look up by `citationKey`. No special handling needed for multi-author works.
+
+#### Legacy Format
 
 **Single author (Smith 2020):**
 - Search: `author:Smith year:2020`
@@ -69,7 +93,18 @@ For each citation, record:
 
 ### 5. Build Match Table
 
-Create a comprehensive match record:
+Create a comprehensive match record.
+
+**Pandoc format** (simplified — no ambiguity):
+
+| Citation Key | Status | Zotero Key | Title |
+|-------------|--------|------------|-------|
+| smithSocialMovements2020 | Found | ABC123 | "Social movements and..." |
+| jonesNetworkDynamics2019 | Found | DEF456 | "Network dynamics in..." |
+| garciaImmigrantIncorp2021 | Found | JKL012 | "Immigrant incorporation..." |
+| brownMigrationPatterns2018 | Not Found | — | — |
+
+**Legacy format** (may have ambiguity):
 
 | Citation | Status | Zotero Key | Title (abbreviated) | Notes |
 |----------|--------|------------|---------------------|-------|

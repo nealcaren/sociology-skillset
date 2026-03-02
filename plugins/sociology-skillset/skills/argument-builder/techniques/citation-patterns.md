@@ -6,12 +6,14 @@ How you integrate citations affects readability and signals your relationship to
 
 ## The Four Patterns
 
-| Pattern | Frequency | Signature | Best For |
-|---------|-----------|-----------|----------|
-| **Parenthetical Support** | 50-55% | "Research shows X (Author Year)." | Synthesis, efficient documentation |
-| **Author-as-Subject** | 20-25% | "Author (Year) argues that..." | Canonical theorists, foundational works |
-| **Citation Strings** | 15-20% | "(A 2020; B 2019; C 2018)" | Establishing consensus, breadth |
-| **Quote-then-Cite** | 5-10% | "As X notes, '...' (Year:page)" | Key definitions, precise language |
+| Pattern | Frequency | Pandoc Syntax | Renders As | Best For |
+|---------|-----------|---------------|------------|----------|
+| **Parenthetical Support** | 50-55% | `[@smithHousing2020]` | (Smith 2020) | Synthesis, efficient documentation |
+| **Author-as-Subject** | 20-25% | `@smithHousing2020 argues that...` | Smith (2020) argues that... | Canonical theorists, foundational works |
+| **Citation Strings** | 15-20% | `[@a2020; @b2019; @c2018]` | (A 2020; B 2019; C 2018) | Establishing consensus, breadth |
+| **Quote-then-Cite** | 5-10% | `[@kirkCultural2011, p. 45]` | (Kirk and Papachristos 2011, 45) | Key definitions, precise language |
+
+**Pandoc note**: These `[@citationKey]` references render to standard `(Author Year)` format when processed with Pandoc and a CSL style file. The keys come from the lit-search database or Zotero's `citationKey` field.
 
 ---
 
@@ -20,15 +22,15 @@ How you integrate citations affects readability and signals your relationship to
 The most common pattern. The claim comes first; citations provide evidence without interrupting prose.
 
 ### Structure
-> [Claim] (Author Year).
-> [Claim] (Author Year; Author Year).
+> [Claim] [@citationKey].
+> [Claim] [@key1; @key2].
 
 ### Examples
-> "Research on legal cynicism demonstrates that distrust of legal institutions is patterned by neighborhood context and race (Kirk and Papachristos 2011)."
+> "Research on legal cynicism demonstrates that distrust of legal institutions is patterned by neighborhood context and race [@kirkCulturalMechanisms2011]."
 
-> "Mass incarceration has left thousands of Black and Brown men under 'mass supervision' through probation and parole (McNeil and Beyens 2013, 3)."
+> "Mass incarceration has left thousands of Black and Brown men under 'mass supervision' through probation and parole [@mcneilBeyensMassSuperv2013, p. 3]."
 
-> "Conspiracy beliefs have long proliferated in the United States (Bailyn 2017; Waters 1997) and beyond (Imhoff et al. 2022; Swami 2012)."
+> "Conspiracy beliefs have long proliferated in the United States [@bailynIdeologicalOrigins2017; @watersConspiracyTheories1997] and beyond [@imhoffConspiracyBeliefs2022; @swamiConspiracyTheories2012]."
 
 ### When to Use
 - Synthesizing multiple studies
@@ -48,16 +50,15 @@ The most common pattern. The claim comes first; citations provide evidence witho
 The cited author performs the intellectual action. Gives prominence to the scholar.
 
 ### Structure
-> [Author] (Year) [argues/demonstrates/shows/conceptualizes] that...
-> According to [Author]...
-> [Author's] (Year) [concept/framework]...
+> @citationKey [argues/demonstrates/shows/conceptualizes] that...
+> According to @citationKey...
 
 ### Examples
-> "Connell (2005) conceptualizes hegemonic masculinity as the most honorable expression of manliness within a hierarchy of masculinities."
+> "@connellMasculinities2005 conceptualizes hegemonic masculinity as the most honorable expression of manliness within a hierarchy of masculinities."
 
-> "According to Puwar (2004), numerical representation matters, but so does the construction of race and gender within larger social status hierarchies."
+> "According to @puwarSpaceInvaders2004, numerical representation matters, but so does the construction of race and gender within larger social status hierarchies."
 
-> "Du Bois so clearly explicated that individual agency, the imagined range of actions available to the self, was shaped through the ongoing reconciliation of consciousness."
+> "@duboisSoulsBlackFolk1903 so clearly explicated that individual agency, the imagined range of actions available to the self, was shaped through the ongoing reconciliation of consciousness."
 
 ### When to Use
 - Introducing canonical theorists (Bourdieu, Goffman, Foucault)
@@ -81,19 +82,19 @@ The cited author performs the intellectual action. Gives prominence to the schol
 Multiple citations bundled together, signaling consensus or breadth.
 
 ### Structure
-> [Claim] (Author Year; Author Year; Author Year).
-> [Claim] (see Author Year; Author Year; cf. Author Year).
-> [Claim] (e.g., Author Year; Author Year).
+> [Claim] [@key1; @key2; @key3].
+> [Claim] [see @key1; @key2; cf. @key3].
+> [Claim] [e.g., @key1; @key2].
 
 ### Examples
-> "Scholarship on business-elite influence on populist movements links opposition to climate reform to climate denial and other far-right ideals (Dunlap and McCright 2015; Brulle 2018; Hertel-Fernandez 2019)."
+> "Scholarship on business-elite influence on populist movements links opposition to climate reform to climate denial and other far-right ideals [@dunlapClimateDenial2015; @brulleInstitutionalizingDelay2018; @hertelFernandezPoliticsScale2019]."
 
-> "...the sociology of law, which demonstrates that legality is embedded in a complex set of cultural schemas (Ewick and Silbey 1998; Silbey 2005; Nielsen 2000)."
+> "...the sociology of law, which demonstrates that legality is embedded in a complex set of cultural schemas [@ewickCommonPlace1998; @silbeyAfterLegal2005; @nielsenSituatedJustice2000]."
 
 ### String Modifiers
-- **"see"**: Points to useful sources: "(see Smith 2019; Jones 2020)"
-- **"e.g."**: Indicates examples, not exhaustive: "(e.g., Brown 2018)"
-- **"cf."**: Indicates comparison or contrast: "(cf. alternative view in Lee 2017)"
+- **"see"**: Points to useful sources: `[see @smithHousing2019; @jonesUrban2020]`
+- **"e.g."**: Indicates examples, not exhaustive: `[e.g., @brownMigration2018]`
+- **"cf."**: Indicates comparison or contrast: `[cf. @leeAlternativeView2017]`
 
 ### When to Use
 - Establishing that a finding is robust across studies
@@ -118,14 +119,14 @@ Multiple citations bundled together, signaling consensus or breadth.
 Direct quotation with attribution. Use sparingly and strategically.
 
 ### Structure
-> As [Author] notes, "..." (Year:page).
-> [Author] describes [concept] as "..." (Year:page).
-> "[Quote]" ([Author] Year:page).
+> As @citationKey notes, "..." [@key, p. page].
+> @citationKey describes [concept] as "..." [@key, p. page].
+> "[Quote]" [@citationKey, p. page].
 
 ### Examples
-> "Legal cynicism is broadly conceived of as 'a *cultural orientation* in which the law and the agents of its enforcement are viewed as illegitimate, unresponsive, and ill-equipped to ensure public safety' (Kirk and Matsuda 2011:443)."
+> "Legal cynicism is broadly conceived of as 'a *cultural orientation* in which the law and the agents of its enforcement are viewed as illegitimate, unresponsive, and ill-equipped to ensure public safety' [@kirkCulturalMechanisms2011, p. 443]."
 
-> "According to Lamont (2009:158): 'Low-status groups (in this situation) are more likely to be resigned and passive instead of resilient.'"
+> "According to @lamontDignityMorality2009 [p. 158]: 'Low-status groups (in this situation) are more likely to be resigned and passive instead of resilient.'"
 
 ### When to Use
 - **Key definitions**: When the original language matters

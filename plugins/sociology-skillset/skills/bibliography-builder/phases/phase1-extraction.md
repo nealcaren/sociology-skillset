@@ -8,7 +8,38 @@ Accurate extraction is the foundation. Missing a citation means an incomplete bi
 
 ### 1. Extract All Citations
 
-Use regex patterns to find citations. Handle these patterns:
+First determine the citation format (from Phase 0 intake). Use the appropriate extraction strategy.
+
+#### Pandoc Format Extraction (Primary)
+
+If the manuscript uses `[@citationKey]` syntax (from our writing skills), extract keys directly:
+
+```python
+import re
+
+# Bracketed citations: [@key], [@key1; @key2], [@key, p. 45], [-@key]
+bracketed = re.findall(r'\[[-]?@([a-zA-Z][a-zA-Z0-9]*(?:;\s*@[a-zA-Z][a-zA-Z0-9]*)*(?:,\s*p\.\s*\d+(?:[-–]\d+)?)?)\]', text)
+
+# Parse individual keys from bracketed matches
+citation_keys = set()
+for match in bracketed:
+    # Split multi-citations on '; @'
+    for part in re.split(r';\s*@', match):
+        key = re.match(r'([a-zA-Z][a-zA-Z0-9]*)', part.lstrip('@'))
+        if key:
+            citation_keys.add(key.group(1))
+
+# Narrative citations: @key (not inside brackets)
+narrative = re.findall(r'(?<!\[[-]?)(?<!\[)@([a-zA-Z][a-zA-Z0-9]+)(?!\])', text)
+for key in narrative:
+    citation_keys.add(key)
+```
+
+**Output**: A list of unique citation keys. No author/year parsing needed — keys are the identifiers.
+
+#### Legacy Format Extraction (Fallback)
+
+If the manuscript uses `(Author Year)` format, use the original regex patterns:
 
 **Parenthetical citations:**
 ```python

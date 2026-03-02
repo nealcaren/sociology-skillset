@@ -282,7 +282,7 @@ lit-synthesis/
 └── field-synthesis.md        # Comprehensive synthesis with sections for theoretical map, thematic clusters, debate map
 ```
 
-**Note**: Filenames use `author-year-short-title.md` for human readability, but the **frontmatter identifiers** (OpenAlex ID, DOI, Zotero key) are the authoritative way to match notes back to source papers.
+**Note**: Filenames use `author-year-short-title.md` for human readability, but the **frontmatter identifiers** (`citation_key`, OpenAlex ID, DOI, Zotero key) are the authoritative way to match notes back to source papers. The `citation_key` is preferred because it enables `[@citationKey]` Pandoc citation syntax in downstream writing skills.
 
 ## Reading Note Template
 
@@ -291,7 +291,8 @@ For each paper in Phase 1, notes **must include identifier frontmatter** to enab
 ```markdown
 ---
 # Required: At least one unique identifier
-openalex_id: W2123456789    # From lit-search database (preferred)
+citation_key: smithCulturalFrames2020  # Preferred: from lit-search database or Zotero citationKey
+openalex_id: W2123456789    # From lit-search database
 doi: 10.1086/123456         # Digital Object Identifier
 zotero_key: ABC123XY        # Zotero item key (if in library)
 
@@ -386,7 +387,7 @@ When the user is ready to begin:
 
 ## Key Reminders
 
-- **Identifiers are essential**: Every reading note must have at least one unique identifier (OpenAlex ID, DOI, or Zotero key) in its frontmatter
+- **Identifiers are essential**: Every reading note must have at least one unique identifier (`citation_key`, OpenAlex ID, DOI, or Zotero key) in its frontmatter. Prefer `citation_key` when available.
 - **Choose the right mode**: Zotero mode for annotated papers; Docling mode for batch processing
 - **Annotations accelerate**: If you've already highlighted papers, Zotero mode leverages that work
 - **Quality over quantity**: Deep reading 15 papers beats skimming 50

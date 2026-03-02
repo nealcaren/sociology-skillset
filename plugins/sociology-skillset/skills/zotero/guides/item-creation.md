@@ -240,6 +240,53 @@ update_item(
 
 ---
 
+## Setting citationKey
+
+When creating or updating items, you can set the `citationKey` field for BibTeX/Pandoc-compatible citation identifiers.
+
+### On Creation
+
+Include `citationKey` in the `fields` dictionary:
+```
+add_item(
+  item_type="journalArticle",
+  fields={
+    "title": "Agendas, Alternatives, and Public Policies",
+    "citationKey": "kingdonAgendasAlternatives1984",
+    "creators": [{"creatorType": "author", "firstName": "John", "lastName": "Kingdon"}],
+    "date": "1984"
+  }
+)
+```
+
+### On Update
+
+```
+update_item(
+  item_key="ABC123XY",
+  fields={
+    "citationKey": "kingdonAgendasAlternatives1984"
+  }
+)
+```
+
+### Generating Citation Keys
+
+Use this algorithm (BBT-compatible):
+
+1. First author last name, lowercase: `kingdon`
+2. Up to 3 significant title words (skip: a, an, the, of, in, on, for, with, to, from, by, at, and, or, but, is, are, was, were), capitalize each: `Agendas`, `Alternatives`
+3. Append 4-digit year: `1984`
+4. Result: `kingdonAgendasAlternatives1984`
+5. Collisions: append `a`, `b`, `c` suffixes
+
+**Examples**:
+- "Evicted: Poverty and Profit in the American City" (Desmond 2016) → `desmondEvictedPovertyProfit2016`
+- "Cultural Mechanisms and the Persistence of Neighborhood Violence" (Kirk & Papachristos 2011) → `kirkCulturalMechanisms2011`
+- "The Truly Disadvantaged" (Wilson 1987) → `wilsonTrulyDisadvantaged1987`
+
+---
+
 ## Deleting Items
 
 ```
@@ -283,6 +330,7 @@ add_item(
   item_type="journalArticle",
   fields={
     "title": "Housing Instability",
+    "citationKey": "smithHousingInstability2024",
     "creators": [{"creatorType": "author", "firstName": "J.", "lastName": "Smith"}],
     "publicationTitle": "Social Forces",
     "date": "2024",

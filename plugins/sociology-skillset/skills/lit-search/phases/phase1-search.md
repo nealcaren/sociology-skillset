@@ -68,6 +68,46 @@ results = search_openalex(
 For each paper, extract and store:
 
 ```python
+STOP_WORDS = {"a", "an", "the", "of", "in", "on", "for", "with", "to", "from",
+               "by", "at", "and", "or", "but", "is", "are", "was", "were"}
+
+def generate_citation_key(work):
+    """Generate a BBT-compatible citation key from OpenAlex work metadata.
+
+    Format: firstAuthorLastNameSignificantTitleWordsYear (camelCase)
+    Example: kingdonAgendasAlternatives1984
+    """
+    # First author last name, lowercase
+    authorships = work.get("authorships", [])
+    if authorships:
+        display_name = authorships[0].get("author", {}).get("display_name", "Unknown")
+        last_name = display_name.split()[-1].lower()
+    else:
+        last_name = "unknown"
+
+    # Up to 3 significant title words, capitalized
+    title = work.get("title") or ""
+    words = [w for w in title.split() if w.lower().strip(",:;.!?()") not in STOP_WORDS]
+    sig_words = "".join(w.strip(",:;.!?()").capitalize() for w in words[:3])
+
+    # 4-digit year
+    year = str(work.get("publication_year") or "0000")
+
+    return f"{last_name}{sig_words}{year}"
+
+
+def deduplicate_citation_keys(papers):
+    """Add a/b/c suffixes to resolve citation key collisions."""
+    seen = {}
+    for paper in papers:
+        key = paper.get("citation_key", "")
+        if key in seen:
+            seen[key] += 1
+            paper["citation_key"] = f"{key}{chr(96 + seen[key])}"  # a, b, c...
+        else:
+            seen[key] = 0
+
+
 def extract_metadata(work):
     """Extract relevant fields from OpenAlex work."""
     return {
@@ -75,6 +115,7 @@ def extract_metadata(work):
         "doi": work.get("doi"),
         "title": work.get("title"),
         "publication_year": work.get("publication_year"),
+        "citation_key": generate_citation_key(work),
         "abstract": work.get("abstract_inverted_index"),  # Needs reconstruction
         "authors": [a.get("author", {}).get("display_name") for a in work.get("authorships", [])],
         "journal": work.get("primary_location", {}).get("source", {}).get("display_name"),
@@ -113,6 +154,12 @@ def deduplicate(results):
             seen_ids.add(paper_id)
             unique.append(paper)
     return unique
+```
+
+After deduplication, resolve any citation key collisions:
+
+```python
+deduplicate_citation_keys(papers)
 ```
 
 ### 4. Generate Corpus Statistics

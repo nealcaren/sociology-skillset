@@ -67,9 +67,8 @@ def generate_bibtex(papers, output_path="output/references.bib"):
     bibtex_entries = []
 
     for paper in papers:
-        # Create cite key: AuthorYear
-        first_author = paper["authors"][0].split()[-1] if paper["authors"] else "Unknown"
-        cite_key = f"{first_author}{paper['year']}"
+        # Use citation_key from database (generated in Phase 1)
+        cite_key = paper.get("citation_key", f"{paper['authors'][0].split()[-1] if paper['authors'] else 'Unknown'}{paper['year']}")
 
         entry = f"""@article{{{cite_key},
   author = {{{" and ".join(paper["authors"])}}},
@@ -84,6 +83,26 @@ def generate_bibtex(papers, output_path="output/references.bib"):
     with open(output_path, "w") as f:
         f.write("\n".join(bibtex_entries))
 ```
+
+### Zotero Import with Citation Keys
+
+When importing papers into Zotero, set the `citationKey` field so downstream skills can look up items deterministically:
+
+```python
+for paper in papers:
+    add_item(
+        item_type="journalArticle",
+        fields={
+            "title": paper["title"],
+            "citationKey": paper["citation_key"],
+            "creators": [...],  # Format from paper["authors"]
+            "date": str(paper["year"]),
+            "DOI": paper.get("doi", "").replace("https://doi.org/", "")
+        }
+    )
+```
+
+This ensures `[@citationKey]` references in downstream writing skills resolve to the correct Zotero item.
 
 ### 3. Thematic Analysis
 

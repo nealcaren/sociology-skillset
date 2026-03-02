@@ -39,17 +39,19 @@ Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The g
 
 This is a **utility skill** that automates bibliography creation:
 
-1. **Extract** all in-text citations from a document (Author Year format)
-2. **Match** each citation against the user's Zotero library via MCP
+1. **Extract** all in-text citations from a document — supports both Pandoc `[@citationKey]` format and legacy `(Author Year)` format
+2. **Match** each citation against the user's Zotero library via MCP — direct `citationKey` lookup for Pandoc format, fuzzy search for legacy
 3. **Review** for issues: missing items, ambiguous matches, duplicates
 4. **Generate** a properly formatted bibliography in the requested style
 
 ## When to Use This Skill
 
 Use this skill when you have:
-- A **manuscript with in-text citations** in Author-Year format (e.g., "Smith 2020", "Jones and Lee 2019")
+- A **manuscript with in-text citations** — either Pandoc `[@citationKey]` format (from our writing skills) or legacy `(Author Year)` format
 - Access to the **Zotero MCP** with your library connected
 - A need for a **formatted bibliography** (APA, ASA, Chicago, etc.)
+
+**Pandoc format manuscripts** (written with our skills) get fast, deterministic matching via `citationKey`. **Legacy format manuscripts** still work through fuzzy author+year search.
 
 ## Requirements
 
@@ -152,7 +154,18 @@ This skill requires the **Zotero MCP server** to be configured. The MCP provides
 
 ## Citation Pattern Reference
 
-### Patterns Extracted
+### Pandoc Format (Primary — from our writing skills)
+
+| Pattern | Example | Regex |
+|---------|---------|-------|
+| Parenthetical | `[@smithHousing2020]` | `\[@([a-zA-Z0-9]+)\]` |
+| Multiple | `[@smith2020; @jones2019]` | `\[@([a-zA-Z0-9]+(?:;\s*@[a-zA-Z0-9]+)*)\]` |
+| With page | `[@smith2020, p. 45]` | `\[@([a-zA-Z0-9]+),\s*p\.\s*\d+\]` |
+| Narrative | `@smithHousing2020 argues` | `(?<!\[)@([a-zA-Z0-9]+)(?!\])` |
+| Suppress author | `[-@smith2020]` | `\[-@([a-zA-Z0-9]+)\]` |
+| String modifiers | `[see @key1; cf. @key2]` | `\[(?:see\|e\.g\.,\|cf\.)\s*@` |
+
+### Legacy Format (Fallback — for manuscripts not written with our skills)
 
 | Pattern | Example | Regex |
 |---------|---------|-------|
@@ -163,7 +176,7 @@ This skill requires the **Zotero MCP server** to be configured. The MCP provides
 | With page | `(Smith 2020, p. 45)` | `\(([A-Z][a-z]+)\s+(\d{4}),?\s*p?p?\.?\s*\d+\)` |
 | Narrative | `Smith (2020)` | `([A-Z][a-z]+)\s+\((\d{4})\)` |
 
-### Edge Cases
+### Edge Cases (Legacy Format)
 
 - **Hyphenated names**: `(García-López 2020)` - include hyphen in author pattern
 - **Particles**: `(van der Berg 2020)` - lowercase particles before surname

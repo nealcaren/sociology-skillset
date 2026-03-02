@@ -62,11 +62,11 @@ This funnel structure moves from the scholarly conversation → specific gap →
 ## Citation Patterns
 
 Gap-Fillers use **efficient parenthetical strings** for synthesis:
-> "Research demonstrates X (Author 2020; Author 2019; Author 2018)."
+> "Research demonstrates X [@authorTopicA2020; @authorTopicB2019; @authorTopicC2018]."
 
 **Minimal author-subject constructions** unless citing a canonical source:
-> Avoid: "Jones (2019) argues that..."
-> Prefer: "Studies show that... (Jones 2019)."
+> Avoid: "@jonesOrganizational2019 argues that..."
+> Prefer: "Studies show that... [@jonesOrganizational2019]."
 
 **Citation density**: Aim for 2.4-5.0 citations per paragraph (lower end of range is fine).
 

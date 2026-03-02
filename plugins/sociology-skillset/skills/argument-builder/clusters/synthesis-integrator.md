@@ -63,14 +63,14 @@ The payoff is the bridge paragraph that demonstrates synergy.
 Synthesis Integrators use **mixed citation patterns** because you're drawing from multiple traditions:
 
 **Author-subject** for canonical sources in each tradition:
-> "Honneth (2003) theorizes recognition as..."
-> "Ewick and Silbey (1998) argue that legal consciousness..."
+> "@honnethStruggleRecognition2003 theorizes recognition as..."
+> "@ewickCommonPlace1998 argue that legal consciousness..."
 
 **Parenthetical strings** for synthesizing findings within each tradition:
-> "Studies demonstrate the importance of recognition (Author 2020; Author 2019)."
+> "Studies demonstrate the importance of recognition [@authorRecognitionA2020; @authorRecognitionB2019]."
 
 **Bridging citations** that connect traditions (if they exist):
-> "Recent work has begun connecting these perspectives (Author 2021)."
+> "Recent work has begun connecting these perspectives [@authorBridging2021]."
 
 **Citation density**: Moderate-high (3-4 per paragraph, drawn from multiple traditions).
 

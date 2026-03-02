@@ -109,6 +109,7 @@ Combine `citations.json` into a unique list of sources:
 {
   "citations": [
     {
+      "citation_key": "kirkCulturalMechanisms2011",
       "author": "Kirk and Papachristos",
       "year": "2011",
       "count": 3,
@@ -120,19 +121,17 @@ Combine `citations.json` into a unique list of sources:
 ```
 
 **Step 2: Zotero lookup (if MCP available)**
-If the Zotero MCP is configured, look up each citation to get:
-- Zotero item key
-- Full bibliographic metadata
-- Formatted citation
-
-Use `mcp__zotero-mcp__zotero_search_items` with author + year queries:
+If the Zotero MCP is configured, look up each citation using `citation_key` for direct matching:
 
 ```
 For each citation:
-1. Search: "{author} {year}"
-2. If match found: record zotero_key and full metadata
-3. If no match: flag for manual resolution
+1. Search: search_items(query=citation_key)
+2. Verify: data.citationKey matches the expected key
+3. If match found: record zotero_key and full metadata
+4. If no match: fall back to author + year search, then flag for manual resolution
 ```
+
+This is faster and more reliable than fuzzy author+year matching — the `citationKey` is unique in Zotero.
 
 **Step 3: Generate outputs**
 
@@ -144,6 +143,7 @@ Update `citations.json` in place (git tracks the version):
   "unique_sources": 35,
   "citations": [
     {
+      "citation_key": "kirkCulturalMechanisms2011",
       "author": "Kirk and Papachristos",
       "year": "2011",
       "title": "Legal Cynicism and Collective Efficacy",
@@ -153,6 +153,7 @@ Update `citations.json` in place (git tracks the version):
   ],
   "unmatched": [
     {
+      "citation_key": "smithUnknown2020",
       "author": "Smith",
       "year": "2020",
       "note": "Not found in Zotero library"

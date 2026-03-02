@@ -4,19 +4,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-A Claude Code plugin marketplace containing the `sociology-skillset` plugin — 27 markdown-based skills for academic sociology research covering qualitative, quantitative, and mixed methods workflows. No build system, no compiled code; skills are structured markdown files that Claude Code loads as instructions.
+A Claude Code plugin marketplace containing two plugins:
+- **`sociology-skillset`** — 27 markdown-based skills for academic sociology research covering qualitative, quantitative, and mixed methods workflows.
+- **`socibook-skillset`** — 10 skills for planning and drafting book-length scholarly monographs, grounded in genre analysis of political sociology and American politics monographs.
+
+No build system, no compiled code; skills are structured markdown files that Claude Code loads as instructions.
 
 ## Repository Layout
 
 ```
 .claude-plugin/marketplace.json          # Marketplace catalog (version + plugin list)
-plugins/sociology-skillset/
-  plugin.json                            # Plugin manifest (version must match marketplace.json)
-  skills/[skill-name]/
-    SKILL.md                             # Skill definition (YAML frontmatter + instructions)
-    phases/                              # Phase-specific guides (phase0-intake.md, etc.)
-    clusters/ or pathways/               # Empirically-derived style variants
-    techniques/                          # Craft reference guides
+plugins/
+  sociology-skillset/
+    plugin.json                          # Plugin manifest (version must match marketplace.json)
+    skills/[skill-name]/
+      SKILL.md                           # Skill definition (YAML frontmatter + instructions)
+      phases/                            # Phase-specific guides (phase0-intake.md, etc.)
+      clusters/ or pathways/             # Empirically-derived style variants
+      techniques/                        # Craft reference guides
+  socibook-skillset/
+    plugin.json                          # Plugin manifest for monograph writing
+    skills/[skill-name]/
+      SKILL.md
+      phases/
+      clusters/
 ```
 
 ## Skill Anatomy
@@ -50,11 +61,10 @@ See `PUBLISHING.md` for the full process. The critical rule: **versions must mat
 
 ## Version Sync Checklist
 
-When bumping versions or adding/removing skills, update these **three things** in **both** files:
-1. `plugins/sociology-skillset/plugin.json` — `version` and `description`
-2. `.claude-plugin/marketplace.json` — `plugins[0].version` and `plugins[0].description`
+When bumping versions or adding/removing skills, update the plugin's `version` and `description` in **both** its `plugin.json` and `.claude-plugin/marketplace.json`. The `description` field is duplicated verbatim between the two files — it must list the current skill count and all skill names grouped by category. Keep descriptions identical.
 
-The `description` field is duplicated verbatim between the two files. It must list the current skill count and all skill names grouped by category. Keep the descriptions identical.
+For `sociology-skillset`: update `plugins/sociology-skillset/plugin.json` and `marketplace.json` `plugins[0]`.
+For `socibook-skillset`: update `plugins/socibook-skillset/plugin.json` and `marketplace.json` `plugins[1]`.
 
 Also update the "Current Skills" section below and the skill count in this file's opening paragraph.
 
@@ -67,7 +77,9 @@ Also update the "Current Skills" section below and the skill count in this file'
 5. Bump the version in both `plugin.json` and `marketplace.json`
 6. Use `genre-skill-builder` to create new writing skills from corpus analysis
 
-## Current Skills (27)
+## Current Skills
+
+### sociology-skillset (27 skills)
 
 **Zotero**: zotero, zotero-rag
 **Literature**: lit-search, lit-synthesis, reading-agent, argument-builder
@@ -79,3 +91,9 @@ Also update the "Current Skills" section below and the skill count in this file'
 **Manuscript sections**: methods-writer, case-justification, contribution-framer, article-bookends, abstract-builder
 **Revision**: verifier, peer-reviewer, revision-coordinator, writing-editor, bibliography-builder
 **Meta**: genre-skill-builder, project-scaffold, research-coordinator
+
+### socibook-skillset (10 skills)
+
+**Architecture**: book-architecture
+**Chapter writing**: book-introduction, book-theory-chapter, book-context-chapter, book-parallel-case, book-cross-issue, book-quant-chapter, book-conclusion
+**Revision**: book-editor, book-continuity

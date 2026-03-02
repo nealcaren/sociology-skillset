@@ -131,6 +131,7 @@ Returns:
     "data": {
       "itemType": "journalArticle",
       "title": "Housing Instability and Health",
+      "citationKey": "smithHousingInstability2024",
       "creators": [...],
       "publicationTitle": "Social Forces",
       "date": "2024",
@@ -161,6 +162,7 @@ Returns:
   "key": "ABC123XY",
   "itemType": "journalArticle",
   "title": "Housing Instability...",
+  "citationKey": "smithHousingInstability2024",
   "creators": [...],
   "date": "2024",
   "tags": [...]
@@ -272,6 +274,46 @@ collection_tags(collection_key="COLL123")
 
 4. **Check for PDF**:
    Look in `children` for `itemType: "attachment"` with `filename` ending in `.pdf`.
+
+---
+
+## The citationKey Field
+
+Zotero 7 items have a `citationKey` field — a human-readable, unique identifier suitable for BibTeX and Pandoc citations. The Better BibTeX (BBT) plugin auto-generates these, but the field is native to Zotero 7.
+
+### citationKey vs. key
+
+| Field | Example | Purpose |
+|-------|---------|---------|
+| `key` | `ABC123XY` | Zotero internal identifier (opaque, 8 chars) |
+| `citationKey` | `kingdonAgendasAlternatives1984` | Human-readable BibTeX-compatible key |
+
+### Format
+
+Citation keys follow the pattern `firstAuthorLastNameSignificantTitleWordsYear` in camelCase:
+- `kingdonAgendasAlternatives1984`
+- `desmondEvictedPovertyProfit2016`
+- `kirkCulturalMechanisms2011`
+
+### When Present
+
+- **Always present** in Zotero 7 libraries (may be auto-generated or user-set)
+- **BBT users**: Keys are generated deterministically and stable across syncs
+- **Non-BBT users**: Zotero generates a default key; may be less predictable
+
+### Using citationKey
+
+The `citationKey` is the preferred identifier for:
+- Pandoc citation syntax: `[@kingdonAgendasAlternatives1984]`
+- BibTeX export: `@article{kingdonAgendasAlternatives1984, ...}`
+- Cross-skill pipeline: lit-search → lit-synthesis → argument-builder → bibliography-builder
+
+To find an item by citation key:
+```
+search_items(query="kingdonAgendasAlternatives1984")
+```
+
+Then verify: `data.citationKey == "kingdonAgendasAlternatives1984"`.
 
 ---
 

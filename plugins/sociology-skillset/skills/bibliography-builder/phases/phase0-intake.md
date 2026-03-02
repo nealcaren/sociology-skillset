@@ -13,9 +13,20 @@ Read the manuscript file provided by the user. Note:
 - Approximate length (word count, page count)
 - Subject matter (helps disambiguate common author names)
 
-### 2. Identify Citation Patterns
+### 2. Identify Citation Format
 
-Scan for in-text citations and identify:
+First, determine the citation format used in the manuscript:
+
+**Check for Pandoc format first** (from our writing skills):
+- Look for `[@` patterns — e.g., `[@smithHousing2020]`, `[@key1; @key2]`
+- Look for narrative `@key` patterns — e.g., `@smithHousing2020 argues`
+- If Pandoc citations are present, this is the **primary format** (fast, deterministic matching)
+
+**Fall back to legacy Author-Year format**:
+- Parenthetical: `(Smith 2020)`, `(Smith and Jones 2020)`
+- Narrative: `Smith (2020) argues...`
+
+**For legacy format, also identify:**
 
 **Connector style:**
 - "and" → `(Smith and Jones 2020)`
@@ -71,9 +82,9 @@ Create a brief report:
 - **Format**: [md/docx/txt]
 - **Word count**: ~[X]
 
-## Citation Style Detected
-- **Format**: Author-Year (parenthetical + narrative)
-- **Connector**: [and / &]
+## Citation Format Detected
+- **Primary format**: [Pandoc [@citationKey] / Legacy Author-Year]
+- **Connector** (legacy only): [and / &]
 - **Page numbers**: [yes/no, format]
 - **Multi-citation separator**: [semicolon]
 
