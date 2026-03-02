@@ -213,6 +213,7 @@ Field profiles adjust benchmarks and add field-specific patterns for particular 
 |-------|------|-----------------|
 | **Generalist** (default) | — | Benchmarks from *SP*, *SF*, *AJS*, and *ASR* (n=182) |
 | **Social Movements** | `fields/social-movements.md` | Theory-led openings 4× generalist rate, balanced opening move distribution, early citations, conclusion-only default, field-reflexive codas, 5 structural patterns. Venue-specific calibration for roadmaps (*SMS* 69% vs *Moby* 22%) and limitations (*SMS* ~20% vs *Moby* 82%). Based on combined corpus (n=80). |
+| **Gender & Society** | `fields/gender-and-society.md` | Balanced opening moves (theory 28%, quote 21%, phenomenon 21%, stakes 18%), quote-led is signature move, 77% cite in ¶1, conclusion-only modal (49%), future-vision codas dominant (51%), 4 structural patterns (phenomenon-problematization, feminist-concept-launch, intersectional-reframing, case-as-lens). Based on 39 articles from *Gender & Society*. |
 
 Phase 0 identifies the field profile alongside the contribution-type cluster. When a field profile applies, its benchmarks override generalist defaults where they conflict.
 

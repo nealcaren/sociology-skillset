@@ -230,6 +230,7 @@ Field profiles adjust benchmarks and add field-specific patterns for particular 
 |-------|------|-----------------|
 | **Generalist** (default) | — | Benchmarks from *Social Problems* and *Social Forces* (n=80) |
 | **Social Movements** | `fields/social-movements.md` | Building-blocks arc dominant (52%), dialogue arcs absent, 32% weave case into theory, limitation-critique turns common (24%). Based on argument-style coding of 25 articles from *Mobilization* and *SMS*. |
+| **Gender & Society** | `fields/gender-and-society.md` | Building-blocks arc dominant (77%), conceptual development is modal mode (51%), integration-promise turns common (28%), theory-case integration distributed across separate/woven/theory-first. Based on argument-style coding of 39 articles from *Gender & Society*. |
 
 Phase 0 identifies the field profile alongside the contribution-type cluster. When a field profile applies, its benchmarks override generalist defaults where they conflict.
 

@@ -243,6 +243,7 @@ Field profiles adjust distribution expectations and calibration guidance for par
 |-------|------|-----------------|
 | **Generalist** (default) | — | Benchmarks from *AJS*, *ASR*, *SP*, *SF* (n=115) |
 | **Social Movements** | `fields/social-movements.md` | PT drops to 6% (vs 27%), GF rises to 21% (vs 9%), CB is mid-range/domain-specific, FI dominates at *Mobilization* (38%). Threading moderate. Based on 82 articles from *SMS* and *Mobilization*. |
+| **Gender & Society** | `fields/gender-and-society.md` | CB dominant (62%), all concepts mid-range, GF nearly absent (3%), PT rare (8%), threading strong (92%). Based on argument-style coding of 39 articles from *Gender & Society*. |
 
 Phase 0 identifies the field profile alongside the contribution type. When a field profile applies, its calibration guidance overrides generalist defaults where they conflict.
 
