@@ -61,7 +61,7 @@ Ask the user for:
 Ingest into the local library (converts to markdown + adds metadata to `references.bib`):
 ```bash
 uv run plugins/sociology-skillset/scripts/ingest.py --file "/path/to/paper.pdf"
-# Copies to library/pdfs/, converts to library/markdown/ via docling, appends to references.bib
+# Copies to library/pdfs/, converts to library/markdown/ (docling for PDFs, pandoc for EPUBs), appends to references.bib
 ```
 
 **If PDF provided for a paper already in references.bib** (e.g., from lit-search but PDF was missing):

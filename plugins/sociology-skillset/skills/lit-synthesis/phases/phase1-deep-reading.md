@@ -212,7 +212,7 @@ For more control, manually convert PDFs and spawn agents:
 
 ```bash
 uv run plugins/sociology-skillset/scripts/ingest.py --file "/path/to/paper.pdf"
-# Converts via docling (--image-export-mode placeholder), adds to references.bib
+# Converts via docling for PDFs (--image-export-mode placeholder) or pandoc for EPUBs, adds to references.bib
 # Files linked by citation key: library/pdfs/{citekey}.pdf → library/markdown/{citekey}.md
 ```
 

@@ -7,7 +7,7 @@ Use this prompt template when spawning a haiku reading agent for structured note
 1. **Convert PDF to markdown**:
 ```bash
 uv run plugins/sociology-skillset/scripts/ingest.py --file "/path/to/paper.pdf"
-# Converts to library/markdown/ via docling, adds to references.bib
+# Converts to library/markdown/ (docling for PDFs, pandoc for EPUBs), adds to references.bib
 ```
 
 2. **Gather identifiers** (at least one required):
