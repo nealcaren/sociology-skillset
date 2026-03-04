@@ -9,6 +9,7 @@ Usage:
     python ingest.py --file paper.pdf
     python ingest.py --file paper.pdf --doi 10.1177/00031224231150000
     python ingest.py --file book.epub --title "Book Title" --author "Smith" --year 2023
+    python ingest.py --file paper.pdf --citekey Thompson2022_Inequality --update
 """
 
 import argparse
@@ -168,6 +169,44 @@ def generate_citekey(authors, year, title):
 # BibTeX writing
 # ---------------------------------------------------------------------------
 
+def update_bib_paths(bib_path, citekey, pdf_rel, md_rel):
+    """Update pdf_path and md_path for an existing BibTeX entry."""
+    text = open(bib_path, "r", encoding="utf-8").read()
+
+    # Find the entry block for this citekey
+    pattern = re.compile(
+        r"(@\w+\{" + re.escape(citekey) + r",.*?\n\})",
+        re.DOTALL,
+    )
+    m = pattern.search(text)
+    if not m:
+        return False
+
+    entry = m.group(1)
+    new_entry = entry
+
+    for field, value in [("pdf_path", pdf_rel), ("md_path", md_rel)]:
+        if re.search(rf"{field}\s*=", new_entry):
+            # Update existing field
+            new_entry = re.sub(
+                rf"{field}\s*=\s*\{{[^}}]*\}}",
+                f"{field} = {{{value}}}",
+                new_entry,
+            )
+        else:
+            # Insert new field before the closing }
+            new_entry = re.sub(
+                r"\n\}$",
+                f"\n  {field} = {{{value}}},\n}}",
+                new_entry,
+            )
+
+    text = text[:m.start()] + new_entry + text[m.end():]
+    with open(bib_path, "w", encoding="utf-8") as f:
+        f.write(text)
+    return True
+
+
 def make_bib_entry(meta, citekey, pdf_rel, md_rel):
     """Create a BibTeX entry string."""
     if meta["type"] == "book":
@@ -252,6 +291,11 @@ def main():
     parser.add_argument("--author", default=None, help="Manual author override (Family, Given)")
     parser.add_argument("--year", default=None, help="Manual year override")
     parser.add_argument("--citekey", default=None, help="Manual citation key override")
+    parser.add_argument(
+        "--update", action="store_true",
+        help="Update an existing references.bib entry with pdf_path/md_path "
+             "(use when adding a PDF for a paper already in the bibliography)",
+    )
     args = parser.parse_args()
 
     file_path = os.path.abspath(args.file)
@@ -357,22 +401,35 @@ def main():
     bib_path = os.path.join(".", "references.bib")
 
     # Check for duplicate citekey
+    key_exists = False
     if os.path.exists(bib_path):
         existing = open(bib_path, "r", encoding="utf-8").read()
-        if f"{{{citekey}," in existing:
-            print(f"\nWarning: Citation key '{citekey}' already exists in references.bib")
-            print("Entry NOT appended. Use --citekey to specify a different key.")
-            sys.exit(0)
+        key_exists = f"{{{citekey}," in existing
 
-    with open(bib_path, "a", encoding="utf-8") as f:
-        f.write("\n" + bib_entry + "\n")
-
-    print(f"\nAdded to references.bib:")
-    print(f"  Key:    {citekey}")
-    print(f"  Title:  {meta.get('title', 'N/A')}")
-    if meta.get("authors"):
-        print(f"  Author: {meta['authors'][0].get('family', 'N/A')}")
-    print(f"  Year:   {meta.get('year', 'N/A')}")
+    if key_exists and args.update:
+        # Update existing entry with file paths
+        if update_bib_paths(bib_path, citekey, pdf_rel, md_rel):
+            print(f"\nUpdated references.bib entry:")
+            print(f"  Key:      {citekey}")
+            print(f"  pdf_path: {pdf_rel}")
+            print(f"  md_path:  {md_rel}")
+        else:
+            print(f"Error: Could not update entry for '{citekey}'")
+            sys.exit(1)
+    elif key_exists:
+        print(f"\nWarning: Citation key '{citekey}' already exists in references.bib")
+        print("Use --update to add file paths to the existing entry,")
+        print("or --citekey to specify a different key.")
+        sys.exit(0)
+    else:
+        with open(bib_path, "a", encoding="utf-8") as f:
+            f.write("\n" + bib_entry + "\n")
+        print(f"\nAdded to references.bib:")
+        print(f"  Key:    {citekey}")
+        print(f"  Title:  {meta.get('title', 'N/A')}")
+        if meta.get("authors"):
+            print(f"  Author: {meta['authors'][0].get('family', 'N/A')}")
+        print(f"  Year:   {meta.get('year', 'N/A')}")
 
 
 if __name__ == "__main__":

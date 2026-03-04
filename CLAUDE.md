@@ -81,7 +81,7 @@ Also update the "Current Skills" section below and the skill count in this file'
 
 ### sociology-skillset (27 skills)
 
-**Reference management (deprecated)**: zotero, zotero-rag
+**Reference management**: zotero [deprecated], zotero-rag (local library RAG)
 **Literature**: lit-search, lit-synthesis, reading-agent, argument-builder
 **Qualitative analysis**: interview-analyst
 **Quantitative analysis**: r-analyst, stata-analyst

@@ -57,12 +57,17 @@ Ask the user for:
 
 ### Step 1: Access Paper Content
 
-**If PDF or EPUB provided**:
-Convert using the shared script:
+**If PDF or EPUB provided (new paper)**:
+Ingest into the local library (converts to markdown + adds metadata to `references.bib`):
 ```bash
-plugins/sociology-skillset/scripts/convert-to-md.sh "/path/to/paper.pdf"
-# Creates: /path/to/paper.md (cached for reuse)
-# Also supports .epub files
+uv run plugins/sociology-skillset/scripts/ingest.py --file "/path/to/paper.pdf"
+# Copies to library/pdfs/, converts to library/markdown/ via docling, appends to references.bib
+```
+
+**If PDF provided for a paper already in references.bib** (e.g., from lit-search but PDF was missing):
+```bash
+uv run plugins/sociology-skillset/scripts/ingest.py --file "/path/to/paper.pdf" --citekey Thompson2022_Inequality --update
+# Converts the PDF, copies files to library/, updates the existing bib entry with pdf_path and md_path
 ```
 
 **If citation key provided**: Look up the key in `references.bib` to find the `md_path` field, then read the markdown file at that path directly.
@@ -159,7 +164,7 @@ short_title: cultural-frames
 For multiple papers:
 
 1. **Gather papers**: List of PDFs, EPUBs, or citation keys
-2. **Convert all files**: Run `convert-to-md.sh` on each (results cached)
+2. **Ingest all files**: Run `uv run plugins/sociology-skillset/scripts/ingest.py --file <pdf>` on each
 3. **Prepare identifiers**: From lit-search database or references.bib
 4. **Spawn parallel agents**: Multiple haiku agents via Task tool
 5. **Collect outputs**: Save to `reading-notes/` directory
@@ -212,16 +217,15 @@ Focus on:
 
 ## Scripts
 
-### convert-to-md.sh
+### PDF/EPUB Conversion
 
-Converts PDF or EPUB to markdown using docling (PDF) or pandoc (EPUB), with caching:
+Always use `ingest.py` to add papers — this ensures the PDF, markdown, and `references.bib` metadata stay linked via the citation key:
 
 ```bash
-# Usage: plugins/sociology-skillset/scripts/convert-to-md.sh <file_path> [output_dir]
-plugins/sociology-skillset/scripts/convert-to-md.sh "/path/to/paper.pdf"
-# Supports .pdf and .epub files; creates <basename>.md alongside the source file (or in output_dir)
-# If markdown already exists, returns the cached file immediately
+uv run plugins/sociology-skillset/scripts/ingest.py --file "/path/to/paper.pdf"
 ```
+
+Uses **docling** for PDFs (with `--image-export-mode placeholder`) and **pandoc** for EPUBs. Files are organized as `library/pdfs/{citekey}.pdf` and `library/markdown/{citekey}.md`.
 
 ### Setup
 
@@ -236,6 +240,11 @@ brew install pandoc   # for EPUB conversion (or apt-get install pandoc)
 ## Integration with Other Skills
 
 **From lit-search**: Use the database.json to get OpenAlex IDs and DOIs for papers you've identified.
+
+**Finding related papers**: Use semantic search to discover related papers in your library:
+```bash
+uv run plugins/sociology-skillset/scripts/rag.py search "topic from the paper you just read"
+```
 
 **To lit-synthesis**: Reading notes feed directly into:
 - Phase 2: Theoretical mapping (uses Tradition and Key concepts)

@@ -89,13 +89,30 @@ project/
 
 ### Converting PDFs to Markdown
 
-Use the shared conversion script:
+Use the ingest script to add papers to your library:
 
 ```bash
-plugins/sociology-skillset/scripts/convert-to-md.sh /path/to/paper.pdf
+uv run plugins/sociology-skillset/scripts/ingest.py --file /path/to/paper.pdf
 ```
 
-This script handles PDF-to-markdown conversion with caching. Run it for each PDF before starting Phase 1. See the script for full usage and options.
+This converts the PDF to markdown in `library/markdown/` and adds metadata to `references.bib`.
+
+### Semantic Search
+
+For conceptual/semantic search across your library (e.g., finding passages about a concept even when exact terms differ), use the RAG index:
+
+```bash
+# Build/update the index (run after adding new papers)
+uv run plugins/sociology-skillset/scripts/rag.py index
+
+# Search by meaning
+uv run plugins/sociology-skillset/scripts/rag.py search "cultural capital and educational attainment"
+```
+
+For exact keyword search, grep the markdown files directly:
+```bash
+grep -ril "cultural capital" library/markdown/
+```
 
 ### Using reading-agent Skill
 
@@ -120,7 +137,7 @@ The reading-agent skill handles PDF conversion and produces structured notes wit
 
 For batch processing many papers:
 
-1. **Convert PDFs**: Run `plugins/sociology-skillset/scripts/convert-to-md.sh` on each paper
+1. **Convert PDFs**: Run `plugins/sociology-skillset/scripts/ingest.py --file` on each paper
 2. **Use reading-agent in batch mode**:
    ```
    /reading-agent
@@ -170,6 +187,7 @@ For batch processing many papers:
 
 **Process**:
 - Identify which theoretical frameworks appear across papers
+- Use `uv run plugins/sociology-skillset/scripts/rag.py search "theoretical concept"` to find conceptually related passages across the library
 - Map citation relationships (who cites whom)
 - Note foundational texts and their descendants
 - Identify "camps" or schools of thought
@@ -319,7 +337,7 @@ When the user is ready to begin:
    > "Where are your papers? A folder of PDFs? A `references.bib` from lit-search? How many papers total?"
 
 2. **Verify local library setup**:
-   > "Do you have PDFs converted to markdown in `library/markdown/`? If not, we'll run `plugins/sociology-skillset/scripts/convert-to-md.sh` on each PDF before Phase 1."
+   > "Do you have PDFs converted to markdown in `library/markdown/`? If not, we'll run `plugins/sociology-skillset/scripts/ingest.py --file` on each PDF before Phase 1."
 
 3. **Set priorities**:
    > "Which papers are most central to your project? We'll deep-read those first and skim the rest."
@@ -332,7 +350,7 @@ When the user is ready to begin:
 ## Key Reminders
 
 - **Identifiers are essential**: Every reading note must have at least one unique identifier (`citation_key`, OpenAlex ID, or DOI) in its frontmatter. Prefer `citation_key` when available.
-- **Convert before reading**: Run `plugins/sociology-skillset/scripts/convert-to-md.sh` on all PDFs before Phase 1 begins
+- **Convert before reading**: Run `uv run plugins/sociology-skillset/scripts/ingest.py --file <pdf>` for each PDF before Phase 1 begins
 - **Quality over quantity**: Deep reading 15 papers beats skimming 50
 - **Debates are opportunities**: Every tension you find is a potential contribution space
 - **This feeds argument-builder**: The outputs here become inputs there—keep that handoff in mind

@@ -211,12 +211,10 @@ For more control, manually convert PDFs and spawn agents:
 #### 1. Convert PDF to Markdown
 
 ```bash
-# Convert a single PDF (output cached alongside original)
-./scripts/pdf-to-md.sh "/path/to/paper.pdf"
-# Returns: /path/to/paper.md
+uv run plugins/sociology-skillset/scripts/ingest.py --file "/path/to/paper.pdf"
+# Converts via docling (--image-export-mode placeholder), adds to references.bib
+# Files linked by citation key: library/pdfs/{citekey}.pdf → library/markdown/{citekey}.md
 ```
-
-The markdown is saved next to the PDF. Subsequent conversions use the cached file.
 
 #### 2. Spawn Reading Agent
 
@@ -305,7 +303,7 @@ short_title: [2-3 word slug]
 For processing multiple papers:
 
 1. **Prepare list**: Gather PDF paths and their identifiers (from lit-search database)
-2. **Convert all PDFs**: Run docling on each (conversions are cached)
+2. **Convert all PDFs**: Run `uv run plugins/sociology-skillset/scripts/ingest.py --file <pdf>` on each (conversions are cached)
 3. **Spawn agents in parallel**: Use multiple Task calls to process papers concurrently
 4. **Collect notes**: Save each agent's output to `reading-notes/author-year-slug.md`
 

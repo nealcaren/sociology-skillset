@@ -10,11 +10,11 @@ lit-synthesis now uses a single local-library mode. Papers are accessed as markd
 
 1. **Export your references** as BibTeX to `references.bib` (lit-search produces this automatically; or export from your reference manager).
 
-2. **Convert PDFs to markdown** using the shared script:
+2. **Convert PDFs to markdown** using the ingest script:
    ```bash
-   plugins/sociology-skillset/scripts/convert-to-md.sh /path/to/paper.pdf
+   uv run plugins/sociology-skillset/scripts/ingest.py --file /path/to/paper.pdf
    ```
-   Converted files land in `library/markdown/`.
+   Converted files land in `library/markdown/`, metadata added to `references.bib`.
 
 3. **Run lit-synthesis** — it reads directly from `library/markdown/` and `references.bib`. No MCP server required.
 

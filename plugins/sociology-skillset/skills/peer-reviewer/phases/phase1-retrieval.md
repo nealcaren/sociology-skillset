@@ -164,12 +164,15 @@ Key operations for this phase:
 
 | Operation | Command |
 |-----------|---------|
+| **Semantic search** | `uv run plugins/sociology-skillset/scripts/rag.py search "concept or question"` |
 | Search by author | `grep -i "author.*LastName" references.bib -A 20` |
 | Search by keyword | `grep -i "keyword" references.bib -B 5 -A 20` |
 | Search by year | `grep -i "author.*Name" references.bib -A 20 \| grep "year.*20XX"` |
 | Get citation key | `grep -B 1 "author.*LastName" references.bib \| grep "@"` |
 | Get md_path | `grep -A 30 "@.*{CitationKey" references.bib \| grep "md_path"` |
 | Read full text | Read the file at the `md_path` value from the `.bib` entry |
+
+**Tip**: Use `rag.py search` for conceptual/semantic search (finding passages about a topic even when exact keywords differ). Use `grep` for exact keyword or metadata lookups. Both complement each other.
 
 ---
 
