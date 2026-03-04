@@ -37,12 +37,11 @@ Use this skill when you need to:
 I need to read: /path/to/paper.pdf
 ```
 
-Or with a Zotero reference:
+Or with a citation key:
 ```
 /reading-agent
 
-Paper: Smith 2020 "Cultural Frames"
-DOI: 10.1086/123456
+Citation key: smithCulturalFrames2020
 ```
 
 ## Workflow
@@ -50,23 +49,23 @@ DOI: 10.1086/123456
 ### Step 0: Identify the Paper
 
 Ask the user for:
-1. **Paper source**: PDF path, Zotero reference, or pasted text
+1. **Paper source**: PDF path, citation key (for local library lookup), or pasted text
 2. **Identifiers** (at least one, prefer citation key):
-   - Citation key (e.g., `smithCulturalFrames2020`) — from lit-search database or Zotero `data.citationKey`
+   - Citation key (e.g., `smithCulturalFrames2020`) — from lit-search database or references.bib
    - OpenAlex ID (e.g., `W2123456789`)
    - DOI (e.g., `10.1086/123456`)
-   - Zotero key (e.g., `ABC123XY`)
 
 ### Step 1: Access Paper Content
 
-**If PDF provided**:
-Convert using docling:
+**If PDF or EPUB provided**:
+Convert using the shared script:
 ```bash
-./scripts/pdf-to-md.sh "/path/to/paper.pdf"
+plugins/sociology-skillset/scripts/convert-to-md.sh "/path/to/paper.pdf"
 # Creates: /path/to/paper.md (cached for reuse)
+# Also supports .epub files
 ```
 
-**If Zotero reference**: Use `zotero_get_item_metadata` and `zotero_get_annotations` via MCP. Capture `data.citationKey` from the item metadata for the note frontmatter.
+**If citation key provided**: Look up the key in `references.bib` to find the `md_path` field, then read the markdown file at that path directly.
 
 **If markdown/text**: Use directly.
 
@@ -97,10 +96,9 @@ All reading notes **must** follow this structure with required frontmatter:
 
 ```markdown
 ---
-citation_key: smithCulturalFrames2020  # From database.json or Zotero data.citationKey (preferred)
+citation_key: smithCulturalFrames2020  # From references.bib or lit-search database (preferred)
 openalex_id: W2123456789    # From lit-search database
 doi: 10.1086/123456         # Digital Object Identifier
-zotero_key: ABC123XY        # Zotero item key (if in library)
 first_author: Smith
 year: 2020
 short_title: cultural-frames
@@ -160,9 +158,9 @@ short_title: cultural-frames
 
 For multiple papers:
 
-1. **Gather papers**: List of PDFs or Zotero collection
-2. **Convert all PDFs**: Run `pdf-to-md.sh` on each (results cached)
-3. **Prepare identifiers**: From lit-search database or Zotero metadata
+1. **Gather papers**: List of PDFs, EPUBs, or citation keys
+2. **Convert all files**: Run `convert-to-md.sh` on each (results cached)
+3. **Prepare identifiers**: From lit-search database or references.bib
 4. **Spawn parallel agents**: Multiple haiku agents via Task tool
 5. **Collect outputs**: Save to `reading-notes/` directory
 
@@ -173,7 +171,7 @@ Example batch invocation:
 Batch process these papers:
 - /papers/smith2020.pdf (DOI: 10.1086/123456)
 - /papers/jones2019.pdf (OpenAlex: W2123456789)
-- /papers/brown2021.pdf (Zotero: ABC123XY)
+- Citation key: brownMovementSpillover2021
 ```
 
 The skill will spawn haiku agents in parallel for cost-effective processing.
@@ -191,7 +189,6 @@ You are a research assistant creating structured reading notes for a sociology l
 - Citation Key: {citation_key}
 - OpenAlex ID: {openalex_id}
 - DOI: {doi}
-- Zotero Key: {zotero_key}
 - PDF source: {pdf_path}
 
 ## Paper Content
@@ -215,42 +212,24 @@ Focus on:
 
 ## Scripts
 
-### pdf-to-md.sh
+### convert-to-md.sh
 
-Converts PDF to markdown using docling:
+Converts PDF or EPUB to markdown using docling (PDF) or pandoc (EPUB), with caching:
 
 ```bash
-#!/usr/bin/env bash
-# Convert PDF to markdown with caching
-# Usage: ./pdf-to-md.sh "/path/to/paper.pdf"
-
-set -euo pipefail
-
-PDF_PATH="$1"
-MD_PATH="${PDF_PATH%.pdf}.md"
-
-# Check for cached version
-if [[ -f "$MD_PATH" ]]; then
-    echo "$MD_PATH"
-    exit 0
-fi
-
-# Convert using docling
-docling "$PDF_PATH" --output-format md --output "${PDF_PATH%.pdf}"
-
-echo "$MD_PATH"
+# Usage: plugins/sociology-skillset/scripts/convert-to-md.sh <file_path> [output_dir]
+plugins/sociology-skillset/scripts/convert-to-md.sh "/path/to/paper.pdf"
+# Supports .pdf and .epub files; creates <basename>.md alongside the source file (or in output_dir)
+# If markdown already exists, returns the cached file immediately
 ```
 
 ### Setup
 
-Install docling:
+Install dependencies:
 ```bash
-pip install docling
+pip install docling   # for PDF conversion
+brew install pandoc   # for EPUB conversion (or apt-get install pandoc)
 ```
-
-For Zotero access, use the bundled **zotero** skill. See `skills/zotero/guides/setup.md` for configuration.
-
-For semantic search across PDFs, use the bundled **zotero-rag** skill. This enables finding passages by meaning rather than keyword.
 
 ---
 
@@ -297,10 +276,10 @@ Each file contains full structured notes with frontmatter identifiers for reliab
 When the user invokes this skill:
 
 1. **Identify source**:
-   > "What paper do you want to read? Provide a PDF path, Zotero reference, or paste the text."
+   > "What paper do you want to read? Provide a PDF path, citation key (for local library lookup), or paste the text."
 
 2. **Gather identifiers**:
-   > "What identifiers do you have? I need at least one of: OpenAlex ID, DOI, or Zotero key."
+   > "What identifiers do you have? I need at least one of: citation key, OpenAlex ID, or DOI."
 
 3. **Choose mode** (if multiple papers):
    > "Single paper or batch? For batch, I'll spawn haiku agents to process in parallel."

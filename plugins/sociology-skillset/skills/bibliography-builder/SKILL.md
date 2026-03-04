@@ -1,11 +1,11 @@
 ---
 name: bibliography-builder
-description: Build bibliographies from manuscript citations by extracting in-text citations, matching them against a Zotero library, identifying issues, and generating a formatted reference list.
+description: Build bibliographies from manuscript citations by extracting in-text citations, matching them against a references.bib file, identifying issues, and generating a formatted reference list.
 ---
 
 # Bibliography Builder
 
-You help researchers **build bibliographies** from manuscript citations by extracting in-text citations, matching them against a Zotero library, identifying issues, and generating a formatted reference list.
+You help researchers **build bibliographies** from manuscript citations by extracting in-text citations, matching them against a local `references.bib` file, identifying issues, and generating a formatted reference list.
 
 ## Project Integration
 
@@ -40,7 +40,7 @@ Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The g
 This is a **utility skill** that automates bibliography creation:
 
 1. **Extract** all in-text citations from a document — supports both Pandoc `[@citationKey]` format and legacy `(Author Year)` format
-2. **Match** each citation against the user's Zotero library via MCP — direct `citationKey` lookup for Pandoc format, fuzzy search for legacy
+2. **Match** each citation against the local `references.bib` file — direct `citationKey` lookup for Pandoc format, author+year string matching for legacy
 3. **Review** for issues: missing items, ambiguous matches, duplicates
 4. **Generate** a properly formatted bibliography in the requested style
 
@@ -48,17 +48,14 @@ This is a **utility skill** that automates bibliography creation:
 
 Use this skill when you have:
 - A **manuscript with in-text citations** — either Pandoc `[@citationKey]` format (from our writing skills) or legacy `(Author Year)` format
-- Access to the **Zotero MCP** with your library connected
+- A **`references.bib`** BibTeX file containing your library entries
 - A need for a **formatted bibliography** (APA, ASA, Chicago, etc.)
 
-**Pandoc format manuscripts** (written with our skills) get fast, deterministic matching via `citationKey`. **Legacy format manuscripts** still work through fuzzy author+year search.
+**Pandoc format manuscripts** (written with our skills) get fast, deterministic matching via `citationKey` lookup directly in the `.bib` file. **Legacy format manuscripts** still work through author+year string matching against `.bib` entries.
 
 ## Requirements
 
-This skill requires the **Zotero MCP server** to be configured. The MCP provides access to:
-- `zotero_search_items` - Search library by author/title
-- `zotero_get_item_metadata` - Get full citation details
-- Citation formatting capabilities
+This skill requires a **`references.bib`** BibTeX file containing the project's library entries. This file is typically located in the project root or a `references/` subdirectory and is populated by the `bibliography-builder` pipeline (e.g., via the writing-editor skill or Pandoc-based workflows).
 
 ## Workflow Phases
 
@@ -99,16 +96,16 @@ This skill requires the **Zotero MCP server** to be configured. The MCP provides
 
 ---
 
-### Phase 2: Zotero Matching
-**Goal**: Find each citation in the Zotero library.
+### Phase 2: BibTeX Matching
+**Goal**: Find each citation in the local `references.bib` file.
 
 **Process**:
+- Read `references.bib` into memory
 - For each extracted citation:
-  - Parse author name(s) and year
-  - Search Zotero using `zotero_search_items`
-  - If multiple matches, retrieve metadata to disambiguate
+  - Pandoc format: look up `citationKey` directly against BibTeX entry keys
+  - Legacy format: match author surname(s) and year against BibTeX `author` and `year` fields
   - Record match status: Found, Ambiguous, Not Found
-- Build match table with Zotero item keys
+- Build match table with BibTeX entry keys
 
 **Output**: Match results presented in conversation (not saved to a file).
 
@@ -121,7 +118,7 @@ This skill requires the **Zotero MCP server** to be configured. The MCP provides
 
 **Process**:
 - Flag issues:
-  - **Missing**: Citations not found in Zotero
+  - **Missing**: Citations not found in `references.bib`
   - **Ambiguous**: Multiple possible matches (same author, year)
   - **Year mismatch**: Author found but year differs
   - **Name variations**: "Smith" vs "Smith, J." vs "Smith, John"
@@ -138,7 +135,7 @@ This skill requires the **Zotero MCP server** to be configured. The MCP provides
 **Goal**: Produce the formatted bibliography.
 
 **Process**:
-- Retrieve full metadata for all matched items
+- Read full metadata for all matched items directly from their BibTeX entries in `references.bib`
 - Format according to requested style:
   - APA 7th Edition
   - ASA (American Sociological Association)
@@ -215,20 +212,12 @@ project/
 
 Phases 1–3 produce conversation output only. No intermediate files are saved.
 
-## Zotero MCP Tools Used
-
-| Tool | Purpose |
-|------|---------|
-| `zotero_search_items` | Find items by author/title/year |
-| `zotero_get_item_metadata` | Get full bibliographic data |
-| `zotero_get_collections` | Browse library structure |
-
 ## Key Reminders
 
-- **Zotero must be running** with the MCP server active
-- **Author names vary**: Search flexibly (last name + year first, then refine)
-- **Multiple matches are common**: Same author publishes multiple works per year
-- **Missing items**: User may need to add items to Zotero before proceeding
+- **`references.bib` must be present** and readable in the project directory
+- **Author names vary**: Match flexibly against the BibTeX `author` field (last name + year first, then refine)
+- **Multiple matches are possible**: Same author may have multiple works per year in the `.bib` file
+- **Missing items**: User may need to add entries to `references.bib` before proceeding
 - **Format matters**: Confirm desired style before generating bibliography
 
 ## Starting the Process
@@ -241,7 +230,7 @@ When the user is ready to begin:
 2. **Confirm citation style**:
    > "I'll extract Author-Year citations. What bibliography format do you need? (APA, ASA, Chicago, other)"
 
-3. **Check Zotero access**:
-   > "Let me verify I can connect to your Zotero library via MCP."
+3. **Locate `references.bib`**:
+   > "Let me verify the `references.bib` file is present. Is it in the project root or a `references/` subdirectory?"
 
 4. **Proceed with Phase 0** to read the document and inventory citations.

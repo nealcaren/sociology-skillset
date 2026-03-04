@@ -40,7 +40,7 @@ ls /path/to/interviews/
 ```
 
 **For Literature**:
-- Identify how sources are organized (folder, Zotero, mixed)
+- Identify how sources are organized (folder, references.bib/library/, mixed)
 - Check accessibility of cited works
 - Note any citations without accessible source material
 
@@ -88,7 +88,7 @@ Document the verification task:
 | [etc.] | |
 
 ### Literature Sources (if applicable)
-- Location: [folder path / Zotero collection]
+- Location: [folder path / references.bib + library/]
 - Accessible: [count] of [total] cited works
 
 ### Verification Scope

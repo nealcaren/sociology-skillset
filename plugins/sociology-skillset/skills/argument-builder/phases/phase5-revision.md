@@ -98,7 +98,7 @@ Read the entire section for prose quality:
 - **Jargon check**: Is technical terminology necessary and defined?
 - **Read aloud**: Does it flow when spoken?
 
-### 8. Compile Citation List & Zotero Lookup
+### 8. Compile Citation List & references.bib Lookup
 
 Transform the citation tracking from Phase 3 into final outputs.
 
@@ -113,25 +113,23 @@ Combine `citations.json` into a unique list of sources:
       "author": "Kirk and Papachristos",
       "year": "2011",
       "count": 3,
-      "zotero_key": null,
       "full_citation": null
     }
   ]
 }
 ```
 
-**Step 2: Zotero lookup (if MCP available)**
-If the Zotero MCP is configured, look up each citation using `citation_key` for direct matching:
+**Step 2: references.bib lookup**
+Match each `citation_key` against entries in `references.bib`:
 
 ```
 For each citation:
-1. Search: search_items(query=citation_key)
-2. Verify: data.citationKey matches the expected key
-3. If match found: record zotero_key and full metadata
-4. If no match: fall back to author + year search, then flag for manual resolution
+1. Search references.bib for an entry whose key matches citation_key exactly
+2. If match found: extract author, year, title, journal/book, and volume/page metadata
+3. If no match: flag for manual resolution
 ```
 
-This is faster and more reliable than fuzzy author+year matching — the `citationKey` is unique in Zotero.
+The citation key in the draft must match the `.bib` entry key exactly — this is faster and more reliable than fuzzy author+year matching.
 
 **Step 3: Generate outputs**
 
@@ -147,7 +145,6 @@ Update `citations.json` in place (git tracks the version):
       "author": "Kirk and Papachristos",
       "year": "2011",
       "title": "Legal Cynicism and Collective Efficacy",
-      "zotero_key": "ABC12345",
       "count_in_section": 3
     }
   ],
@@ -156,7 +153,7 @@ Update `citations.json` in place (git tracks the version):
       "citation_key": "smithUnknown2020",
       "author": "Smith",
       "year": "2020",
-      "note": "Not found in Zotero library"
+      "note": "Not found in references.bib"
     }
   ]
 }
@@ -176,11 +173,11 @@ Kirk, David S. and Andrew V. Papachristos. 2011. "Cultural Mechanisms and the Pe
 
 ## Unmatched Citations (require manual lookup)
 
-- Smith (2020) - Not found in Zotero library
+- Smith (2020) - Not found in references.bib
 ```
 
-**If Zotero MCP is not available**:
-- Output the deduplicated citation list without Zotero keys
+**If references.bib is not available**:
+- Output the deduplicated citation list without resolved metadata
 - Note that manual bibliography creation is needed
 - The list still saves significant time vs. parsing the document
 
@@ -319,7 +316,7 @@ this section.
 
 1. **theory-section.md** - Edit in place to produce the final polished Theory section (do not create a new file; git tracks the version)
 2. **theory-memo.md** - Append a `## Phase 5: Quality Assessment` section with the full quality assessment and record of changes made
-3. **citations.json** - Update in place with complete citation list and Zotero keys (if available); git tracks the version
+3. **citations.json** - Update in place with complete citation list and matched metadata from references.bib; git tracks the version
 4. **bibliography.md** - Formatted bibliography ready for reference section
 
 ---
@@ -332,12 +329,12 @@ Report to the orchestrator:
 - Calibration status (in range / deviations explained)
 - Confidence assessment (High/Medium/Low)
 - Citation outputs generated (citations.json updated, bibliography.md)
-- Zotero matches found / unmatched citations
+- references.bib matches found / unmatched citations
 - Any remaining concerns
 
 Example summary:
 > "**Revision complete**. Final section: 1,523 words (target 1,145-1,744 ✓), 37 citations (target 26-43 ✓), 10 paragraphs, 2 subsections. All calibration metrics in range. Turn confirmed specific and well-placed at P6. Transitions smoothed throughout. Hedging calibrated. **High confidence** section is publication-ready.
 >
-> **Citation outputs**: `citations.json` updated with 35 unique sources. Zotero lookup: 32 matched, 3 unmatched (flagged in bibliography.md). `bibliography.md` ready for reference section. Quality assessment appended to `theory-memo.md`.
+> **Citation outputs**: `citations.json` updated with 35 unique sources. references.bib lookup: 32 matched, 3 unmatched (flagged in bibliography.md). `bibliography.md` ready for reference section. Quality assessment appended to `theory-memo.md`.
 >
 > Minor consideration: paragraph 8 bridge could be strengthened if user wants to emphasize theoretical contribution more."

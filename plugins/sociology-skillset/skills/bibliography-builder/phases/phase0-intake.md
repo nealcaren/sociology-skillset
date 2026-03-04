@@ -60,15 +60,15 @@ Ask user to confirm desired bibliography format:
 - **Chicago Author-Date** - General humanities/social sciences
 - **Other** - Specify
 
-### 5. Verify Zotero Access
+### 5. Verify Library Access
 
-Test the Zotero MCP connection:
+Check that `references.bib` is accessible:
 ```
-Use ToolSearch to load: mcp__zotero-mcp__zotero_search_items
-Then run a test search for a known author
+Read the references.bib file at the path provided by the user
+Confirm it contains entries and citation keys are present
 ```
 
-If Zotero is not accessible, inform the user before proceeding.
+If references.bib is not accessible, inform the user before proceeding.
 
 ## Output: Intake Report
 
@@ -95,9 +95,9 @@ Create a brief report:
 ## Output Format Requested
 - **Style**: [APA 7th / ASA / Chicago / Other]
 
-## Zotero Status
-- **Connection**: [Active / Not available]
-- **Test search**: [Successful / Failed]
+## Library Status
+- **references.bib**: [Found / Not available]
+- **Entry count**: [Successful read / Failed]
 ```
 
 ## Pause Point
@@ -105,6 +105,6 @@ Create a brief report:
 Present the intake report to the user. Confirm:
 1. Citation patterns detected correctly?
 2. Output format confirmed?
-3. Zotero connection working?
+3. Library (references.bib) accessible?
 
 Once confirmed, proceed to Phase 1: Citation Extraction.

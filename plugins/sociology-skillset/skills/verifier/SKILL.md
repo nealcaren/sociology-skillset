@@ -97,7 +97,7 @@ Common scenarios:
 **Process**:
 - Read the manuscript (or specified sections)
 - Identify source type: interviews, literature, or mixed
-- Locate source materials (folder path, Zotero collection, or file list)
+- Locate source materials (folder path, references.bib + library/, or file list)
 - Confirm verification scope (all quotes, specific sections, etc.)
 - Count approximate items to verify
 
@@ -132,7 +132,7 @@ Common scenarios:
 
 **Process**:
 - For interview quotes: Match participant pseudonym to transcript file
-- For literature: Match citation to PDF/document or Zotero item
+- For literature: Match citation to PDF/document or references.bib entry
 - Flag unmapped items:
   - Participant not found in transcript list
   - Citation not found in source materials
@@ -316,7 +316,7 @@ When the user is ready to begin:
    > "Are we verifying quotes from interviews, cited literature, or both?"
 
 3. **Locate sources**:
-   > "Where are your source materials? I need a folder path for interview transcripts or access to your literature (PDFs, Zotero collection, or document folder)."
+   > "Where are your source materials? I need a folder path for interview transcripts or access to your literature (PDFs, references.bib + library/ folder, or document folder)."
 
 4. **Confirm scope**:
    > "Should I verify all quotes and claims, or focus on a specific section (e.g., Findings only)?"

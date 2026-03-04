@@ -188,7 +188,7 @@ lit-search/
 ├── fulltext/                  # PDF storage (user-managed)
 ├── output/
 │   ├── bibliography.md        # Annotated bibliography
-│   ├── references.bib         # BibTeX export
+│   ├── references.bib         # BibTeX export — canonical, used by all downstream skills
 │   └── synthesis.md           # Thematic summary
 └── memos/
     └── search-memo.md         # Single memo appended at each phase

@@ -465,10 +465,10 @@ Note dependencies in the revision map so sequencing is correct.
 
 ## Invoking Peer-Reviewer Skill
 
-The `peer-reviewer` skill simulates peer review using Zotero-sourced materials to construct informed reviewer personas. Unlike other sub-skills that revise specific sections, peer-reviewer provides external validation at strategic checkpoints.
+The `peer-reviewer` skill simulates peer review using local library materials to construct informed reviewer personas. Unlike other sub-skills that revise specific sections, peer-reviewer provides external validation at strategic checkpoints.
 
 **Key Features**:
-- Builds reviewer personas from your Zotero library (named for theoretical perspectives, not individual scholars)
+- Builds reviewer personas from your local library (named for theoretical perspectives, not individual scholars)
 - Uses full-text retrieval to ground feedback in actual disciplinary knowledge
 - Returns structured reviews with major concerns, minor concerns, and strengths
 - Provides synthesis and prioritized revision recommendations
@@ -480,8 +480,8 @@ The `peer-reviewer` skill simulates peer review using Zotero-sourced materials t
 | Pre-submission | Phase 5 | Anticipate reviewer concerns before journal submission |
 
 **Prerequisites**:
-- Zotero MCP server configured and accessible
-- Relevant literature in your Zotero library (peer-reviewer will search for works related to your theoretical traditions)
+- `references.bib` and `library/` folder accessible
+- Relevant literature in your local library (peer-reviewer will search for works related to your theoretical traditions)
 - Clear articulation of your theoretical positioning
 
 ---
@@ -1118,8 +1118,8 @@ prompt: |
   [list specific literatures or debates]
 
   EXISTING LITERATURE DATABASE:
-  - Zotero collection: [name or path]
-  - OR papers in: [path to literature folder]
+  - references.bib: [path]
+  - Library folder: [path to library/ folder]
 
   CURRENT THEORY SECTION (for context):
   [paste or summarize current theoretical framing]
@@ -1257,7 +1257,7 @@ prompt: |
 - **User decisions**: When feedback is ambiguous or conflicting, flag for user input.
 - **Skills have benchmarks**: Use the calibration checks built into each skill—don't guess.
 - **Coherence is a system property**: Changes to one section affect others.
-- **Peer review strategically**: Use Phase 1.5 (pre-empirical) when theory is novel or risky; use Phase 5 (final) when manuscript is complete and ready for submission feedback. The peer-reviewer skill uses Zotero-sourced materials to build informed reviewer personas—it's most valuable when you want discipline-specific critique.
+- **Peer review strategically**: Use Phase 1.5 (pre-empirical) when theory is novel or risky; use Phase 5 (final) when manuscript is complete and ready for submission feedback. The peer-reviewer skill uses local library materials to build informed reviewer personas—it's most valuable when you want discipline-specific critique.
 
 ## Starting the Process
 

@@ -11,7 +11,7 @@ You can start the workflow at any phase if you have the necessary inputs. Common
 | Entry Point | Prerequisites | Use When |
 |-------------|---------------|----------|
 | LS.0 (Scope) | None | Fresh start, no prior work |
-| LY.0 (Corpus Audit) | Papers in Zotero | Have literature, need synthesis |
+| LY.0 (Corpus Audit) | Papers in references.bib + library/ | Have literature, need synthesis |
 | IA.1 (Immersion) | Transcripts | Have data, ready to analyze |
 | LW.0 (Theory Cluster) | Literature notes | Have lit knowledge, ready to write |
 | QW.0 (Findings Intake) | Quote database | Have qual analysis, ready to write |
@@ -486,7 +486,7 @@ When jumping to a phase, the coordinator checks prerequisites:
 |-------|-------------------|
 | LS.2 | LS.1 output exists |
 | LS.5 | Full texts acquired |
-| LY.1 | Papers in Zotero |
+| LY.1 | Papers in references.bib + library/ |
 | IA.2 | Transcripts exist |
 | QW.2 | Quote database exists |
 | QF.1 | Statistical output exists (tables/figures from r-analyst or stata-analyst) |

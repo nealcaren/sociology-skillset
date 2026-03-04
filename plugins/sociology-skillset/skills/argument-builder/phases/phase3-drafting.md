@@ -168,7 +168,7 @@ Maintain a running list of every citation as you use it. For each citation, reco
 ```
 
 **Why track citations?**
-- The `citation_key` enables deterministic Zotero lookup in Phase 5 (no fuzzy matching needed)
+- The `citation_key` enables deterministic references.bib lookup in Phase 5 (no fuzzy matching needed)
 - Enables bibliography generation without parsing the document
 - Helps verify citation density during revision
 - Creates audit trail of sources used

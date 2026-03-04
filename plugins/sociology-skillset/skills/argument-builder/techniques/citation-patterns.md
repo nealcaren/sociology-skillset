@@ -13,7 +13,7 @@ How you integrate citations affects readability and signals your relationship to
 | **Citation Strings** | 15-20% | `[@a2020; @b2019; @c2018]` | (A 2020; B 2019; C 2018) | Establishing consensus, breadth |
 | **Quote-then-Cite** | 5-10% | `[@kirkCultural2011, p. 45]` | (Kirk and Papachristos 2011, 45) | Key definitions, precise language |
 
-**Pandoc note**: These `[@citationKey]` references render to standard `(Author Year)` format when processed with Pandoc and a CSL style file. The keys come from the lit-search database or Zotero's `citationKey` field.
+**Pandoc note**: These `[@citationKey]` references render to standard `(Author Year)` format when processed with Pandoc and a CSL style file. The keys come from the lit-search database or `references.bib`.
 
 ---
 

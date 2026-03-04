@@ -13,7 +13,7 @@ Use this prompt template when spawning a haiku reading agent for structured note
 2. **Gather identifiers** (at least one required):
    - OpenAlex work ID (e.g., `W2123456789`) - from lit-search database
    - DOI (e.g., `10.1086/123456`)
-   - Zotero item key (e.g., `ABC123XY`)
+   - BibTeX citation key (e.g., `smithHousing2020`) - from references.bib
 
 ## Prompt Template
 
@@ -23,7 +23,7 @@ You are a research assistant creating structured reading notes for a sociology l
 ## Paper Identifiers
 - OpenAlex ID: {openalex_id}
 - DOI: {doi}
-- Zotero Key: {zotero_key}
+- Citation Key: {citation_key}
 - PDF source: {pdf_path}
 
 ## Paper Content
@@ -36,7 +36,7 @@ Create reading notes in this exact format, starting with the required YAML front
 ---
 openalex_id: {openalex_id}
 doi: {doi}
-zotero_key: {zotero_key}
+citation_key: {citation_key}
 first_author: [extract from paper]
 year: [extract from paper]
 short_title: [2-3 word slug derived from title]

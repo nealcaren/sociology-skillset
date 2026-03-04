@@ -17,8 +17,8 @@ Determine where the papers come from:
 - Papers should already be screened and annotated
 - Check the `synthesis.md` for initial thematic groupings
 
-**From existing Zotero library**:
-- Identify the relevant collection(s)
+**From existing local library**:
+- Identify the relevant collection(s) in `library/` or `references.bib`
 - May need initial screening if not pre-filtered
 
 **From user's ad-hoc collection**:
@@ -27,7 +27,7 @@ Determine where the papers come from:
 
 ### 2. Generate Corpus Statistics
 
-Using Zotero MCP, compile:
+Using the local library (references.bib / library/ folder), compile:
 
 ```markdown
 ## Corpus Overview
@@ -98,7 +98,7 @@ Present the corpus audit results in the conversation using this structure:
 ## Corpus Audit Results
 
 ### Corpus Summary
-- Source: [lit-search / Zotero collection / ad-hoc]
+- Source: [lit-search / local library / ad-hoc]
 - Total papers: [N]
 - Date range: [years]
 

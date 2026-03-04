@@ -53,7 +53,7 @@ Skills follow a **phase-based workflow** pattern: numbered phases with pause poi
 
 **Three project types**: qualitative, quantitative, and mixed methods. Skills check project type from `project.yaml` and adapt their workflows accordingly.
 
-**Zotero integration**: `zotero` and `zotero-rag` skills wrap the `mcp-zotero` MCP server (separate package at `nealcaren/mcp-zotero`). Both include first-run checks that detect whether the server is installed.
+**Local BibTeX pipeline**: `references.bib` serves as the canonical metadata store for each project, with PDFs/EPUBs in `library/pdfs/` and converted markdown in `library/markdown/`. The `ingest.py` script handles adding new papers (with Crossref/Open Library metadata lookup), and `migrate-zotero.py` supports one-time migration from exported Zotero libraries. The `zotero` and `zotero-rag` skills are deprecated.
 
 ## Publishing Updates
 
@@ -81,7 +81,7 @@ Also update the "Current Skills" section below and the skill count in this file'
 
 ### sociology-skillset (27 skills)
 
-**Zotero**: zotero, zotero-rag
+**Reference management (deprecated)**: zotero, zotero-rag
 **Literature**: lit-search, lit-synthesis, reading-agent, argument-builder
 **Qualitative analysis**: interview-analyst
 **Quantitative analysis**: r-analyst, stata-analyst

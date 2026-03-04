@@ -2,7 +2,7 @@
 
 ## Why This Phase Matters
 
-Reviewer personas must be grounded in actual texts, not stereotypes. This phase retrieves full texts from Zotero for each confirmed reviewer perspective. The quality of the simulated review depends entirely on having substantive sources to read—we're building personas from what these scholars actually wrote, not from secondhand summaries.
+Reviewer personas must be grounded in actual texts, not stereotypes. This phase retrieves full texts from the project's reference library for each confirmed reviewer perspective. The quality of the simulated review depends entirely on having substantive sources to read—we're building personas from what these scholars actually wrote, not from secondhand summaries.
 
 ---
 
@@ -30,21 +30,21 @@ Start with the user-confirmed reviewer list from Phase 0. For each reviewer:
 
 ### 2. Retrieve Sources for Each Reviewer
 
-For each confirmed reviewer, use Zotero MCP to retrieve relevant sources.
+For each confirmed reviewer, search `references.bib` to find relevant sources.
 
 **Search strategies**:
 
-```
-# For specific scholars:
-mcp__zotero-mcp__zotero_search_items: "author:Lareau"
-mcp__zotero-mcp__zotero_search_items: "author:Bourdieu"
+```bash
+# For specific scholars (search by author field):
+grep -i "author.*Lareau" references.bib -A 20 | grep -E "author|title|year|md_path"
+grep -i "author.*Bourdieu" references.bib -A 20 | grep -E "author|title|year|md_path"
 
-# For theoretical traditions:
-mcp__zotero-mcp__zotero_search_by_tag: "cultural capital"
-mcp__zotero-mcp__zotero_search_by_tag: "field theory"
+# For theoretical keywords (search across all fields):
+grep -i "cultural capital" references.bib -B 5 -A 20 | grep -E "@|author|title|year|md_path"
+grep -i "field theory" references.bib -B 5 -A 20 | grep -E "@|author|title|year|md_path"
 
-# For collections:
-mcp__zotero-mcp__zotero_get_collection_items: [collection_key]
+# For year-range filtering:
+grep -i "author.*Lareau" references.bib -A 20 | grep -E "year.*200[0-9]|year.*201[0-9]"
 ```
 
 **Prioritize sources**:
@@ -55,23 +55,29 @@ mcp__zotero-mcp__zotero_get_collection_items: [collection_key]
 
 ### 3. Retrieve Full Texts
 
-For each identified source, attempt to retrieve full text:
+For each identified source, read the full text using the `md_path` field from the `.bib` entry:
 
+```bash
+# Extract the md_path for a given citation key:
+grep -A 30 "@.*{LareauUnequal2003" references.bib | grep "md_path"
+
+# Then read the file at that path:
+# Read: library/markdown/lareau_unequal_2003.md
 ```
-mcp__zotero-mcp__zotero_get_item_fulltext: [item_key]
-```
+
+If no `md_path` is present for a source, note it as unavailable for full-text reading.
 
 Track retrieval status:
 
 ```markdown
 ## Source Retrieval: [Reviewer Perspective]
 
-| Item Key | Author(s) | Year | Title | Full Text? | Priority |
-|----------|-----------|------|-------|------------|----------|
-| ABC123 | Lareau | 2003 | Unequal Childhoods | Yes | Foundational |
-| DEF456 | Lareau | 2011 | Unequal Childhoods 2nd ed | Yes | Recent |
-| GHI789 | Lareau & Weininger | 2003 | Cultural capital in educational research | Yes | Methodological |
-| JKL012 | Lareau | 2015 | Cultural knowledge and social inequality | No | Recent |
+| Citation Key | Author(s) | Year | Title | Full Text? | Priority |
+|--------------|-----------|------|-------|------------|----------|
+| LareauUnequal2003 | Lareau | 2003 | Unequal Childhoods | Yes | Foundational |
+| LareauUnequal2011 | Lareau | 2011 | Unequal Childhoods 2nd ed | Yes | Recent |
+| LareauWeininger2003 | Lareau & Weininger | 2003 | Cultural capital in educational research | Yes | Methodological |
+| LareauCultural2015 | Lareau | 2015 | Cultural knowledge and social inequality | No | Recent |
 ```
 
 ### 4. Assess Source Quality
@@ -112,17 +118,17 @@ Create a structured source list for each reviewer:
 
 ### Foundational Works
 1. **[Title]** ([Year])
-   - Zotero key: [key]
+   - Citation key: [key]
    - Relevance: [Why this is foundational for this perspective]
 
 ### Methodological/Theoretical Statements
 2. **[Title]** ([Year])
-   - Zotero key: [key]
+   - Citation key: [key]
    - Relevance: [What this reveals about their approach]
 
 ### Recent/Applied Work
 3. **[Title]** ([Year])
-   - Zotero key: [key]
+   - Citation key: [key]
    - Relevance: [How this shows current thinking]
 
 ### Total: [N] sources with full text
@@ -148,23 +154,22 @@ Document any limitations for Phase 2:
 
 ## Output Files to Create
 
-None — present retrieval results (Zotero queries, source lists organized by reviewer, quality assessments, and any flags) in conversation for user review.
+None — present retrieval results (grep searches, source lists organized by reviewer, quality assessments, and any flags) in conversation for user review.
 
 ---
 
-## Zotero MCP Reference
+## Reference Library Reference
 
-Key tools for this phase:
+Key operations for this phase:
 
-| Tool | Purpose |
-|------|---------|
-| `zotero_search_items` | Search by author, title, keyword |
-| `zotero_search_by_tag` | Search by tag (theoretical traditions) |
-| `zotero_get_collection_items` | Get all items in a collection |
-| `zotero_get_item_metadata` | Get bibliographic details |
-| `zotero_get_item_fulltext` | Retrieve full text content |
-| `zotero_get_annotations` | Get user highlights/notes |
-| `zotero_get_notes` | Get attached notes |
+| Operation | Command |
+|-----------|---------|
+| Search by author | `grep -i "author.*LastName" references.bib -A 20` |
+| Search by keyword | `grep -i "keyword" references.bib -B 5 -A 20` |
+| Search by year | `grep -i "author.*Name" references.bib -A 20 \| grep "year.*20XX"` |
+| Get citation key | `grep -B 1 "author.*LastName" references.bib \| grep "@"` |
+| Get md_path | `grep -A 30 "@.*{CitationKey" references.bib \| grep "md_path"` |
+| Read full text | Read the file at the `md_path` value from the `.bib` entry |
 
 ---
 
@@ -180,10 +185,7 @@ Metadata alone isn't enough. We need to read what they actually wrote to build a
 The canonical texts define the perspective; recent work shows evolution.
 
 ### Note What's Missing
-If a key work isn't available, flag it. The user may be able to add it.
-
-### Annotations Are Valuable
-If the user has highlighted or annotated sources, these reveal what they found important.
+If a key work isn't available in `library/markdown/` (no `md_path` or file absent), flag it. The user may be able to add it.
 
 ---
 
@@ -196,4 +198,4 @@ Report to the orchestrator:
 - Ready for user review of source lists
 
 Example summary:
-> "**Retrieval complete**. Reviewer 1 (Lareau): 4 sources with full text, strong foundation. Reviewer 2 (Interview methods): 3 sources with full text, adequate foundation. Reviewer 3 (Critical education): Only 1 source with full text—flagging for user. May need to add Bowles & Gintis or similar, or reconsider this perspective. Sources organized and ready for user review before persona construction."
+> "**Retrieval complete**. Reviewer 1 (Lareau): 4 sources found in references.bib, all with full text in library/markdown/, strong foundation. Reviewer 2 (Interview methods): 3 sources found, all with full text, adequate foundation. Reviewer 3 (Critical education): Only 1 source with full text in library/markdown/—flagging for user. May need to add Bowles & Gintis or similar to references.bib, or reconsider this perspective. Sources organized and ready for user review before persona construction."

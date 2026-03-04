@@ -73,6 +73,9 @@ project-name/
 │   ├── codes/            # Codebook, code definitions
 │   ├── memos/            # Analytical memos
 │   └── outputs/          # Quote database, matrices
+├── library/
+│   ├── pdfs/             # PDF and EPUB files
+│   └── markdown/         # Converted markdown versions
 ├── literature/
 │   ├── database/         # lit-search outputs
 │   ├── notes/            # reading-agent outputs
@@ -81,6 +84,7 @@ project-name/
 │   ├── sections/         # Individual section drafts
 │   └── revisions/        # Revision rounds
 ├── submissions/          # Final manuscripts
+├── references.bib        # Canonical bibliography (used by all skills)
 ├── project.yaml          # Project configuration
 ├── progress.yaml         # State tracking
 └── README.md             # Project overview
@@ -101,6 +105,9 @@ project-name/
 ├── models/               # Saved model objects, outputs
 ├── figures/              # Generated plots and visualizations
 ├── tables/               # Generated tables
+├── library/
+│   ├── pdfs/             # PDF and EPUB files
+│   └── markdown/         # Converted markdown versions
 ├── literature/
 │   ├── database/
 │   ├── notes/
@@ -109,6 +116,7 @@ project-name/
 │   ├── sections/
 │   └── revisions/
 ├── submissions/
+├── references.bib
 ├── project.yaml
 ├── progress.yaml
 └── README.md
@@ -137,6 +145,9 @@ project-name/
 │       └── outputs/
 ├── figures/
 ├── tables/
+├── library/
+│   ├── pdfs/             # PDF and EPUB files
+│   └── markdown/         # Converted markdown versions
 ├── literature/
 │   ├── database/
 │   ├── notes/
@@ -145,6 +156,7 @@ project-name/
 │   ├── sections/
 │   └── revisions/
 ├── submissions/
+├── references.bib
 ├── project.yaml
 ├── progress.yaml
 └── README.md
@@ -357,6 +369,11 @@ if project_type == "qualitative":
     data_path = config["paths"]["transcripts"]
 elif project_type == "quantitative":
     data_path = config["paths"]["raw_data"]
+
+# Access library paths (same for all project types)
+bib_path = config["library"]["references_bib"]
+pdf_dir = config["library"]["pdfs"]
+md_dir = config["library"]["markdown"]
 ```
 
 Skills update `progress.yaml` when done:

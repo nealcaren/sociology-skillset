@@ -412,7 +412,7 @@ Every project maintains two YAML files created by `/project-scaffold`:
 
 | File | Purpose |
 |------|---------|
-| `project.yaml` | Configuration: title, RQ, paths, Zotero settings |
+| `project.yaml` | Configuration: title, RQ, paths, library paths |
 | `progress.yaml` | State: artifacts, status flags, blocked items, session log |
 
 Skills read `project.yaml` for canonical paths (no more "where are your transcripts?").

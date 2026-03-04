@@ -1,6 +1,6 @@
 ---
 name: lit-synthesis
-description: Deep reading and synthesis of literature corpus. Theoretical mapping, thematic clustering, and debate identification using Zotero MCP for full-text access.
+description: Deep reading and synthesis of literature corpus. Theoretical mapping, thematic clustering, and debate identification using local library of markdown-converted papers.
 ---
 
 # Literature Synthesis
@@ -33,11 +33,11 @@ This skill is the middle step in a three-skill workflow:
 
 | Skill | Role | Key Output |
 |-------|------|------------|
-| **lit-search** | Find papers via OpenAlex | `database.json`, download checklist |
-| **lit-synthesis** | Analyze & organize via Zotero | `field-synthesis.md` (with theoretical map, thematic clusters, debate map as sections) |
+| **lit-search** | Find papers via OpenAlex | `database.json`, `references.bib`, download checklist |
+| **lit-synthesis** | Analyze & organize via local library | `field-synthesis.md` (with theoretical map, thematic clusters, debate map as sections) |
 | **argument-builder** | Draft prose | Publication-ready Theory section |
 
-**Input**: Papers in Zotero (imported from lit-search or user's existing library)
+**Input**: Papers as markdown files in `library/` (converted from PDFs) and `references.bib` (from lit-search or user's existing library)
 **Output**: Organized understanding of the field ready for writing
 
 ## When to Use This Skill
@@ -69,70 +69,33 @@ This skill uses git to track progress across phases. Before modifying any output
 
 Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
 
-## Reading Modes
-
-Phase 1 (Deep Reading) supports two modes for accessing paper content:
-
-| Mode | Source | Model | Cost | Best For |
-|------|--------|-------|------|----------|
-| **Zotero** | Library via MCP | Opus | Higher | Papers you've annotated; leverages highlights |
-| **Docling** | PDF → Markdown | Haiku | Lower | Batch processing; new PDFs without annotations |
-
-Choose based on your situation:
-- **Zotero mode**: When papers are in your library and you've already highlighted key passages
-- **Docling mode**: When processing many new PDFs quickly, or when Zotero isn't set up
-
-Both modes produce the same structured reading notes with required identifiers.
-
 ---
 
-## Zotero Integration
+## Local Library Integration
 
-For **Zotero mode**, this skill uses the bundled **zotero** and **zotero-rag** skills:
+This skill reads papers from a local library of markdown-converted PDFs alongside `references.bib` for bibliographic metadata.
 
-### Setup
+### Expected Library Layout
 
-See `mcp/zotero-setup.md` for detailed configuration.
-
-### Two Complementary Skills
-
-| Skill | Purpose | Best For |
-|-------|---------|----------|
-| **zotero** | 43 MCP tools for library operations | Metadata, collections, annotations |
-| **zotero-rag** | Semantic search across PDF content | Finding passages by meaning |
-
-### Key Capabilities
-
-**zotero skill** (structured access):
-- `search_items` - Find papers by keyword, author, tag
-- `get_item` - Retrieve full metadata
-- `collection_items` - List items in a collection
-
-**zotero-rag skill** (semantic search):
-- `semantic_search` - Find passages by conceptual similarity
-- `get_chunk_context` - Expand results with surrounding text
-- `find_similar_chunks` - Discover related discussions across documents
-
-### Workflow Integration
-
-1. **From lit-search**: Import the BibTeX export into Zotero
-2. **Acquire PDFs**: Use Zotero's "Find Available PDF" or manual download
-3. **Index for RAG**: Run `index_library collection_key="YOUR_COLLECTION"`
-4. **Read and annotate**: Highlight key passages, add notes
-5. **lit-synthesis reads**: Access via zotero tools and semantic search via zotero-rag
-
----
-
-## Docling PDF Conversion
-
-For **Docling mode**, PDFs are converted to markdown for agent-based reading:
-
-### Setup
-
-Install docling:
-```bash
-pip install docling
 ```
+project/
+├── references.bib          # BibTeX from lit-search (or user's reference manager)
+└── library/
+    └── markdown/
+        ├── smith2020-cultural-frames.md
+        ├── jones2019-institutional.md
+        └── ...             # One .md per paper, converted from PDF
+```
+
+### Converting PDFs to Markdown
+
+Use the shared conversion script:
+
+```bash
+plugins/sociology-skillset/scripts/convert-to-md.sh /path/to/paper.pdf
+```
+
+This script handles PDF-to-markdown conversion with caching. Run it for each PDF before starting Phase 1. See the script for full usage and options.
 
 ### Using reading-agent Skill
 
@@ -157,7 +120,7 @@ The reading-agent skill handles PDF conversion and produces structured notes wit
 
 For batch processing many papers:
 
-1. **Convert PDFs**: Run `scripts/pdf-to-md.sh` on each paper
+1. **Convert PDFs**: Run `plugins/sociology-skillset/scripts/convert-to-md.sh` on each paper
 2. **Use reading-agent in batch mode**:
    ```
    /reading-agent
@@ -168,15 +131,7 @@ For batch processing many papers:
    ```
 3. **Collect outputs**: Notes saved to `reading-notes/` directory
 
-### Conversion Scripts (Alternative)
-
-Located in `scripts/` directory:
-
-| Script | Purpose |
-|--------|---------|
-| `pdf-to-md.sh` | Convert single PDF to markdown (with caching) |
-| `read-paper.sh` | Wrapper with status messages |
-| `reading-agent-prompt.md` | Template for manual agent spawning |
+---
 
 ## Workflow Phases
 
@@ -184,7 +139,7 @@ Located in `scripts/` directory:
 **Goal**: Assess what's in the corpus and identify gaps.
 
 **Process**:
-- Review the database from lit-search (or user's Zotero collection)
+- Review the database from lit-search (or user's reference library)
 - Count papers by year, journal, author, theoretical tradition
 - Identify potential gaps in coverage
 - Prioritize which papers need deep reading vs. skimming
@@ -199,7 +154,7 @@ Located in `scripts/` directory:
 **Goal**: Close read priority papers and extract analytical insights.
 
 **Process**:
-- For each priority paper, read full text via Zotero MCP
+- For each priority paper, read full text from `library/markdown/`
 - Extract: argument structure, theoretical framework, key concepts, methodological approach
 - Note: how theory is deployed, what evidence supports claims, limitations acknowledged
 - Create structured reading notes
@@ -282,7 +237,7 @@ lit-synthesis/
 └── field-synthesis.md        # Comprehensive synthesis with sections for theoretical map, thematic clusters, debate map
 ```
 
-**Note**: Filenames use `author-year-short-title.md` for human readability, but the **frontmatter identifiers** (`citation_key`, OpenAlex ID, DOI, Zotero key) are the authoritative way to match notes back to source papers. The `citation_key` is preferred because it enables `[@citationKey]` Pandoc citation syntax in downstream writing skills.
+**Note**: Filenames use `author-year-short-title.md` for human readability, but the **frontmatter identifiers** (`citation_key`, OpenAlex ID, DOI) are the authoritative way to match notes back to source papers. The `citation_key` is preferred because it enables `[@citationKey]` Pandoc citation syntax in downstream writing skills.
 
 ## Reading Note Template
 
@@ -291,10 +246,9 @@ For each paper in Phase 1, notes **must include identifier frontmatter** to enab
 ```markdown
 ---
 # Required: At least one unique identifier
-citation_key: smithCulturalFrames2020  # Preferred: from lit-search database or Zotero citationKey
+citation_key: smithCulturalFrames2020  # Preferred: from lit-search database or references.bib
 openalex_id: W2123456789    # From lit-search database
 doi: 10.1086/123456         # Digital Object Identifier
-zotero_key: ABC123XY        # Zotero item key (if in library)
 
 # Recommended: Additional metadata for filtering
 first_author: Smith
@@ -305,7 +259,7 @@ short_title: cultural-frames
 # Smith 2020 - Cultural Frames
 
 ## Bibliographic Info
-- Full citation: [from Zotero or database]
+- Full citation: [from references.bib or database]
 - DOI: [link]
 - OpenAlex: https://openalex.org/W2123456789
 
@@ -351,45 +305,34 @@ short_title: cultural-frames
 | Phase | Model | Rationale |
 |-------|-------|-----------|
 | **Phase 0**: Corpus Audit | **Sonnet** | Data processing, statistics |
-| **Phase 1**: Deep Reading (Zotero) | **Opus** | Analytical reading with annotations |
-| **Phase 1**: Deep Reading (Docling) | **Haiku** | Cost-effective batch processing |
+| **Phase 1**: Deep Reading | **Sonnet** | Analytical reading of converted markdown |
 | **Phase 2**: Theoretical Mapping | **Opus** | Pattern recognition, intellectual history |
 | **Phase 3**: Thematic Clustering | **Sonnet** | Organization, categorization |
 | **Phase 4**: Debate Mapping | **Opus** | Tension identification, nuance |
 | **Phase 5**: Field Synthesis | **Opus** | Integration, strategic judgment |
-
-**Phase 1 model choice**: Use Opus for close reading of key theoretical papers; use Haiku via docling mode for processing larger batches where structured extraction is the goal.
 
 ## Starting the Synthesis
 
 When the user is ready to begin:
 
 1. **Identify the corpus**:
-   > "Where are your papers? A Zotero collection? A folder of PDFs? A database from lit-search? How many papers total?"
+   > "Where are your papers? A folder of PDFs? A `references.bib` from lit-search? How many papers total?"
 
-2. **Choose reading mode**:
-   > "For Phase 1, we have two options:
-   > - **Zotero mode**: Best if papers are in your library with annotations. Uses Opus for deep reading.
-   > - **Docling mode**: Best for batch-processing PDFs. Converts to markdown and uses Haiku agents.
-   > Which fits your situation?"
+2. **Verify local library setup**:
+   > "Do you have PDFs converted to markdown in `library/markdown/`? If not, we'll run `plugins/sociology-skillset/scripts/convert-to-md.sh` on each PDF before Phase 1."
 
-3. **Verify setup** (based on mode):
-   - *Zotero*: Check MCP is configured (see `mcp/zotero-setup.md`)
-   - *Docling*: Verify docling is installed (`pip install docling`)
-
-4. **Set priorities**:
+3. **Set priorities**:
    > "Which papers are most central to your project? We'll deep-read those first and skim the rest."
 
-5. **Clarify goals**:
+4. **Clarify goals**:
    > "What are you trying to understand about this field? Are you looking for gaps, debates, or a specific theoretical tradition?"
 
-6. **Proceed with Phase 0** to audit the corpus.
+5. **Proceed with Phase 0** to audit the corpus.
 
 ## Key Reminders
 
-- **Identifiers are essential**: Every reading note must have at least one unique identifier (`citation_key`, OpenAlex ID, DOI, or Zotero key) in its frontmatter. Prefer `citation_key` when available.
-- **Choose the right mode**: Zotero mode for annotated papers; Docling mode for batch processing
-- **Annotations accelerate**: If you've already highlighted papers, Zotero mode leverages that work
+- **Identifiers are essential**: Every reading note must have at least one unique identifier (`citation_key`, OpenAlex ID, or DOI) in its frontmatter. Prefer `citation_key` when available.
+- **Convert before reading**: Run `plugins/sociology-skillset/scripts/convert-to-md.sh` on all PDFs before Phase 1 begins
 - **Quality over quantity**: Deep reading 15 papers beats skimming 50
 - **Debates are opportunities**: Every tension you find is a potential contribution space
 - **This feeds argument-builder**: The outputs here become inputs there—keep that handoff in mind

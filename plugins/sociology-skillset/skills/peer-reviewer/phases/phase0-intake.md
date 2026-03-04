@@ -2,7 +2,7 @@
 
 ## Why This Phase Matters
 
-The quality of simulated peer review depends on selecting the right perspectives. You need to identify reviewers who would genuinely engage with this manuscript—scholars or theoretical camps whose work the manuscript cites, builds on, or challenges. This phase analyzes the manuscript to find those perspectives and confirms they're viable given what's available in Zotero.
+The quality of simulated peer review depends on selecting the right perspectives. You need to identify reviewers who would genuinely engage with this manuscript—scholars or theoretical camps whose work the manuscript cites, builds on, or challenges. This phase analyzes the manuscript to find those perspectives and confirms they're viable given what's available in the local library.
 
 ---
 
@@ -55,28 +55,28 @@ For each candidate, note:
 - How they're engaged (built upon, extended, challenged, ignored)
 - What their review focus would be (theory+findings or methods+findings)
 
-### 3. Check Zotero Availability
+### 3. Check Local Library Availability
 
-For each candidate perspective, query Zotero to check source availability.
+For each candidate perspective, check what sources are available in the local library.
 
-Use `mcp__zotero-mcp__zotero_search_items` to search for:
+Search `references.bib` and the `library/` folder for:
 - Works by specific authors
-- Works tagged with relevant theoretical traditions
-- Works in relevant collections
+- Works on relevant theoretical traditions
+- Works that appear in the manuscript's reference list
 
 For each candidate, assess:
-- **Strong availability**: 3+ relevant full texts
+- **Strong availability**: 3+ relevant full texts (md_path present in references.bib)
 - **Moderate availability**: 1-2 relevant full texts
 - **Weak availability**: No full texts (must drop or user must add)
 
 ```markdown
-## Zotero Availability Check
+## Library Availability Check
 
 | Perspective | Search Query | Results | Full Texts | Viability |
 |-------------|--------------|---------|------------|-----------|
-| [Perspective 1] | author:"Smith" | 5 items | 3 | Strong |
-| [Perspective 2] | tag:"Bourdieu" | 8 items | 2 | Moderate |
-| [Perspective 3] | author:"Jones" | 1 item | 0 | Weak |
+| [Perspective 1] | author:"Smith" in references.bib | 5 items | 3 | Strong |
+| [Perspective 2] | "Bourdieu" in library/*.md | 8 items | 2 | Moderate |
+| [Perspective 3] | author:"Jones" in references.bib | 1 item | 0 | Weak |
 ```
 
 ### 4. Select 2-3 Recommended Reviewers
@@ -85,7 +85,7 @@ Based on relevance and availability, recommend 2-3 reviewer perspectives.
 
 **Selection criteria**:
 - High relevance to the manuscript's contribution
-- Sufficient Zotero sources to build an informed persona
+- Sufficient local library sources to build an informed persona
 - Complementary focus areas (don't select 3 theory-focused reviewers)
 - Diversity of likely feedback (supportive, challenging, methodological)
 
@@ -106,7 +106,7 @@ For each recommended reviewer:
 - Cited: [Yes/No - how many times, how]
 - Engagement: [Built upon / Extended / Challenged / Compared]
 
-**Zotero sources available**:
+**Library sources available**:
 - [Source 1]: [Title] (full text: yes/no)
 - [Source 2]: [Title] (full text: yes/no)
 - [Source 3]: [Title] (full text: yes/no)
@@ -129,7 +129,7 @@ Document perspectives you considered but didn't recommend, with reasons:
 
 | Perspective | Reason Not Selected |
 |-------------|---------------------|
-| [Perspective A] | Insufficient Zotero sources |
+| [Perspective A] | Insufficient library sources |
 | [Perspective B] | Too similar to selected Reviewer 1 |
 | [Perspective C] | Tangential to core contribution |
 ```
@@ -142,7 +142,7 @@ Compile findings into a complete intake memo and present it in the conversation 
 
 ## Output Files to Create
 
-None — present all assessment results (manuscript summary, reviewer candidates, Zotero availability check, recommended reviewers, and intake memo) in conversation for user review.
+None — present all assessment results (manuscript summary, reviewer candidates, library availability check, recommended reviewers, and intake memo) in conversation for user review.
 
 ---
 
@@ -158,7 +158,7 @@ Aim for complementary perspectives: one more theoretical, one more methodologica
 Note whether the manuscript engages perspectives well or poorly—this shapes review focus.
 
 ### Flag Gaps
-If important perspectives lack Zotero sources, flag this for the user. They may want to add sources before proceeding.
+If important perspectives lack local library sources, flag this for the user. They may want to add sources to references.bib before proceeding.
 
 ### 2-3 Is the Sweet Spot
 More than 3 reviewers creates synthesis challenges. Fewer than 2 misses the value of multiple perspectives.
@@ -170,10 +170,10 @@ More than 3 reviewers creates synthesis challenges. Fewer than 2 misses the valu
 Report to the orchestrator:
 - Manuscript summary complete
 - Number of candidate perspectives identified
-- Zotero availability assessment
+- Library availability assessment
 - 2-3 recommended reviewers with rationale
 - Any perspectives that need user input (weak availability but high relevance)
 - Ready for user confirmation of reviewer selection
 
 Example summary:
-> "**Intake complete**. Manuscript engages Bourdieusian cultural capital theory, applies it to educational settings, uses interview methods. Identified 5 candidate perspectives; 3 have strong Zotero availability. **Recommended reviewers**: (1) Cultural Capital in Education [theory + findings, 4 sources from Lareau], (2) Interview Validity Perspective [methods + findings, 3 sources], (3) Critical Education Scholarship [theory + findings, 3 sources]. One high-relevance perspective (class reproduction) has weak availability—user may want to add sources. Ready for user confirmation."
+> "**Intake complete**. Manuscript engages Bourdieusian cultural capital theory, applies it to educational settings, uses interview methods. Identified 5 candidate perspectives; 3 have strong local library availability. **Recommended reviewers**: (1) Cultural Capital in Education [theory + findings, 4 sources from Lareau], (2) Interview Validity Perspective [methods + findings, 3 sources], (3) Critical Education Scholarship [theory + findings, 3 sources]. One high-relevance perspective (class reproduction) has weak availability—user may want to add sources to references.bib. Ready for user confirmation."

@@ -101,11 +101,11 @@ paths_mixed:
 # Active paths (set by scaffold based on type)
 paths: {}
 
-# Zotero integration (optional)
-zotero:
-  collection_key: ""
-  collection_name: ""
-  indexed: false  # true if zotero-rag index exists
+# Local library
+library:
+  references_bib: references.bib
+  pdfs: library/pdfs/       # PDFs and EPUBs
+  markdown: library/markdown/ # Converted markdown versions
 
 # Timestamps
 created: ""

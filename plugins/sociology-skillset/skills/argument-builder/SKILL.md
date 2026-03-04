@@ -35,7 +35,7 @@ This skill is part of a multi-skill workflow:
 | Skill | Role | Key Output |
 |-------|------|------------|
 | **lit-search** | Find papers via OpenAlex | `database.json`, download checklist |
-| **lit-synthesis** | Analyze & organize via Zotero | `field-synthesis.md`, `theoretical-map.md`, `debate-map.md` |
+| **lit-synthesis** | Analyze & organize literature | `field-synthesis.md`, `theoretical-map.md`, `debate-map.md` |
 | **contribution-framer** | Identify contribution type & threading template | `contribution-profile.md` |
 | **argument-builder** | Craft argument & draft prose | Publication-ready Theory section |
 
@@ -189,7 +189,7 @@ See `clusters/` directory for detailed profiles with characteristic paragraph se
 - Verify paragraph functions are clear
 - Ensure smooth transitions
 - Final polish for prose quality
-- **Compile citation list** with Zotero lookup (if MCP available)
+- **Compile citation list** with references.bib lookup
 - **Generate bibliography** for reference section
 
 **Output**: Final Theory section (`theory-section.md`) + quality assessment appended to `theory-memo.md` + `citations.json` (updated) + `bibliography.md`.

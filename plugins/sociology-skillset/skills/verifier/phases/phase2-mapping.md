@@ -67,9 +67,9 @@ Check available sources:
 ls -la /path/to/literature/
 ```
 
-**If Zotero-based**:
-- Search for each cited work
-- Record Zotero key or note if not found
+**If references.bib-based**:
+- Search references.bib for each cited work by citation key
+- Record the BibTeX key or note if not found
 
 Create a citation-to-source mapping:
 
@@ -84,7 +84,7 @@ Create a citation-to-source mapping:
 For each extracted item with a literature citation:
 
 1. **Parse the citation**: Extract author(s) and year
-2. **Search for source**: Check folder or Zotero
+2. **Search for source**: Check folder or references.bib
 3. **Handle ambiguity**: Same author, same year = need title match
 4. **Record the mapping**: Item ID -> Source path/key
 

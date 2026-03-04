@@ -51,9 +51,9 @@ For each reviewer, construct a detailed profile.
 - **Active period**: [When this perspective emerged/flourished]
 
 ## Sources Consulted
-1. [Author (Year). Title. — Zotero key]
-2. [Author (Year). Title. — Zotero key]
-3. [Author (Year). Title. — Zotero key]
+1. [Author (Year). Title. — citation key]
+2. [Author (Year). Title. — citation key]
+3. [Author (Year). Title. — citation key]
 
 ---
 

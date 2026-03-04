@@ -98,12 +98,12 @@ prompt: |
   - Main argument: [ARGUMENT]
 
   PRIOR OUTPUTS:
-  - Literature database: literature/database.json (or Zotero collection)
+  - Literature database: literature/database.json
+  - Bibliography: references.bib
   - Corpus size: [N] papers
 
   USER HAS:
-  - Zotero MCP configured: [yes/no]
-  - PDFs acquired: [N of M]
+  - PDFs in library/: [N of M] acquired
 
   PHASE GOAL:
   Assess corpus coverage and prioritize reading.

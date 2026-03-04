@@ -75,7 +75,9 @@ def generate_bibtex(papers, output_path="output/references.bib"):
   title = {{{paper["title"]}}},
   journal = {{{paper.get("journal", "")}}},
   year = {{{paper["year"]}}},
-  doi = {{{paper.get("doi", "").replace("https://doi.org/", "")}}}
+  doi = {{{paper.get("doi", "").replace("https://doi.org/", "")}}},
+  pdf_path = {{}},
+  md_path = {{}}
 }}
 """
         bibtex_entries.append(entry)
@@ -84,25 +86,20 @@ def generate_bibtex(papers, output_path="output/references.bib"):
         f.write("\n".join(bibtex_entries))
 ```
 
-### Zotero Import with Citation Keys
+### Ingest PDFs into the Local BibTeX Pipeline
 
-When importing papers into Zotero, set the `citationKey` field so downstream skills can look up items deterministically:
+After generating `output/references.bib`, run `ingest.py` to register PDFs and convert them to markdown. This populates the `pdf_path` and `md_path` fields in each entry so downstream skills can locate full text by citation key:
 
-```python
-for paper in papers:
-    add_item(
-        item_type="journalArticle",
-        fields={
-            "title": paper["title"],
-            "citationKey": paper["citation_key"],
-            "creators": [...],  # Format from paper["authors"]
-            "date": str(paper["year"]),
-            "DOI": paper.get("doi", "").replace("https://doi.org/", "")
-        }
-    )
+```bash
+python ingest.py --bib output/references.bib --pdf-dir fulltext/
 ```
 
-This ensures `[@citationKey]` references in downstream writing skills resolve to the correct Zotero item.
+`ingest.py` will:
+1. Match each PDF filename (or DOI-derived name) to its BibTeX entry by citation key
+2. Convert the PDF to a markdown file alongside it
+3. Write the resolved `pdf_path` and `md_path` back into `output/references.bib`
+
+Once ingested, `[@citationKey]` references in downstream writing skills resolve to the correct local files via `references.bib`.
 
 ### 3. Thematic Analysis
 
@@ -267,7 +264,7 @@ Your literature database on "Social Movement Participation" is ready.
    - Organized thematically
 
 2. **Citation file** (`output/references.bib`)
-   - Ready for Zotero, Mendeley, or LaTeX
+   - Ready for Mendeley, LaTeX, or local library pipeline
 
 3. **Synthesis document** (`output/synthesis.md`)
    - Thematic summary

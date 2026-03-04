@@ -1,11 +1,11 @@
 ---
 name: peer-reviewer
-description: Simulate peer review by constructing reviewer personas from Zotero sources. Identifies relevant perspectives, retrieves full texts, builds reviewer profiles, and generates focused reviews on theory/methods and findings.
+description: Simulate peer review by constructing reviewer personas from project references. Identifies relevant perspectives, retrieves full texts, builds reviewer profiles, and generates focused reviews on theory/methods and findings.
 ---
 
 # Peer Reviewer
 
-You help authors get pre-submission feedback by simulating peer review. You identify 2-3 relevant reviewer perspectives based on the manuscript's theoretical and empirical engagement, retrieve their work from Zotero, construct informed reviewer personas, and generate focused reviews that help authors strengthen their manuscripts before submission.
+You help authors get pre-submission feedback by simulating peer review. You identify 2-3 relevant reviewer perspectives based on the manuscript's theoretical and empirical engagement, retrieve their work from the project's reference library, construct informed reviewer personas, and generate focused reviews that help authors strengthen their manuscripts before submission.
 
 ## Project Integration
 
@@ -34,7 +34,7 @@ artifacts:
 This skill creates **simulated peer reviewers** grounded in actual scholarly work:
 
 1. **Identifies perspectives** - Analyzes the manuscript to find 2-3 relevant reviewer viewpoints (specific scholars or theoretical camps)
-2. **Retrieves literature** - Uses Zotero MCP to fetch full texts from those perspectives
+2. **Retrieves literature** - Searches `references.bib` and reads full texts from `library/markdown/` for those perspectives
 3. **Builds personas** - Reads the literature to understand each perspective's core commitments and concerns
 4. **Generates reviews** - Each persona reviews the manuscript, focusing on their area of expertise
 5. **Synthesizes feedback** - Aggregates reviews into actionable recommendations
@@ -42,9 +42,9 @@ This skill creates **simulated peer reviewers** grounded in actual scholarly wor
 
 ## Prerequisites
 
-**Required**: [Zotero MCP](https://github.com/54yyyu/zotero-mcp) configured and connected to your Zotero library with relevant full texts.
+**Required**: A populated `references.bib` file and a `library/markdown/` directory containing full-text markdown versions of sources. These are typically created by the `bibliography-builder` skill.
 
-The quality of simulated reviews depends on having relevant sources in your Zotero library. The skill works with whatever is available but produces better results with richer libraries.
+The quality of simulated reviews depends on having relevant sources in your reference library. The skill works with whatever is available but produces better results with richer libraries.
 
 ## When to Use This Skill
 
@@ -69,7 +69,7 @@ The skill adapts its review focus based on what you provide.
 
 2. **Focused reviews**: Each reviewer focuses on 1-2 areas (theory + findings OR methods + findings) based on their expertise.
 
-3. **Constrained by Zotero**: We can only simulate perspectives for which you have full texts available.
+3. **Constrained by library**: We can only simulate perspectives for which you have full texts available in `library/markdown/`.
 
 4. **User control**: You approve reviewer selection, personas, and response strategy at each step.
 
@@ -104,7 +104,7 @@ Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The g
 - Note scholars cited prominently or engaged critically
 - Identify empirical/methodological traditions
 - Propose 2-3 reviewer perspectives with rationale
-- Check Zotero availability for each perspective
+- Check `references.bib` availability for each perspective
 
 **Output**: Manuscript summary, reviewer candidates, and recommended perspectives presented in conversation.
 
@@ -113,12 +113,12 @@ Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The g
 ---
 
 ### Phase 1: Literature Retrieval
-**Goal**: Fetch relevant full texts from Zotero for each perspective.
+**Goal**: Fetch relevant full texts from the project reference library for each perspective.
 
 **Process**:
 - For each confirmed reviewer perspective:
-  - Search Zotero for relevant works (by author, tag, or collection)
-  - Retrieve full texts (prioritize foundational works + recent pieces)
+  - Search `references.bib` by author, keyword, or year using grep
+  - Read full texts from `library/markdown/` using the `md_path` field from `.bib` entries (prioritize foundational works + recent pieces)
   - Note any gaps (perspectives without sufficient sources)
 - Compile source list for each perspective
 
@@ -234,9 +234,9 @@ Each constructed persona includes:
 - [Methodological preference]
 
 **Sources consulted**:
-- [Source 1 - Zotero key]
-- [Source 2 - Zotero key]
-- [Source 3 - Zotero key]
+- [Source 1 - citation key]
+- [Source 2 - citation key]
+- [Source 3 - citation key]
 
 **What this perspective values**:
 - [Quality 1]
@@ -302,7 +302,7 @@ Use the Task tool for each phase:
 Task: Phase 0 Intake
 subagent_type: general-purpose
 model: opus
-prompt: Read phases/phase0-intake.md. Analyze the manuscript at [path] and identify 2-3 reviewer perspectives. Check Zotero availability.
+prompt: Read phases/phase0-intake.md. Analyze the manuscript at [path] and identify 2-3 reviewer perspectives. Check references.bib availability.
 ```
 
 ## Model Recommendations
@@ -310,7 +310,7 @@ prompt: Read phases/phase0-intake.md. Analyze the manuscript at [path] and ident
 | Phase | Model | Rationale |
 |-------|-------|-----------|
 | **Phase 0**: Intake | **Opus** | Strategic judgment about perspectives |
-| **Phase 1**: Retrieval | **Sonnet** | Zotero queries, source organization |
+| **Phase 1**: Retrieval | **Sonnet** | .bib searches, source organization |
 | **Phase 2**: Persona | **Opus** | Deep reading, profile construction |
 | **Phase 3**: Reviews | **Opus** | Inhabiting perspectives, critical reading |
 | **Phase 4**: Synthesis | **Opus** | Prioritization, strategy |
@@ -326,8 +326,8 @@ When the user is ready to begin:
 2. **Ask about known concerns**:
    > "Are there specific perspectives or scholars you're worried about engaging? Anyone whose work you cite critically or build on heavily?"
 
-3. **Ask about Zotero**:
-   > "Is your Zotero library connected? Do you have collections organized by theoretical tradition or scholar?"
+3. **Ask about the reference library**:
+   > "Do you have a `references.bib` file and full texts in `library/markdown/`? Are sources organized by theoretical tradition or scholar?"
 
 4. **Proceed with Phase 0** to analyze the manuscript and identify perspectives.
 
@@ -336,7 +336,7 @@ When the user is ready to begin:
 - **Phases 0-2 are conversation**: Manuscript summary, reviewer candidates, personas, and source lists are presented in conversation — no files created until Phase 3.
 - **Phases 3-4 produce files**: `reviews.md` (all reviewer perspectives as sections) and `synthesis-memo.md` (consolidated synthesis) are the key file outputs.
 - **Phase 5 edits in place**: Revisions go directly into the manuscript; git tracks changes. Only `response-to-reviewers.md` is a new file output.
-- **Zotero is the constraint**: We can only build personas from sources you have. Better library = better simulation.
+- **Library is the constraint**: We can only build personas from sources you have in `references.bib` and `library/markdown/`. Better library = better simulation.
 - **2-3 reviewers is optimal**: More becomes unwieldy; fewer misses perspectives.
 - **Focus beats breadth**: Reviewers examining 1-2 sections deeply > shallow full-manuscript reads.
 - **User controls personas**: You can adjust characterizations if they don't match your understanding.

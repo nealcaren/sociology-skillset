@@ -8,16 +8,14 @@ This is the deliverable phase. All the extraction, matching, and review work cul
 
 ### 1. Retrieve Full Metadata
 
-For each matched citation, get complete bibliographic data from Zotero:
-- All authors (full names)
-- Publication year
-- Title
-- Journal/Book/Source
-- Volume, issue, pages
-- DOI or URL
-- Item type (article, book, chapter, etc.)
-
-Use `mcp__zotero-mcp__zotero_get_item_metadata` with each Zotero key.
+For each matched citation, read complete bibliographic data directly from the corresponding BibTeX entry in `references.bib`. Extract the following fields:
+- `author` — all authors (full names as stored in the entry)
+- `year` — publication year
+- `title` — full title
+- `journal`, `booktitle`, or `publisher` — source/venue
+- `volume`, `number`, `pages` — pagination metadata
+- `doi` or `url` — identifier when available
+- Entry type (`@article`, `@book`, `@incollection`, etc.) — determines formatting template
 
 ### 2. Format According to Style
 

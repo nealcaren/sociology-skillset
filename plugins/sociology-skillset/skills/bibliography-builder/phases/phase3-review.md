@@ -11,8 +11,8 @@ Even after matching, issues may remain. This phase provides a systematic review 
 Aggregate all issues from previous phases:
 
 **Missing Items:**
-- Citations not found in Zotero
-- Decision: Skip, add to Zotero, or mark as "[citation needed]"
+- Citations not found in references.bib or local library
+- Decision: Skip, add to references.bib, or mark as "[citation needed]"
 
 **Ambiguous Matches:**
 - Multiple candidates for same citation
@@ -20,17 +20,17 @@ Aggregate all issues from previous phases:
 
 **Year Discrepancies:**
 - Author found but year differs from citation
-- May indicate typo in manuscript or Zotero
+- May indicate typo in manuscript or references.bib
 
 **Et Al. Verification:**
-- All "et al." citations should now have full author lists
+- All "et al." citations should now have full author lists from references.bib
 - Verify these match the manuscript's usage
 
 ### 2. Cross-Check for Consistency
 
 **Same author, multiple works:**
 - If "Smith 2020" and "Smith 2021" both cited, are they the same Smith?
-- If "Smith 2020a" and "Smith 2020b" cited, are both in Zotero?
+- If "Smith 2020a" and "Smith 2020b" cited, are both in references.bib?
 
 **Name consistency:**
 - Is "García" always spelled the same way?
@@ -38,7 +38,7 @@ Aggregate all issues from previous phases:
 
 **Citation/reference match:**
 - Every in-text citation should have a reference
-- Are there Zotero items that were matched but perhaps shouldn't be? (false positives)
+- Are there library items that were matched but perhaps shouldn't be? (false positives)
 
 ### 3. Generate Issue Report
 
@@ -64,7 +64,7 @@ For each critical issue, document the resolution:
 |-------|------------|--------|
 | Brown 2018 not found | Skip | Omit from bibliography |
 | Jones 2019 ambiguous | Use DEF456 | "Organizational theory" article |
-| Smith year mismatch (2019 vs 2020) | Manuscript error | Will note; use 2019 from Zotero |
+| Smith year mismatch (2019 vs 2020) | Manuscript error | Will note; use 2019 from references.bib |
 
 ## Output: Issues Report
 
@@ -88,7 +88,7 @@ Present the issue report in conversation (do not save to a file):
 | Citation | Decision | Notes |
 |----------|----------|-------|
 | Brown 2018 | SKIP | Author confirmed not needed |
-| Williams 2021 | ADD | User will add to Zotero |
+| Williams 2021 | ADD | User will add to references.bib |
 
 ### Resolved Ambiguities
 
@@ -100,15 +100,15 @@ Present the issue report in conversation (do not save to a file):
 
 ### Year Discrepancies
 
-| Citation | Manuscript | Zotero | Resolution |
-|----------|------------|--------|------------|
-| Smith 2020 | 2020 | 2019 | Use Zotero (2019); manuscript has typo |
+| Citation | Manuscript | Library | Resolution |
+|----------|------------|---------|------------|
+| Smith 2020 | 2020 | 2019 | Use references.bib entry (2019); manuscript has typo |
 
 ### Name Variations
 
-| Manuscript Form | Zotero Form | Status |
-|-----------------|-------------|--------|
-| García | Garcia | Acceptable variation |
+| Manuscript Form | Library Form | Status |
+|-----------------|--------------|--------|
+| García | Garcia | Acceptable variation (check references.bib entry) |
 
 ## Information
 
@@ -122,7 +122,7 @@ Present the issue report in conversation (do not save to a file):
 ## Final Citation Count
 
 - **Total unique citations**: [X]
-- **With valid Zotero match**: [X]
+- **With valid library match**: [X]
 - **Skipped (unresolved)**: [X]
 ```
 

@@ -2,7 +2,7 @@
 
 ## Why This Phase Matters
 
-Accurate extraction is the foundation. Missing a citation means an incomplete bibliography; mis-parsing a name means a failed Zotero match. This phase uses pattern matching to find all citations and normalize them for lookup.
+Accurate extraction is the foundation. Missing a citation means an incomplete bibliography; mis-parsing a name means a failed library match. This phase uses pattern matching to find all citations and normalize them for lookup.
 
 ## Your Tasks
 
@@ -108,7 +108,7 @@ Sort by:
 
 Mark citations that may cause problems:
 - **Ambiguous names**: Common surnames (Smith, Lee, etc.)
-- **Et al. citations**: Will need full author list from Zotero
+- **Et al. citations**: Will need full author list from references.bib
 - **Year suffixes**: May indicate multiple works by same author
 - **Unusual formats**: Anything that didn't match standard patterns
 
@@ -190,6 +190,6 @@ Present extraction results in conversation using this format (do not save to a f
 Present the extraction results in conversation. Ask:
 1. Are all citations captured?
 2. Any obvious misses or misparsings?
-3. Ready to proceed to Zotero matching?
+3. Ready to proceed to references.bib matching?
 
-Once confirmed, proceed to Phase 2: Zotero Matching.
+Once confirmed, proceed to Phase 2: Library Matching.
