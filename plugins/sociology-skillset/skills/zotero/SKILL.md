@@ -41,7 +41,7 @@ metadata:
 | `search_items(query=...)` | Search `references.bib` by author/title/year |
 | `get_item(item_key=...)` | Look up entry in `references.bib` by citation key |
 | `download_attachments(...)` | Read from `library/pdfs/` directly |
-| Zotero RAG semantic search | Read from `library/markdown/` + grep |
+| Zotero RAG semantic search | `uv run plugins/sociology-skillset/scripts/rag.py search "query"` |
 | `add_item(...)` | `python ingest.py --file paper.pdf` |
 
 ### Skills That Use the New Pipeline

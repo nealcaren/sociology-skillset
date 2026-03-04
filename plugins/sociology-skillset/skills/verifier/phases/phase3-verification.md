@@ -106,12 +106,20 @@ If you find a match with variations:
 
 ## Step 3: Deep Reading (Haiku Agent)
 
-When grep fails, spawn a haiku agent to do semantic search.
+When grep fails, try semantic search before spawning a haiku agent.
 
-### When to Use Deep Read
+### Semantic Search (RAG)
 
-- Quote not found after fuzzy search
-- Paraphrase that needs semantic matching
+For paraphrases and claims where exact keywords differ from the source, use:
+```bash
+uv run plugins/sociology-skillset/scripts/rag.py search "paraphrased claim text"
+```
+If the RAG index is available, this finds semantically similar passages even without keyword overlap. Use `rag.py context <chunk_id>` to read the full surrounding passage for verification.
+
+### When to Use Deep Read (Haiku Agent)
+
+- Quote not found after fuzzy search and semantic search
+- Paraphrase that needs careful contextual matching beyond what RAG returns
 - Aggregate claim requiring pattern confirmation
 - Source is PDF that may have OCR issues
 
@@ -182,9 +190,10 @@ prompt: |
 **Success criteria**: Source contains quote verbatim or with only minor punctuation differences.
 
 **Process**:
-1. Fast search with distinctive phrase
-2. Fuzzy search with variations
-3. Deep read if needed
+1. Fast search with distinctive phrase (grep)
+2. Fuzzy search with variations (grep)
+3. Semantic search if paraphrased (`rag.py search`)
+4. Deep read if needed (haiku agent)
 4. Accept if source text matches manuscript text
 
 **Acceptable differences**:

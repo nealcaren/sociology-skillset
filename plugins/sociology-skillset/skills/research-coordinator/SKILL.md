@@ -267,7 +267,7 @@ When a user comes to you with a research question like "How do community health 
 │ 16. VERIFY QUOTES & CLAIMS (VF.0-VF.4)                                   │
 │     • Extract all quotes and source-attributed claims                    │
 │     • Map to source documents (transcripts, literature)                  │
-│     • Verify each using grep search, haiku agent for deep read           │
+│     • Verify each using grep, rag.py semantic search, haiku deep read    │
 │     • Generate verification report with issues flagged                   │
 │     └── DECISION POINT: Review NOT FOUND items, fix before submission   │
 │                                                                          │

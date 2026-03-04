@@ -156,12 +156,17 @@ For each item:
    - For paraphrases: Search for key terms that must appear
    - If found: Mark VERIFIED with source location
 
-2. **If not found, fuzzy search**:
+2. **If not found, semantic search** (RAG):
+   - Run `uv run plugins/sociology-skillset/scripts/rag.py search "paraphrased claim or key concept"`
+   - Especially useful for paraphrases where exact keywords differ from source
+   - If found: Mark VERIFIED with source location and note on variation
+
+3. **If not found, fuzzy search**:
    - Try variations (punctuation, spacing, common OCR errors)
    - Search for partial matches (beginning/end of quote)
    - If found: Mark VERIFIED with notes on variation
 
-3. **If still not found, deep reading** (haiku agent):
+4. **If still not found, deep reading** (haiku agent):
    - Spawn haiku agent with source document and search target
    - Agent reads document looking for semantic match
    - Agent returns: FOUND (with location), NOT FOUND, or PARTIAL MATCH
@@ -174,12 +179,12 @@ For each item:
 
 **Verification strategies by type**:
 
-| Type | Fast Search | Deep Read Trigger |
-|------|-------------|-------------------|
-| Exact quote | Full phrase grep | No match after fuzzy |
-| Near quote | Core phrase grep | Partial match only |
-| Paraphrase | Key terms grep | Terms found but context unclear |
-| Aggregate | Count matching instances | Need pattern confirmation |
+| Type | Fast Search | Semantic Search | Deep Read Trigger |
+|------|-------------|-----------------|-------------------|
+| Exact quote | Full phrase grep | — | No match after fuzzy |
+| Near quote | Core phrase grep | `rag.py search` with key concept | Partial match only |
+| Paraphrase | Key terms grep | `rag.py search` with paraphrased claim | Terms found but context unclear |
+| Aggregate | Count matching instances | — | Need pattern confirmation |
 
 **Output**: Appends `## Verification Results` section to `verification-report.md`.
 

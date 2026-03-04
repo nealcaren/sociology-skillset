@@ -117,7 +117,8 @@ Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The g
 
 **Process**:
 - For each confirmed reviewer perspective:
-  - Search `references.bib` by author, keyword, or year using grep
+  - Search `references.bib` by author, keyword, or year using grep (for metadata/exact terms)
+  - Use `uv run plugins/sociology-skillset/scripts/rag.py search "theoretical perspective"` for semantic search (finding conceptually related sources even when exact keywords differ)
   - Read full texts from `library/markdown/` using the `md_path` field from `.bib` entries (prioritize foundational works + recent pieces)
   - Note any gaps (perspectives without sufficient sources)
 - Compile source list for each perspective
