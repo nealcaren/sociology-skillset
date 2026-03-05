@@ -161,20 +161,29 @@ Update `citations.json` in place (git tracks the version):
 
 (This updates `citations.json` in place; the Phase 3 version is preserved in git history.)
 
-Create `bibliography.md`:
-```markdown
-# Bibliography for Theory Section
+Create `bibliography.md` using **pandoc with citeproc**:
 
-## Sources Cited (35 unique)
+1. Build a dummy markdown file with all matched citation keys:
+   ```markdown
+   ---
+   bibliography: references.bib
+   csl: american-sociological-association.csl
+   nocite: |
+     @kirkCultural2011, @papachristosNeighborhood2015
+   ---
+   # References
+   ```
 
-Kirk, David S. and Andrew V. Papachristos. 2011. "Cultural Mechanisms and the Persistence of Neighborhood Violence." *American Journal of Sociology* 116(4):1190-1233.
+2. Run pandoc:
+   ```bash
+   pandoc dummy-refs.md --citeproc -o bibliography.md -t markdown
+   ```
 
-[Continue for all sources...]
-
-## Unmatched Citations (require manual lookup)
-
-- Smith (2020) - Not found in references.bib
-```
+3. Remove the dummy file. Append any unmatched citations:
+   ```markdown
+   ## Unmatched Citations (require manual lookup)
+   - Smith (2020) — Not found in references.bib
+   ```
 
 **If references.bib is not available**:
 - Output the deduplicated citation list without resolved metadata

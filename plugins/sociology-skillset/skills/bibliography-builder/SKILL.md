@@ -55,7 +55,13 @@ Use this skill when you have:
 
 ## Requirements
 
-This skill requires a **`references.bib`** BibTeX file containing the project's library entries. This file is typically located in the project root or a `references/` subdirectory and is populated by the `bibliography-builder` pipeline (e.g., via the writing-editor skill or Pandoc-based workflows).
+- A **`references.bib`** BibTeX file containing the project's library entries. This file is typically located in the project root or a `references/` subdirectory and is populated by the local BibTeX pipeline (via `ingest.py`).
+- **`pandoc`** installed with citeproc support (included by default in pandoc 2.11+). Used in Phase 4 to generate the formatted reference list.
+- A **CSL style file** for the target citation style. Common styles:
+  - ASA: `american-sociological-association.csl`
+  - APA 7th: `apa.csl`
+  - Chicago Author-Date: `chicago-author-date.csl`
+  - Download from https://github.com/citation-style-language/styles if not already present. Place in project root or a `csl/` subdirectory.
 
 ## Workflow Phases
 
@@ -132,20 +138,41 @@ This skill requires a **`references.bib`** BibTeX file containing the project's 
 ---
 
 ### Phase 4: Bibliography Generation
-**Goal**: Produce the formatted bibliography.
+**Goal**: Produce the formatted bibliography using pandoc with citeproc.
 
 **Process**:
-- Read full metadata for all matched items directly from their BibTeX entries in `references.bib`
-- Format according to requested style:
-  - APA 7th Edition
-  - ASA (American Sociological Association)
-  - Chicago Author-Date
-  - Other styles as requested
-- Sort alphabetically by first author
-- Handle special cases (edited volumes, translations, etc.)
-- Output as markdown or plain text
+1. **Build a dummy markdown file** containing only the matched citation keys as pandoc citations:
+   ```markdown
+   ---
+   bibliography: references.bib
+   csl: american-sociological-association.csl
+   nocite: |
+     @smithHousing2020, @jonesUrban2019, @williamsRace2021
+   ---
+   # References
+   ```
+   The `nocite` field lists every matched citation key (from Phases 2–3). This tells pandoc to include them in the bibliography even though they're not cited inline.
 
-**Output**: `bibliography.md` with formatted references.
+2. **Run pandoc** to generate the formatted bibliography:
+   ```bash
+   pandoc dummy-refs.md --citeproc -o bibliography.md -t markdown
+   ```
+   Adjust the CSL file path as needed. Common styles:
+   - ASA: `--csl american-sociological-association.csl`
+   - APA 7th: `--csl apa.csl`
+   - Chicago: `--csl chicago-author-date.csl`
+
+3. **Clean up**: Remove the dummy file. Review `bibliography.md` for any citeproc warnings (missing fields, unresolved keys).
+
+4. **Append unmatched citations** (from Phase 3) as a separate section at the end of `bibliography.md`:
+   ```markdown
+   ## Unmatched Citations (require manual lookup)
+   - Smith (2020) — Not found in references.bib
+   ```
+
+**Output**: `bibliography.md` with pandoc/citeproc-formatted references.
+
+**Why pandoc?** Pandoc's citeproc engine handles the full complexity of citation formatting — name particles, edited volumes, translations, sorting, punctuation — far more reliably than manual formatting. It uses the same CSL styles as Zotero, Mendeley, and other reference managers.
 
 ---
 
@@ -183,23 +210,15 @@ This skill requires a **`references.bib`** BibTeX file containing the project's 
 
 ## Output Formats
 
-### APA 7th Edition
-```
-Smith, J. A., & Jones, B. C. (2020). Article title in sentence case.
-    *Journal Name*, *45*(2), 123-145. https://doi.org/10.xxxx
-```
+Formatting is handled entirely by pandoc's citeproc engine using CSL style files. You do **not** need to manually format entries. Simply specify the correct CSL file for the target style:
 
-### ASA (American Sociological Association)
-```
-Smith, John A. and Beth C. Jones. 2020. "Article Title in Title Case."
-    *Journal Name* 45(2):123-45.
-```
+| Style | CSL file | Notes |
+|-------|----------|-------|
+| ASA | `american-sociological-association.csl` | Default for sociology journals |
+| APA 7th | `apa.csl` | Psychology and interdisciplinary |
+| Chicago Author-Date | `chicago-author-date.csl` | History, some social sciences |
 
-### Chicago Author-Date
-```
-Smith, John A., and Beth C. Jones. 2020. "Article Title in Title Case."
-    *Journal Name* 45 (2): 123–45.
-```
+Download CSL files from https://github.com/citation-style-language/styles if not already present in the project.
 
 ## File Structure
 

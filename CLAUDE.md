@@ -55,6 +55,8 @@ Skills follow a **phase-based workflow** pattern: numbered phases with pause poi
 
 **Local BibTeX pipeline**: `references.bib` serves as the canonical metadata store for each project, with PDFs/EPUBs in `library/pdfs/` and converted markdown in `library/markdown/`. The `ingest.py` script handles adding new papers (with Crossref/Open Library metadata lookup), and `migrate-zotero.py` supports one-time migration from exported Zotero libraries. The `zotero` and `zotero-rag` skills are deprecated.
 
+**Bibliography generation**: Use `pandoc --citeproc` with a CSL style file to produce formatted reference lists from `references.bib`. This applies to the `bibliography-builder` skill (Phase 4) and the `argument-builder` skill (Phase 5). Pandoc handles name formatting, sorting, punctuation, and all style-specific rules via CSL files (ASA, APA, Chicago, etc.).
+
 ## Publishing Updates
 
 See `PUBLISHING.md` for the full process. The critical rule: **versions must match** in both `plugin.json` and `marketplace.json`. After pushing, update the local marketplace with `/plugin marketplace update sociology-skillset`.
