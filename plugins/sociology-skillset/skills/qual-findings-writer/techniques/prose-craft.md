@@ -8,34 +8,61 @@ This means: **claims precede quotes**. The reader knows what to listen for befor
 
 ---
 
-## The Anchor and Echo Pattern
+## Evidence Presentation Strategies
 
-Every section anchors its argument in **one deep, extended story** (the Anchor), then zooms out to show prevalence (the Echo).
+Choose different strategies for different subsections. **Varying the strategy across subsections prevents the findings from feeling formulaic.** If every subsection uses the same deep-case-then-prevalence pattern, the pacing becomes monotonous. Mix these approaches:
 
-### The Anchor (Vignette)
+### Strategy 1: Anchor-Echo (Deep Case + Prevalence)
 
-Dedicate 2-3 paragraphs to a single person:
-- Establish their "social location" (age, race, class, occupation, situation)
+Go deep on one exemplary case, then zoom out to show the pattern is widespread.
+
+**The Anchor** (2-3 paragraphs on a single person):
+- Establish their social location (age, race, class, occupation, situation)
 - Describe their specific experience in narrative detail
 - Use an extended quote (5-12 lines) that reveals how they think, not just what they think
 - Interpret what this case shows
 
-**Example opening for an Anchor**:
-> "Guadalupe, a forty-year-old mother originally from Jalisco, followed her husband to Escondido in 2004. Just two years later, at work in a take-out restaurant, she learned of a new state law that would..."
+**The Echo** (prevalence):
+- Cite 2-3 other participants briefly with shorter, punchier quotes
+- Signal prevalence: "Other participants explained...", "This sentiment was shared across..."
 
-The writing **slows down** for anchors. Take time to build the character.
+**Best for**: Subsections where voice, narrative arc, or internal contradiction matters. Good for anchor subsections early in the findings.
 
-### The Echo (Prevalence)
+### Strategy 2: Convergence (Multiple Short Quotes)
 
-Immediately after the Anchor, show this isn't just one person's story:
-- Cite 2-3 other participants briefly
-- Use shorter, punchier quotes
-- Signal prevalence: "Other participants explained...", "This sentiment was shared across...", "Similar accounts emerged from..."
+Marshal 3-5 participants' voices rapidly within a single paragraph or two, each contributing a different angle on the same point.
 
 **Example**:
-> "Other respondents echoed this logic. As Marcus, a retired teacher, put it: '[short quote].' Nancy, who had worked in the industry for fifteen years, similarly noted: '[short quote].' These accounts suggest that [analytical point]."
+> "Directors consistently described the evaluation as intuitive rather than standardized. The Tanglewood director explained, '[1-2 sentences].' Similarly, the Ridgewood coordinator noted, '[1-2 sentences].' And at Pinecrest, the head of admissions put it bluntly: '[1-2 sentences].' Across these accounts, the pattern is clear: [analytical claim]."
 
-The writing **speeds up** for echoes. Stack perspectives efficiently.
+**Best for**: Establishing that a practice is widespread; showing institutional or organizational patterns; subsections where the point is consensus, not individual experience.
+
+### Strategy 3: Extended Case (One Individual or Family, Sustained)
+
+Devote most of a subsection to one participant's story, told across multiple paragraphs with multiple block quotes interleaved with author narration. No pivot to prevalence — the depth *is* the evidence.
+
+**Example structure**:
+> Analytic claim → Participant's situation → First block quote → Interpretation → Continuation of story → Second block quote → Interpretation → What this case reveals about the mechanism.
+
+**Best for**: Subsections where the mechanism is complex and requires sustained narration to show; when a single case reveals an entire process; when dialogue or back-and-forth with institutions matters.
+
+### Strategy 4: Polyphonic Accumulation (Many Brief Voices)
+
+Cycle through many participants quickly — each gets 1-3 sentences of context and a brief quote. No single case dominates. The cumulative weight of many voices establishes the pattern.
+
+**Example**:
+> "Murat (42, Istanbul) described feeling like 'a cog in a machine.' Deniz (37, New York) put it differently — 'golden handcuffs' — but the sentiment was the same. Ayşe (29, Istanbul) was more blunt: '[short quote].' Across these accounts, alienation manifested not as a single breaking point but as..."
+
+**Best for**: Large interview samples (50+); subsections establishing a shared experience; when the point is that *everyone* feels this way, not how any one person feels.
+
+### Choosing Across Subsections
+
+A findings section with three subsections might use:
+- **Subsection 1**: Anchor-echo (establish the pattern with depth)
+- **Subsection 2**: Convergence (show institutional consensus efficiently)
+- **Subsection 3**: Extended case (close with a rich narrative showing the full process)
+
+The key is **variation in pacing**. If the reader can predict the structure of each subsection, the prose feels mechanical.
 
 ---
 
@@ -90,12 +117,15 @@ This reveals the interview as co-construction of meaning.
 | Showing reasoning | 3-6 sentences | When the *how* of thinking matters |
 | Full narrative | 8-15 lines (block) | When voice, arc, or internal contradiction matters |
 
+**Match quote length to your evidence strategy**: Convergence subsections lean toward short quotes (1-2 sentences each from many voices). Extended case subsections lean toward longer block quotes (8-15 lines). Anchor-echo uses both — long for the anchor, short for echoes. Varying quote length across subsections is itself a pacing tool.
+
 ### When Block Quotes Work
 
 Use extended block quotes when:
 - **Voice and texture matter**: The quote reveals *how* they think, not just *what*
 - **The story has narrative arc**: Beginning-middle-end structure within the quote
 - **Contradiction is internal**: The participant wrestles with competing ideas in one response
+- **Dialogue or institutional interaction**: The participant recounts a back-and-forth with officials, employers, etc.
 
 ### Strategic Trimming
 
@@ -107,15 +137,29 @@ Use ellipses to jump from concrete details to the analytical crux:
 
 ## Pacing: Zoom In, Zoom Out
 
-The dominant rhythm is **oscillation**, not linear accumulation.
+The dominant rhythm is **oscillation**, not linear accumulation. But the specific rhythm varies by evidence strategy.
 
-### The Cycle
+### Anchor-Echo Cycle
 
 1. **Generalized claim** (sociological voice): "Most ghostwriters emphasized..."
 2. **Drop into extended quote** (participant voice): The anchor vignette
 3. **Pull back out** (sociological voice): Name the mechanism illustrated
 4. **Brief prevalence** (mixed voice): Echo quotes
 5. **Transition** (sociological voice): Connect to next point
+
+### Convergence Cycle
+
+1. **Generalized claim** (sociological voice): "Directors consistently described..."
+2. **Rapid sequence** (mixed voice): 3-5 short quotes from different participants with brief analytic bridges
+3. **Synthesis** (sociological voice): What these voices collectively demonstrate
+4. **Transition** (sociological voice): Connect to next point
+
+### Extended Case Cycle
+
+1. **Generalized claim** (sociological voice): "The process of trust erosion is visible in..."
+2. **Sustained narration** (mixed voice): Multiple paragraphs interleaving author narration with participant quotes
+3. **Theoretical interpretation** (sociological voice): What this case reveals about the mechanism
+4. **Transition** (sociological voice): Connect to next point
 
 ### Voice Balance by Section Type
 

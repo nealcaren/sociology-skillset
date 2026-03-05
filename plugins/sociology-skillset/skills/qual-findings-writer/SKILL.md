@@ -1,6 +1,6 @@
 ---
 name: qual-findings-writer
-description: Draft publication-ready methods and findings sections for qualitative sociology articles. Guides argument-driven narrative, quote integration, and anchor-echo patterns based on genre analysis of Social Problems and Social Forces articles.
+description: Draft publication-ready methods and findings sections for qualitative sociology articles. Guides argument-driven narrative, varied evidence presentation strategies (anchor-echo, convergence, extended case, polyphonic), and quote integration based on genre analysis of AJS, ASR, Social Problems, and Social Forces articles.
 ---
 
 # Qualitative Findings Writer
@@ -53,8 +53,8 @@ Use this skill when users want to:
 
 1. **Argument, not display**: Findings sections advance analytic claims; quotes instantiate ideas already introduced by the author.
 2. **Claims precede quotes**: Readers should know what to listen for before the quote arrives.
-3. **Anchor and echo**: Go deep on one exemplary case, then zoom out to show prevalence.
-4. **Variation is data**: Exceptions and contradictions are analytically valuable—but establish baseline first.
+3. **Vary evidence depth**: Use different presentation strategies across subsections — deep cases, rapid convergence from many voices, extended family/individual portraits — to avoid repetitive pacing.
+4. **Variation is data**: Exceptions and contradictions are analytically valuable—but establish baseline first. Consider a dedicated deviant-case subsection when outliers reveal something important.
 5. **Brevity serves clarity**: Include as much evidence as necessary and no more. If one quote will do, don't use three.
 6. **Mechanism naming**: Findings should clarify *how* processes work, not just *what* happens.
 
@@ -63,10 +63,10 @@ Use this skill when users want to:
 Evaluate writing against these markers:
 
 - **Analytical confidence**: Patterns stated assertively; mechanisms named by the author, not discovered in quotes
-- **Narrative craft**: Varied quote integration; anchor-echo pacing; smooth transitions
+- **Narrative craft**: Varied quote integration; varied evidence strategies across subsections; smooth transitions
 - **Grounded abstraction**: Sociological concepts tied to concrete, specific evidence
-- **Strategic depth**: Anchor cases developed fully; echoes efficient
-- **Appropriate scope**: Claims bounded to sample; prevalence indicated throughout
+- **Strategic depth**: Evidence depth varies by purpose — some subsections go deep on one case, others accumulate many voices
+- **Appropriate scope**: Claims bounded to sample; prevalence indicated through language, counts, or grouping as appropriate
 
 ## Technique Guides
 
@@ -74,8 +74,8 @@ The skill includes detailed reference guides:
 
 | Guide | Purpose |
 |-------|---------|
-| `techniques/macro-structure.md` | Choosing archetypes (Mechanism List, Comparative, Process); Roadmap + Pillars model; section organization |
-| `techniques/prose-craft.md` | Quote integration techniques; Anchor-Echo pattern; pacing; attribution; transitions |
+| `techniques/macro-structure.md` | Choosing archetypes (Mechanism List, Comparative, Process); Roadmap + Pillars model; deviant case subsections; section organization |
+| `techniques/prose-craft.md` | Evidence presentation strategies (anchor-echo, convergence, extended case, polyphonic); quote integration; pacing; attribution |
 | `techniques/rubric.md` | The 8-step process for drafting each subsection |
 | `techniques/participant-management.md` | Minimizing recurrence; recall tags; when participants should (and shouldn't) reappear |
 
@@ -110,7 +110,7 @@ The skill includes detailed reference guides:
 - Choose an archetype (Mechanism List, Comparative, or Process)
 - Write the Roadmap introduction summarizing the entire argument
 - Draft each subsection following the 8-step rubric
-- Use the Anchor-Echo pattern for evidence presentation
+- Choose an evidence presentation strategy for each subsection (anchor-echo, convergence, extended case, or polyphonic)
 - Craft theoretical headings that name mechanisms
 
 **Guides**:
@@ -126,7 +126,7 @@ The skill includes detailed reference guides:
 ### Phase 3: Revision & Quality Check
 **Goal**: Transform competent draft into compelling argument.
 - Check argument structure (roadmap, claims before quotes)
-- Verify Anchor-Echo pattern in each subsection
+- Verify evidence strategies vary across subsections
 - Fix formulaic quote integration
 - Ensure appropriate voice balance and confidence
 - Catch prohibited moves
@@ -144,11 +144,11 @@ The skill explicitly trains against common problems:
 - Starting subsections with quotes
 - Listing themes without argument
 - Using quotes without interpretation
-- Stacking quotes back-to-back
+- Stacking quotes back-to-back without analytical mediation
 - Hedging empirical patterns ("might suggest")
 - Writing descriptive subheadings ("Findings," "Race")
 - Letting quotes introduce analytic novelty
-- Treating all quotes with equal depth (no anchor)
+- Using the same evidence strategy for every subsection (monotonous pacing)
 - Starting with variation before baseline
 
 ## Output Expectations
@@ -166,7 +166,7 @@ Use the Task tool for each phase:
 Task: Phase 2 Findings Drafting
 subagent_type: general-purpose
 model: opus
-prompt: Read phases/phase2-findings.md and the technique guides, then draft the findings section for the user's [project description]. Follow the 8-step rubric for each subsection. Use the Anchor-Echo pattern.
+prompt: Read phases/phase2-findings.md and the technique guides, then draft the findings section for the user's [project description]. Follow the rubric for each subsection. Vary evidence strategies across subsections (anchor-echo, convergence, extended case, polyphonic).
 ```
 
 **Model recommendations**:

@@ -32,19 +32,28 @@ Work through these checks in order. Earlier issues compound later ones.
 
 ---
 
-### 2. The Anchor-Echo Pattern
+### 2. Evidence Strategy and Depth Variation
 
-**For each subsection, verify**:
-- [ ] There is one anchor vignette (2-3 paragraphs on a single participant)
-- [ ] The anchor establishes social location before quoting
-- [ ] The anchor quote is extended enough to show how they think (not just what)
-- [ ] There are 2-3 echo quotes showing prevalence
-- [ ] Echoes are shorter and punchier than the anchor
+**Across the full findings section, verify**:
+- [ ] Not every subsection uses the same evidence strategy (avoid monotonous pacing)
+- [ ] At least one subsection goes deep on an individual case
+- [ ] At least one subsection demonstrates breadth across multiple voices
+- [ ] Quote lengths vary across subsections (not all block quotes, not all embedded)
+
+**For each subsection, verify the chosen strategy is executed well**:
+
+If **anchor-echo**: One deep vignette (2-3 paragraphs), social location established, extended quote, then 2-3 echo quotes showing prevalence.
+
+If **convergence**: 3-5 participants quoted briefly, each adding an angle, with analytic bridges between voices and a synthesis at the end.
+
+If **extended case**: One participant sustained across most of the subsection, multiple quotes interleaved with narration, theoretical interpretation at the close.
+
+If **polyphonic**: Many brief voices cycled through efficiently, cumulative weight building toward an interpretive conclusion.
 
 **Red flags**:
-- All quotes treated equally (no depth variation)
-- No clear anchor case
-- Prevalence asserted but not demonstrated
+- All subsections use identical structure (repetitive pacing)
+- All quotes treated equally (no depth variation across the findings)
+- Prevalence never established for major claims
 - Participant introduced only by name, not situation
 
 ---
@@ -108,16 +117,17 @@ Work through these checks in order. Earlier issues compound later ones.
 
 ### 6. Scope and Prevalence
 
-**Check prevalence indicators**:
-- [ ] Is scope indicated throughout ("most," "nearly all," "across both sites")?
-- [ ] Are vague quantifiers avoided ("some," "many," "few")?
-- [ ] When numbers are used, is it clear they describe the sample (not the population)?
+**Check that breadth is established for each major claim** through at least one of:
+- [ ] Prevalence language ("most," "nearly all," "across both sites")
+- [ ] Counts ("twelve of our 24 respondents," "N = 19")
+- [ ] Group-based framing ("middle-class parents uniformly...", "working-class families, by contrast...")
+- [ ] Implicit breadth through convergence or polyphonic strategies (many voices demonstrate scope)
 
 **Red flags**:
-- "Some respondents said..."
-- "Many participants felt..."
-- No indication of how common a pattern is
+- A major claim rests on a single quote with no indication of breadth
+- Vague quantifiers used throughout ("some," "many," "few") — pick a strategy
 - Numbers implying statistical representativeness
+- Prevalence never addressed for the central argument
 
 ---
 
@@ -136,9 +146,9 @@ Work through these checks in order. Earlier issues compound later ones.
 
 | Problem | Symptom | Solution |
 |---------|---------|----------|
-| **Formulaic structure** | Every quote has identical setup-quote-analysis pattern | Vary integration: embed phrases, front-load claims, use pivot phrases |
+| **Formulaic structure** | Every subsection has identical deep-case-then-prevalence pattern | Vary evidence strategy across subsections: anchor-echo, convergence, extended case, polyphonic |
 | **Quotes speaking for themselves** | Quote followed by transition, not interpretation | Add 1-2 sentences naming what the quote shows |
-| **Missing anchor** | All cases treated equally briefly | Pick one exemplary case, go deep (2-3 paragraphs) |
+| **No depth variation** | All cases treated equally briefly | Pick one exemplary case in at least one subsection and go deep (2-3 paragraphs) |
 | **Stacked quotes** | Quote immediately follows quote | Insert analytical sentences between |
 | **Weak attribution** | "Maria said..." | "Maria, a [demographics] in [situation], explained..." |
 | **Descriptive headings** | "Race," "Findings," "Results" | Name the mechanism: "Racialized Pathways to..." |
@@ -146,6 +156,7 @@ Work through these checks in order. Earlier issues compound later ones.
 | **Hedged empirics** | "This might suggest..." | "This pattern shows..." (hedge theory, not data) |
 | **Topic headings** | "What Workers Said About Pay" | "Wage Theft as Normalized Exploitation" |
 | **No roadmap** | Jumps straight into first subsection | Add 1-2 paragraph overview naming all mechanisms |
+| **No deviant case treatment** | Outliers buried in hedges or ignored | Consider a dedicated subsection when exceptions are analytically revealing |
 
 ---
 
@@ -172,9 +183,9 @@ The final draft should demonstrate:
 
 - **Argument over display**: Each subsection advances a claim, not just shows data
 - **Analytical confidence**: Patterns stated assertively, mechanisms named clearly
-- **Narrative craft**: Varied quote integration, anchor-echo pacing, smooth transitions
+- **Narrative craft**: Varied evidence strategies across subsections, varied quote integration, smooth transitions
 - **Grounded abstraction**: Sociological concepts tied to concrete evidence
-- **Strategic depth**: Anchor cases developed fully, echoes efficient
+- **Strategic depth**: Evidence depth varies by purpose — not every subsection uses the same approach
 
 ---
 

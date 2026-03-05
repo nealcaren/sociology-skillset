@@ -154,9 +154,37 @@ STAGE 3: The Justification/Outcome
 
 ---
 
+## Deviant Case Subsections
+
+When exceptions or outliers reveal something analytically important, consider a **dedicated deviant-case subsection** rather than burying counter-evidence in a footnote or hedge.
+
+**When to include one**:
+- Outliers illuminate the mechanism's boundary conditions (e.g., "Trust Outliers: The Freedom to (Dis)Trust")
+- Counter-evidence strengthens the argument by showing what makes the main pattern possible
+- A distinct subgroup responds differently in ways that demand explanation
+
+**Structure**:
+```
+[MAIN PATTERN SUBSECTION(S)]
+└── Establishes baseline pattern with evidence
+
+DEVIANT CASE: [Theoretical Name]
+├── Signal the shift: "Not all participants followed this pattern..."
+├── Characterize who diverges and how
+├── Evidence (quotes from outliers)
+├── Explain WHY they diverge (structural position, resources, context)
+└── What their divergence reveals about the main mechanism
+```
+
+**Naming**: Use a theoretical heading, not "Exceptions" or "Other Findings." Name what the deviance *shows*: "The Freedom to (Dis)Trust," "Alternative Accounts," "When the Mechanism Breaks Down."
+
+**Placement**: Typically after the main pattern subsections, before the final subsection or as the penultimate pillar.
+
+---
+
 ## Section Length and Pacing
 
-Each subsection typically runs **600-900 words**. To fill this space without rambling, use the "Anchor and Echo" pattern described in `prose-craft.md`.
+Each subsection typically runs **600-900 words**. Choose an evidence presentation strategy from `prose-craft.md` that fits the subsection's purpose — anchor-echo, convergence, extended case, or polyphonic accumulation. **Vary the strategy across subsections** to prevent monotonous pacing.
 
 ---
 

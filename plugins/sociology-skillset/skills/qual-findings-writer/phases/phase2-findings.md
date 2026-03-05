@@ -10,9 +10,9 @@ A strong findings section advances analytic claims using interview data. Quotes 
 
 Before drafting, review these technique guides:
 
-1. **`techniques/macro-structure.md`** — Choose your archetype (Mechanism List, Comparative, or Process) and understand the Roadmap + Pillars model
-2. **`techniques/prose-craft.md`** — Master the Anchor-Echo pattern, quote integration techniques, and pacing
-3. **`techniques/rubric.md`** — Follow the 8-step process for each subsection
+1. **`techniques/macro-structure.md`** — Choose your archetype (Mechanism List, Comparative, or Process), understand the Roadmap + Pillars model, and consider deviant case subsections
+2. **`techniques/prose-craft.md`** — Choose evidence presentation strategies (anchor-echo, convergence, extended case, polyphonic), master quote integration and pacing
+3. **`techniques/rubric.md`** — Follow the 8-step process for each subsection (steps adapt to chosen strategy)
 4. **`techniques/participant-management.md`** — Minimize recurrence; most participants appear in only one section
 
 ## Step 1: Choose Your Archetype
@@ -48,27 +48,31 @@ For each subsection, follow the 8-step rubric in `techniques/rubric.md`:
 1. **Declare the analytic move** (internal—know what claim this section advances)
 2. **Open with analytic assertion** (2-4 sentences, sociological voice, scope indicated)
 3. **Elaborate the mechanism** (1-2 sentences on how/why)
-4. **Introduce anchor quote with purpose** (explain what it will illustrate)
-5. **Present the anchor quote** (extended, from one deep case)
-6. **Interpret explicitly** (name what it shows, link to claim)
-7. **Show prevalence with echo quotes** (2-3 shorter quotes from other participants)
-8. **Manage variation and close** (if applicable; connect to next section)
+4. **Present evidence** using the chosen strategy (see below)
+5. **Interpret explicitly** (name what the evidence shows, link to claim)
+6. **Demonstrate pattern breadth** (echo quotes, convergence, prevalence language, or counts)
+7. **Manage variation and close** (if applicable; connect to next section)
 
-### The Anchor-Echo Pattern
+### Evidence Presentation Strategies
 
-Every subsection needs:
+**Vary the strategy across subsections** to prevent repetitive pacing. See `techniques/prose-craft.md` for full descriptions.
 
-**One Anchor** — Go deep on a single participant (2-3 paragraphs). Establish their social location, describe their specific experience, use an extended quote, interpret what the case shows.
+| Strategy | How it works | Best for |
+|----------|-------------|----------|
+| **Anchor-echo** | Go deep on one case (2-3 paragraphs), then zoom out with 2-3 shorter quotes showing prevalence | Subsections where voice or narrative arc matters |
+| **Convergence** | 3-5 participants quoted briefly in rapid succession, each adding an angle on the same point | Showing consensus or institutional patterns |
+| **Extended case** | One participant's story sustained across most of the subsection, with multiple block quotes | Complex processes that need sustained narration |
+| **Polyphonic** | Many brief voices (1-3 sentences each) cycled through quickly | Large samples; establishing a widely shared experience |
 
-**2-3 Echoes** — Zoom out to show this isn't idiosyncratic. Use shorter quotes, signal prevalence ("Other respondents echoed...", "This pattern held across...").
+A three-subsection findings might use anchor-echo for the first, convergence for the second, and extended case for the third. The key is that the reader shouldn't be able to predict each subsection's rhythm.
 
 ### Subsection Length
 
-Target **600-900 words** per subsection. This is enough for:
-- Analytic setup (100-150 words)
-- Anchor vignette with quote and interpretation (300-400 words)
-- Echo quotes with brief analysis (150-200 words)
-- Variation handling and close (100-150 words)
+Target **600-900 words** per subsection. The internal breakdown varies by strategy:
+- **Anchor-echo**: Setup (100-150) + anchor (300-400) + echoes (150-200) + close (100-150)
+- **Convergence**: Setup (100-150) + rapid quotes with bridges (300-400) + synthesis (150-200)
+- **Extended case**: Setup (100-150) + sustained narration with quotes (400-600) + close (100-150)
+- **Polyphonic**: Setup (100-150) + many-voice sequence (350-500) + interpretation (100-200)
 
 ## Step 4: Craft Theoretical Headings
 
@@ -139,15 +143,25 @@ Use high-value verbs: explained, recounted, reasoned, emphasized, lamented, arti
 
 ## Scope and Prevalence
 
-Indicate prevalence throughout—but naturally:
+Indicate prevalence, but choose the approach that fits the subsection:
 
-- "Most respondents..."
-- "Nearly all participants..."
-- "A minority of interviewees..."
-- "Across both sites..."
-- "Regardless of [demographic]..."
+**Prevalence language** (natural, unobtrusive):
+- "Most respondents...", "Nearly all participants...", "A minority of interviewees..."
+- "Across both sites...", "Regardless of [demographic]..."
 
-When precision matters, use numbers: "Twelve of our 24 respondents described..." But avoid disrupting narrative flow with excessive quantification.
+**Counts** (precise, useful for methods-adjacent claims):
+- "Twelve of our 24 respondents described..."
+- "Of the 39 parents who responded directly, 28 said..."
+
+**Group-based prevalence** (structural, good for comparative archetypes):
+- "Middle-class parents uniformly refused placement..."
+- "Working-class families, by contrast, tended to accept..."
+
+**Implicit prevalence** (through evidence strategy):
+- Convergence and polyphonic strategies inherently demonstrate breadth by marshaling many voices
+- Extended case subsections may not need explicit prevalence if other subsections have established the pattern's scope
+
+Avoid disrupting narrative flow with excessive quantification. But don't leave the reader guessing how common a pattern is — establish breadth somewhere for each major claim.
 
 ## Prohibited Moves
 
@@ -155,10 +169,11 @@ Do **not**:
 - Start any subsection with a quote
 - List themes without argument
 - Use quotes without interpretation
-- Stack quotes back-to-back
+- Stack quotes back-to-back without analytical mediation
 - Hedge empirical patterns ("might suggest")
 - Write descriptive subheadings ("Findings," "Race," "Results")
 - Let quotes introduce analytic novelty
+- Use the same evidence strategy for every subsection
 - Add a summary conclusion paragraph to the Findings section
 
 ## The Hard Stop Ending
@@ -181,8 +196,9 @@ Provide:
 
 For each subsection, note:
 - The analytic claim it advances
-- The anchor participant and why they're exemplary
-- The echo participants showing prevalence
+- The evidence strategy chosen (anchor-echo, convergence, extended case, or polyphonic) and why
+- Key participants and their roles in the argument
+- How prevalence/breadth is established
 - Any variation to be addressed
 - Gaps in evidence (quotes needed but not yet available)
 

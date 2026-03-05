@@ -21,7 +21,7 @@ If the user ran the **interview-analyst** skill first, request these outputs:
 | **core-argument.md** | Phase 5 | Research question, central argument, contribution |
 | **paper-outline.md** | Phase 5 | Structural outline with findings |
 
-These files are designed to feed directly into writeup. The quote-database.md is the primary handoff—it contains everything needed for the anchor-echo pattern.
+These files are designed to feed directly into writeup. The quote-database.md is the primary handoff—it contains quotes organized by finding with exemplars flagged, which supports any evidence strategy (anchor-echo, convergence, extended case, or polyphonic).
 
 ### If Starting Fresh (no prior analysis)
 

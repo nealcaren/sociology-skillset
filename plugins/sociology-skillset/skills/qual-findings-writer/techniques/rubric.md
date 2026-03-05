@@ -94,16 +94,19 @@ Immediately after each quote, write **at least one sentence** that:
 
 ---
 
-## Step 7: Show Prevalence (The Echo)
+## Step 7: Demonstrate Pattern Breadth
 
-After the anchor vignette, demonstrate that this isn't idiosyncratic:
+After the primary evidence, show this isn't idiosyncratic. **Choose the approach that fits the subsection's evidence strategy** (see `techniques/prose-craft.md` for full descriptions):
 
-- Cite 2-3 other participants briefly
-- Use shorter, punchier quotes
-- Signal scope: "Other respondents echoed...", "This sentiment was shared..."
+**If using anchor-echo**: Cite 2-3 other participants briefly with shorter, punchier quotes. Signal scope: "Other respondents echoed...", "This sentiment was shared..."
 
-**Example**:
-> "Other respondents echoed Helen's sense of institutional betrayal. Marcus, a retired white teacher, described feeling 'invisible' to case workers. Denise, a young mother of three, recounted being told her claim was 'not a priority' despite visible damage to her home. As she put it: 'They looked at me like I was trying to steal something.' Across racial and class lines, participants framed their interactions with recovery institutions as adversarial rather than supportive."
+> "Other respondents echoed Helen's sense of institutional betrayal. Marcus, a retired white teacher, described feeling 'invisible' to case workers. Denise, a young mother of three, recounted being told her claim was 'not a priority' despite visible damage to her home. As she put it: 'They looked at me like I was trying to steal something.'"
+
+**If using convergence**: The rapid accumulation of voices in steps 4-6 already establishes breadth. Step 7 becomes a synthesis sentence naming what the voices collectively demonstrate.
+
+**If using extended case**: Breadth can come from explicit prevalence language ("This pattern held across..."), from grouping ("Middle-class parents uniformly..."), or from counts ("Twelve of our 24 respondents described..."). Or it may not be needed if the subsection's role is to show a process in depth, with other subsections handling breadth.
+
+**If using polyphonic accumulation**: The many-voices format inherently demonstrates breadth. Step 7 becomes a closing interpretive paragraph.
 
 ---
 
@@ -147,8 +150,8 @@ Before finishing each subsection, verify:
 - [ ] The subsection advances one clear analytic claim
 - [ ] The claim is stated before any quotes appear
 - [ ] Every quote is framed (why showing it) and interpreted (what it shows)
-- [ ] An anchor vignette goes deep on one case
-- [ ] Echo quotes establish prevalence
+- [ ] Evidence depth varies appropriately (not every subsection uses the same strategy)
+- [ ] Breadth is established — through echo quotes, convergence, prevalence language, grouping, or counts
 - [ ] The author's voice outweighs participant voice overall
 - [ ] The subsection reads as an argument, not a transcript
 - [ ] Variation is introduced only after baseline is established
