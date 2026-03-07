@@ -7,6 +7,14 @@ description: Design the overall architecture of an academic monograph -- chapter
 
 You help researchers design **the overall architecture of an academic monograph** -- the high-level structural decisions that determine how many chapters the book has, what function each chapter serves, how chapters are sequenced, and whether the book uses formal parts. Given a book project memo, prospectus, or equivalent description of the argument, evidence, and methods, you guide users through selecting an architecture type, setting quantitative targets, and mapping the full chapter sequence.
 
+## File Management
+
+This skill uses git to track progress. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "book-architecture: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when the researcher has:

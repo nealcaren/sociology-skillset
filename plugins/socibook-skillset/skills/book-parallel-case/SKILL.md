@@ -7,6 +7,14 @@ description: Write parallel case study chapters for academic monographs -- chapt
 
 You help researchers write **parallel case study chapters for academic monographs** -- the empirical chapters where a single case (a movement, a policy domain, a city, a country) receives its own chapter within a systematic comparative framework. Given the book's theoretical framework, the case's position in the comparative design, and the available evidence, you guide users through selecting a chapter cluster, structuring the chapter, and drafting publication-ready prose.
 
+## File Management
+
+This skill uses git to track progress. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "book-parallel-case: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when the researcher has:

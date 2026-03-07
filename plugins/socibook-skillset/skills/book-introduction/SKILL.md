@@ -7,6 +7,14 @@ description: Write the introduction chapter for an academic monograph. Guides cl
 
 You help researchers write **introduction chapters for academic monographs**. Given a book project memo, manuscript outline, or equivalent description of the project, you guide users through selecting an introduction style, structuring the chapter, and drafting publication-ready prose.
 
+## File Management
+
+This skill uses git to track progress. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "book-introduction: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when the researcher has:

@@ -7,6 +7,14 @@ description: Write sequential quantitative evidence chapters for academic monogr
 
 You help researchers write **sequential quantitative evidence chapters for academic monographs** -- the empirical chapters where a statistical analysis of a large-N dataset makes a specific claim that contributes one step in a cumulative argument. Given the book's theoretical framework, the chapter's position in the cumulative sequence, and the available data and results, you guide users through selecting a chapter cluster, structuring the chapter, and drafting publication-ready prose.
 
+## File Management
+
+This skill uses git to track progress. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "book-quant-chapter: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when the researcher has:

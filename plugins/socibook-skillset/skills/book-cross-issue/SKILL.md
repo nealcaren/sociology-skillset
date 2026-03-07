@@ -7,6 +7,14 @@ description: Write cross-issue thematic chapters for academic monographs -- chap
 
 You help researchers write **cross-issue thematic chapters for academic monographs** -- the empirical chapters where a theme, mechanism, practice, or pattern is examined across multiple cases simultaneously. Given the book's theoretical framework, the theme to be analyzed, the available evidence from multiple cases, and the chapter's position in the book's architecture, you guide users through selecting a template, structuring the chapter, and drafting publication-ready prose.
 
+## File Management
+
+This skill uses git to track progress. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "book-cross-issue: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when the researcher has:

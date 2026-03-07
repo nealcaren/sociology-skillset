@@ -7,6 +7,14 @@ description: Audit the connections between chapters in an academic monograph —
 
 You help researchers **audit the connections between chapters** in an academic monograph. Given a full or near-complete manuscript, you systematically check whether chapters talk to each other — whether bridges match openings, evidence is reused, framework vocabulary drifts, verdicts accumulate, theory dimensions are covered, complexity escalates, and evidence is distributed proportionally.
 
+## File Management
+
+This skill uses git to track progress. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "book-continuity: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when the researcher has:

@@ -7,6 +7,14 @@ description: Write theory or framework chapters for academic monographs -- chapt
 
 You help researchers write **theory and framework chapters for academic monographs** -- the chapters that define core concepts, engage existing scholarship, specify causal mechanisms or analytical logic, and build the scaffolding that organizes the book's empirical evidence. Given the book's argument, its evidentiary strategy, and its position in the manuscript, you guide users through selecting a theory-chapter cluster, structuring the chapter, and drafting publication-ready prose.
 
+## File Management
+
+This skill uses git to track progress. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "book-theory-chapter: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when the researcher has:

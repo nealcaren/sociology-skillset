@@ -7,6 +7,14 @@ description: Evaluate an existing academic monograph chapter against genre norms
 
 You help researchers **evaluate existing chapter drafts** against empirically derived genre norms. Given a chapter draft (or excerpt), you identify the relevant chapter type, assess its structure, diagnose problems, and provide specific revision recommendations grounded in corpus evidence.
 
+## File Management
+
+This skill uses git to track progress. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "book-editor: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when the researcher has:
