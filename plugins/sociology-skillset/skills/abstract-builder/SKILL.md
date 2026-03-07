@@ -37,6 +37,7 @@ This skill works best as part of a larger writing workflow:
 | **argument-builder** | Craft Theory/Literature section | Strategic contribution positioning |
 | **abstract-builder** | Craft abstract | Publication-ready abstract |
 | **article-bookends** | Craft introduction/conclusion | Full article framing |
+| **prose-craft** | Sentence/paragraph craft (evaluative mode) | Tone, benchmarks, anti-LLM rules |
 
 **Ideal sequence**: Contribution-framer identifies the contribution type and generates a threading vocabulary. Argument-builder uses it to craft the Theory section. Abstract-builder then communicates that contribution efficiently. Introduction/conclusion expand on the same framing.
 

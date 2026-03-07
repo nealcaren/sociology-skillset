@@ -60,6 +60,7 @@ Many sociology articles combine Discussion and Conclusion into one section. This
 | **quant-findings-writer** | Drafts quantitative results sections | Publication-ready Results |
 | **mixed-methods-findings-writer** | Drafts mixed-methods findings | Integrated findings prose |
 | **article-bookends** | Drafts introduction and conclusion | Complete framing prose |
+| **prose-craft** | Sentence/paragraph craft (argumentative mode for intros, evaluative mode for discussions/conclusions) | Tone, benchmarks, anti-LLM rules |
 
 **Ideal input**: If users ran contribution-framer, request their `contribution-profile.md`. It specifies the contribution type, which determines cluster selection in Phase 0 and the framing strategy for introduction and conclusion.
 

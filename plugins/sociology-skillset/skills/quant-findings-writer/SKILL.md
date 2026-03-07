@@ -48,6 +48,7 @@ artifacts:
 | **article-bookends** | Downstream | Takes results section as input for framing |
 | **methods-writer** | Parallel | Methods section written alongside or before results |
 | **lit-synthesis** | Upstream | Provides theoretical framework for theory-linking |
+| **prose-craft** | Craft guide | Sentence/paragraph benchmarks (evaluative mode); tone, anti-LLM rules |
 
 ## Workflow
 

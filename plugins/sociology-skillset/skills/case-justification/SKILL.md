@@ -48,6 +48,7 @@ This skill assumes users have selected their research site and can describe its 
 | **methods-writer** | Write methods sections | Draft methods |
 | **case-justification** | Write case/setting context | Draft case justification |
 | **article-bookends** | Write intros/conclusions | Draft bookends |
+| **prose-craft** | Sentence/paragraph craft (descriptive mode) | Tone, benchmarks, anti-LLM rules |
 
 This skill handles the case background that typically appears between the theory section and methods section.
 

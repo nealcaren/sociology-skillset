@@ -451,6 +451,44 @@ Stacked adjectives read as synthetic regardless of genre. Let the work speak.
 
 ---
 
+# Corpus-Derived Benchmarks (AJS/ASR)
+
+These benchmarks come from analysis of 103 articles (61,100 sentences) in the *American Journal of Sociology* and *American Sociological Review*. Use them to calibrate edits for academic sociology prose.
+
+## Sentence Length
+
+- **Median: 23 words.** Sentences over 35 words should be flagged for splitting.
+- **26% of sentences are under 15 words.** Short sentences are common and valued. Do not lengthen them.
+- **Variation is the key signal.** Within a paragraph, sentence lengths should vary by ~10 words (stdev). A paragraph of five 24-word sentences is worse than one mixing 10, 28, 15, 32, and 19. Flag paragraphs where all sentences are similar length.
+
+## Paragraph Length
+
+- **Median: 3 sentences per paragraph** (IQR: 2-5).
+- **First sentences are shorter** (median 20 words) than middle sentences (25). Paragraphs open punchy.
+- Flag paragraphs exceeding 6 sentences for possible splitting.
+
+## Semicolons
+
+- **10% of sentences use semicolons.** This is high. When editing, check whether a semicolon could be a period. Two shorter sentences are usually clearer than one semicolon-joined sentence.
+
+## Transition Word Overuse
+
+- **"However," opens 1.4% of sentences** in published work. If it appears more than twice per page, flag for variety (use "But," "Yet," or restructure).
+- **Total transition-led sentences: 7%.** If a draft exceeds this, the prose sounds mechanical.
+
+## Tone (Academic Sociology)
+
+When editing academic sociology prose, apply these additional checks:
+
+- **Prosecutorial language**: Flag "guilty," "verdict," "condemned," "exposed," "damning." Replace with "conclusion," "evidence indicates," "difficult to justify."
+- **Sloganized lines**: Flag sentences built for pull quotes or talks. If it sounds like a TED talk, it needs rewriting.
+- **Stacked intensifiers**: Flag paragraphs where emotional volume rises sentence after sentence. One strong claim per paragraph is enough.
+- **Absolutist claims**: Flag "all," "every," "none," "always" unless literally true. Replace with "most," "often," "typically," "in many cases."
+- **Pop-sociology cadence**: Flag "Here's the twist," "But that's not what happened," "The real shock is." Replace with analytic alternatives.
+- **Intensity test**: For each strong sentence, ask: Is the intensity coming from the evidence or from the wording? If from the wording, revise down one notch.
+
+---
+
 # Editing Workflow
 
 0. **Document protection**: Create working copy OR set up git tracking → User chooses

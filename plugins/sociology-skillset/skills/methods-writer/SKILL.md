@@ -49,6 +49,7 @@ This skill assumes users have completed their data collection and analysis, and 
 | **interview-analyst** | Analyze qualitative data | Coding structure, findings |
 | **qual-findings-writer** | Write findings sections | Draft findings |
 | **article-bookends** | Write intros/conclusions | Draft bookends |
+| **prose-craft** | Sentence/paragraph craft (descriptive mode) | Tone, benchmarks, anti-LLM rules |
 
 ## File Management
 

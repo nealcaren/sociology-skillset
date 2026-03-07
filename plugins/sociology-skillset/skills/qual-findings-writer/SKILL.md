@@ -38,6 +38,7 @@ This skill pairs with **interview-analyst** as a one-two punch:
 | **interview-analyst** | Analyzes interview data, builds codes, identifies patterns | `quote-database.md` with quotes organized by finding, anchors/echoes identified |
 | **qual-findings-writer** | Drafts methods and findings sections | Publication-ready prose |
 | **article-bookends** | Drafts introduction and conclusion | Complete framing prose |
+| **prose-craft** | Sentence/paragraph craft (descriptive mode for methods, evaluative mode for findings) | Tone, benchmarks, anti-LLM rules |
 
 If users ran interview-analyst first, request their `quote-database.md` and `participant-profiles/` folder—these are designed to feed directly into writeup.
 

@@ -113,6 +113,9 @@ After document structure is sound:
 - **Triplets**: Ornamental lists of three that could be two? (Keep conceptual triplets like "race, class, and gender")
 - **Over-balanced contrast**: "Not X, but Y" that could be one clause?
 - **Syntax-logic match**: Does grammar show which ideas are subordinate?
+- **Sentence length variation**: Do all sentences in a paragraph have similar word counts? Flag uniform-length paragraphs. Good paragraphs mix short (10-15 words) and longer (25-30) sentences with ~10 words stdev.
+- **Paragraph length**: Flag paragraphs exceeding 6 sentences for possible splitting. Median in published sociology is 3 sentences.
+- **Stacked intensifiers**: Does the paragraph keep raising emotional volume sentence after sentence? One strong claim is enough.
 
 Present paragraph-level changes. Wait for user approval.
 
@@ -132,7 +135,12 @@ After paragraphs are structured:
 - **Meta-commentary**: Cut sentences about process/intent
 - **Grand evaluations**: Replace abstract praise with observable effects
 - **Over-justification**: Allow judgment without explaining every reason
-- **Em/en dashes**: Rewrite the sentence—don't just swap for commas. Split into two sentences, fold the aside into the main clause, use a colon, reposition the aside, or drop it. Offer multiple options.
+- **Em/en dashes**: Rewrite the sentence. Do not just swap for commas. Split into two sentences, fold the aside into the main clause, use a colon, reposition the aside, or drop it. Offer multiple options. Em dashes are strongly associated with LLM-generated text and should be eliminated.
+- **Semicolons**: Check whether each semicolon could be a period. Two shorter sentences are usually clearer. Published sociology uses semicolons in ~10% of sentences, which is high.
+- **Transition word overuse**: If "However," appears more than twice per page, suggest alternatives ("But," "Yet," or restructure). Total transition-led sentences should not exceed ~7%.
+- **Absolutist claims**: Flag "all," "every," "none," "always" unless literally true. Suggest "most," "often," "typically," "in many cases."
+- **Prosecutorial tone**: Flag "guilty," "verdict," "condemned," "exposed," "damning." Suggest "conclusion," "evidence indicates," "difficult to justify."
+- **Intensity check**: For strong sentences, ask: Is intensity from evidence or wording? If from wording, revise down one notch.
 
 Present sentence-level changes. Wait for user approval.
 

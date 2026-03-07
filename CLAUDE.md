@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What This Is
 
 A Claude Code plugin marketplace containing two plugins:
-- **`sociology-skillset`** — 27 markdown-based skills for academic sociology research covering qualitative, quantitative, and mixed methods workflows.
+- **`sociology-skillset`** — 28 markdown-based skills for academic sociology research covering qualitative, quantitative, and mixed methods workflows.
 - **`socibook-skillset`** — 10 skills for planning and drafting book-length scholarly monographs, grounded in genre analysis of political sociology and American politics monographs.
 
 No build system, no compiled code; skills are structured markdown files that Claude Code loads as instructions.
@@ -81,7 +81,7 @@ Also update the "Current Skills" section below and the skill count in this file'
 
 ## Current Skills
 
-### sociology-skillset (27 skills)
+### sociology-skillset (28 skills)
 
 **Reference management**: zotero [deprecated], zotero-rag (local library RAG)
 **Literature**: lit-search, lit-synthesis, reading-agent, argument-builder
@@ -91,6 +91,7 @@ Also update the "Current Skills" section below and the skill count in this file'
 **Text classification**: prompt-optimizer
 **Findings writing**: qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer
 **Manuscript sections**: methods-writer, case-justification, contribution-framer, article-bookends, abstract-builder
+**Prose craft**: prose-craft
 **Revision**: verifier, peer-reviewer, revision-coordinator, writing-editor, bibliography-builder
 **Meta**: genre-skill-builder, project-scaffold, research-coordinator
 

@@ -38,6 +38,7 @@ This skill is part of a multi-skill workflow:
 | **lit-synthesis** | Analyze & organize literature | `field-synthesis.md`, `theoretical-map.md`, `debate-map.md` |
 | **contribution-framer** | Identify contribution type & threading template | `contribution-profile.md` |
 | **argument-builder** | Craft argument & draft prose | Publication-ready Theory section |
+| **prose-craft** | Sentence/paragraph craft (argumentative mode) | Tone, benchmarks, anti-LLM rules |
 
 **Ideal input**: If users ran contribution-framer, request their `contribution-profile.md` — it specifies the contribution type, threading vocabulary, and theory section architecture. If they also ran lit-synthesis, request `field-synthesis.md`, `theoretical-map.md`, and `debate-map.md`.
 

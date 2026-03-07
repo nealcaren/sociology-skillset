@@ -51,6 +51,7 @@ artifacts:
 | **article-bookends** | Downstream | Takes findings section as input for framing |
 | **methods-writer** | Parallel | Methods section written alongside or before findings |
 | **lit-synthesis** | Upstream | Provides theoretical framework for integration |
+| **prose-craft** | Craft guide | Sentence/paragraph benchmarks (evaluative mode for findings, descriptive mode for methods); tone, anti-LLM rules |
 
 ## Workflow
 
