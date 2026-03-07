@@ -9,7 +9,7 @@
       "name": "sociology-skillset",
       "source": "./plugins/sociology-skillset",
       "description": "Complete academic research toolkit for sociology research with 28 integrated skills supporting qualitative, quantitative, and mixed methods workflows. Use research-coordinator to orchestrate the full workflow. Skills: reference management (zotero [deprecated], zotero-rag (local library RAG)), literature review (lit-search, lit-synthesis, reading-agent, argument-builder), qualitative analysis (interview-analyst), quantitative analysis (r-analyst, stata-analyst), computational text analysis (text-analyst), text classification (prompt-optimizer), findings writing (qual-findings-writer, quant-findings-writer, mixed-methods-findings-writer), manuscript drafting (methods-writer, case-justification, contribution-framer, article-bookends with field-specific profiles, abstract-builder), prose craft (prose-craft), revision support (verifier, peer-reviewer, revision-coordinator, writing-editor, bibliography-builder), and meta-skills (genre-skill-builder, project-scaffold, research-coordinator).",
-      "version": "2.21.0",
+      "version": "2.22.0",
       "author": {
         "name": "Neal Caren"
       }
@@ -18,7 +18,7 @@
       "name": "socibook-skillset",
       "source": "./plugins/socibook-skillset",
       "description": "Academic monograph writing toolkit with 10 skills for planning and drafting book-length scholarly works, grounded in genre analysis of 22 political sociology and American politics monographs. Skills: architecture (book-architecture), chapter writing (book-introduction, book-theory-chapter, book-context-chapter, book-parallel-case, book-cross-issue, book-quant-chapter, book-conclusion), and revision support (book-editor, book-continuity).",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Neal Caren"
       }
