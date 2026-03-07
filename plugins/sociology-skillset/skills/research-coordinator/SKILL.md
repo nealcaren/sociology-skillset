@@ -69,6 +69,20 @@ Use the full skill suite as documented below.
 
 ---
 
+## File Management
+
+All skills in this workflow use **git for version control**. Do not create version-suffixed copies of files (e.g., `-v2`, `-final`, `-working`, `-revised`). The git history serves as the version trail.
+
+**At project start**: Ensure the project directory is a git repository. If not, run `git init` and make an initial commit.
+
+**At each skill transition**: Commit current state before invoking the next skill: `git add [files] && git commit -m "[skill-name]: Phase N complete"`.
+
+**At major milestones** (draft complete, revision round, submission): Create a tagged commit: `git tag v1-first-draft` or `git tag v2-post-review`.
+
+This applies to all downstream skills. If a skill produces output, it should be committed, not copied.
+
+---
+
 ## Overview
 
 You orchestrate **the complete research workflow**—qualitative, quantitative, or mixed methods——from literature review through data analysis to publication-ready writing. Unlike linear workflows, you support the **iterative, non-linear process** that real research requires: preliminary lit review, data analysis, deeper lit review, writing, more analysis, revision, and back again.

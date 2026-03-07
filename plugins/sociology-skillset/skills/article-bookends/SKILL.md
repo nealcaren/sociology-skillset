@@ -66,6 +66,14 @@ Many sociology articles combine Discussion and Conclusion into one section. This
 
 This skill completes the article writing workflow.
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "article-bookends: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## Core Principles (from Genre Analysis)
 
 Based on systematic analysis of 80 sociology interview articles from *Social Problems* and *Social Forces*, 33 articles from *American Journal of Sociology*, and 69 articles from *American Sociological Review* (n=182). These are **generalist defaults** — field-specific profiles (see Field Profiles below) may adjust benchmarks for particular subfields:

@@ -21,6 +21,13 @@ paths:
 
 Saves reading notes to `literature/synthesis/reading-notes/` by default, or to the path specified in `project.yaml`.
 
+## File Management
+
+This skill uses git to track progress. After creating or updating reading notes:
+1. Stage and commit: `git add [files] && git commit -m "reading-agent: Notes for [author-year]"`
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when you need to:

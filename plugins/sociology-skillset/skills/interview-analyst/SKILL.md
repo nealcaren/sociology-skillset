@@ -35,6 +35,14 @@ This skill connects to the writing skills:
 | **methods-writer** | Drafts calibrated Methods sections | Publication-ready Methods (via Phase 6 dispatch) |
 | **qual-findings-writer** | Drafts Findings sections | Publication-ready Findings |
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "interview-analyst: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 **Phase 2** produces **participant profiles** with demographics, trajectories, and quotes at varying lengths.
 
 **Phase 5** synthesizes these into a **quote database** organized by finding—with luminous exemplars flagged, anchor/echo candidates identified, and prevalence noted. This feeds directly into qual-findings-writer.

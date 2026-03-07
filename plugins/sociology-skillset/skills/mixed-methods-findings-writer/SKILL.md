@@ -53,6 +53,14 @@ artifacts:
 | **lit-synthesis** | Upstream | Provides theoretical framework for integration |
 | **prose-craft** | Craft guide | Sentence/paragraph benchmarks (evaluative mode for findings, descriptive mode for methods); tone, anti-LLM rules |
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "mixed-methods-findings-writer: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## Workflow
 
 ### Phase 1: Orient

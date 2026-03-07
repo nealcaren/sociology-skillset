@@ -60,6 +60,15 @@ Ask for:
 - **Research question** (recommended)
 - **Mode**: `new` or `adopt`
 
+### Step 1b: Initialize Git
+
+After gathering project info, ensure the project directory is a git repository:
+
+1. If not already a git repo, run `git init`
+2. After creating the directory structure (Step 2), make an initial commit: `git add -A && git commit -m "project-scaffold: Initial project structure"`
+
+All downstream skills use git for version tracking. Do not create version-suffixed copies of files (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ### Step 2: Create/Map Structure
 
 #### Qualitative Projects
@@ -82,7 +91,7 @@ project-name/
 │   └── synthesis/        # lit-synthesis outputs
 ├── drafts/
 │   ├── sections/         # Individual section drafts
-│   └── revisions/        # Revision rounds
+│   └── submission/       # Submission-ready manuscripts
 ├── submissions/          # Final manuscripts
 ├── references.bib        # Canonical bibliography (used by all skills)
 ├── project.yaml          # Project configuration

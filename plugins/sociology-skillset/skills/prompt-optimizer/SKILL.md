@@ -18,6 +18,14 @@ A project may involve a single classification task or multiple dimensions applie
 5. **Measure to improve.** Labeled examples and metrics are essential. You cannot optimize what you cannot measure.
 6. **The user is the domain expert.** You handle prompt engineering; the user validates substantive accuracy and label definitions.
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "prompt-optimizer: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## Workflow Overview
 
 The optimization process has seven phases. Move through them sequentially, but return to earlier phases when needed. Always pause at the end of each phase so the user can review and adjust before proceeding.

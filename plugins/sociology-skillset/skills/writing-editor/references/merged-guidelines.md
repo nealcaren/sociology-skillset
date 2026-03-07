@@ -8,35 +8,17 @@ Work through each level with a human checkpoint before moving to the next.
 
 ## Step 0: Document Protection
 
-**Before making any edits**, establish how changes will be tracked.
+**Before making any edits**, set up git tracking.
 
-### Option A: Working Copy (Default)
-
-Create a copy of the original file and edit only the copy.
-
-- Input: `draft.md` → Working file: `draft-working.md`
-- Original file is never modified
-- Safe for users without version control experience
-
-### Option B: Git Tracking
-
-Use git to create a full revision history with commits after each phase.
-
-**Setup**:
-1. Check if file is in a git repo
-2. If not, offer to `git init` in the file's directory
-3. Commit the original state before any edits: `"Writing editor: Original state"`
+1. Check if the file is in a git repo
+2. If not, run `git init` in the file's directory
+3. Commit the original state before any edits: `git add [file] && git commit -m "writing-editor: Original state"`
 
 **After each level**:
 - Commit approved changes with descriptive message
-- Example: `"Writing editor: Level 1 (Document) complete"`
+- Example: `git commit -m "writing-editor: Level 1 (Document) complete"`
 
-**Benefits**:
-- Full diff history between phases
-- Easy to revert any level's changes
-- User can see exactly what changed at each stage
-
-**Never edit the original file directly unless git tracking is active.**
+Do NOT create version-suffixed copies (e.g., `draft-working.md`, `draft-v2.md`, `draft-final.md`). The git history serves as the version trail. Edit in place.
 
 ---
 

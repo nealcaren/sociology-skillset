@@ -42,6 +42,14 @@ This skill pairs with **interview-analyst** as a one-two punch:
 
 If users ran interview-analyst first, request their `quote-database.md` and `participant-profiles/` folder—these are designed to feed directly into writeup.
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "qual-findings-writer: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when users want to:

@@ -47,6 +47,14 @@ This skill is an **upstream dependency** for three writing skills:
 
 **Can also run standalone**: If the user already has drafts and wants to check contribution alignment, the skill can audit existing sections for threading consistency.
 
+## File Management
+
+This skill uses git to track progress across phases. Before modifying any output file at a new phase:
+1. Stage and commit current state: `git add [files] && git commit -m "contribution-framer: Phase N complete"`
+2. Then proceed with modifications.
+
+Do NOT create version-suffixed copies (e.g., `-v2`, `-final`, `-working`). The git history serves as the version trail.
+
 ## When to Use This Skill
 
 Use this skill when users want to:
