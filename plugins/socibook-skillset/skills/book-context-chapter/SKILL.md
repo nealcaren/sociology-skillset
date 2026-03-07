@@ -506,6 +506,8 @@ A context chapter that treats history as a neutral backdrop -- presenting "just 
 
 **Goal:** Draft each section of the context chapter following the selected cluster's sequence, applying word count targets.
 
+**Prose calibration:** Invoke `prose-craft` in **book mode**. Use descriptive mode for historical narrative and case material; argumentative mode for analytical framing passages.
+
 **Steps:**
 1. Draft the opening. The first 500--1,000 words must accomplish one of the five opening types identified for your cluster. The opening should signal that the chapter has an argument, not just a topic.
 2. Draft each subsequent section in the cluster's prescribed order, following the word count targets from the structural plan.

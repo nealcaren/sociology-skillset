@@ -400,6 +400,8 @@ The chapter defines concepts and engages literature but provides no portable str
 
 **Goal:** Draft each section following the selected cluster's sequence, applying word count targets.
 
+**Prose calibration:** Invoke `prose-craft` in **book mode**. Use argumentative mode throughout; shift to descriptive mode for any case illustrations or historical examples within the theory chapter.
+
 **Steps:**
 1. Draft the opening. Use the opening type prescribed by the cluster. The first 500-800 words must establish why this framework is necessary -- through puzzle, case, gap, or question.
 2. Draft concept definitions. Each core concept gets its own subsection or clearly demarcated passage. Define by contrast: state what the concept is AND what it is not. Distinguish from adjacent terms.

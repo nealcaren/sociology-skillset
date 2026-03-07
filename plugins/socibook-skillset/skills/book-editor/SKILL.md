@@ -235,6 +235,8 @@ For the middle 60-75% of the chapter:
 
 **Goal:** Assess whether the prose register is consistent with genre expectations.
 
+**Reference:** Invoke `prose-craft` in **book mode** for sentence- and paragraph-level benchmarks. Book prose runs shorter (median 19 words vs. 23 in articles), uses shorter paragraphs (3 vs. 4 sentences), more first person (~14% vs. ~10%), less passive voice (~7% vs. ~11%), and far fewer formal transitions (~2% vs. ~7%).
+
 Academic monographs in political sociology operate in a characteristic register: analytical, confident, and declarative, but not polemical. The specific tone varies by cluster:
 
 | Cluster Type | Expected Register |

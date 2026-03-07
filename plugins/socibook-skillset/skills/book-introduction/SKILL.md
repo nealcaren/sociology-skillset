@@ -327,6 +327,8 @@ These guides provide the paragraph- and sentence-level detail needed during Phas
 
 **Goal:** Draft each section of the introduction following the selected cluster's sequence, applying word count targets.
 
+**Prose calibration:** Invoke `prose-craft` in **book mode**. Use argumentative mode for literature engagement and concept definition sections; descriptive mode for scene-setting and evidence passages; evaluative mode for thesis and stakes paragraphs.
+
 **Steps:**
 1. Read `techniques/section-recipes.md` for the recipe matching your selected cluster. Read `techniques/paragraph-functions.md` for paragraph-level moves and `techniques/sentence-toolbox.md` for sentence-level patterns.
 2. Draft the opening hook. Target: 500-800 words. The first paragraph must establish that something important and non-obvious is at stake. Use the opening sentence types from the sentence toolbox.

@@ -373,6 +373,8 @@ Read these guides before drafting begins.
 
 **Goal:** Draft each section following the selected cluster's sequence, applying word count targets.
 
+**Prose calibration:** Invoke `prose-craft` in **book mode**. Use evaluative mode for results presentation and interpretation; descriptive mode for methods and data passages; argumentative mode for theory-linking.
+
 **Steps:**
 1. Read `techniques/section-recipes.md` for the recipe matching your cluster. Read `techniques/paragraph-functions.md` for paragraph-level moves.
 2. Draft the opening. The first two paragraphs must establish the prior-chapter bridge and the research question. Use the opening type prescribed by your cluster.

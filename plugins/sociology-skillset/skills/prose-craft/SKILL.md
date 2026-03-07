@@ -284,6 +284,30 @@ The target register is a smart colleague explaining their work at a seminar: cle
 
 These benchmarks are derived from analysis of 103 articles (33 AJS, 70 ASR, 61,100 sentences). They describe what published sociology prose actually looks like, filtered through editorial best practices.
 
+### Format: Article vs. Book
+
+The three modes below (argumentative, descriptive, evaluative) apply to both articles and books. But book prose differs systematically from article prose. These adjustments are based on analysis of 22 political sociology and American politics monographs (~2.5M words, ~88,000 sentences).
+
+**When writing for a book**, apply the mode-specific guidance below but shift all targets in these directions:
+
+| Metric | Article target | Book target | Why |
+|--------|---------------|-------------|-----|
+| Median sentence length | 23 words | 19 words | Books run shorter; 38% of sentences are under 15 words vs. 26% in articles |
+| Sentences per paragraph | 4 | 3 | Books let paragraphs breathe; each does less heavy lifting |
+| First person rate | ~10% | ~14% | Books use I/we more freely throughout, not just in methods |
+| Passive voice | ~11% | ~7% | Books are more consistently active |
+| Formal transitions | ~7% of sentences | ~2% of sentences | Books rely on paragraph breaks and conjunctions ("But," "And") instead of "However," "Moreover" |
+| Sentence-initial conjunctions | Occasional | ~4% of sentences | "But" and "And" as sentence openers are a normal book register |
+
+**What stays the same**: Core rules, anti-LLM rules, tone, hedging guidance, phrase substitutions. The shift is in rhythm and density, not in craft principles.
+
+**Practical implications for book mode**:
+- Paragraphs of 2-3 sentences are normal, not a sign of underdevelopment. A book paragraph can make one point and stop.
+- Short sentences (under 15 words) should appear more often. Let them do standalone work.
+- Cut most formal transition words. If a paragraph logically follows the previous one, the reader will follow without "Moreover." Use "But" over "However."
+- Use first person for analytical moves throughout, not just in methods chapters. "I argue," "I trace," "I show" are standard book register.
+- The over-35-word ceiling is tighter: only 15% of book sentences exceed it (vs. 19% in articles). If a sentence crosses 35 words, split it.
+
 ### Argumentative Mode
 
 Use for: theory sections, literature reviews, conceptual framing, engagement with prior work.

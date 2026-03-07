@@ -338,6 +338,8 @@ Read these guides before drafting begins.
 
 **Goal:** Draft each section following the selected template's sequence, applying word count targets.
 
+**Prose calibration:** Invoke `prose-craft` in **book mode**. Use evaluative mode for thematic analysis and evidence synthesis; descriptive mode for case examples; argumentative mode for theoretical framing.
+
 **Steps:**
 1. Read `techniques/section-recipes.md` for the recipe matching your template. Read `techniques/paragraph-functions.md` for paragraph-level moves.
 2. Draft the opening. The first section must accomplish the claim announcement and establish what cross-cutting pattern the chapter will demonstrate. Use the opening type prescribed by your template.

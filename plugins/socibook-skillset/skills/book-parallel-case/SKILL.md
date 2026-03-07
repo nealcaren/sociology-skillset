@@ -336,6 +336,8 @@ Read these guides before drafting begins.
 
 **Goal:** Draft each section following the selected cluster's sequence, applying word count targets.
 
+**Prose calibration:** Invoke `prose-craft` in **book mode**. Use descriptive mode for case narratives and evidence presentation; evaluative mode for cross-case comparison and analytical claims.
+
 **Steps:**
 1. Read `techniques/section-recipes.md` for the recipe matching your cluster and position. Read `techniques/paragraph-functions.md` for paragraph-level moves.
 2. Draft the opening. The first two paragraphs must accomplish the claim announcement. Use the opening type prescribed by your cluster.

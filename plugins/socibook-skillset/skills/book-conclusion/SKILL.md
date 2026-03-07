@@ -572,6 +572,8 @@ Read these guides before drafting begins.
 
 **Goal:** Draft each section of the conclusion following the selected cluster's sequence, applying word count targets.
 
+**Prose calibration:** Invoke `prose-craft` in **book mode**. Use evaluative mode for findings recaps and implication passages; argumentative mode for contribution claims and theoretical reframing.
+
 **Steps:**
 1. Read `techniques/section-recipes.md` for the recipe matching your selected cluster. Read `techniques/paragraph-functions.md` for paragraph-level moves.
 2. Draft the opening. The first 1--3 paragraphs must accomplish the thesis restatement (100% frequency) and begin the callback to the introduction (100% frequency). Use the opening type prescribed by your cluster.
