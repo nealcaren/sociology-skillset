@@ -148,7 +148,30 @@ Cut triplets that are purely rhetorical filler—where the third item adds rhyth
 
 **Rule**: If a sentence has both *not* and *but*, try one clause.
 
-## 2.5 Match Syntax to Logic
+## 2.5 Flag Listicle-in-Disguise Structure
+
+"The first... The second... The third..." dressed up as continuous prose is a hidden list. Either use an actual list or integrate points into the argument without ordinal labels.
+
+## 2.6 Cut Gerund Fragment Litanies
+
+Standalone gerund fragments used to illustrate a preceding claim add nothing the claim didn't already say. Fold into a single sentence or cut.
+
+**Cut**: "Junior developers handled the routine work. Fixing small bugs. Writing straightforward features. Implementing well-defined tickets."
+**Keep**: "Junior developers handled routine work: fixing bugs, writing features, and implementing tickets."
+
+## 2.7 Flag One-Point Dilution
+
+If a section restates the same argument in multiple ways without adding new evidence or a new angle, cut the redundant restatements. A single clear statement beats four paraphrases.
+
+## 2.8 Cut Signposted Conclusions
+
+"In conclusion," "To sum up," "In summary" — cut. The reader can feel the ending without being told it's arriving.
+
+## 2.9 Flag "Despite Its Challenges" Formula
+
+Acknowledging problems only to immediately dismiss them ("Despite these challenges, the initiative continues to thrive") is a formulaic pattern. Engage with challenges substantively or don't raise them.
+
+## 2.10 Match Syntax to Logic
 
 Coordinate clauses suggest equal importance. Show hierarchy through grammar.
 
@@ -293,7 +316,42 @@ Replace abstract reflection language with causal explanation.
 **Before**: "This reflects a broader shift in the manuscript's theoretical orientation."
 **After**: "Because the spatial framework is gone, the analysis now follows the interviews more closely."
 
-## 3.14 Replace Em/En Dashes with Commas or Restructure
+## 3.14 Cut Self-Posed Rhetorical Questions
+
+Do not pose a question and immediately answer it. "The result? Devastating." is a theatrical pattern.
+
+**Fix**: Rewrite as a declarative statement. "The result was devastating." Or fold into the preceding sentence.
+
+## 3.15 Replace "Serves As" with "Is"
+
+"Serves as," "stands as," "marks," "represents" are pompous substitutes for "is." Use the simpler copula unless the sentence genuinely describes a function rather than an identity.
+
+**Before**: "The building serves as a reminder of the city's heritage."
+**After**: "The building is a reminder of the city's heritage." (Or better: state the heritage directly.)
+
+## 3.16 Cut Dramatic Countdown Patterns
+
+"Not X. Not Y. Just Z." builds false tension. State Z directly.
+
+**Before**: "Not a bug. Not a feature. A fundamental design flaw."
+**After**: "The flaw was structural, not incidental."
+
+## 3.17 Cut False Ranges
+
+"From X to Y" implies a spectrum with a meaningful middle. If X and Y aren't on a real continuum, name the items directly.
+
+**Before**: "From innovation to cultural transformation."
+**After**: "Innovation and cultural change." (Or describe each separately.)
+
+## 3.18 Flag Invented Concept Labels
+
+Coined compound terms ("the supervision paradox," "acceleration trap," "workload creep") treated as established terminology without definition. If the concept needs a name, define and justify it. Otherwise, describe the phenomenon in plain language.
+
+## 3.19 Cut Superficial Analyses
+
+Tacked-on present participle phrases that inject shallow significance: "contributing to the region's rich cultural heritage," "highlighting its importance," "underscoring its role as a dynamic hub." Cut or replace with a specific, evidence-backed claim.
+
+## 3.20 Replace Em/En Dashes with Commas or Restructure
 
 Em dashes (—) and en dashes (–) create artificial drama and interrupt reading flow. Don't default to swapping every dash for a comma—that just trades one tic for another. Instead, consider the full range of rewrites: split into two sentences, fold the aside into the main clause, move it to a different position, use a colon, or drop it entirely if it's not pulling its weight.
 
@@ -377,7 +435,34 @@ These hint at difficulty that may not exist.
 | "were able to" | "could" |
 | "had the capability of" | "can" |
 
-## 4.6 Replace Fancy-Talk
+## 4.6 Cut LLM Vocabulary
+
+These words are strongly associated with AI-generated text. Replace with plain equivalents.
+
+| Avoid | Use instead |
+|-------|-------------|
+| "delve" / "delve into" | "examine," "explore," "investigate" |
+| "tapestry" | name the actual structure |
+| "landscape" (for a field/domain) | "field," "area," "domain" |
+| "leverage" (as a verb) | "use," "draw on," "apply" |
+| "robust" | "strong," "reliable," "durable" |
+| "streamline" | "simplify," "reduce," "speed up" |
+| "harness" | "use," "apply," "draw on" |
+| "utilize" | "use" |
+| "synergy" | name the actual interaction |
+| "ecosystem" (outside biology) | "field," "network," "community" |
+| "navigate" (abstract) | "handle," "manage," "work through" |
+| "paradigm" (outside Kuhn) | "approach," "framework," "model" |
+
+## 4.7 Cut Magic Adverbs
+
+Adverbs that inject unearned significance. Cut unless removing them changes the meaning.
+
+**Cut**: "quietly," "deeply," "fundamentally," "remarkably," "arguably"
+
+These differ from evaluative adverbs (4.3) because they modify the *importance* of facts rather than the *quality* of evidence. "The policy quietly reshaped hiring" → "The policy reshaped hiring." If the reshaping was subtle, explain how.
+
+## 4.8 Replace Fancy-Talk
 
 Ceremonial language that means the same as plain language.
 

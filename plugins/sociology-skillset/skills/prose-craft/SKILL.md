@@ -186,6 +186,63 @@ Do not "land the plane" with a summary statement. End after the analysis. Silenc
 
 **Cut**: "Together, these changes underscore the manuscript's contribution to..."
 
+### No Self-Posed Rhetorical Questions
+
+Do not pose a question and immediately answer it. This is a common LLM pattern that manufactures false drama.
+
+**Cut**: "The result? A complete overhaul." → "The result was a complete overhaul."
+**Cut**: "The worst part? Nobody anticipated it." → Fold the claim into the narrative.
+
+### No "Serves As" Dodge
+
+Replace pompous copula substitutes with "is" or "are."
+
+| Avoid | Use |
+|-------|-----|
+| "serves as a reminder of" | "is a reminder of" (or just state the reminder) |
+| "stands as an example of" | "is an example of" |
+| "represents a shift toward" | "is a shift toward" |
+
+### No Gerund Fragment Litany
+
+After making a claim, do not illustrate it with a stream of verbless gerund fragments. The claim already said it.
+
+**Cut**: "Junior developers handled the routine work. Fixing small bugs. Writing straightforward features. Implementing well-defined tickets."
+**Keep**: "Junior developers handled the routine work: fixing bugs, writing features, and implementing tickets." (One sentence, not four.)
+
+### No False Ranges
+
+"From X to Y" implies a spectrum. Use it only when X and Y sit on a real continuum with a meaningful middle.
+
+**Cut**: "From innovation to cultural transformation" (what's in between?)
+**Keep**: "From $10,000 to $50,000" (a real numeric range)
+
+### No Dramatic Countdown
+
+"Not X. Not Y. Just Z." is a theatrical narrowing pattern. State Z directly.
+
+**Cut**: "Not a bug. Not a feature. A fundamental design flaw."
+**Keep**: "The flaw was structural, not incidental."
+
+### No Listicle in Disguise
+
+Do not number points as "The first... The second... The third..." in continuous prose. Either use an actual list or integrate points into the argument without ordinal labels.
+
+### No Invented Concept Labels
+
+Do not coin compound labels (e.g., "the supervision paradox," "acceleration trap," "workload creep") and treat them as established terms. If the concept needs a name, define and justify it. Otherwise, describe the phenomenon in plain language.
+
+### No Signposted Conclusions
+
+Do not announce that you are concluding. "In conclusion," "To sum up," "In summary" are unnecessary. The reader can feel the ending. Just end.
+
+### No "Despite Its Challenges" Formula
+
+Do not follow the rigid pattern of acknowledging problems only to immediately dismiss them. If challenges are real, engage with them. If they don't matter, don't raise them.
+
+**Cut**: "Despite these challenges, the initiative continues to thrive."
+**Keep**: Discuss either the challenges or the success, with evidence for whichever claim you're making.
+
 ### Break Symmetry
 
 If three consecutive paragraphs start the same way, rewrite one. Let one be shorter, more direct, or structured differently. Vary sentence openings within paragraphs too.
@@ -433,6 +490,28 @@ Hedge when warranted. Do not hedge reflexively.
 Use "may" and "likely" as your defaults. Reserve "might" and "could" for genuinely uncertain claims. Avoid "perhaps" and "arguably" (both under 0.3% in the corpus).
 
 ---
+
+## Banned LLM Vocabulary
+
+These words are strongly associated with AI-generated text. Replace or cut them.
+
+| Avoid | Use instead |
+|-------|-------------|
+| "delve" / "delve into" | "examine," "explore," "investigate" |
+| "tapestry" | name the actual structure |
+| "landscape" (for a field/domain) | "field," "area," "domain" |
+| "leverage" (as a verb) | "use," "draw on," "apply" |
+| "robust" | "strong," "reliable," "durable" |
+| "streamline" | "simplify," "reduce," "speed up" |
+| "harness" | "use," "apply," "draw on" |
+| "utilize" | "use" |
+| "paradigm" (outside Kuhn) | "approach," "framework," "model" |
+| "synergy" | name the actual interaction |
+| "ecosystem" (outside biology) | "field," "network," "community" |
+| "navigate" (abstract) | "handle," "manage," "work through" |
+| "arguably" | cut, or state the argument |
+| "remarkably" | cut, or show what's remarkable |
+| "fundamentally" | cut, or explain the foundation |
 
 ## Phrase Substitutions
 

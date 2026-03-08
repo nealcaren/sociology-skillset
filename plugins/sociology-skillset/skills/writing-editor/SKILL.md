@@ -45,9 +45,9 @@ This creates a full revision history the user can diff or revert. The input file
 | Level | What to Fix | Checkpoint |
 |-------|-------------|------------|
 | **1. Document** | Structure, hooks, titles, abstracts, citations | User approves before continuing |
-| **2. Paragraph** | Symmetry, triplets, endings, contrast patterns | User approves before continuing |
-| **3. Sentence** | Passive voice, agents, abstract nouns, meta-commentary, em/en dashes | User approves before continuing |
-| **4. Word** | Adverbs, signposts, throat-clearing, fancy-talk | User approves final version |
+| **2. Paragraph** | Symmetry, triplets, endings, contrast patterns, listicle structure, gerund fragments, dilution, signposted conclusions | User approves before continuing |
+| **3. Sentence** | Passive voice, agents, abstract nouns, meta-commentary, em/en dashes, rhetorical questions, "serves as," dramatic countdown, false ranges, invented labels, superficial analyses | User approves before continuing |
+| **4. Word** | Adverbs, signposts, throat-clearing, fancy-talk, LLM vocabulary, magic adverbs | User approves final version |
 
 This ensures the user stays in control and can accept/reject changes at each stage.
 
@@ -72,9 +72,9 @@ Here's a draft that sounds too formal: [paste text]
 Use `references/merged-guidelines.md` as the main editing guide. It consolidates all rules organized by level:
 
 - **Level 1: Document** (6 rules) - hooks, titles, structure, abstracts, citations, concrete examples
-- **Level 2: Paragraph** (5 rules) - endings, symmetry, triplets, contrast, syntax-logic match
-- **Level 3: Sentence** (13 rules) - passive voice, first person, abstract nouns, placeholders, agents
-- **Level 4: Word** (7 rules) - throat-clearing, signposts, adverbs, intensifiers, fancy-talk
+- **Level 2: Paragraph** (10 rules) - endings, symmetry, triplets, contrast, syntax-logic match, listicle structure, gerund fragments, one-point dilution, signposted conclusions, "despite challenges" formula
+- **Level 3: Sentence** (20 rules) - passive voice, first person, abstract nouns, placeholders, agents, rhetorical questions, "serves as," dramatic countdown, false ranges, invented labels, superficial analyses
+- **Level 4: Word** (9 rules) - throat-clearing, signposts, adverbs, intensifiers, LLM vocabulary, magic adverbs, fancy-talk
 
 ## Additional References
 
@@ -83,6 +83,7 @@ For deeper context or source-specific guidance:
 | File | Source |
 |------|--------|
 | `references/guidelines.md` | LLM-specific patterns (15 rules) |
+| `references/tropes.md` | AI writing tropes catalog (word choice, sentence/paragraph structure, tone, formatting, composition) |
 | `references/becker-guidelines.md` | Becker's *Writing for Social Scientists* (12 rules) |
 | `references/sword-guidelines.md` | Sword's *Stylish Academic Writing* (14 rules) |
 | `references/phrase-transformations.md` | Common phrase before/after examples |
@@ -116,6 +117,11 @@ After document structure is sound:
 - **Sentence length variation**: Do all sentences in a paragraph have similar word counts? Flag uniform-length paragraphs. Good paragraphs mix short (10-15 words) and longer (25-30) sentences with ~10 words stdev.
 - **Paragraph length**: Flag paragraphs exceeding 6 sentences for possible splitting. Median in published sociology is 3 sentences.
 - **Stacked intensifiers**: Does the paragraph keep raising emotional volume sentence after sentence? One strong claim is enough.
+- **Listicle in disguise**: "The first... The second... The third..." dressed up as continuous prose? Either use an actual list or integrate without ordinal labels.
+- **Gerund fragment litany**: Standalone "-ing" fragments used to illustrate a claim? Fold into a single sentence or cut.
+- **One-point dilution**: Does the section restate the same argument in multiple ways without adding anything? Cut redundant restatements.
+- **Signposted conclusions**: "In conclusion," "To sum up," "In summary" — cut these. The reader can feel the ending.
+- **"Despite its challenges" formula**: Acknowledging problems only to immediately dismiss them? Engage with the challenges or don't raise them.
 
 Present paragraph-level changes. Wait for user approval.
 
@@ -136,6 +142,12 @@ After paragraphs are structured:
 - **Grand evaluations**: Replace abstract praise with observable effects
 - **Over-justification**: Allow judgment without explaining every reason
 - **Em/en dashes**: Rewrite the sentence. Do not just swap for commas. Split into two sentences, fold the aside into the main clause, use a colon, reposition the aside, or drop it. Offer multiple options. Em dashes are strongly associated with LLM-generated text and should be eliminated.
+- **Self-posed rhetorical questions**: "The result? Devastating." — rewrite as a declarative statement.
+- **"Serves as" dodge**: Replace "serves as," "stands as," "marks," "represents" with "is" when it means the same thing.
+- **Dramatic countdown**: "Not X. Not Y. Just Z." — state Z directly.
+- **False ranges**: "From X to Y" where X and Y aren't on a real spectrum — name the items directly.
+- **Invented concept labels**: Coined compound terms ("the supervision paradox") treated as established — describe the phenomenon in plain language instead.
+- **Superficial analyses**: Tacked-on "-ing" phrases that inject shallow depth ("contributing to the region's rich cultural heritage," "highlighting its importance") — cut or replace with a specific claim.
 - **Semicolons**: Check whether each semicolon could be a period. Two shorter sentences are usually clearer. Published sociology uses semicolons in ~10% of sentences, which is high.
 - **Transition word overuse**: If "However," appears more than twice per page, suggest alternatives ("But," "Yet," or restructure). Total transition-led sentences should not exceed ~7%.
 - **Absolutist claims**: Flag "all," "every," "none," "always" unless literally true. Suggest "most," "often," "typically," "in many cases."
@@ -154,6 +166,8 @@ Final polish:
 - **Empty intensifiers**: "reasonably comprehensive" → "comprehensive"
 - **Ability phrases**: "managed to maintain" → "kept"
 - **Fancy-talk**: "predicated upon" → "depends on"
+- **LLM vocabulary**: Flag "delve," "tapestry," "landscape" (for domains), "leverage" (as verb), "robust," "streamline," "harness," "utilize," "synergy," "ecosystem" (outside biology), "navigate" (abstract), "paradigm" (outside Kuhn). Replace with plain equivalents.
+- **Magic adverbs**: Flag "quietly," "deeply," "fundamentally," "remarkably," "arguably" when used to inject unearned significance. Cut or replace with evidence.
 - **Excessive praise**: "thoughtful, rigorous, and sophisticated" → "careful"
 
 Present word-level changes. Wait for user approval.
